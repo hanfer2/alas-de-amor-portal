@@ -1,0 +1,368 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "nosotros": "Quiénes Somos",
+    "servicios": "Servicios",
+    "testimonios": "Testimonios",
+    "blog": "Blog",
+    "acerca": "Acerca de",
+    "agendar": "Agendar Cita",
+    "contacto": "Contacto"
+  },
+  "home": {
+    "badge": "Terapia Holística Certificada",
+    "hero": {
+      "title1": "Alas de",
+      "title2": "Amor",
+      "subtitle": "Restaura el equilibrio de tu ser a través de terapias holísticas que atienden cuerpo, mente, emociones y espíritu.",
+      "ctaPrimary": "Agenda tu Cita",
+      "ctaSecondary": "Ver Servicios"
+    },
+    "services": {
+      "badge": "Nuestras Terapias",
+      "title": "Servicios de Sanación",
+      "subtitle": "Cada terapia está diseñada para restaurar tu equilibrio integral y despertar tu poder de autosanación.",
+      "learnMore": "Saber más"
+    },
+    "about": {
+      "badge": "Sobre Nosotros",
+      "title": "Liliana Rodas",
+      "bio": "Con años de experiencia y múltiples certificaciones, Liliana Rodas guía a las personas hacia su bienestar integral a través de terapias holísticas que restauran el equilibrio entre cuerpo, mente, emociones y espíritu.",
+      "cta": "Conoce nuestra historia"
+    },
+    "cta": {
+      "title1": "Comienza tu Camino de",
+      "title2": "Sanación",
+      "subtitle": "Cada sesión es un paso hacia tu bienestar integral. Permítenos acompañarte en tu proceso de transformación.",
+      "button": "Agendar Ahora"
+    },
+    "testimonials": {
+      "badge": "Testimonios",
+      "title": "Lo que Dicen Nuestros Clientes",
+      "items": [
+        {
+          "quote": "Después de mi sesión de Reiki sentí una paz que no había experimentado en años. Liliana tiene un don especial.",
+          "author": "María G."
+        },
+        {
+          "quote": "Las Barras Access cambiaron mi perspectiva de vida. Ahora duermo mejor y me siento más centrada.",
+          "author": "Carlos R."
+        },
+        {
+          "quote": "La lectura angelical me dio la claridad que necesitaba para tomar decisiones importantes. Totalmente recomendado.",
+          "author": "Ana P."
+        }
+      ]
+    },
+    "masterReiki": "Master\nReiki"
+  },
+  "nosotros": {
+    "hero": {
+      "badge": "Nuestra Historia",
+      "title": "Quiénes Somos",
+      "subtitle": "Alas de Amor nació del deseo profundo de acompañar a las personas en su camino hacia el bienestar integral y la conexión con su esencia divina."
+    },
+    "about": {
+      "subtitle": "Fundadora de Alas de Amor | Terapeuta Holística",
+      "bio1": "La terapia holística es un enfoque de atención a la salud y al bienestar que ve a la persona como un todo, no solo como un síntoma o una enfermedad. Considera de manera integrada los aspectos físicos, mentales, emocionales, espirituales y sociales.",
+      "bio2": "La idea central es que todo está conectado: si algo no está en equilibrio en una de esas áreas, puede afectar a las demás.",
+      "goalsTitle": "¿Qué busca la terapia holística?",
+      "goals": [
+        "Restablecer el equilibrio integral de la persona",
+        "Promover la autosanación y el bienestar general",
+        "Atender la causa profunda de los problemas, no solo los síntomas"
+      ],
+      "yearsExperience": "+10",
+      "yearsLabel": "Años de experiencia"
+    },
+  "services": {
+    "reiki": "Reiki",
+    "access": "Barras Access",
+    "angelical": "Lectura Angelical",
+    "chakras": "Alineación de Chakras",
+    "meditacion": "Meditación Guiada",
+    "facelight": "Facelight Energético",
+    "coaching": "Coaching Espiritual",
+    "oraculos": "Oráculos"
+  },
+  "credentials": {
+      "badge": "Certificaciones",
+      "title": "Credenciales y Formación"
+    },
+    "certificates": {
+      "badge": "Respaldo",
+      "title": "Nuestros Certificados"
+    },
+    "experience": {
+      "badge": "Trayectoria",
+      "title": "Nuestra Experiencia"
+    }
+  },
+  "servicios": {
+    "hero": {
+      "badge": "Terapias Holísticas",
+      "title": "Nuestros Servicios",
+      "subtitle": "Cada terapia está diseñada para restaurar tu equilibrio integral y despertar tu poder natural de autosanación."
+    },
+    "cta": {
+      "title": "¿No sabes qué terapia necesitas?",
+      "subtitle": "Contáctanos y te orientaremos sobre la terapia más adecuada para ti.",
+      "button": "Contáctanos"
+    },
+    "scheduleButton": "Agendar esta terapia",
+    "reiki": {
+      "desc": "El Reiki es una técnica de canalización de energía universal que activa el proceso natural de sanación del cuerpo. A través de la imposición de manos, se equilibran los centros energéticos promoviendo la relajación profunda, reduciendo el estrés y restaurando el bienestar físico, emocional y espiritual.",
+      "duration": "60 minutos",
+      "benefits": ["Reduce el estrés y la ansiedad", "Alivia dolores físicos y tensiones", "Mejora la calidad del sueño", "Fortalece el sistema inmunológico", "Promueve la paz interior"]
+    },
+    "barras": {
+      "desc": "Las Barras de Access es una técnica que consiste en tocar suavemente 32 puntos en la cabeza para liberar bloqueos energéticos, pensamientos limitantes, creencias y emociones que ya no te sirven.",
+      "duration": "45-60 minutos",
+      "benefits": ["Libera patrones limitantes", "Mejora el enfoque y la claridad mental", "Reduce la ansiedad y el estrés", "Favorece un sueño reparador", "Abre nuevas posibilidades de vida"]
+    },
+    "angelical": {
+      "desc": "Como Medium y Coach Angelical, Liliana canaliza mensajes de tus ángeles y guías espirituales para brindarte orientación, claridad y sanación en los momentos que más lo necesitas.",
+      "duration": "45 minutos",
+      "benefits": ["Recibe mensajes de tus ángeles guardianes", "Claridad en decisiones importantes", "Sanación emocional profunda", "Conexión con tu guía espiritual", "Orientación sobre tu propósito de vida"]
+    },
+    "chakras": {
+      "desc": "Los 7 chakras son centros de energía en tu cuerpo que regulan diferentes aspectos de tu bienestar. Cuando están bloqueados o desequilibrados, pueden manifestarse problemas físicos, emocionales o espirituales.",
+      "duration": "60 minutos",
+      "benefits": ["Restablece el equilibrio energético", "Mejora la vitalidad y energía física", "Equilibra las emociones", "Fortalece la intuición", "Conecta cuerpo, mente y espíritu"]
+    },
+    "meditacion": {
+      "desc": "Sesiones personalizadas de meditación profunda guiadas por Liliana. Cada sesión está diseñada para tu necesidad específica: relajación, sanación, conexión espiritual o liberación emocional.",
+      "duration": "30-45 minutos",
+      "benefits": ["Reduce el estrés y la tensión", "Mejora la concentración y el enfoque", "Profundiza la conexión espiritual", "Libera emociones reprimidas", "Promueve la autoconciencia"]
+    },
+    "facelight": {
+      "desc": "Técnica de limpieza energética facial que libera tensiones acumuladas en el rostro. A través de movimientos suaves y canalización de energía, se liberan bloqueos.",
+      "duration": "30 minutos",
+      "benefits": ["Libera tensiones faciales acumuladas", "Alivia dolores de cabeza y migrañas", "Mejora la circulación energética facial", "Promueve la relajación profunda", "Revitaliza la piel desde el interior"]
+    },
+    "coaching": {
+      "desc": "Acompañamiento personalizado para tu despertar y crecimiento espiritual. Liliana te guía en un proceso de autoconocimiento profundo.",
+      "duration": "60 minutos",
+      "benefits": ["Descubre tu propósito de vida", "Supera bloqueos emocionales", "Fortalece tu intuición", "Desarrolla tu espiritualidad", "Encuentra paz y claridad interior"]
+    },
+    "oraculos": {
+      "desc": "Sesiones de lectura con cartas oráculo para recibir mensajes profundos y orientadores sobre tu presente y futuro.",
+      "duration": "30 minutos",
+      "benefits": ["Orientación sobre tu camino de vida", "Claridad en relaciones y decisiones", "Conexión con la sabiduría ancestral", "Herramientas para el autoconocimiento", "Mensajes de tus guías espirituales"]
+    }
+  },
+  "agendar": {
+    "hero": {
+      "badge": "Reserva tu Sesión",
+      "title": "Agendar Cita",
+      "subtitle": "Selecciona el servicio que necesitas y encuentra el horario que mejor se adapte a ti."
+    },
+    "form": {
+      "title": "Solicita tu Cita",
+      "name": "Nombre completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono / WhatsApp",
+      "phonePlaceholder": "+57 300 000 0000",
+      "service": "Servicio",
+      "servicePlaceholder": "Selecciona un servicio",
+      "date": "Fecha preferida",
+      "message": "Mensaje (opcional)",
+      "messagePlaceholder": "Cuéntanos cómo te podemos ayudar...",
+      "submit": "Solicitar Cita",
+      "submitting": "Enviando...",
+      "success": "¡Tu solicitud ha sido enviada! Te contactaremos pronto para confirmar tu cita.",
+      "whatsapp": "O agenda directamente por WhatsApp"
+    }
+  },
+  "contacto": {
+    "hero": {
+      "badge": "Estamos para Ti",
+      "title": "Contacto",
+      "subtitle": "¿Tienes preguntas? Escríbenos y te responderemos lo antes posible."
+    },
+    "form": {
+      "title": "Envíanos un Mensaje",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿De qué se trata?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje aquí...",
+      "submit": "Enviar Mensaje",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado! Te responderemos pronto."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "phone": "Teléfono",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Ubicación",
+      "hours": "Horario de Atención",
+      "hoursDetail": "Lunes a Sábado: 8:00 AM - 6:00 PM"
+    }
+  },
+  "footer": {
+    "description": "Restauramos el equilibrio integral de tu ser a través de terapias holísticas que atienden la causa profunda, promoviendo la autosanación y el bienestar general.",
+    "navigation": "Navegación",
+    "services": "Servicios",
+    "rights": "Todos los derechos reservados.",
+    "therapy": "Terapia Holística | Colombia"
+  },
+  "credentials": {
+    "reiki": {
+      "title": "Master Reiki",
+      "desc": "Maestría en canalización de energía universal Reiki"
+    },
+    "access": {
+      "title": "Facilitadora de Barras Access",
+      "desc": "Técnica certificada de liberación de bloqueos energéticos"
+    },
+    "facelight": {
+      "title": "Facelight Energético",
+      "desc": "Especialista en limpieza energética facial"
+    },
+    "medium": {
+      "title": "Medium",
+      "desc": "Conexión con planos espirituales y guías angélicos"
+    },
+    "angelical": {
+      "title": "Coach Angelical",
+      "desc": "Acompañamiento espiritual guiado por ángeles"
+    },
+    "espiritual": {
+      "title": "Coach Espiritual",
+      "desc": "Coaching para el despertar y crecimiento espiritual"
+    }
+  },
+  "testimonios": {
+    "hero": {
+      "badge": "Testimonios",
+      "title": "Lo que Dicen Nuestros Clientes",
+      "subtitle": "Estas son algunas experiencias de personas que han transformado su vida con Alas de Amor."
+    },
+    "items": [
+      {
+        "name": "María G.",
+        "location": "Bogotá",
+        "therapy": "Reiki",
+        "quote": "Después de mi sesión de Reiki sentí una paz que no había experimentado en años. Liliana tiene un don especial para transmitir energía sanadora.",
+        "rating": 5
+      },
+      {
+        "name": "Carlos R.",
+        "location": "Medellín",
+        "therapy": "Barras Access",
+        "quote": "Las Barras Access cambiaron mi perspectiva de vida. Ahora duermo mejor y me siento más centrado en mis decisiones.",
+        "rating": 5
+      },
+      {
+        "name": "Ana P.",
+        "location": "Cali",
+        "therapy": "Lectura Angelical",
+        "quote": "La lectura angelical me dio la claridad que necesitaba para tomar decisiones importantes en mi vida.",
+        "rating": 5
+      },
+      {
+        "name": "Laura M.",
+        "location": "Cartagena",
+        "therapy": "Alineación de Chakras",
+        "quote": "Tras mi sesión de chakras, sentí una energía fluyendo que no había sentido antes. Increíble.",
+        "rating": 5
+      },
+      {
+        "name": "Daniel S.",
+        "location": "Bogotá",
+        "therapy": "Meditación Guiada",
+        "quote": "La meditación guiada cambió completamente cómo manejo el estrés diario. Ahora tengo herramientas para mantenerme en paz.",
+        "rating": 5
+      },
+      {
+        "name": "Isabella R.",
+        "location": "Barranquilla",
+        "therapy": "Coaching Espiritual",
+        "quote": "Mi proceso de coaching espiritual me helped encontrar mi propósito de vida. Estoy infinitamente agradecida.",
+        "rating": 5
+      }
+    ],
+    "cta": {
+      "title": "Tu También Puedes Transformarte",
+      "subtitle": "Reserve ahora su sesión y comience su camino de sanación.",
+      "button": "Agendar Ahora"
+    },
+    "share": {
+      "title": "Comparte Tu Experiencia",
+      "subtitle": "¿Ya has tenido una sesión con nosotros? Nos encantaría escuchar tu historia.",
+      "button": "Dejar Testimonio"
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "title": "Mensajes de Luz",
+      "subtitle": "Reflexiones y sabiduría espiritual para iluminar tu camino."
+    },
+    "posts": [
+      {
+        "title": "El Poder del Reiki en Tiempos de Cambio",
+        "excerpt": "El Reiki es una fuerza de sanación universal que nos conecta con la energía restauradora del universo. En tiempos de incertidumbre, esta práctica se vuelve aún más importante...",
+        "date": "2024-01-15",
+        "category": "Reiki"
+      },
+      {
+        "title": "Sanar Tu Niño Interior",
+        "excerpt": "El niño interior es esa parte de nosotros que guarda las heridas más profundas. Sanarlo nos permite vivir con mayor libertad emocional...",
+        "date": "2024-02-01",
+        "category": "Crecimiento"
+      },
+      {
+        "title": "Mensajes de Tus Ángeles",
+        "excerpt": "Tus ángeles siempre están hablando contigo. Aprende a reconocer las señales que te envían diariamente...",
+        "date": "2024-02-15",
+        "category": "Angelical"
+      },
+      {
+        "title": "La Transformación Que Viene",
+        "excerpt": "Cada fin ciclo trae consigo un nuevo comienzo. Abrazar la transformación es abrazar tu crecimiento espiritual...",
+        "date": "2024-03-01",
+        "category": "Espiritual"
+      }
+    ],
+    "newsletter": {
+      "title": "Recibe Mensajes de Luz",
+      "subtitle": "Suscríbete para recibir reflexiones diarias en tu correo.",
+      "placeholder": "Tu correo electrónico",
+      "button": "Suscribirse"
+    }
+  },
+  "acerca": {
+    "hero": {
+      "badge": "Nuestra Historia",
+      "title": "Alas de Amor",
+      "subtitle": "Donde la sanación encuentra su camino hacia ti."
+    },
+    "history": {
+      "title": "Nuestra Historia",
+      "p1": "Alas de Amor nació del deseo profundo de acompañar a las personas en su camino hacia el bienestar integral. Fundada en 2023, nuestra misión es ayudarte a reconectarte con tu esencia divina.",
+      "p2": "Creemos que cada persona tiene el poder de sanarse a sí misma, y nuestro rol es ser guías en ese proceso de autoconocimiento y transformación."
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "text": "Proveer un espacio sagrado donde cada persona pueda encontrar equilibrio integral: cuerpo, mente, emociones y espíritu."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "items": [
+        "Compasión sin juicio",
+        "Sanación integral",
+        "Respeto por el proceso individual",
+        "Conexión espiritual",
+        "Autenticidad"
+      ]
+    }
+  }
+}

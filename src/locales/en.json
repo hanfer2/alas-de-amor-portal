@@ -1,0 +1,368 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "nosotros": "About Us",
+    "servicios": "Services",
+    "testimonios": "Testimonials",
+    "blog": "Blog",
+    "acerca": "About",
+    "agendar": "Book Appointment",
+    "contacto": "Contact"
+  },
+  "home": {
+    "badge": "Certified Holistic Therapy",
+    "hero": {
+      "title1": "Wings of",
+      "title2": "Love",
+      "subtitle": "Restore the balance of your being through holistic therapies that address body, mind, emotions, and spirit.",
+      "ctaPrimary": "Book Your Session",
+      "ctaSecondary": "View Services"
+    },
+    "services": {
+      "badge": "Our Therapies",
+      "title": "Healing Services",
+      "subtitle": "Each therapy is designed to restore your integral balance and awaken your natural self-healing power.",
+      "learnMore": "Learn more"
+    },
+    "about": {
+      "badge": "About Us",
+      "title": "Liliana Rodas",
+      "bio": "With years of experience and multiple certifications, Liliana Rodas guides people toward their integral well-being through holistic therapies that restore the balance between body, mind, emotions, and spirit.",
+      "cta": "Discover our story"
+    },
+    "cta": {
+      "title1": "Begin Your Path of",
+      "title2": "Healing",
+      "subtitle": "Each session is a step toward your integral well-being. Let us accompany you on your transformation journey.",
+      "button": "Book Now"
+    },
+    "testimonials": {
+      "badge": "Testimonials",
+      "title": "What Our Clients Say",
+      "items": [
+        {
+          "quote": "After my Reiki session I felt a peace I hadn't experienced in years. Liliana has a special gift.",
+          "author": "Maria G."
+        },
+        {
+          "quote": "Access Bars changed my life perspective. I now sleep better and feel more centered.",
+          "author": "Carlos R."
+        },
+        {
+          "quote": "The angelic reading gave me the clarity I needed to make important decisions. Highly recommended.",
+          "author": "Ana P."
+        }
+      ]
+    },
+    "masterReiki": "Master\nReiki"
+  },
+  "nosotros": {
+    "hero": {
+      "badge": "Our Story",
+      "title": "About Us",
+      "subtitle": "Wings of Love was born from the deep desire to accompany people on their journey toward integral well-being and connection with their divine essence."
+    },
+    "about": {
+      "subtitle": "Founder of Wings of Love | Holistic Therapist",
+      "bio1": "Holistic therapy is a health and wellness care approach that sees the person as a whole, not just as a symptom or a disease. It considers in an integrated way the physical, mental, emotional, spiritual, and social aspects.",
+      "bio2": "The central idea is that everything is connected: if something is not in balance in one of these areas, it can affect the others.",
+      "goalsTitle": "What does holistic therapy seek?",
+      "goals": [
+        "Restore the integral balance of the person",
+        "Promote self-healing and general well-being",
+        "Address the root cause of problems, not just the symptoms"
+      ],
+      "yearsExperience": "+10",
+      "yearsLabel": "Years of experience"
+    },
+  "services": {
+    "reiki": "Reiki",
+    "access": "Access Bars",
+    "angelical": "Angelic Reading",
+    "chakras": "Chakra Alignment",
+    "meditacion": "Guided Meditation",
+    "facelight": "Facelight Energetic",
+    "coaching": "Spiritual Coaching",
+    "oraculos": "Oracles"
+  },
+  "credentials": {
+      "badge": "Certifications",
+      "title": "Credentials & Training"
+    },
+    "certificates": {
+      "badge": "Credentials",
+      "title": "Our Certificates"
+    },
+    "experience": {
+      "badge": "Career",
+      "title": "Our Experience"
+    }
+  },
+  "servicios": {
+    "hero": {
+      "badge": "Holistic Therapies",
+      "title": "Our Services",
+      "subtitle": "Each therapy is designed to restore your integral balance and awaken your natural self-healing power."
+    },
+    "cta": {
+      "title": "Not sure which therapy you need?",
+      "subtitle": "Contact us and we'll guide you to the most suitable therapy for you.",
+      "button": "Contact Us"
+    },
+    "scheduleButton": "Book this therapy",
+    "reiki": {
+      "desc": "Reiki is a universal energy channeling technique that activates the body's natural healing process. Through laying on of hands, energy centers are balanced promoting deep relaxation, reducing stress and restoring physical, emotional and spiritual well-being.",
+      "duration": "60 minutes",
+      "benefits": ["Reduces stress and anxiety", "Relieves physical pain and tension", "Improves sleep quality", "Strengthens the immune system", "Promotes inner peace"]
+    },
+    "barras": {
+      "desc": "Access Bars is a technique that involves gently touching 32 points on the head to release energetic blockages, limiting thoughts, beliefs and emotions that no longer serve you.",
+      "duration": "45-60 minutes",
+      "benefits": ["Releases limiting patterns", "Improves focus and mental clarity", "Reduces anxiety and stress", "Promotes restorative sleep", "Opens new life possibilities"]
+    },
+    "angelical": {
+      "desc": "As a Medium and Angelic Coach, Liliana channels messages from your angels and spiritual guides to provide you with guidance, clarity and healing when you need it most.",
+      "duration": "45 minutes",
+      "benefits": ["Receive messages from your guardian angels", "Clarity on important decisions", "Deep emotional healing", "Connection with your spiritual guide", "Guidance on your life purpose"]
+    },
+    "chakras": {
+      "desc": "The 7 chakras are energy centers in your body that regulate different aspects of your well-being. When blocked or unbalanced, physical, emotional or spiritual problems may manifest.",
+      "duration": "60 minutes",
+      "benefits": ["Restores energetic balance", "Improves vitality and physical energy", "Balances emotions", "Strengthens intuition", "Connects body, mind and spirit"]
+    },
+    "meditacion": {
+      "desc": "Personalized deep meditation sessions guided by Liliana. Each session is designed for your specific need: relaxation, healing, spiritual connection or emotional release.",
+      "duration": "30-45 minutes",
+      "benefits": ["Reduces stress and tension", "Improves concentration and focus", "Deepens spiritual connection", "Releases repressed emotions", "Promotes self-awareness"]
+    },
+    "facelight": {
+      "desc": "Facial energetic cleansing technique that releases accumulated tension in the face. Through gentle movements and energy channeling, blockages are released.",
+      "duration": "30 minutes",
+      "benefits": ["Releases accumulated facial tension", "Relieves headaches and migraines", "Improves facial energy circulation", "Promotes deep relaxation", "Revitalizes skin from within"]
+    },
+    "coaching": {
+      "desc": "Personalized accompaniment for your spiritual awakening and growth. Liliana guides you in a process of deep self-discovery.",
+      "duration": "60 minutes",
+      "benefits": ["Discover your life purpose", "Overcome emotional blockages", "Strengthen your intuition", "Develop your spirituality", "Find inner peace and clarity"]
+    },
+    "oraculos": {
+      "desc": "Oracle card reading sessions to receive deep and guiding messages about your present and future.",
+      "duration": "30 minutes",
+      "benefits": ["Guidance on your life path", "Clarity in relationships and decisions", "Connection with ancestral wisdom", "Tools for self-knowledge", "Messages from your spiritual guides"]
+    }
+  },
+  "agendar": {
+    "hero": {
+      "badge": "Book Your Session",
+      "title": "Book Appointment",
+      "subtitle": "Select the service you need and find the schedule that best suits you."
+    },
+    "form": {
+      "title": "Request Your Appointment",
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone / WhatsApp",
+      "phonePlaceholder": "+57 300 000 0000",
+      "service": "Service",
+      "servicePlaceholder": "Select a service",
+      "date": "Preferred date",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Tell us how we can help you...",
+      "submit": "Request Appointment",
+      "submitting": "Sending...",
+      "success": "Your request has been sent! We'll contact you soon to confirm your appointment.",
+      "whatsapp": "Or book directly via WhatsApp"
+    }
+  },
+  "contacto": {
+    "hero": {
+      "badge": "We're Here for You",
+      "title": "Contact",
+      "subtitle": "Have questions? Write to us and we'll respond as soon as possible."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is it about?",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent! We'll reply soon."
+    },
+    "info": {
+      "title": "Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Location",
+      "hours": "Business Hours",
+      "hoursDetail": "Monday to Saturday: 8:00 AM - 6:00 PM"
+    }
+  },
+  "footer": {
+    "description": "We restore the integral balance of your being through holistic therapies that address the root cause, promoting self-healing and general well-being.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "rights": "All rights reserved.",
+    "therapy": "Holistic Therapy | Colombia"
+  },
+  "credentials": {
+    "reiki": {
+      "title": "Master Reiki",
+      "desc": "Mastership in universal Reiki energy channeling"
+    },
+    "access": {
+      "title": "Access Bars Facilitator",
+      "desc": "Certified technique for releasing energetic blockages"
+    },
+    "facelight": {
+      "title": "Facelight Energetic",
+      "desc": "Specialist in facial energetic cleansing"
+    },
+    "medium": {
+      "title": "Medium",
+      "desc": "Connection with spiritual planes and angelic guides"
+    },
+    "angelical": {
+      "title": "Angelic Coach",
+      "desc": "Spiritual guidance led by angels"
+    },
+    "espiritual": {
+      "title": "Spiritual Coach",
+      "desc": "Coaching for spiritual awakening and growth"
+    }
+  },
+  "testimonios": {
+    "hero": {
+      "badge": "Testimonials",
+      "title": "What Our Clients Say",
+      "subtitle": "These are experiences from people who have transformed their lives with Wings of Love."
+    },
+    "items": [
+      {
+        "name": "María G.",
+        "location": "Bogotá",
+        "therapy": "Reiki",
+        "quote": "After my Reiki session I felt a peace I hadn't experienced in years. Liliana has a special gift for transmitting healing energy.",
+        "rating": 5
+      },
+      {
+        "name": "Carlos R.",
+        "location": "Medellín",
+        "therapy": "Access Bars",
+        "quote": "Access Bars changed my life perspective. I now sleep better and feel more centered in my decisions.",
+        "rating": 5
+      },
+      {
+        "name": "Ana P.",
+        "location": "Cali",
+        "therapy": "Angelic Reading",
+        "quote": "The angelic reading gave me the clarity I needed to make important decisions in my life.",
+        "rating": 5
+      },
+      {
+        "name": "Laura M.",
+        "location": "Cartagena",
+        "therapy": "Chakra Alignment",
+        "quote": "After my chakra session, I felt energy flowing that I hadn't felt before. Incredible.",
+        "rating": 5
+      },
+      {
+        "name": "Daniel S.",
+        "location": "Bogotá",
+        "therapy": "Guided Meditation",
+        "quote": "Guided meditation completely changed how I handle daily stress. Now I have tools to stay at peace.",
+        "rating": 5
+      },
+      {
+        "name": "Isabella R.",
+        "location": "Barranquilla",
+        "therapy": "Spiritual Coaching",
+        "quote": "My spiritual coaching process helped me find my life purpose. I'm infinitely grateful.",
+        "rating": 5
+      }
+    ],
+    "cta": {
+      "title": "You Can Also Transform",
+      "subtitle": "Book your session now and begin your healing journey.",
+      "button": "Book Now"
+    },
+    "share": {
+      "title": "Share Your Experience",
+      "subtitle": "Have you already had a session with us? We'd love to hear your story.",
+      "button": "Leave Testimonial"
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "title": "Messages of Light",
+      "subtitle": "Reflections and spiritual wisdom to illuminate your path."
+    },
+    "posts": [
+      {
+        "title": "The Power of Reiki in Times of Change",
+        "excerpt": "Reiki is a universal healing force that connects us with the restorative energy of the universe. In times of uncertainty, this practice becomes even more important...",
+        "date": "2024-01-15",
+        "category": "Reiki"
+      },
+      {
+        "title": "Heal Your Inner Child",
+        "excerpt": "The inner child is that part of us that holds the deepest wounds. Healing it allows us to live with greater emotional freedom...",
+        "date": "2024-02-01",
+        "category": "Growth"
+      },
+      {
+        "title": "Messages from Your Angels",
+        "excerpt": "Your angels are always talking with you. Learn to recognize the signs they send you daily...",
+        "date": "2024-02-15",
+        "category": "Angelic"
+      },
+      {
+        "title": "The Transformation Coming",
+        "excerpt": "Every end of cycle brings a new beginning. Embracing transformation is embracing your spiritual growth...",
+        "date": "2024-03-01",
+        "category": "Spiritual"
+      }
+    ],
+    "newsletter": {
+      "title": "Receive Messages of Light",
+      "subtitle": "Subscribe to receive daily reflections in your email.",
+      "placeholder": "Your email",
+      "button": "Subscribe"
+    }
+  },
+  "acerca": {
+    "hero": {
+      "badge": "Our Story",
+      "title": "Wings of Love",
+      "subtitle": "Where healing finds its way to you."
+    },
+    "history": {
+      "title": "Our Story",
+      "p1": "Wings of Love was born from the deep desire to accompany people on their journey toward integral well-being. Founded in 2023, our mission is to help you reconnect with your divine essence.",
+      "p2": "We believe that every person has the power to heal themselves, and our role is to be guides in that process of self-discovery and transformation."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "To provide a sacred space where each person can find integral balance: body, mind, emotions and spirit."
+    },
+    "values": {
+      "title": "Our Values",
+      "items": [
+        "Compassion without judgment",
+        "Integral healing",
+        "Respect for the individual process",
+        "Spiritual connection",
+        "Authenticity"
+      ]
+    }
+  }
+}
