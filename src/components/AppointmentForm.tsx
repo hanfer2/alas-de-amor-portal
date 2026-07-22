@@ -60,6 +60,8 @@ export default function AppointmentForm() {
     e.preventDefault();
     if (!validate()) return;
 
+    window.open(buildWhatsApp(), "_blank", "noopener,noreferrer");
+
     setSending(true);
     setSendError("");
 
@@ -79,8 +81,6 @@ export default function AppointmentForm() {
     } catch {
       setSendError("Error de conexión al enviar el formulario");
     }
-
-    window.open(buildWhatsApp(), "_blank", "noopener,noreferrer");
 
     setSending(false);
     setSubmitted(true);
