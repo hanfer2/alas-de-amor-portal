@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -18,6 +19,16 @@ function LangUpdater() {
   return null;
 }
 
+function MainContent({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
+  return (
+    <main id="main-content" className="flex-1">
+      <ScrollReveal key={pathname}>{children}</ScrollReveal>
+    </main>
+  );
+}
+
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <LanguageProvider>
@@ -30,9 +41,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         Saltar al contenido
       </a>
       <Header />
-      <main id="main-content" className="flex-1">
-        <ScrollReveal>{children}</ScrollReveal>
-      </main>
+      <MainContent>{children}</MainContent>
       <Footer />
       <BackToTop />
     </LanguageProvider>
