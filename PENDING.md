@@ -30,17 +30,60 @@
 
 ---
 
-### Paso 2: Configurar variables de entorno
+### Paso 2: Variables de entorno (SEGURIDAD)
 
-Agregar en `.env.local` y en Vercel (Settings → Environment Variables):
+Este proyecto es open-source. **NUNCA** subas credenciales reales al repositorio. Usa dos mecanismos:
+
+| Entorno | Dónde se configuran | Archivo |
+|---------|-------------------|---------|
+| Desarrollo local | `.env.local` | Gitignored, nunca se sube |
+| Producción (Vercel) | Dashboard → Settings → Environment Variables | Se inyectan en build/runtime |
+
+#### Clasificación de las keys de Supabase
+
+| Variable | ¿Pública? | Dónde se usa |
+|----------|-----------|-------------|
+| `NEXT_PUBLIC_SUPABASE_URL` | Sí (es la URL del proyecto) | Cliente y servidor |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Sí (es la key anónima, diseñada para ser pública) | Cliente (navegador) |
+| `SUPABASE_SERVICE_ROLE_KEY` | **NO — SECRETA** (bypassea RLS) | Solo server-side |
+
+> **Importante**: La `ANON_KEY` es segura de exponer porque Supabase la diseña para uso público. La `SERVICE_ROLE_KEY` **nunca** debe ir al cliente ni al repo. Solo se usa en Server Actions y endpoints API.
+
+#### Configuración en Vercel
+
+1. Ir a https://vercel.com → tu proyecto → Settings → Environment Variables
+2. Agregar una por una:
+
+```
+NEXT_PUBLIC_SUPABASE_URL      = https://xxxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY = eyJhbGciOi...  (la anon/public)
+SUPABASE_SERVICE_ROLE_KEY     = eyJhbGciOi...  (la secret)
+```
+
+3. Redeploy para que las variables tomen efecto
+
+#### En desarrollo local
+
+Crear `.env.local` (ya está en `.gitignore`):
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOi...    # Solo server-side
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOi...
 ```
 
-Actualizar `.env.example` con las nuevas keys comentadas.
+#### En el repo solo va el template
+
+`.env.example` contiene el formato sin valores reales (ya está commiteado):
+
+```bash
+# Supabase (Base de Datos)
+# NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
+# NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
+# SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOi...
+```
+
+
 
 ---
 
