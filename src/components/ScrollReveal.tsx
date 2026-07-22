@@ -9,7 +9,7 @@ export default function ScrollReveal({ children }: { children: React.ReactNode }
     const container = containerRef.current;
     if (!container) return;
 
-    const elements = container.querySelectorAll(".reveal");
+    const elements = container.querySelectorAll(".reveal:not(.visible)");
     if (elements.length === 0) return;
 
     const observer = new IntersectionObserver(
@@ -26,7 +26,7 @@ export default function ScrollReveal({ children }: { children: React.ReactNode }
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, []);
+  }, [children]);
 
   return <div ref={containerRef}>{children}</div>;
 }
