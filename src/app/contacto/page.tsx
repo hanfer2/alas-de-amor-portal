@@ -2,6 +2,7 @@
 
 import ContactForm from "@/components/ContactForm";
 import { useTranslations } from "@/hooks/useTranslations";
+import config from "@/lib/config";
 
 export default function ContactoPage() {
   const t = useTranslations();
@@ -58,7 +59,7 @@ function ContactInfo() {
             </div>
             <div>
               <p className="font-medium text-reiki-800">{t("contacto.info.phone")}</p>
-              <p className="text-reiki-600">+57 304 3732955</p>
+              <p className="text-reiki-600">{config.contact.phone}</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -69,7 +70,7 @@ function ContactInfo() {
             </div>
             <div>
               <p className="font-medium text-reiki-800">{t("contacto.info.email")}</p>
-              <p className="text-reiki-600">contacto@alasdeamor.com</p>
+              <p className="text-reiki-600">{config.contact.email}</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -80,8 +81,8 @@ function ContactInfo() {
             </div>
             <div>
               <p className="font-medium text-reiki-800">{t("contacto.info.whatsapp")}</p>
-              <a href="https://wa.me/573043732955" target="_blank" rel="noopener noreferrer" className="text-heal-600 hover:text-heal-700">
-                +57 304 3732955
+              <a href={`https://wa.me/${config.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-heal-600 hover:text-heal-700">
+                {config.contact.phone}
               </a>
             </div>
           </div>

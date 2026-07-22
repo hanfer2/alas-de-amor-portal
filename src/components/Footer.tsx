@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
+import config from "@/lib/config";
 
 export default function Footer() {
   const t = useTranslations();
@@ -57,7 +58,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.facebook.com/liliana.rodas.9615"
+                href={config.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-blue-500 hover:shadow-lg transition-all"
@@ -68,7 +69,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/573043732955"
+                href={`https://wa.me/${config.contact.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-heal-500 hover:shadow-lg transition-all"
@@ -79,7 +80,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/alasdeamor"
+                href={config.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-pink-500 hover:shadow-lg transition-all"
@@ -90,7 +91,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:contacto@alasdeamor.com"
+                href={`mailto:${config.contact.email}`}
                 className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-reiki-500 hover:shadow-lg transition-all"
                 aria-label="Email"
               >

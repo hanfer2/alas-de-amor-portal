@@ -1,4 +1,9 @@
 export default function StructuredData() {
+  const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "+57 304 3732955";
+  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "Lilo_rodas87@hotmail.com";
+  const fb = process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK || "https://www.facebook.com/liliana.rodas.9615";
+  const ig = process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM || "https://instagram.com/alasdeamor";
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -7,8 +12,8 @@ export default function StructuredData() {
       "Holistic therapy with Liliana Rodas. Master Reiki, Access Bars Facilitator, Medium and Angelic Coach.",
     image: "https://alas-de-amor.vercel.app/imgs/team/liliana-profile.jpg",
     url: "https://alas-de-amor.vercel.app",
-    telephone: "+573043732955",
-    email: "contacto@alasdeamor.com",
+    telephone: phone.replace(/\s/g, ""),
+    email,
     address: {
       "@type": "PostalAddress",
       addressCountry: "CO",
@@ -68,10 +73,7 @@ export default function StructuredData() {
         },
       },
     ],
-    sameAs: [
-      "https://www.facebook.com/liliana.rodas.9615",
-      "https://instagram.com/alasdeamor",
-    ],
+    sameAs: [fb, ig],
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [

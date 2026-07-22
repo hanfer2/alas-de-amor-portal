@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "@/hooks/useTranslations";
 import { sendAppointmentEmail } from "@/app/actions/contact";
+import config from "@/lib/config";
 
 const serviceOptionKeys = [
   "nosotros.services.reiki",
@@ -53,7 +54,7 @@ export default function AppointmentForm() {
 
   const buildWhatsApp = () => {
     const text = `Hola! Me gustaría agendar una cita.%0A%0A👤 Nombre: ${formData.name}%0A📧 Email: ${formData.email}%0A📱 Teléfono: ${formData.phone}%0A💆 Servicio: ${formData.service}%0A📅 Fecha: ${formData.date}%0A💬 Mensaje: ${formData.message || "N/A"}`;
-    return `https://wa.me/573043732955?text=${text}`;
+    return `https://wa.me/${config.contact.whatsapp}?text=${text}`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

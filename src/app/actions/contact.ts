@@ -19,7 +19,7 @@ type ContactData = {
 type Result = { success: boolean; error?: string };
 
 const WEBHOOK_URL = process.env.EMAIL_WEBHOOK_URL || "";
-const TO_EMAIL = process.env.CONTACT_EMAIL || "contacto@alasdeamor.com";
+const TO_EMAIL = process.env.CONTACT_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL || "Lilo_rodas87@hotmail.com";
 
 async function sendViaWebhook(payload: Record<string, unknown>): Promise<Result> {
   if (!WEBHOOK_URL) {

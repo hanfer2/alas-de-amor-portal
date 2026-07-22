@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
+import config from "@/lib/config";
 
 export default function TestimoniosPage() {
   const t = useTranslations();
@@ -111,7 +112,7 @@ export default function TestimoniosPage() {
             {t("testimonios.share.subtitle")}
           </p>
           <a
-            href="https://wa.me/573043732955"
+            href={`https://wa.me/${config.contact.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-heal-500 text-white font-semibold hover:bg-heal-600 hover:scale-105 transition-all"
