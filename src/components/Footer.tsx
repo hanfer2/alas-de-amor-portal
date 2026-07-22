@@ -15,12 +15,12 @@ export default function Footer() {
   ];
 
   const serviceKeys = [
-    "services.reiki",
-    "services.access",
-    "services.angelical",
-    "services.chakras",
-    "services.meditacion",
-    "services.facelight",
+    "nosotros.services.reiki",
+    "nosotros.services.access",
+    "nosotros.services.angelical",
+    "nosotros.services.chakras",
+    "nosotros.services.meditacion",
+    "nosotros.services.facelight",
   ];
 
   return (

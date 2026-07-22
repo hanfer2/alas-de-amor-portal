@@ -4,14 +4,14 @@ import { useState } from "react";
 import { useTranslations } from "@/hooks/useTranslations";
 
 const serviceOptionKeys = [
-  "services.reiki",
-  "services.access",
-  "services.angelical",
-  "services.chakras",
-  "services.meditacion",
-  "services.facelight",
-  "services.coaching",
-  "services.oraculos",
+  "nosotros.services.reiki",
+  "nosotros.services.access",
+  "nosotros.services.angelical",
+  "nosotros.services.chakras",
+  "nosotros.services.meditacion",
+  "nosotros.services.facelight",
+  "nosotros.services.coaching",
+  "nosotros.services.oraculos",
 ];
 
 type FormErrors = {
