@@ -89,15 +89,15 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden">
       <FloatingOrb
-        className="w-96 h-96 bg-spiritual-300 top-20 -left-48 animate-float-slow"
+        className="w-96 h-96 bg-reiki-300 top-20 -left-48 animate-float-slow"
         delay={0}
       />
       <FloatingOrb
-        className="w-80 h-80 bg-gold-300 top-40 right-0 animate-float"
+        className="w-80 h-80 bg-heal-300 top-40 right-0 animate-float"
         delay={2}
       />
       <FloatingOrb
-        className="w-64 h-64 bg-rose-gold bottom-40 left-1/4 animate-float-delay"
+        className="w-64 h-64 bg-reiki-200 bottom-40 left-1/4 animate-float-delay"
         delay={4}
       />
 
@@ -106,8 +106,8 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm shadow-sm">
-                <div className="w-2 h-2 rounded-full bg-spiritual-400 animate-pulse" />
-                <span className="text-sm text-spiritual-700 font-medium">
+                <div className="w-2 h-2 rounded-full bg-reiki-400 animate-pulse" />
+                <span className="text-sm text-reiki-700 font-medium">
                   {t("home.badge")}
                 </span>
               </div>
@@ -115,23 +115,23 @@ export default function Home() {
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="text-gradient">{t("home.hero.title1")}</span>
                 <br />
-                <span className="text-spiritual-800">{t("home.hero.title2")}</span>
+                <span className="text-reiki-800">{t("home.hero.title2")}</span>
               </h1>
 
-              <p className="text-xl text-spiritual-700 max-w-lg leading-relaxed">
+              <p className="text-xl text-reiki-700 max-w-lg leading-relaxed">
                 {t("home.hero.subtitle")}
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/agendar"
-                  className="px-8 py-4 rounded-full bg-gradient-to-r from-spiritual-500 to-spiritual-600 text-white font-semibold shadow-lg shadow-spiritual-400/30 hover:shadow-xl hover:shadow-spiritual-400/40 hover:scale-105 transition-all duration-300"
+                  className="px-8 py-4 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white font-semibold shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:shadow-reiki-400/40 hover:scale-105 transition-all duration-300"
                 >
                   {t("home.hero.ctaPrimary")}
                 </Link>
                 <Link
                   href="/servicios"
-                  className="px-8 py-4 rounded-full glass text-spiritual-700 font-semibold hover:bg-white/80 hover:scale-105 transition-all duration-300"
+                  className="px-8 py-4 rounded-full glass text-reiki-700 font-semibold hover:bg-white/80 hover:scale-105 transition-all duration-300"
                 >
                   {t("home.hero.ctaSecondary")}
                 </Link>
@@ -140,7 +140,7 @@ export default function Home() {
 
             <div className="relative flex justify-center">
               <div className="relative w-80 h-80 sm:w-96 sm:h-96 animate-float-slow">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-spiritual-200 via-gold-200 to-spiritual-300 opacity-60 blur-2xl" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-reiki-200 via-heal-200 to-reiki-300 opacity-60 blur-2xl" />
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-glow">
                   <Image
                     src="/imgs/team/liliana-profile.jpg"
@@ -151,7 +151,7 @@ export default function Home() {
                     sizes="(max-width: 640px) 320px, 384px"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-br from-gold-300 to-gold-400 flex items-center justify-center shadow-gold animate-glow">
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-br from-heal-300 to-heal-400 flex items-center justify-center shadow-gold animate-glow">
                   <span className="text-white font-display text-xs font-bold text-center leading-tight whitespace-pre-line">
                     {t("home.masterReiki")}
                   </span>
@@ -165,7 +165,7 @@ export default function Home() {
       </section>
 
       <section className="relative py-8 bg-warm-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="rounded-3xl overflow-hidden shadow-2xl bg-black">
             <video
               className="w-full"
@@ -174,6 +174,7 @@ export default function Home() {
               muted
               playsInline
               loop
+              preload="none"
             >
               <source src="/videos/alas-de-amor.mp4" type="video/mp4" />
             </video>
@@ -183,18 +184,18 @@ export default function Home() {
 
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-spiritual-500 font-medium tracking-wider uppercase text-sm">
+          <div className="text-center mb-16 reveal">
+            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
               {t("home.services.badge")}
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-spiritual-900 mt-3">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
               {t("home.services.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i === 1 ? <span className="text-gradient">{word} </span> : `${word} `}
                 </span>
               ))}
             </h2>
-            <p className="text-spiritual-600 mt-4 max-w-2xl mx-auto text-lg">
+            <p className="text-reiki-600 mt-4 max-w-2xl mx-auto text-lg">
               {t("home.services.subtitle")}
             </p>
           </div>
@@ -204,19 +205,19 @@ export default function Home() {
               <Link
                 key={service.titleKey}
                 href="/servicios"
-                className="group gradient-card rounded-3xl p-8 shadow-sm hover:shadow-xl hover:shadow-spiritual-200/30 transition-all duration-500 hover:-translate-y-2 border border-white/50"
+                className="group gradient-card rounded-3xl p-8 shadow-sm hover:shadow-xl hover:shadow-reiki-200/30 transition-all duration-500 hover:-translate-y-2 border border-white/50 reveal"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-spiritual-100 to-gold-100 flex items-center justify-center text-spiritual-600 group-hover:from-spiritual-200 group-hover:to-gold-200 group-hover:scale-110 transition-all duration-300 mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-reiki-100 to-heal-100 flex items-center justify-center text-reiki-600 group-hover:from-reiki-200 group-hover:to-heal-200 group-hover:scale-110 transition-all duration-300 mb-6">
                   {service.icon}
                 </div>
-                <h3 className="font-display text-xl font-bold text-spiritual-800 mb-3 group-hover:text-gradient transition-all">
+                <h3 className="font-display text-xl font-bold text-reiki-800 mb-3 group-hover:text-gradient transition-all">
                   {t(service.titleKey)}
                 </h3>
-                <p className="text-spiritual-600 text-sm leading-relaxed">
+                <p className="text-reiki-600 text-sm leading-relaxed">
                   {t(service.descKey)}
                 </p>
-                <div className="mt-6 flex items-center text-spiritual-500 text-sm font-medium group-hover:text-spiritual-700 transition-colors">
+                <div className="mt-6 flex items-center text-reiki-500 text-sm font-medium group-hover:text-reiki-700 transition-colors">
                   <span>{t("home.services.learnMore")}</span>
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
@@ -241,8 +242,8 @@ export default function Home() {
       <section className="relative py-24 gradient-spiritual">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-spiritual-300/20">
+            <div className="relative reveal">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20">
                 <Image
                   src="/imgs/gallery/gallery-1.jpg"
                   alt="Holistic therapy space at Alas de Amor"
@@ -262,11 +263,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <span className="text-spiritual-500 font-medium tracking-wider uppercase text-sm">
+            <div className="space-y-6 reveal">
+              <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
                 {t("home.about.badge")}
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl font-bold text-spiritual-900">
+              <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900">
                 {t("home.about.title")}
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -280,18 +281,18 @@ export default function Home() {
                 ].map((titleKey) => (
                   <span
                     key={titleKey}
-                    className="px-3 py-1 rounded-full bg-white/60 text-xs font-medium text-spiritual-700 shadow-sm"
+                    className="px-3 py-1 rounded-full bg-white/60 text-xs font-medium text-reiki-700 shadow-sm"
                   >
                     {t(titleKey)}
                   </span>
                 ))}
               </div>
-              <p className="text-spiritual-700 text-lg leading-relaxed">
+              <p className="text-reiki-700 text-lg leading-relaxed">
                 {t("home.about.bio")}
               </p>
               <Link
                 href="/nosotros"
-                className="inline-flex items-center gap-2 text-spiritual-600 hover:text-spiritual-800 font-semibold transition-colors group"
+                className="inline-flex items-center gap-2 text-reiki-600 hover:text-reiki-800 font-semibold transition-colors group"
               >
                 <span>{t("home.about.cta")}</span>
                 <svg
@@ -314,9 +315,9 @@ export default function Home() {
       </section>
 
       <section className="relative py-24 bg-warm-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-spiritual-200/20 border border-white/50">
-            <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-spiritual-400 to-gold-400 flex items-center justify-center animate-glow">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+          <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-reiki-200/20 border border-white/50">
+            <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-reiki-400 to-heal-400 flex items-center justify-center animate-glow">
               <svg
                 viewBox="0 0 48 48"
                 fill="none"
@@ -328,16 +329,16 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-spiritual-900 mb-4">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900 mb-4">
               <span>{t("home.cta.title1")}</span>{" "}
               <span className="text-gradient">{t("home.cta.title2")}</span>
             </h2>
-            <p className="text-spiritual-600 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-reiki-600 text-lg mb-8 max-w-xl mx-auto">
               {t("home.cta.subtitle")}
             </p>
             <Link
               href="/agendar"
-              className="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-gradient-to-r from-spiritual-500 to-spiritual-600 text-white font-semibold text-lg shadow-lg shadow-spiritual-400/30 hover:shadow-xl hover:shadow-spiritual-400/40 hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white font-semibold text-lg shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:shadow-reiki-400/40 hover:scale-105 transition-all duration-300"
             >
               <span>{t("home.cta.button")}</span>
               <svg
@@ -360,11 +361,11 @@ export default function Home() {
 
       <section className="relative py-24 gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-spiritual-500 font-medium tracking-wider uppercase text-sm">
+          <div className="text-center mb-16 reveal">
+            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
               {t("home.testimonials.badge")}
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-spiritual-900 mt-3">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
               {t("home.testimonials.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i >= 2 ? <span className="text-gradient">{word} </span> : `${word} `}
@@ -380,13 +381,13 @@ export default function Home() {
               return (
                 <div
                   key={i}
-                  className="gradient-card rounded-3xl p-8 shadow-sm border border-white/50 hover:shadow-lg transition-shadow"
+                  className="gradient-card rounded-3xl p-8 shadow-sm border border-white/50 hover:shadow-lg transition-shadow reveal"
                 >
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <svg
                         key={j}
-                        className="w-5 h-5 text-gold-400"
+                        className="w-5 h-5 text-reiki-400"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -394,14 +395,14 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-spiritual-700 italic mb-6 leading-relaxed">
+                  <p className="text-reiki-700 italic mb-6 leading-relaxed">
                     &ldquo;{quote}&rdquo;
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-spiritual-300 to-gold-300 flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-reiki-300 to-heal-300 flex items-center justify-center text-white font-bold text-sm">
                       {author[0]}
                     </div>
-                    <span className="font-semibold text-spiritual-800">
+                    <span className="font-semibold text-reiki-800">
                       {author}
                     </span>
                   </div>

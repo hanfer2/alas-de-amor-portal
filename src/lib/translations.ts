@@ -1,12 +1,11 @@
 import es from "@/locales/es.json";
 import en from "@/locales/en.json";
 
-export type TranslationValue = string | TranslationObject;
-export type TranslationObject = Record<string, unknown>;
+export type TranslationValue = string | string[] | Record<string, unknown>;
 
 const translations: Record<string, typeof es> = { es, en };
 
-export function t(lang: string, key: string): string {
+export function t(lang: string, key: string): TranslationValue {
   const dict = translations[lang] || translations.es;
   const keys = key.split(".");
   let value: unknown = dict;
@@ -17,7 +16,9 @@ export function t(lang: string, key: string): string {
       return key;
     }
   }
-  return typeof value === "string" ? value : key;
+  if (typeof value === "string") return value;
+  if (Array.isArray(value)) return value as string[];
+  return key;
 }
 
 export function getTranslations(lang: string): typeof es {

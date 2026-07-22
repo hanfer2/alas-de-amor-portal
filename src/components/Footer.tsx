@@ -14,7 +14,7 @@ export default function Footer() {
     { href: "/contacto", labelKey: "nav.contacto" },
   ];
 
-  const serviceLinkKeys = [
+  const serviceKeys = [
     "services.reiki",
     "services.access",
     "services.angelical",
@@ -23,16 +23,13 @@ export default function Footer() {
     "services.facelight",
   ];
 
-  const serviceNamesES = ["Reiki", "Barras Access", "Lectura Angelical", "Alineación de Chakras", "Meditación Guiada", "Facelight Energético"];
-  const serviceNamesEN = ["Reiki", "Access Bars", "Angelic Reading", "Chakra Alignment", "Guided Meditation", "Facelight Energetic"];
-
   return (
-    <footer className="bg-gradient-to-b from-warm-white to-spiritual-50 border-t border-spiritual-100">
+    <footer className="bg-gradient-to-b from-warm-white to-reiki-50 border-t border-reiki-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-spiritual-400 to-gold-400 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-reiki-400 to-heal-400 flex items-center justify-center">
                 <svg
                   viewBox="0 0 48 48"
                   fill="none"
@@ -50,12 +47,12 @@ export default function Footer() {
                 <h3 className="font-display text-xl font-bold text-gradient">
                   Alas de Amor
                 </h3>
-                <p className="text-xs text-spiritual-500 tracking-wider uppercase">
+                <p className="text-xs text-reiki-500 tracking-wider uppercase">
                   {t("home.badge")}
                 </p>
               </div>
             </div>
-            <p className="text-spiritual-600 max-w-md mb-6">
+            <p className="text-reiki-600 max-w-md mb-6">
               {t("footer.description")}
             </p>
             <div className="flex gap-4">
@@ -63,7 +60,7 @@ export default function Footer() {
                 href="https://www.facebook.com/liliana.rodas.9615"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-spiritual-600 hover:text-blue-500 hover:shadow-lg transition-all"
+                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-blue-500 hover:shadow-lg transition-all"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -74,7 +71,7 @@ export default function Footer() {
                 href="https://wa.me/573043732955"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-spiritual-600 hover:text-green-500 hover:shadow-lg transition-all"
+                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-heal-500 hover:shadow-lg transition-all"
                 aria-label="WhatsApp"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -85,7 +82,7 @@ export default function Footer() {
                 href="https://instagram.com/alasdeamor"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-spiritual-600 hover:text-pink-500 hover:shadow-lg transition-all"
+                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-pink-500 hover:shadow-lg transition-all"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -94,7 +91,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:contacto@alasdeamor.com"
-                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-spiritual-600 hover:text-spiritual-500 hover:shadow-lg transition-all"
+                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-reiki-500 hover:shadow-lg transition-all"
                 aria-label="Email"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -105,7 +102,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-lg font-semibold text-spiritual-800 mb-4">
+            <h4 className="font-display text-lg font-semibold text-reiki-800 mb-4">
               {t("footer.navigation")}
             </h4>
             <ul className="space-y-3">
@@ -113,7 +110,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-spiritual-600 hover:text-spiritual-800 transition-colors text-sm"
+                    className="text-reiki-600 hover:text-reiki-800 transition-colors text-sm"
                   >
                     {t(link.labelKey)}
                   </Link>
@@ -123,17 +120,17 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-lg font-semibold text-spiritual-800 mb-4">
+            <h4 className="font-display text-lg font-semibold text-reiki-800 mb-4">
               {t("footer.services")}
             </h4>
             <ul className="space-y-3">
-              {serviceLinkKeys.map((key, i) => (
+              {serviceKeys.map((key) => (
                 <li key={key}>
                   <Link
                     href="/servicios"
-                    className="text-spiritual-600 hover:text-spiritual-800 transition-colors text-sm"
+                    className="text-reiki-600 hover:text-reiki-800 transition-colors text-sm"
                   >
-                    {serviceNamesES[i]}
+                    {t(key)}
                   </Link>
                 </li>
               ))}
@@ -141,12 +138,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-spiritual-100 text-center">
-          <p className="text-spiritual-500 text-sm">
+        <div className="mt-12 pt-8 border-t border-reiki-100 text-center">
+          <p className="text-reiki-500 text-sm">
             &copy; {new Date().getFullYear()} Alas de Amor - Liliana Rodas.
             {` ${t("footer.rights")}`}
           </p>
-          <p className="text-spiritual-400 text-xs mt-2">
+          <p className="text-reiki-400 text-xs mt-2">
             {t("footer.therapy")}
           </p>
         </div>

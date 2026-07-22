@@ -1,34 +1,57 @@
 @import "tailwindcss";
 
 @theme {
-  --color-spiritual-50: #fdf4ff;
-  --color-spiritual-100: #fae8ff;
-  --color-spiritual-200: #f5d0fe;
-  --color-spiritual-300: #f0abfc;
-  --color-spiritual-400: #e879f9;
-  --color-spiritual-500: #d946ef;
-  --color-spiritual-600: #c026d3;
-  --color-spiritual-700: #a21caf;
-  --color-spiritual-800: #86198f;
-  --color-spiritual-900: #701a75;
-  --color-spiritual-950: #4a044e;
+  --color-reiki-50: #f5f3ff;
+  --color-reiki-100: #ede9fe;
+  --color-reiki-200: #ddd6fe;
+  --color-reiki-300: #c4b5fd;
+  --color-reiki-400: #a78bfa;
+  --color-reiki-500: #8b5cf6;
+  --color-reiki-600: #7c3aed;
+  --color-reiki-700: #6d28d9;
+  --color-reiki-800: #5b21b6;
+  --color-reiki-900: #4c1d95;
+  --color-reiki-950: #3b0764;
 
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
+  --color-spiritual-50: #f5f3ff;
+  --color-spiritual-100: #ede9fe;
+  --color-spiritual-200: #ddd6fe;
+  --color-spiritual-300: #c4b5fd;
+  --color-spiritual-400: #a78bfa;
+  --color-spiritual-500: #8b5cf6;
+  --color-spiritual-600: #7c3aed;
+  --color-spiritual-700: #6d28d9;
+  --color-spiritual-800: #5b21b6;
+  --color-spiritual-900: #4c1d95;
+  --color-spiritual-950: #3b0764;
 
-  --color-cream: #fefaf6;
-  --color-warm-white: #fef9f3;
-  --color-soft-lavender: #f3e8ff;
-  --color-rose-gold: #e8b4b8;
-  --color-deep-plum: #2d1b36;
+  --color-heal-50: #ecfdf5;
+  --color-heal-100: #d1fae5;
+  --color-heal-200: #a7f3d0;
+  --color-heal-300: #6ee7b7;
+  --color-heal-400: #34d399;
+  --color-heal-500: #10b981;
+  --color-heal-600: #059669;
+  --color-heal-700: #047857;
+  --color-heal-800: #065f46;
+  --color-heal-900: #064e3b;
+
+  --color-gold-50: #ecfdf5;
+  --color-gold-100: #d1fae5;
+  --color-gold-200: #a7f3d0;
+  --color-gold-300: #6ee7b7;
+  --color-gold-400: #34d399;
+  --color-gold-500: #10b981;
+  --color-gold-600: #059669;
+  --color-gold-700: #047857;
+  --color-gold-800: #065f46;
+  --color-gold-900: #064e3b;
+
+  --color-cream: #fefcfb;
+  --color-warm-white: #fefcfb;
+  --color-soft-lavender: #ede9fe;
+  --color-rose-gold: #fda4af;
+  --color-deep-plum: #1e1b4b;
 
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Playfair Display", Georgia, serif;
@@ -64,8 +87,8 @@
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(217, 70, 239, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(217, 70, 239, 0.6), 0 0 60px rgba(251, 191, 36, 0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.5), 0 0 60px rgba(52, 211, 153, 0.2); }
 }
 
 @keyframes fade-in-up {
@@ -96,39 +119,83 @@ body {
   font-family: var(--font-display);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @layer utilities {
   .gradient-spiritual {
-    background: linear-gradient(135deg, #f5d0fe 0%, #fae8ff 25%, #fef3c7 50%, #fde68a 75%, #f5d0fe 100%);
+    background: linear-gradient(135deg, #ddd6fe 0%, #ede9fe 25%, #f5f3ff 50%, #ede9fe 75%, #ddd6fe 100%);
     background-size: 200% 200%;
     animation: gradient-shift 8s ease infinite;
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, #fdf4ff 0%, #f3e8ff 30%, #fef3c7 60%, #fffbeb 100%);
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 30%, #fce7f3 60%, #f5f3ff 100%);
   }
 
   .gradient-card {
-    background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(253,244,255,0.7) 100%);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 243, 255, 0.75) 100%);
     backdrop-filter: blur(10px);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #a21caf 0%, #d946ef 30%, #f59e0b 70%, #fbbf24 100%);
+    background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 40%, #a78bfa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .shadow-glow {
-    box-shadow: 0 0 30px rgba(217, 70, 239, 0.2), 0 0 60px rgba(251, 191, 36, 0.1);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.2), 0 0 60px rgba(52, 211, 153, 0.1);
   }
 
   .shadow-gold {
-    box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+    box-shadow: 0 4px 20px rgba(52, 211, 153, 0.3);
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
