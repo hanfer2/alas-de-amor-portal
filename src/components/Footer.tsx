@@ -31,9 +31,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-reiki-400 to-reiki-600 flex items-center justify-center">
-                <Logo className="w-8 h-8" />
-              </div>
+              <Logo className="w-12 h-12 rounded-full" size={48} />
               <div>
                 <h3 className="font-display text-xl font-bold text-gradient">
                   Alas de Amor
