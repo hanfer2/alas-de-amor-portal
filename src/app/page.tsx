@@ -110,7 +110,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-8 animate-fade-in-up">
-              <Logo className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl shadow-glow" size={112} />
+              <Logo className="w-full max-w-xs sm:max-w-sm h-auto" size={200} />
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm shadow-sm">
                 <div className="w-2 h-2 rounded-full bg-reiki-400 animate-pulse" />

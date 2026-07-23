@@ -1,14 +1,21 @@
 import Image from "next/image";
 
-export default function Logo({ className = "w-10 h-10", size = 40 }: { className?: string; size?: number }) {
+export default function Logo({
+  className = "",
+  size = 80,
+}: {
+  className?: string;
+  size?: number;
+}) {
   return (
     <Image
       src="/imgs/logo.png"
       alt="Alas de Amor"
-      width={size}
+      width={size * 2}
       height={size}
       className={className}
       priority
+      style={{ width: "auto", height: "auto", maxWidth: "100%" }}
     />
   );
 }
