@@ -32,14 +32,6 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <Logo className="w-12 h-12 rounded-full" size={48} />
-              <div>
-                <h3 className="font-display text-xl font-bold text-gradient">
-                  Alas de Amor
-                </h3>
-                <p className="text-xs text-reiki-500 tracking-wider uppercase">
-                  {t("home.badge")}
-                </p>
-              </div>
             </div>
             <p className="text-reiki-600 max-w-md mb-6">
               {t("footer.description")}

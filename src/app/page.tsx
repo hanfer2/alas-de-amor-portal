@@ -119,12 +119,6 @@ export default function Home() {
                 </span>
               </div>
 
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="text-gradient">{t("home.hero.title1")}</span>
-                <br />
-                <span className="text-reiki-800">{t("home.hero.title2")}</span>
-              </h1>
-
               <p className="text-xl text-reiki-700 max-w-lg leading-relaxed">
                 {t("home.hero.subtitle")}
               </p>

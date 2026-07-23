@@ -56,14 +56,6 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <Logo className="w-10 h-10 rounded-full" size={40} />
-            <div className="flex flex-col">
-              <span className="font-display text-xl font-bold text-gradient">
-                Alas de Amor
-              </span>
-              <span className="text-xs text-reiki-600 tracking-wider uppercase">
-                {t("home.badge")}
-              </span>
-            </div>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
