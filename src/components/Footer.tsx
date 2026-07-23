@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-reiki-400 to-heal-400 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-reiki-400 to-reiki-600 flex items-center justify-center">
                 <Logo className="w-8 h-8" />
               </div>
               <div>
@@ -62,7 +62,7 @@ export default function Footer() {
                 href={`https://wa.me/${config.contact.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-heal-500 hover:shadow-lg transition-all"
+                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-reiki-600 hover:text-reiki-500 hover:shadow-lg transition-all"
                 aria-label="WhatsApp"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

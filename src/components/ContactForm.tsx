@@ -83,7 +83,7 @@ export default function ContactForm() {
 
       {submitted ? (
         <div className="text-center py-12" role="alert">
-          <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-heal-400 to-heal-600 flex items-center justify-center">
+          <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-reiki-400 to-reiki-600 flex items-center justify-center">
             <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>

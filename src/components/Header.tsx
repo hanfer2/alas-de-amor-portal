@@ -56,7 +56,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-reiki-400 to-heal-400 flex items-center justify-center shadow-glow">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-reiki-400 to-reiki-600 flex items-center justify-center shadow-glow">
                 <Logo className="w-8 h-8" />
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function Header() {
                 href={link.href}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   pathname === link.href
-                    ? "bg-gradient-to-r from-reiki-500/20 to-heal-400/20 text-reiki-700 shadow-sm"
+                    ? "bg-gradient-to-r from-reiki-500/20 to-reiki-400/20 text-reiki-700 shadow-sm"
                     : "text-reiki-600 hover:text-reiki-800 hover:bg-reiki-50"
                 }`}
               >
@@ -162,7 +162,7 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                   pathname === link.href
-                    ? "bg-gradient-to-r from-reiki-500/20 to-heal-400/20 text-reiki-700"
+                    ? "bg-gradient-to-r from-reiki-500/20 to-reiki-400/20 text-reiki-700"
                     : "text-reiki-600 hover:bg-reiki-50"
                 }`}
               >

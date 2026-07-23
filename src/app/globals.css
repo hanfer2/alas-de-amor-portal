@@ -25,27 +25,27 @@
   --color-spiritual-900: #4c1d95;
   --color-spiritual-950: #3b0764;
 
-  --color-heal-50: #ecfdf5;
-  --color-heal-100: #d1fae5;
-  --color-heal-200: #a7f3d0;
-  --color-heal-300: #6ee7b7;
-  --color-heal-400: #34d399;
-  --color-heal-500: #10b981;
-  --color-heal-600: #059669;
-  --color-heal-700: #047857;
-  --color-heal-800: #065f46;
-  --color-heal-900: #064e3b;
+  --color-heal-50: #f5f3ff;
+  --color-heal-100: #ede9fe;
+  --color-heal-200: #ddd6fe;
+  --color-heal-300: #c4b5fd;
+  --color-heal-400: #a78bfa;
+  --color-heal-500: #8b5cf6;
+  --color-heal-600: #7c3aed;
+  --color-heal-700: #6d28d9;
+  --color-heal-800: #5b21b6;
+  --color-heal-900: #4c1d95;
 
-  --color-gold-50: #ecfdf5;
-  --color-gold-100: #d1fae5;
-  --color-gold-200: #a7f3d0;
-  --color-gold-300: #6ee7b7;
-  --color-gold-400: #34d399;
-  --color-gold-500: #10b981;
-  --color-gold-600: #059669;
-  --color-gold-700: #047857;
-  --color-gold-800: #065f46;
-  --color-gold-900: #064e3b;
+  --color-gold-50: #f5f3ff;
+  --color-gold-100: #ede9fe;
+  --color-gold-200: #ddd6fe;
+  --color-gold-300: #c4b5fd;
+  --color-gold-400: #a78bfa;
+  --color-gold-500: #8b5cf6;
+  --color-gold-600: #7c3aed;
+  --color-gold-700: #6d28d9;
+  --color-gold-800: #5b21b6;
+  --color-gold-900: #4c1d95;
 
   --color-cream: #fefcfb;
   --color-warm-white: #fefcfb;
@@ -88,7 +88,7 @@
 
 @keyframes glow {
   0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.5), 0 0 60px rgba(52, 211, 153, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.5), 0 0 60px rgba(139, 92, 246, 0.15); }
 }
 
 @keyframes fade-in-up {
@@ -187,11 +187,11 @@ body {
   }
 
   .shadow-glow {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.2), 0 0 60px rgba(52, 211, 153, 0.1);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.08);
   }
 
   .shadow-gold {
-    box-shadow: 0 4px 20px rgba(52, 211, 153, 0.3);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
   }
 
   .glass {

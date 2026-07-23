@@ -17,7 +17,7 @@ const services = [
     descKey: "servicios.barras.desc",
     benefitsKey: "servicios.barras.benefits",
     durationKey: "servicios.barras.duration",
-    color: "from-heal-400 to-heal-600",
+    color: "from-reiki-400 to-reiki-600",
   },
   {
     titleKey: "nosotros.services.angelical",
@@ -31,14 +31,14 @@ const services = [
     descKey: "servicios.chakras.desc",
     benefitsKey: "servicios.chakras.benefits",
     durationKey: "servicios.chakras.duration",
-    color: "from-reiki-400 to-heal-400",
+    color: "from-reiki-400 to-reiki-400",
   },
   {
     titleKey: "nosotros.services.meditacion",
     descKey: "servicios.meditacion.desc",
     benefitsKey: "servicios.meditacion.benefits",
     durationKey: "servicios.meditacion.duration",
-    color: "from-heal-300 to-reiki-400",
+    color: "from-reiki-300 to-reiki-400",
   },
   {
     titleKey: "nosotros.services.facelight",
@@ -52,14 +52,14 @@ const services = [
     descKey: "servicios.coaching.desc",
     benefitsKey: "servicios.coaching.benefits",
     durationKey: "servicios.coaching.duration",
-    color: "from-reiki-500 to-heal-500",
+    color: "from-reiki-500 to-reiki-500",
   },
   {
     titleKey: "nosotros.services.oraculos",
     descKey: "servicios.oraculos.desc",
     benefitsKey: "servicios.oraculos.benefits",
     durationKey: "servicios.oraculos.duration",
-    color: "from-heal-500 to-reiki-500",
+    color: "from-reiki-500 to-reiki-500",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function ServiciosPage() {
                   {[0, 1, 2, 3, 4].map((bi) => (
                     <li key={bi} className="flex items-start gap-3">
                       <svg
-                        className="w-5 h-5 text-heal-500 mt-0.5 flex-shrink-0"
+                        className="w-5 h-5 text-reiki-500 mt-0.5 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

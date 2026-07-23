@@ -95,7 +95,7 @@ export default function Home() {
         delay={0}
       />
       <FloatingOrb
-        className="w-80 h-80 bg-heal-300 top-40 right-0 animate-float"
+        className="w-80 h-80 bg-reiki-300 top-40 right-0 animate-float"
         delay={2}
       />
       <FloatingOrb
@@ -145,7 +145,7 @@ export default function Home() {
 
             <div className="relative flex justify-center">
               <div className="relative w-80 h-80 sm:w-96 sm:h-96 animate-float-slow">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-reiki-200 via-heal-200 to-reiki-300 opacity-60 blur-2xl" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-reiki-200 via-reiki-300 to-reiki-100 opacity-60 blur-2xl" />
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-glow">
                   <Image
                     src="/imgs/team/liliana-profile.jpg"
@@ -156,7 +156,7 @@ export default function Home() {
                     sizes="(max-width: 640px) 320px, 384px"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-br from-heal-300 to-heal-400 flex items-center justify-center shadow-gold animate-glow">
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-br from-reiki-300 to-reiki-500 flex items-center justify-center shadow-gold animate-glow">
                   <span className="text-white font-display text-xs font-bold text-center leading-tight whitespace-pre-line">
                     {t("home.masterReiki")}
                   </span>
@@ -213,7 +213,7 @@ export default function Home() {
                 className="group gradient-card rounded-3xl p-8 shadow-sm hover:shadow-xl hover:shadow-reiki-200/30 transition-all duration-500 hover:-translate-y-2 border border-white/50 reveal"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-reiki-100 to-heal-100 flex items-center justify-center text-reiki-600 group-hover:from-reiki-200 group-hover:to-heal-200 group-hover:scale-110 transition-all duration-300 mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-reiki-100 to-reiki-100 flex items-center justify-center text-reiki-600 group-hover:from-reiki-200 group-hover:to-reiki-200 group-hover:scale-110 transition-all duration-300 mb-6">
                   {service.icon}
                 </div>
                 <h3 className="font-display text-xl font-bold text-reiki-800 mb-3 group-hover:text-gradient transition-all">
@@ -322,7 +322,7 @@ export default function Home() {
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
           <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-reiki-200/20 border border-white/50">
-            <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-reiki-400 to-heal-400 flex items-center justify-center animate-glow">
+            <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-reiki-400 to-reiki-600 flex items-center justify-center animate-glow">
               <Logo className="w-12 h-12" />
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900 mb-4">
@@ -395,7 +395,7 @@ export default function Home() {
                     &ldquo;{quote}&rdquo;
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-reiki-300 to-heal-300 flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-reiki-300 to-reiki-500 flex items-center justify-center text-white font-bold text-sm">
                       {author[0]}
                     </div>
                     <span className="font-semibold text-reiki-800">

@@ -79,7 +79,7 @@ export default function NosotrosPage() {
                 {t("nosotros.about.bio2")}
               </p>
 
-              <div className="bg-gradient-to-r from-reiki-50 to-heal-50 rounded-2xl p-6 border border-reiki-100">
+              <div className="bg-gradient-to-r from-reiki-50 to-reiki-50 rounded-2xl p-6 border border-reiki-100">
                 <h3 className="font-display text-lg font-bold text-reiki-800 mb-3">
                   {t("nosotros.about.goalsTitle")}
                 </h3>
@@ -87,7 +87,7 @@ export default function NosotrosPage() {
                   {[0, 1, 2].map((i) => (
                     <li key={i} className="flex items-start gap-3">
                       <svg
-                        className="w-5 h-5 text-heal-500 mt-0.5 flex-shrink-0"
+                        className="w-5 h-5 text-reiki-500 mt-0.5 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -130,7 +130,7 @@ export default function NosotrosPage() {
                 key={cred.titleKey}
                 className="gradient-card rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-white/50 hover:-translate-y-1 reveal"
               >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-reiki-100 to-heal-100 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-reiki-100 to-reiki-100 flex items-center justify-center mb-6">
                   <svg
                     className="w-7 h-7 text-reiki-600"
                     fill="none"
