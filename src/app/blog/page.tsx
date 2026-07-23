@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
+import { OpenBook, FloatingOrbs } from "@/components/HeroDecoration";
 
 export default function BlogPage() {
   const t = useTranslations();
@@ -24,7 +25,11 @@ export default function BlogPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-32 pb-20 gradient-hero">
+      <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
+        <FloatingOrbs />
+        <div className="absolute bottom-5 right-10 opacity-20">
+          <OpenBook className="w-52 h-40" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
             <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">

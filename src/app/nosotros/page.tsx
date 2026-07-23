@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
+import { LotusMandala, FloatingOrbs } from "@/components/HeroDecoration";
 
 export default function NosotrosPage() {
   const t = useTranslations();
@@ -17,7 +18,11 @@ export default function NosotrosPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-32 pb-20 gradient-hero">
+      <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
+        <FloatingOrbs />
+        <div className="absolute top-10 right-10 opacity-30">
+          <LotusMandala className="w-48 h-48" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
             <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
+import { EnergyWaves, FloatingOrbs } from "@/components/HeroDecoration";
 
 const services = [
   {
@@ -67,7 +68,11 @@ export default function ServiciosPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-32 pb-20 gradient-hero">
+      <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
+        <FloatingOrbs />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 opacity-20">
+          <EnergyWaves className="w-[600px] h-[200px]" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
             <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">

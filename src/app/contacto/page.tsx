@@ -3,13 +3,18 @@
 import ContactForm from "@/components/ContactForm";
 import { useTranslations } from "@/hooks/useTranslations";
 import config from "@/lib/config";
+import { DovePeace, FloatingOrbs } from "@/components/HeroDecoration";
 
 export default function ContactoPage() {
   const t = useTranslations();
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-32 pb-20 gradient-hero">
+      <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
+        <FloatingOrbs />
+        <div className="absolute top-8 right-8 opacity-20">
+          <DovePeace className="w-64 h-28" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
             <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">

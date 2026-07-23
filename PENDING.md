@@ -245,10 +245,42 @@ export async function sendContactEmail(data: { ... }) {
 
 ## 2. Otros pendientes
 
-### 2.1. Imágenes de placeholder
-- Las imágenes de servicios en `/servicios` son placeholders (círculos SVG)
-- Buscar en Unsplash/Pexels imágenes libres de derechos con temática Reiki
-- Guardar en `/public/imgs/services/`
+### 2.1. Imágenes de Unsplash para fondos de héroe
+
+Estas URLs son de Unsplash (gratuitas, no requieren atribución pero se recomienda). Descargar y guardar en `/public/imgs/hero/`:
+
+| Página | Imagen sugerida | Tema |
+|--------|----------------|------|
+| Home | `hero-home.jpg` | Alas de ángel con luz |
+| Nosotros | `hero-about.jpg` | Meditación / flor de loto |
+| Servicios | `hero-services.jpg` | Manos con energía Reiki |
+| Testimonios | `hero-testimonials.jpg` | Estrellas / cielo nocturno |
+| Blog | `hero-blog.jpg` | Libro abierto con vela |
+| Agendar | `hero-book.jpg` | Calendario con cristales |
+| Contacto | `hero-contact.jpg` | Pluma blanca / paloma |
+
+**Búsquedas recomendadas en Unsplash:**
+- "angel wings light" → para Home
+- "meditation lotus" → para Nosotros
+- "reiki healing hands" → para Servicios
+- "starry night sky" → para Testimonios
+- "open book candle" → para Blog
+- "crystals calendar" → para Agendar
+- "white dove peace" → para Contacto
+
+Para integrar una imagen de fondo en el héroe, agregar en el `section`:
+```tsx
+<section className="relative pt-32 pb-20 overflow-hidden"
+  style={{
+    backgroundImage: "url(/imgs/hero/hero-services.jpg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/90" />
+  {/* contenido */}
+</section>
+```
 
 ### 2.2. Blog con CMS
 - Opción A: Crear tabla `blog_posts` en Supabase y un editor simple

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTranslations } from "@/hooks/useTranslations";
 import { languages } from "@/lib/translations";
+import Logo from "@/components/Logo";
 
 const navLinks = [
   { href: "/", labelKey: "nav.inicio" },
@@ -55,20 +56,8 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-reiki-400 to-heal-400 flex items-center justify-center shadow-glow animate-float">
-                <svg
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  className="w-7 h-7 text-white"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M24 8C20 8 16 14 16 20C16 24 18 26 20 28C14 26 8 28 6 34C10 32 14 32 18 30C16 34 18 40 24 42C30 40 32 34 30 30C34 32 38 32 42 34C40 28 34 26 28 28C30 26 32 24 32 20C32 14 28 8 24 8Z"
-                    fill="currentColor"
-                    opacity="0.9"
-                  />
-                  <circle cx="24" cy="22" r="3" fill="currentColor" />
-                </svg>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-reiki-400 to-heal-400 flex items-center justify-center shadow-glow">
+                <Logo className="w-8 h-8" />
               </div>
             </div>
             <div className="flex flex-col">

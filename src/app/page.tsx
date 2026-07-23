@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
+import Logo from "@/components/Logo";
+import { AngelFeathers } from "@/components/HeroDecoration";
 
 const serviceIcons = [
   {
@@ -101,7 +103,10 @@ export default function Home() {
         delay={4}
       />
 
-      <section className="relative min-h-screen flex items-center gradient-hero pt-24">
+      <section className="relative min-h-screen flex items-center gradient-hero pt-24 overflow-hidden">
+        <div className="absolute top-0 right-0 opacity-[0.07]">
+          <AngelFeathers className="w-[500px] h-[250px]" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-8 animate-fade-in-up">
@@ -318,16 +323,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
           <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-reiki-200/20 border border-white/50">
             <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-reiki-400 to-heal-400 flex items-center justify-center animate-glow">
-              <svg
-                viewBox="0 0 48 48"
-                fill="none"
-                className="w-10 h-10 text-white"
-              >
-                <path
-                  d="M24 8C20 8 16 14 16 20C16 24 18 26 20 28C14 26 8 28 6 34C10 32 14 32 18 30C16 34 18 40 24 42C30 40 32 34 30 30C34 32 38 32 42 34C40 28 34 26 28 28C30 26 32 24 32 20C32 14 28 8 24 8Z"
-                  fill="currentColor"
-                />
-              </svg>
+              <Logo className="w-12 h-12" />
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900 mb-4">
               <span>{t("home.cta.title1")}</span>{" "}

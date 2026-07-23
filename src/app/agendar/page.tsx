@@ -2,13 +2,18 @@
 
 import AppointmentForm from "@/components/AppointmentForm";
 import { useTranslations } from "@/hooks/useTranslations";
+import { CalendarWings, FloatingOrbs } from "@/components/HeroDecoration";
 
 export default function AgendarPage() {
   const t = useTranslations();
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-32 pb-20 gradient-hero">
+      <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
+        <FloatingOrbs />
+        <div className="absolute top-10 right-16 opacity-25">
+          <CalendarWings className="w-36 h-36" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
             <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">

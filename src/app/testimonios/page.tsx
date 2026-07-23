@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
 import config from "@/lib/config";
+import { SparkleStars, FloatingOrbs } from "@/components/HeroDecoration";
 
 export default function TestimoniosPage() {
   const t = useTranslations();
@@ -26,7 +27,11 @@ export default function TestimoniosPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-32 pb-20 gradient-hero">
+      <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
+        <FloatingOrbs />
+        <div className="absolute top-5 right-5 opacity-25">
+          <SparkleStars className="w-80 h-32" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
             <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
