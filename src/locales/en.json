@@ -149,6 +149,58 @@
       "desc": "Oracle card reading sessions to receive deep and guiding messages about your present and future.",
       "duration": "30 minutes",
       "benefits": ["Guidance on your life path", "Clarity in relationships and decisions", "Connection with ancestral wisdom", "Tools for self-knowledge", "Messages from your spiritual guides"]
+    },
+    "categories": {
+      "terapias": "Therapies",
+      "talleres": "Custom Workshops",
+      "charlas": "Talks",
+      "retiros": "Spiritual Retreats"
+    },
+    "price": {
+      "consult": "Contact for pricing",
+      "fallbackNote": "Estimated price based on current exchange rate."
+    },
+    "talleres": {
+      "nina": {
+        "title": "Healing Your Inner Child Workshop",
+        "desc": "Experiential workshop to heal childhood wounds and reconnect with your essence."
+      },
+      "angelical": {
+        "title": "Angelic Oracle Reading",
+        "desc": "Reading with angel cards to receive guidance and messages from your guides."
+      },
+      "medium": {
+        "title": "Medium",
+        "desc": "Mediumship session for spiritual connection and messages from your beings of light."
+      },
+      "reiki": {
+        "title": "Usui Reiki",
+        "desc": "Usui Reiki session to balance your energy and promote self-healing."
+      },
+      "access": {
+        "title": "Access Bars",
+        "desc": "Access Bars session to release blockages and limiting beliefs."
+      }
+    },
+    "charlas": {
+      "0": {
+        "title": "Talk 1",
+        "desc": "Talk on wellness and spiritual growth. Content to be defined."
+      },
+      "1": {
+        "title": "Talk 2",
+        "desc": "Talk on wellness and spiritual growth. Content to be defined."
+      }
+    },
+    "retiros": {
+      "0": {
+        "title": "Retreat 1",
+        "desc": "Spiritual retreat for connection and healing. Content to be defined."
+      },
+      "1": {
+        "title": "Retreat 2",
+        "desc": "Spiritual retreat for connection and healing. Content to be defined."
+      }
     }
   },
   "agendar": {

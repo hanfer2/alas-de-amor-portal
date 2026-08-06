@@ -4,17 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "@/hooks/useTranslations";
 import { sendAppointmentEmail } from "@/app/actions/contact";
 import config from "@/lib/config";
-
-const serviceOptionKeys = [
-  "nosotros.services.reiki",
-  "nosotros.services.access",
-  "nosotros.services.angelical",
-  "nosotros.services.chakras",
-  "nosotros.services.meditacion",
-  "nosotros.services.facelight",
-  "nosotros.services.coaching",
-  "nosotros.services.oraculos",
-];
+import { catalog } from "@/lib/prices";
 
 type FormErrors = {
   name?: string;
@@ -210,8 +200,14 @@ export default function AppointmentForm() {
                 aria-describedby={errors.service ? "apt-service-error" : undefined}
               >
                 <option value="">{t("agendar.form.servicePlaceholder")}</option>
-                {serviceOptionKeys.map((key) => (
-                  <option key={key} value={t(key)}>{t(key)}</option>
+                {catalog.map((category) => (
+                  <optgroup key={category.id} label={t(category.titleKey)}>
+                    {category.items.map((item) => (
+                      <option key={item.id} value={t(item.titleKey)}>
+                        {t(item.titleKey)}
+                      </option>
+                    ))}
+                  </optgroup>
                 ))}
               </select>
               {errors.service && (

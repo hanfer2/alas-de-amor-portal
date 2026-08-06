@@ -149,6 +149,58 @@
       "desc": "Sesiones de lectura con cartas oráculo para recibir mensajes profundos y orientadores sobre tu presente y futuro.",
       "duration": "30 minutos",
       "benefits": ["Orientación sobre tu camino de vida", "Claridad en relaciones y decisiones", "Conexión con la sabiduría ancestral", "Herramientas para el autoconocimiento", "Mensajes de tus guías espirituales"]
+    },
+    "categories": {
+      "terapias": "Terapias",
+      "talleres": "Talleres personalizados",
+      "charlas": "Charlas",
+      "retiros": "Retiros espirituales"
+    },
+    "price": {
+      "consult": "Consultar",
+      "fallbackNote": "Precio estimado según tasa de cambio actual."
+    },
+    "talleres": {
+      "nina": {
+        "title": "Taller Sanando tu niña interior",
+        "desc": "Taller vivencial para sanar heridas de la infancia y reconectar con tu esencia."
+      },
+      "angelical": {
+        "title": "Lectura Oráculo Angelical",
+        "desc": "Lectura con cartas de ángeles para recibir orientación y mensajes de tus guías."
+      },
+      "medium": {
+        "title": "Medium",
+        "desc": "Sesión de mediumnidad para conexión espiritual y mensajes de tus seres de luz."
+      },
+      "reiki": {
+        "title": "Reiki Usui",
+        "desc": "Sesión de Reiki Usui para equilibrar tu energía y promover la autosanación."
+      },
+      "access": {
+        "title": "Barras Access",
+        "desc": "Sesión de Barras de Access para liberar bloqueos y creencias limitantes."
+      }
+    },
+    "charlas": {
+      "0": {
+        "title": "Charla 1",
+        "desc": "Charla sobre bienestar y crecimiento espiritual. Contenido por definir."
+      },
+      "1": {
+        "title": "Charla 2",
+        "desc": "Charla sobre bienestar y crecimiento espiritual. Contenido por definir."
+      }
+    },
+    "retiros": {
+      "0": {
+        "title": "Retiro 1",
+        "desc": "Retiro espiritual de conexión y sanación. Contenido por definir."
+      },
+      "1": {
+        "title": "Retiro 2",
+        "desc": "Retiro espiritual de conexión y sanación. Contenido por definir."
+      }
     }
   },
   "agendar": {

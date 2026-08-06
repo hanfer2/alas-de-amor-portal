@@ -16,6 +16,13 @@ const config = {
     country: process.env.NEXT_PUBLIC_BUSINESS_COUNTRY || "Colombia",
   },
 
+  currency: {
+    base: "COP",
+    fallbackUsdRate: Number(process.env.NEXT_PUBLIC_DEFAULT_USD_RATE) || 0.00025,
+    rateApi: process.env.NEXT_PUBLIC_RATE_API_URL || "https://open.er-api.com/v6/latest/COP",
+    rateTtlHours: 6,
+  },
+
   social: {
     facebook: process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK || "https://www.facebook.com/liliana.rodas.9615",
     instagram: process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM || "https://instagram.com/alasdeamor",

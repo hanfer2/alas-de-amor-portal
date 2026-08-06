@@ -2,69 +2,34 @@
 
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
+import { useLanguage } from "@/context/LanguageContext";
 import { EnergyWaves, FloatingOrbs } from "@/components/HeroDecoration";
+import {
+  catalog,
+  formatCOP,
+  formatUSD,
+  useRate,
+  type CatalogItem,
+} from "@/lib/prices";
 
-const services = [
-  {
-    titleKey: "nosotros.services.reiki",
-    descKey: "servicios.reiki.desc",
-    benefitsKey: "servicios.reiki.benefits",
-    durationKey: "servicios.reiki.duration",
-    color: "from-reiki-400 to-reiki-600",
-  },
-  {
-    titleKey: "nosotros.services.access",
-    descKey: "servicios.barras.desc",
-    benefitsKey: "servicios.barras.benefits",
-    durationKey: "servicios.barras.duration",
-    color: "from-reiki-400 to-reiki-600",
-  },
-  {
-    titleKey: "nosotros.services.angelical",
-    descKey: "servicios.angelical.desc",
-    benefitsKey: "servicios.angelical.benefits",
-    durationKey: "servicios.angelical.duration",
-    color: "from-reiki-300 to-reiki-500",
-  },
-  {
-    titleKey: "nosotros.services.chakras",
-    descKey: "servicios.chakras.desc",
-    benefitsKey: "servicios.chakras.benefits",
-    durationKey: "servicios.chakras.duration",
-    color: "from-reiki-400 to-reiki-400",
-  },
-  {
-    titleKey: "nosotros.services.meditacion",
-    descKey: "servicios.meditacion.desc",
-    benefitsKey: "servicios.meditacion.benefits",
-    durationKey: "servicios.meditacion.duration",
-    color: "from-reiki-300 to-reiki-400",
-  },
-  {
-    titleKey: "nosotros.services.facelight",
-    descKey: "servicios.facelight.desc",
-    benefitsKey: "servicios.facelight.benefits",
-    durationKey: "servicios.facelight.duration",
-    color: "from-reiki-500 to-reiki-700",
-  },
-  {
-    titleKey: "nosotros.services.coaching",
-    descKey: "servicios.coaching.desc",
-    benefitsKey: "servicios.coaching.benefits",
-    durationKey: "servicios.coaching.duration",
-    color: "from-reiki-500 to-reiki-500",
-  },
-  {
-    titleKey: "nosotros.services.oraculos",
-    descKey: "servicios.oraculos.desc",
-    benefitsKey: "servicios.oraculos.benefits",
-    durationKey: "servicios.oraculos.duration",
-    color: "from-reiki-500 to-reiki-500",
-  },
-];
+const categoryColors: Record<string, string> = {
+  terapias: "from-reiki-400 to-reiki-600",
+  talleres: "from-reiki-300 to-reiki-500",
+  charlas: "from-reiki-500 to-reiki-700",
+  retiros: "from-reiki-400 to-reiki-400",
+};
 
 export default function ServiciosPage() {
   const t = useTranslations();
+  const { lang } = useLanguage();
+  const { rate, isFallback } = useRate();
+  const showUsd = lang === "en";
+
+  const formatPrice = (price: number | null) => {
+    if (price === null) return t("servicios.price.consult");
+    if (showUsd && rate) return formatUSD(price * rate);
+    return formatCOP(price);
+  };
 
   return (
     <div className="relative overflow-hidden">
@@ -94,105 +59,33 @@ export default function ServiciosPage() {
 
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {services.map((service, i) => (
-            <div
-              key={service.titleKey}
-              className={`grid lg:grid-cols-2 gap-12 items-center mb-24 last:mb-0 ${
-                i % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
-            >
-              <div className={`reveal ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${service.color} text-white text-sm font-medium mb-4`}
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  {t(service.durationKey)}
+          {isFallback && showUsd && (
+            <p className="text-sm text-reiki-500 text-center mb-12">
+              {t("servicios.price.fallbackNote")}
+            </p>
+          )}
+          {catalog.map((category) => {
+            const color = categoryColors[category.id] || "from-reiki-400 to-reiki-600";
+            return (
+              <div key={category.id} className="mb-24 last:mb-0">
+                <div className="text-center mb-12 reveal">
+                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900">
+                    {t(category.titleKey)}
+                  </h2>
+                  <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-reiki-300 to-reiki-500" />
                 </div>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900 mb-4">
-                  {t(service.titleKey)}
-                </h2>
-                <p className="text-reiki-700 text-lg leading-relaxed mb-6">
-                  {t(service.descKey)}
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {[0, 1, 2, 3, 4].map((bi) => (
-                    <li key={bi} className="flex items-start gap-3">
-                      <svg
-                        className="w-5 h-5 text-reiki-500 mt-0.5 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span className="text-reiki-700">
-                        {t(`${service.benefitsKey}.${bi}`)}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/agendar"
-                  className={`inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r ${service.color} text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300`}
-                >
-                  <span>{t("servicios.scheduleButton")}</span>
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                </Link>
-              </div>
-
-              <div className={`relative reveal ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10`}
+                {category.items.map((item, i) => (
+                  <ServiceBlock
+                    key={item.id}
+                    item={item}
+                    index={i}
+                    color={color}
+                    priceText={formatPrice(item.price)}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div
-                      className={`w-32 h-32 rounded-full bg-gradient-to-br ${service.color} opacity-20 blur-2xl animate-float`}
-                    />
-                  </div>
-                  <svg
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    className="w-24 h-24 mx-auto text-reiki-400 opacity-30"
-                  >
-                    <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="1" />
-                    <circle cx="24" cy="24" r="12" stroke="currentColor" strokeWidth="1" />
-                    <circle cx="24" cy="24" r="6" stroke="currentColor" strokeWidth="1" />
-                    <circle cx="24" cy="24" r="2" fill="currentColor" />
-                  </svg>
-                </div>
+                ))}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -212,6 +105,115 @@ export default function ServiciosPage() {
           </Link>
         </div>
       </section>
+    </div>
+  );
+}
+
+function ServiceBlock({
+  item,
+  index,
+  color,
+  priceText,
+}: {
+  item: CatalogItem;
+  index: number;
+  color: string;
+  priceText: string;
+}) {
+  const t = useTranslations();
+
+  return (
+    <div
+      className={`grid lg:grid-cols-2 gap-12 items-center mb-24 last:mb-0 ${
+        index % 2 === 1 ? "lg:direction-rtl" : ""
+      }`}
+    >
+      <div className={`reveal ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+        <div className="flex flex-wrap items-center gap-3 mb-4">
+          <div
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${color} text-white text-sm font-medium`}
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            {item.durationKey ? t(item.durationKey) : t("servicios.scheduleButton")}
+          </div>
+          <span
+            className={`inline-flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r ${color} text-white text-sm font-semibold`}
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6m0 0l3 3m-3-3l-3 3M6 3h12a3 3 0 013 3v6a3 3 0 01-3 3H9l-3 3v-3a3 3 0 01-3-3V6a3 3 0 013-3z"
+              />
+            </svg>
+            {priceText}
+          </span>
+        </div>
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900 mb-4">
+          {t(item.titleKey)}
+        </h2>
+        <p className="text-reiki-700 text-lg leading-relaxed mb-8">
+          {t(item.descKey)}
+        </p>
+        <Link
+          href="/agendar"
+          className={`inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r ${color} text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300`}
+        >
+          <span>{t("servicios.scheduleButton")}</span>
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+        </Link>
+      </div>
+
+      <div className={`relative reveal ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+        <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20">
+          <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10`} />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div
+              className={`w-32 h-32 rounded-full bg-gradient-to-br ${color} opacity-20 blur-2xl animate-float`}
+            />
+          </div>
+          <svg
+            viewBox="0 0 48 48"
+            fill="none"
+            className="w-24 h-24 mx-auto text-reiki-400 opacity-30"
+          >
+            <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="1" />
+            <circle cx="24" cy="24" r="12" stroke="currentColor" strokeWidth="1" />
+            <circle cx="24" cy="24" r="6" stroke="currentColor" strokeWidth="1" />
+            <circle cx="24" cy="24" r="2" fill="currentColor" />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }
