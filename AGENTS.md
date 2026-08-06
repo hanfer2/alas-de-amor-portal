@@ -70,3 +70,17 @@ Next.js 16 App Router portal for "Alas de Amor" — a holistic therapy brand by 
 - Full metadata in root layout (title, description, OG, Twitter, robots)
 - OpenGraph image: `/imgs/image7.jpeg`
 - `metadataBase`: `https://alas-de-amor.vercel.app` (configurable via `NEXT_PUBLIC_SITE_URL`)
+
+## Custom Agents (Orquestación)
+
+Tres agentes personalizados en `.agents/agents/` para el flujo PO → Dev → QA:
+
+| Agente | Descripción |
+|--------|-------------|
+| `po` | Product Owner: genera `TASKS.md` con tareas + DOR + DOF |
+| `dev` | Developer Next.js: implementa tareas y corrige issues de QA |
+| `qa` | QA con Playwright: verifica deploy y genera `QA-ISSUES.md` |
+
+**Flujo**: ver `.agents/agents/WORKFLOW.md` para el ciclo completo.
+
+**Archivos compartidos**: `TASKS.md` (plan) y `QA-ISSUES.md` (hallazgos) en la raíz.
