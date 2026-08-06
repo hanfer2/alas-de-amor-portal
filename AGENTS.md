@@ -73,14 +73,15 @@ Next.js 16 App Router portal for "Alas de Amor" — a holistic therapy brand by 
 
 ## Custom Agents (Orquestación)
 
-Tres agentes personalizados en `.agents/agents/` para el flujo PO → Dev → QA:
+Cuatro agentes personalizados en `.agents/agents/` para el flujo Spec → Plan → Dev → QA:
 
-| Agente | Descripción |
-|--------|-------------|
-| `po` | Product Owner: genera `TASKS.md` con tareas + DOR + DOF |
-| `dev` | Developer Next.js: implementa tareas y corrige issues de QA |
-| `qa` | QA con Playwright: verifica deploy y genera `QA-ISSUES.md` |
+| Agente | Descripción | Produce |
+|--------|-------------|---------|
+| `po` | Product Owner: especificación funcional | `SPECS.md` |
+| `tech-lead` | Tech Lead: tareas técnicas + DOR + DOF | `TASKS.md` |
+| `dev` | Developer Next.js: implementa y corrige | Código |
+| `qa` | QA con Playwright: verifica DOF y reporta | `QA-ISSUES.md` |
 
 **Flujo**: ver `.agents/agents/WORKFLOW.md` para el ciclo completo.
 
-**Archivos compartidos**: `TASKS.md` (plan) y `QA-ISSUES.md` (hallazgos) en la raíz.
+**Skills**: 24 skills de `addyosmani/agent-skills` instaladas en `.agents/skills/` (spec-driven-development, planning-and-task-breakdown, browser-testing-with-devtools, etc.)
