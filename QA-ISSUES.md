@@ -1,7 +1,39 @@
-# QA ISSUES — Ronda 1
+# QA ISSUES — Ronda 2
 Fecha: 2026-08-06
-Deploy verificado: https://alas-de-amor-portal.vercel.app
-Resultado global: ⚠️ APROBADO CON OBSERVACIONES (1 issue abierto, 1 observación no bloqueante)
+Deploy verificado: https://alas-de-amor-portal.vercel.app (commit 196961d)
+Resultado global: ✅ APROBADO (0 issues abiertos)
+
+## Re-verificación de fixes de la Ronda 1
+
+| Issue | Fix del Dev | Resultado | Evidencia |
+|-------|-------------|-----------|-----------|
+| ISS-001 | Renombrar taller a "Taller Barras Access" / "Access Bars Workshop" | ✅ CORREGIDO | /agendar dropdown: "Barras Access" (terapia) + "Taller Barras Access" (taller) en ES; "Access Bars" + "Access Bars Workshop" en EN. Sin duplicado exacto en ninguno de los 2 idiomas. |
+
+## Checklist DOF (re-verificación del feature tras el fix)
+
+| Tarea | DOF | Resultado | Evidencia |
+|-------|-----|-----------|-----------|
+| T3 | 4 categorías con ítems y precios | ✅ | /servicios: Terapias, Talleres personalizados, Charlas, Retiros presentes |
+| T3 | ES → COP; EN → USD calculado | ✅ | ES "$ 150.000"; EN "$46.95" (verificado en Ronda 1) |
+| T3 | "Consultar" en ítems sin precio | ✅ | "Consultar" presente en charlas/retiros |
+| T3 | Responsive 375px sin overflow | ✅ | scrollWidth 360 ≤ 375 (Ronda 1) |
+| T3 | 0 errores consola | ✅ | /servicios ES: 0 errores con localStorage limpio |
+| T4 | select incluye 17 ítems | ✅ | 17 opciones + placeholder en /agendar |
+| T4 | seleccionar ítem nuevo no rompe envío | ✅ | selección OK + validación funciona (Ronda 1) |
+| T6 | switch ES/EN en /servicios cambia traducciones | ✅ | lang es→en; textos nuevos cambian |
+
+## Issues abiertos
+
+Ninguno.
+
+## Observaciones (pre-existentes, ajenas al feature, sin cambio)
+
+- OBS-001: error de hidratación #418 en home cuando localStorage guarda "en" (patrón i18n + SSR). No aparece en /servicios ni con localStorage limpio.
+- OBS-002: video `/videos/alas-de-amor.mp4` no carga (ERR_CACHE_OPERATION_NOT_SUPPORTED).
+
+## Verificación del feature (CA del SPECS.md)
+
+- CA1: ✅ | CA2: ✅ | CA3: ✅ | CA4: ✅ | CA5: ✅ | CA6: ✅ | CA7: ✅ | CA8: ✅ | CA9: ✅ (implementado; API respondió 200 en ambos tests)
 
 ## Checklist DOF de TASKS.md
 
