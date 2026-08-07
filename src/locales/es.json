@@ -153,12 +153,46 @@
     "categories": {
       "terapias": "Terapias",
       "talleres": "Talleres personalizados",
+      "sanaciones": "Sanaciones",
+      "lecturaAngelical": "Lectura Angelical",
       "charlas": "Charlas",
       "retiros": "Retiros espirituales"
     },
     "price": {
       "consult": "Consultar",
       "fallbackNote": "Precio estimado según tasa de cambio actual."
+    },
+    "combo": {
+      "title": "Combo Barras + Reiki",
+      "desc": "Sesión combinada de Barras de Access y Reiki para una sanación integral y profunda."
+    },
+    "sanaciones": {
+      "nina": {
+        "title": "Sanación niño interior",
+        "desc": "Sesión de sanación para liberar heridas de la infancia y reconectar con tu niño interior."
+      },
+      "mama": {
+        "title": "Sanación mamá",
+        "desc": "Sesión de sanación energética enfocada en la conexión y bienestar de la madre."
+      },
+      "papa": {
+        "title": "Sanación papá",
+        "desc": "Sesión de sanación energética enfocada en la conexión y bienestar del padre."
+      }
+    },
+    "lecturaAngelical": {
+      "basica": {
+        "title": "Lectura angelical básica",
+        "desc": "Lectura angelical de nivel básico para recibir orientación de tus ángeles."
+      },
+      "angelical": {
+        "title": "Lectura Angelical",
+        "desc": "Sesión de canalización y coaching angelical con Liliana para orientación y sanación."
+      },
+      "oraculo": {
+        "title": "Lectura Oráculo Angelical",
+        "desc": "Lectura con cartas de ángeles para recibir orientación y mensajes de tus guías."
+      }
     },
     "talleres": {
       "nina": {

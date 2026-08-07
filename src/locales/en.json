@@ -153,12 +153,46 @@
     "categories": {
       "terapias": "Therapies",
       "talleres": "Custom Workshops",
+      "sanaciones": "Healings",
+      "lecturaAngelical": "Angelic Reading",
       "charlas": "Talks",
       "retiros": "Spiritual Retreats"
     },
     "price": {
       "consult": "Contact for pricing",
       "fallbackNote": "Estimated price based on current exchange rate."
+    },
+    "combo": {
+      "title": "Bars + Reiki Combo",
+      "desc": "Combined Access Bars and Reiki session for deep, integral healing."
+    },
+    "sanaciones": {
+      "nina": {
+        "title": "Inner Child Healing",
+        "desc": "Healing session to release childhood wounds and reconnect with your inner child."
+      },
+      "mama": {
+        "title": "Mother Healing",
+        "desc": "Energetic healing session focused on the mother's connection and well-being."
+      },
+      "papa": {
+        "title": "Father Healing",
+        "desc": "Energetic healing session focused on the father's connection and well-being."
+      }
+    },
+    "lecturaAngelical": {
+      "basica": {
+        "title": "Basic Angelic Reading",
+        "desc": "Basic angelic reading to receive guidance from your angels."
+      },
+      "angelical": {
+        "title": "Angelic Reading",
+        "desc": "Channeling and angelic coaching session with Liliana for guidance and healing."
+      },
+      "oraculo": {
+        "title": "Angelic Oracle Reading",
+        "desc": "Reading with angel cards to receive guidance and messages from your guides."
+      }
     },
     "talleres": {
       "nina": {

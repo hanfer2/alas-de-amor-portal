@@ -27,21 +27,20 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.reiki",
         descKey: "servicios.reiki.desc",
         durationKey: "servicios.reiki.duration",
-        price: 150000,
+        price: 160000,
       },
       {
         id: "access",
         titleKey: "nosotros.services.access",
         descKey: "servicios.barras.desc",
         durationKey: "servicios.barras.duration",
-        price: 180000,
+        price: 230000,
       },
       {
-        id: "angelical",
-        titleKey: "nosotros.services.angelical",
-        descKey: "servicios.angelical.desc",
-        durationKey: "servicios.angelical.duration",
-        price: 120000,
+        id: "combo",
+        titleKey: "servicios.combo.title",
+        descKey: "servicios.combo.desc",
+        price: 265900,
       },
       {
         id: "chakras",
@@ -85,22 +84,10 @@ export const catalog: CatalogCategory[] = [
     titleKey: "servicios.categories.talleres",
     items: [
       {
-        id: "nina",
-        titleKey: "servicios.talleres.nina.title",
-        descKey: "servicios.talleres.nina.desc",
-        price: 250000,
-      },
-      {
-        id: "angelical-taller",
-        titleKey: "servicios.talleres.angelical.title",
-        descKey: "servicios.talleres.angelical.desc",
-        price: 120000,
-      },
-      {
         id: "medium",
         titleKey: "servicios.talleres.medium.title",
         descKey: "servicios.talleres.medium.desc",
-        price: 180000,
+        price: 90000,
       },
       {
         id: "reiki-usui",
@@ -113,6 +100,54 @@ export const catalog: CatalogCategory[] = [
         titleKey: "servicios.talleres.access.title",
         descKey: "servicios.talleres.access.desc",
         price: 180000,
+      },
+    ],
+  },
+  {
+    id: "sanaciones",
+    titleKey: "servicios.categories.sanaciones",
+    items: [
+      {
+        id: "nina",
+        titleKey: "servicios.sanaciones.nina.title",
+        descKey: "servicios.sanaciones.nina.desc",
+        price: 180000,
+      },
+      {
+        id: "mama",
+        titleKey: "servicios.sanaciones.mama.title",
+        descKey: "servicios.sanaciones.mama.desc",
+        price: 180000,
+      },
+      {
+        id: "papa",
+        titleKey: "servicios.sanaciones.papa.title",
+        descKey: "servicios.sanaciones.papa.desc",
+        price: 180000,
+      },
+    ],
+  },
+  {
+    id: "lecturaAngelical",
+    titleKey: "servicios.categories.lecturaAngelical",
+    items: [
+      {
+        id: "basica",
+        titleKey: "servicios.lecturaAngelical.basica.title",
+        descKey: "servicios.lecturaAngelical.basica.desc",
+        price: 50000,
+      },
+      {
+        id: "angelical",
+        titleKey: "servicios.lecturaAngelical.angelical.title",
+        descKey: "servicios.lecturaAngelical.angelical.desc",
+        price: 120000,
+      },
+      {
+        id: "oraculo",
+        titleKey: "servicios.lecturaAngelical.oraculo.title",
+        descKey: "servicios.lecturaAngelical.oraculo.desc",
+        price: 120000,
       },
     ],
   },

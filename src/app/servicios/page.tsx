@@ -15,6 +15,8 @@ import {
 const categoryColors: Record<string, string> = {
   terapias: "from-reiki-400 to-reiki-600",
   talleres: "from-reiki-300 to-reiki-500",
+  sanaciones: "from-reiki-500 to-reiki-700",
+  lecturaAngelical: "from-reiki-400 to-reiki-600",
   charlas: "from-reiki-500 to-reiki-700",
   retiros: "from-reiki-400 to-reiki-400",
 };
