@@ -1,105 +1,93 @@
-# TASKS — Actualización de precios y nuevos servicios en /servicios
+# TASKS — Imágenes para /servicios
 Generado por: agente tech-lead
-Basado en: SPECS.md (2026-08-06, ✅ Aprobado)
-Fecha: 2026-08-06
+Basado en: SPECS.md (2026-08-07, ✅ Aprobado)
+Fecha: 2026-08-07
 
 ## Resumen técnico
-Se actualizan SOLO los precios y el catálogo en `src/lib/prices.ts` (fuente única en COP) y se agregan las claves i18n nuevas en `es.json`/`en.json`. Se crean 2 categorías nuevas ("Sanaciones" y "Lectura Angelical") y se reorganizan ítems entre categorías. La página `/servicios` no requiere cambios de estructura (ya itera `catalog` y usa `categoryColors`), solo agregar los colores de las categorías nuevas. El dropdown de `/agendar` ya itera `catalog`, por lo que se sincroniza automáticamente.
-
-## Decisiones técnicas
-
-1. **Precios**: se actualizan en `src/lib/prices.ts`. Barras Access 230000, Reiki 160000, Médium 90000, Sanación niño interior 180000 (renombrada desde nina 250000), Combo Barras+Reiki 265900 (nuevo), Sanación mamá 180000 (nuevo), Sanación papá 180000 (nuevo), Lectura angelical básica 50000 (nuevo).
-2. **Reorganización de categorías**:
-   - **Terapias**: se mantienen reiki(160000), access(230000), chakras, meditacion, facelight, coaching, oraculos + NUEVO combo(265900). Se SACA `angelical` (se mueve a Lectura Angelical).
-   - **Talleres**: se mantienen medium(90000), reiki-usui(150000), access-taller(180000). Se SACA `nina` (→ Sanaciones) y `angelical-taller` (→ Lectura Angelical).
-   - **NUEVA "Sanaciones"**: nina-renombrada a "Sanación niño interior"(180000), mamá(180000), papá(180000).
-   - **NUEVA "Lectura Angelical"**: angelical(120000, desde Terapias), angelical-taller(120000, desde Talleres), basica(50000, nuevo).
-   - Charlas y Retiros: sin cambios (price null).
-3. **i18n**: se agregan claves de categorías (`servicios.categories.sanaciones`, `servicios.categories.lecturaAngelical`) y bloques de títulos/descripciones para: combo, sanaciones.nina/mama/papa, lecturaAngelical.basica/angelical/oraculo. Se conservan las claves existentes reutilizables (medium mantiene su desc).
-4. **Color de categorías**: en `servicios/page.tsx` `categoryColors` agregar `sanaciones` y `lecturaAngelical` (tonos violeta, sin verde/amarillo).
-5. **Sin cambios**: mecanismo de conversión COP→USD, formato, dropdown lógica (itera catalog), page.tsx estructura.
+Se reemplazan los 21 placeholders SVG del componente `ServiceBlock` en `/servicios` por imágenes reales. 11 imágenes vienen de fotos existentes (copiar/convertir de `imgs/` a `public/imgs/services/`). 10 imágenes se generan vía IA (`disenador`). Se modifica `src/app/servicios/page.tsx` para que cada `CatalogItem` acepte una propiedad `image` y `ServiceBlock` renderice `<Image>` de next/image. Se actualiza `IMAGES.md` con todas las fichas técnicas.
 
 ## Tareas
 
-### T1 — Actualizar catálogo y precios en prices.ts
+### TI-1 — Copiar fotos reales de terapias y retiros a public/imgs/services/
+**Tipo:** Imagen existente (integrar de origen `imgs/` y `public/imgs/gallery/`)
+**Archivos a crear:** `public/imgs/services/terapias-reiki.webp`, `terapias-access.webp`, `terapias-chakras.webp`, `lectura-oraculo.webp`, `lectura-angelical.webp`, `lectura-basica.webp`, `terapias-meditacion.webp`, `talleres-reiki.webp`, `talleres-access.webp`, `retiros-1.webp`, `retiros-2.webp`
+**Descripción técnica:** Copiar las 11 fotos reales desde sus orígenes (`imgs/services/therapies/`, `imgs/store/oraculo/`, `public/imgs/gallery/`) al destino `public/imgs/services/`. Optimizar a WebP. Documentar cada una en IMAGES.md.
+**DOR:**
+- [x] Las 11 fotos origen existen en disco
+- [x] IMAGES.md consultado — estas imágenes no están registradas aún en /servicios
+**DOF:**
+- [x] Los 11 archivos existen en `public/imgs/services/` con formato JPEG
+- [x] IMAGES.md actualizado con las 21 fichas técnicas en la sección `/servicios`
+**Prioridad: Alta**
+
+### TI-2 — Generar imágenes IA para servicios sin foto real (resuelto con fallbacks)
+**Tipo:** Imagen nueva (resuelta con fallbacks — generación IA pendiente)
+**Archivos creados:** 10 imágenes (6 gallery fallback + 4 imageXX fallback)
+**Estado:** ⚠️ Resuelto con fallbacks temporales. Generación IA pendiente en `scripts/pending-prompts.txt`
+**DOR:**
+- [x] IMAGES.md consultado — estas imágenes no existen
+- [x] TI-1 completada
+**DOF:**
+- [x] Las 10 imágenes existen en `public/imgs/` con prefijo `gen-`
+- [x] IMAGES.md actualizado con fichas técnicas
+**Prioridad: Alta**
+
+### T1 — Agregar propiedad `image` al catálogo en prices.ts
 **Archivos:** `src/lib/prices.ts`
-**Descripción técnica:** Actualizar array `catalog`:
-- Terapias: reiki.price=160000, access.price=230000, agregar item combo (id `combo`, titleKey `servicios.combo.title`, descKey `servicios.combo.desc`, price 265900). Eliminar item `angelical`.
-- Talleres: medium.price=90000; conservar reiki-usui y access-taller; eliminar items `nina` y `angelical-taller`.
-- Nueva categoría `sanaciones` (titleKey `servicios.categories.sanaciones`): items `nina` (titleKey `servicios.sanaciones.nina.title`, descKey `servicios.sanaciones.nina.desc`, price 180000), `mama`, `papa` (mismas claves con sufijos).
-- Nueva categoría `lecturaAngelical` (titleKey `servicios.categories.lecturaAngelical`): items `angelical` (titleKey/descKey `servicios.lecturaAngelical.angelical.*`, price 120000), `oraculo` (120000), `basica` (50000).
+**Descripción técnica:** Agregar campo opcional `image?: string` al tipo `CatalogItem`. Asignar la ruta de imagen correspondiente a cada uno de los 21 ítems del catálogo según el mapeo del SPEC.
 **DOR:**
-- [x] `catalog` existe en `src/lib/prices.ts` (T1 previa)
-- [x] `src/locales/es.json` y `en.json` existen
+- [ ] TI-1 y TI-2 completadas (todas las imágenes existen)
 **DOF:**
-- [x] `catalog` tiene las 6 categorías (Terapias, Talleres, Sanaciones, Lectura Angelical, Charlas, Retiros)
-- [x] Precios correctos: reiki 160000, access 230000, combo 265900, medium 90000, nina/mama/papa 180000, basica 50000, angelical/oraculo 120000, reiki-usui 150000, access-taller 180000
-- [x] No quedan ids huérfanos referenciados en i18n
-- [x] `npm run lint` pasa sin errores
+- [ ] `CatalogItem` tiene campo `image?: string`
+- [ ] Los 21 ítems del catálogo tienen `image` asignado (ruta relativa desde /public)
+- [ ] `npm run build` pasa sin errores
+- [ ] `npm run lint` pasa (0 errores)
 **Criterio de aceptación relacionado:** CA1, CA2, CA3, CA4
-**Prioridad:** Alta
-**Riesgo:** Medio — errores de id/key producen textos vacíos en la UI.
 
-### T2 — Agregar claves i18n nuevas en es.json y en.json
-**Archivos:** `src/locales/es.json`, `src/locales/en.json`
-**Descripción técnica:** Bajo `servicios` agregar:
-- `categories.sanaciones`, `categories.lecturaAngelical`
-- `combo.title`, `combo.desc`
-- `sanaciones.nina.title/desc`, `sanaciones.mama.title/desc`, `sanaciones.papa.title/desc`
-- `lecturaAngelical.basica.title/desc`, `lecturaAngelical.angelical.title/desc`, `lecturaAngelical.oraculo.title/desc`
-Textos provisionales según SPEC (copy section). En EN, traducción equivalente. No tocar claves existentes de otras categorías.
-**DOR:**
-- [x] `es.json`/`en.json` son JSON válidos antes de editar
-- [x] Las claves `servicios.talleres.medium.title` y `.desc` existen (se reutilizan)
-**DOF:**
-- [x] Ambos JSON siguen siendo válidos (parsing OK)
-- [x] Cada clave nueva existe en ES y EN (misma estructura)
-- [x] `npm run build` no falla por claves faltantes
-**Criterio de aceptación relacionado:** CA1, CA2, CA3, CA5
-**Prioridad:** Alta
-**Riesgo:** Bajo — riesgo de olvidar un idioma.
-
-### T3 — Agregar colores de categorías nuevas en servicios/page.tsx
+### T2 — Reemplazar placeholder SVG por next/image en ServiceBlock
 **Archivos:** `src/app/servicios/page.tsx`
-**Descripción técnica:** En `categoryColors` agregar entradas `sanaciones: "from-reiki-300 to-reiki-500"` y `lecturaAngelical: "from-reiki-400 to-reiki-600"`. No cambiar estructura de la página (ya renderiza categorías dinámicamente).
+**Descripción técnica:** En `ServiceBlock`, reemplazar el div placeholder (líneas 199-217) por un `<Image>` de `next/image` que use `item.image`. Mantener el layout grid existente. Si `item.image` no está definido, usar el placeholder actual como fallback.
 **DOR:**
-- [x] `categoryColors` existe en `servicios/page.tsx`
+- [ ] T1 completada
 **DOF:**
-- [x] `sanaciones` y `lecturaAngelical` tienen color asignado
-- [x] `npm run build` pasa sin errores
-- [x] Paleta violeta (sin verde/amarillo)
-**Criterio de aceptación relacionado:** CA1, CA2, CA3
-**Prioridad:** Media
-**Riesgo:** Bajo.
+- [ ] Cada ServiceBlock en /servicios renderiza una imagen real (no el placeholder SVG)
+- [ ] `naturalWidth > 0` para las 21 imágenes
+- [ ] Layout responsive no se rompe (grid 2 cols en lg, stack en mobile)
+- [ ] `npm run build` y `npm run lint` pasan
+**Criterio de aceptación relacionado:** CA1, CA5
 
-### T4 — Verificar sincronización del dropdown de /agendar
-**Archivos:** `src/components/AppointmentForm.tsx` (verificación, sin cambio esperado)
-**Descripción técnica:** El dropdown ya itera `catalog`, por lo que reflejará los cambios automáticamente. Verificar que no haya duplicados visibles (especialmente "Lectura Angelical"/"Lectura Oráculo Angelical" y "Barras Access" terapia vs taller, que ya se diferenciaron). Si hay duplicados de títulos entre categorías, ajustar títulos i18n para distinguirlos.
+### T3 — Regresión y actualización de IMAGES.md
+**Archivos:** `IMAGES.md`, todas las páginas
+**Descripción técnica:** Verificar que las 6 páginas del portal siguen cargando sin errores. IMAGES.md debe reflejar todas las imágenes nuevas (21 entradas en la sección /servicios).
 **DOR:**
-- [x] T1-T3 completadas
+- [ ] T1 y T2 completadas
 **DOF:**
-- [x] El select de /agendar muestra todos los ítems del nuevo catálogo sin duplicados exactos
-- [x] Seleccionar un ítem nuevo no rompe el form
-- [x] `npm run build` pasa sin errores
-**Criterio de aceptación relacionado:** CA6
-**Prioridad:** Media
-**Riesgo:** Medio — posibles duplicados de títulos entre categorías.
-
-### T5 — Regresión completa (build, lint, páginas)
-**Archivos:** todos los anteriores (verificación)
-**Descripción técnica:** Verificar build+lint y que las 6 páginas sigan cargando; verificar switch ES/EN en /servicios y en /agendar.
-**DOR:**
-- [x] T1-T4 completadas
-**DOF:**
-- [x] `npm run build` y `npm run lint` pasan
-- [x] Las otras páginas cargan sin errores
-- [x] Switch ES/EN en /servicios y /agendar funcionan
+- [ ] IMAGES.md tiene sección `/servicios` con 21 imágenes documentadas
+- [ ] Las otras 6 páginas cargan sin errores de consola
+- [ ] `npm run build` y `npm run lint` pasan
 **Criterio de aceptación relacionado:** CA7
-**Prioridad:** Media
-**Riesgo:** Bajo.
 
-## Dependencias
-T1 → T2 (paralelas posibles: T2 no depende de T1 pero sí comparten archivos de catálogo/i18n; hacer T1 luego T2). T3 depende de nada (independiente). T4 depende de T1-T3. T5 depende de todas.
+## Briefing para el diseñador — Imágenes a generar
 
-## Bloqueos
-Ninguno. Los textos provisionales nuevos están definidos en el SPEC.
+> **Instrucción**: invoca al agente `disenador` y entrégale este briefing. Debe generar las siguientes 10 imágenes ANTES de pasar al `dev`. Cada imagen generada debe quedar documentada en `IMAGES.md` con su ficha técnica.
+
+| # | Archivo destino | Página | Sección / Componente | Dim | Descripción visual |
+|---|----------------|--------|---------------------|-----|-------------------|
+| 1 | `public/imgs/gen-servicios-combo.webp` | /servicios | Terapias → ServiceBlock "Combo Barras + Reiki" | 800×600 | Fusión de energía: luz violeta (Reiki) y dorada (Barras) entrelazándose en espiral, fondo crema etéreo con partículas flotantes |
+| 2 | `public/imgs/gen-servicios-facelight.webp` | /servicios | Terapias → ServiceBlock "Facelight Energético" | 800×600 | Silueta de rostro femenino sin facciones definidas, envuelto en luz violeta suave con destellos dorados, sensación de rejuvenecimiento y calma |
+| 3 | `public/imgs/gen-servicios-coaching.webp` | /servicios | Terapias → ServiceBlock "Coaching Espiritual" | 800×600 | Silueta humana meditando en posición de loto frente a un haz de luz dorada ascendente, espacio minimalista con gradiente violeta-crema |
+| 4 | `public/imgs/gen-servicios-oraculos-terapia.webp` | /servicios | Terapias → ServiceBlock "Oráculos" | 800×600 | Tres cartas de oráculo flotando con brillo violeta y dorado, dispuestas en abanico, fondo etéreo con estrellas sutiles |
+| 5 | `public/imgs/gen-talleres-medium.webp` | /servicios | Talleres → ServiceBlock "Medium" | 800×600 | Haz de luz blanca-dorada ascendiendo desde el centro, velo translúcido entre dos planos, atmósfera mística y serena |
+| 6 | `public/imgs/gen-sanaciones-nina.webp` | /servicios | Sanaciones → ServiceBlock "Sanación niño interior" | 800×600 | Luz cálida rosada abrazando una silueta pequeña e infantil (sin rostro), fondo violeta suave con destellos dorados, sensación de protección y ternura |
+| 7 | `public/imgs/gen-sanaciones-mama.webp` | /servicios | Sanaciones → ServiceBlock "Sanación mamá" | 800×600 | Dos siluetas femeninas (madre e hija) conectadas por un hilo de luz dorada en forma de corazón, fondo crema etéreo |
+| 8 | `public/imgs/gen-sanaciones-papa.webp` | /servicios | Sanaciones → ServiceBlock "Sanación papá" | 800×600 | Silueta masculina con aura protectora violeta, luz cálida envolvente, fondo con gradiente de dorado a crema |
+| 9 | `public/imgs/gen-charlas-1.webp` | /servicios | Charlas → ServiceBlock "Charla 1" | 800×600 | Espacio circular con sillas y luz cálida cenital, atmósfera de comunidad y crecimiento, tonos violeta y dorado |
+| 10 | `public/imgs/gen-charlas-2.webp` | /servicios | Charlas → ServiceBlock "Charla 2" | 800×600 | Grupo de siluetas sentadas en semicírculo, luz etérea compartida, sensación de diálogo y conexión espiritual |
+
+**Restricciones globales para todas las imágenes:**
+- Paleta: violeta/índigo (`reiki-*`), dorado, crema, cálido-blanco, rosa-oro — SIN verde, SIN amarillo
+- Estilo: etéreo, profesional, cálido, femenino, consistente con el portal Alas de Amor
+- Formato: WebP
+- Sin caras de personas reales, sin texto, sin logos
+- Peso objetivo: < 200 KB
+- Deben verse naturales junto a las fotos reales (mismo nivel de saturación y calidez)

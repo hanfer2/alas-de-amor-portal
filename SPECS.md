@@ -1,76 +1,78 @@
-# SPEC — Actualización de precios y nuevos servicios en /servicios
+# SPEC — Asignar imágenes reales a la página de servicios (/servicios)
 Generado por: agente po
-Fecha: 2026-08-06
+Fecha: 2026-08-07
 Estado: ✅ Aprobado
 
 ## Objetivo de negocio
-Actualizar los precios de las terapias al listado real de Liliana y agregar los nuevos servicios (Sanaciones, Lectura angelical básica, Combo Barras + Reiki), manteniendo el catálogo organizado por categorías para que los visitantes vean la oferta completa con sus precios en COP (y USD en inglés).
+La página /servicios tiene 21 ServiceBlock con placeholders visuales (círculos SVG + gradientes). El visitante no ve imágenes reales de las terapias, talleres, sanaciones ni lecturas. Esto reduce la confianza y el engagement. Debemos reemplazar los placeholders con imágenes reales existentes (fotos de Liliana) y —donde no haya foto— generar imágenes IA que mantengan la identidad etérea del portal.
 
 ## Usuario objetivo
-Visitante del portal que consulta precios de servicios en /servicios y agenda desde /agendar.
+Visitante del portal que está evaluando agendar una terapia. Ver una imagen real de la sesión o del espacio de trabajo aumenta la probabilidad de conversión.
 
 ## Alcance
-
 ### Incluye
-- Actualizar precios de terapias existentes:
-  - **Barras Access**: 180.000 → **230.000** COP
-  - **Reiki**: 150.000 → **160.000** COP
-- Agregar **Combo Barras + Reiki** (**265.900** COP) como ítem en la categoría **Terapias**.
-- Agregar **Médium** → precio **90.000** COP (actualizar el ítem existente en Talleres).
-- Crear **nueva categoría "Sanaciones"** con 3 ítems:
-  - **Sanación niño interior** — **180.000** COP (renombrada y movida desde Talleres; antes "Taller Sanando tu niña interior" a 250.000)
-  - **Sanación mamá** — **180.000** COP (nuevo)
-  - **Sanación papá** — **180.000** COP (nuevo)
-- Crear **categoría única "Lectura Angelical"** que consolide las lecturas angelicales (para poder agregar más variantes a futuro):
-  - **Lectura angelical básica** — **50.000** COP (nuevo)
-  - **Lectura Angelical** — **120.000** COP (movida desde Terapias)
-  - **Lectura Oráculo Angelical** — **120.000** COP (movida desde Talleres)
-- Mantener los **talleres de formación "Reiki Usui" (150.000)** y **"Taller Barras Access" (180.000)** con sus precios actuales (son talleres para enseñar a hacer las terapias, distintos de las terapias).
-- Mantener sin cambios: Chakras (130.000), Meditación (90.000), Facelight (110.000), Coaching (160.000), Oráculos (100.000), Charlas y Retiros ("Consultar").
-- Mantener el dropdown de /agendar sincronizado con el catálogo.
+- Asignar una imagen a cada uno de los 21 ítems del catálogo en /servicios
+- Reutilizar fotos reales de Liliana de las carpetas `imgs/services/therapies/`, `imgs/store/oraculo/`, `public/imgs/gallery/`
+- Convertir archivos HEIC a JPEG cuando sea necesario (retiros)
+- Generar imágenes IA para los servicios que no tengan foto real (sanaciones, charlas, talleres sin foto)
+- Actualizar el componente ServiceBlock para que use `<Image>` de next/image en lugar del placeholder SVG
+- Documentar todo en IMAGES.md
 
-### NO incluye
-- Cambios de diseño/estilo de la página de servicios.
-- Cambios al mecanismo de conversión COP→USD (ya implementado).
-- Nuevas categorías más allá de Sanaciones y Lectura Angelical.
-- Pagos en línea.
+### NO incluye (fuera de alcance)
+- No se cambia la estructura de la página, solo se agregan imágenes
+- No se tocan otras páginas (/, /nosotros, /contacto, etc.)
+- No se generan imágenes para categorías que ya tienen foto real suficiente
+- No se modifican precios ni textos i18n
 
 ## Historia(s) de usuario
-- Como visitante, quiero ver los precios correctos y actualizados de cada terapia, para decidir sin llamar.
-- Como visitante, quiero encontrar las Sanaciones (niño interior, mamá, papá) y las Lecturas angelicales en su propia sección, para comparar variantes.
-- Como administradora (Liliana), quiero que el combo Barras + Reiki tenga su propio precio, para ofrecer el paquete.
+- Como visitante, quiero ver una imagen de cada terapia para entender mejor en qué consiste antes de agendar.
 
 ## Criterios de aceptación (lenguaje de negocio, verificables)
-- [ ] CA1: En /servicios, la categoría Terapias muestra: Reiki $160.000, Barras Access $230.000, Combo Barras + Reiki $265.900, Chakras, Meditación, Facelight, Coaching y Oráculos con sus precios.
-- [ ] CA2: La categoría "Sanaciones" existe y muestra niño interior, mamá y papá, cada uno a $180.000.
-- [ ] CA3: La categoría "Lectura Angelical" existe y muestra la básica a $50.000, Lectura Angelical a $120.000 y Lectura Oráculo Angelical a $120.000.
-- [ ] CA4: En la categoría Talleres, Médium muestra $90.000; Reiki Usui y Taller Barras Access mantienen $150.000 y $180.000.
-- [ ] CA5: En inglés (EN) todos los precios se muestran convertidos a USD (mecanismo existente, sin cambios).
-- [ ] CA6: El dropdown de /agendar refleja el catálogo actualizado sin duplicados ni ítems huérfanos.
-- [ ] CA7: Móvil 375px sin overflow; build y lint pasan; 0 errores de consola.
+- [ ] CA1: Cada uno de los 21 servicios en /servicios muestra una imagen (no el placeholder de círculos)
+- [ ] CA2: Las imágenes de terapias con foto real usan las fotos de sesiones de Liliana
+- [ ] CA3: Las imágenes de Lectura Angelical usan las fotos reales de cartas oráculo
+- [ ] CA4: Los servicios sin foto real (sanaciones, charlas, algunos talleres) muestran imágenes IA generadas con el estilo etéreo del portal
+- [ ] CA5: Las imágenes no se rompen (naturalWidth > 0 en todas)
+- [ ] CA6: Las imágenes están optimizadas (WebP, < 200 KB thumbnails)
+- [ ] CA7: IMAGES.md está actualizado con cada imagen y su ubicación exacta
 
-## Contenido / copy (textos nuevos provisionales)
+## Imágenes necesarias
 
-### Nuevos ítems
-- **Combo Barras + Reiki** — desc: "Sesión combinada de Barras de Access y Reiki para una sanación integral y profunda."
-- **Sanación niño interior** — desc: "Sesión de sanación para liberar heridas de la infancia y reconectar con tu niño interior."
-- **Sanación mamá** — desc: "Sesión de sanación energética enfocada en la conexión y bienestar de la madre."
-- **Sanación papá** — desc: "Sesión de sanación energética enfocada en la conexión y bienestar del padre."
-- **Lectura angelical básica** — desc: "Lectura angelical de nivel básico para recibir orientación de tus ángeles."
-- **Médium** — desc: "Sesión de mediumnidad para conexión espiritual y mensajes de tus seres de luz." (mantiene texto existente, cambia solo el precio)
+### Fotos reales disponibles (reutilizar — NO generar)
 
-### Categorías nuevas
-- "Sanaciones" (ES) / "Healings" (EN)
-- "Lectura Angelical" (ES) / "Angelic Reading" (EN)
+| # | Origen | Destino sugerido | Servicio asignado | Descripción |
+|---|--------|-----------------|-------------------|-------------|
+| R1 | `imgs/services/therapies/WhatsApp Image 2026-05-01 at 9.08.13 AM.jpeg` | `public/imgs/services/terapias-reiki.webp` | Reiki (Terapias) | Sesión de terapia energética con manos |
+| R2 | `imgs/services/therapies/WhatsApp Image 2026-05-01 at 9.08.13 AM (1).jpeg` | `public/imgs/services/terapias-access.webp` | Barras Access (Terapias) | Sesión de Barras de Access |
+| R3 | `imgs/services/therapies/WhatsApp Image 2026-05-01 at 9.08.14 AM.jpeg` | `public/imgs/services/terapias-chakras.webp` | Alineación de Chakras (Terapias) | Trabajo energético |
+| R4 | `imgs/store/oraculo/IMG_3562.JPG.jpeg` | `public/imgs/services/lectura-oraculo.webp` | Lectura Oráculo Angelical | Cartas de oráculo extendidas |
+| R5 | `imgs/store/oraculo/WhatsApp Image 2026-05-01 at 5.40.36 PM.jpeg` | `public/imgs/services/lectura-angelical.webp` | Lectura Angelical | Lectura de cartas angélicas |
+| R6 | `imgs/store/oraculo/WhatsApp Image 2026-05-01 at 5.40.35 PM.jpeg` | `public/imgs/services/lectura-basica.webp` | Lectura angelical básica | Cartas y cristales |
+| R7 | `public/imgs/gallery/gallery-1.jpg` | `public/imgs/services/terapias-meditacion.webp` | Meditación Guiada (Terapias) | Espacio de terapia (ya desplegado) |
+| R8 | `public/imgs/gallery/gallery-5.jpg` | `public/imgs/services/talleres-reiki.webp` | Reiki Usui (Talleres) | Foto de espacio de taller (no usada aún) |
+| R9 | `public/imgs/gallery/gallery-6.jpg` | `public/imgs/services/talleres-access.webp` | Taller Barras Access (Talleres) | Foto de espacio de taller |
+| R10 | `public/imgs/gallery/gallery-7.jpg` | `public/imgs/services/retiros-1.webp` | Retiro 1 (Retiros) | Espacio natural/retiro |
+| R11 | `public/imgs/gallery/gallery-8.jpg` | `public/imgs/services/retiros-2.webp` | Retiro 2 (Retiros) | Espacio natural/retiro |
+
+### Imágenes a generar (IA — no hay foto real disponible)
+
+| # | Archivo destino | Dim | Servicio | Descripción visual |
+|---|----------------|-----|----------|-------------------|
+| G1 | `public/imgs/gen-servicios-combo.webp` | 800×600 | Combo Barras + Reiki (Terapias) | Fusión de energía Reiki y Barras Access, luz violeta y dorada entrelazándose |
+| G2 | `public/imgs/gen-servicios-facelight.webp` | 800×600 | Facelight Energético (Terapias) | Rostro femenino etéreo con luz violeta suave envolviéndolo, sin facciones definidas |
+| G3 | `public/imgs/gen-servicios-coaching.webp` | 800×600 | Coaching Espiritual (Terapias) | Silueta meditando frente a luz dorada, espacio de sanación etéreo |
+| G4 | `public/imgs/gen-servicios-oraculos-terapia.webp` | 800×600 | Oráculos (Terapias) | Cartas de oráculo flotando con brillo violeta, fondo etéreo |
+| G5 | `public/imgs/gen-talleres-medium.webp` | 800×600 | Medium (Talleres) | Luz espiritual ascendente, velo etéreo entre planos |
+| G6 | `public/imgs/gen-sanaciones-nina.webp` | 800×600 | Sanación niño interior (Sanaciones) | Luz cálida abrazando una silueta pequeña, tonos rosados y violetas |
+| G7 | `public/imgs/gen-sanaciones-mama.webp` | 800×600 | Sanación mamá (Sanaciones) | Dos siluetas femeninas conectadas por hilo de luz dorada |
+| G8 | `public/imgs/gen-sanaciones-papa.webp` | 800×600 | Sanación papá (Sanaciones) | Silueta masculina con energía protectora violeta |
+| G9 | `public/imgs/gen-charlas-1.webp` | 800×600 | Charla 1 (Charlas) | Escenario con luz cálida, sillas en círculo, atmósfera de comunidad |
+| G10 | `public/imgs/gen-charlas-2.webp` | 800×600 | Charla 2 (Charlas) | Grupo de siluetas en conversación, luz etérea |
 
 ## Notas y restricciones
-- Los precios se actualizan SOLO en `src/lib/prices.ts` (fuente única en COP). NO se tocan los archivos de idioma para precios.
-- Los títulos/descripciones nuevos se agregan a `es.json` y `en.json` (i18n).
-- Se elimina/mueve el ítem "Taller Sanando tu niña interior" (nina) de Talleres → Sanaciones como "Sanación niño interior".
-- Se mueve "Lectura Angelical" (angelical) de Terapias → categoría Lectura Angelical.
-- Se mueve "Lectura Oráculo Angelical" (angelical-taller) de Talleres → categoría Lectura Angelical.
-- Paleta violeta (reiki-*), sin verde/amarillo. El combo puede usar el color de Terapias.
-- El dropdown de /agendar se alimenta del catálogo; se debe verificar que al mover ítems de categoría no queden referencias huérfanas.
-
-## Preguntas abiertas
-Ninguna (resueltas con las decisiones anteriores).
+- Formato preferido: WebP (menor peso)
+- Peso objetivo: < 200 KB por imagen
+- Paleta: violeta/índigo, dorado, crema — SIN verde, SIN amarillo
+- Sin caras de personas reales en las imágenes IA
+- Las imágenes IA deben integrarse visualmente con las fotos reales (mismo tono cálido, misma saturación)
+- Los HEIC de retiros necesitan conversión previa

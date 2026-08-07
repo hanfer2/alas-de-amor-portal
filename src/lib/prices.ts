@@ -8,6 +8,7 @@ export type CatalogItem = {
   titleKey: string;
   descKey: string;
   durationKey?: string;
+  image?: string;
   price: number | null;
 };
 
@@ -27,6 +28,7 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.reiki",
         descKey: "servicios.reiki.desc",
         durationKey: "servicios.reiki.duration",
+        image: "/imgs/services/terapias-reiki.jpg",
         price: 160000,
       },
       {
@@ -34,12 +36,14 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.access",
         descKey: "servicios.barras.desc",
         durationKey: "servicios.barras.duration",
+        image: "/imgs/services/terapias-access.jpg",
         price: 230000,
       },
       {
         id: "combo",
         titleKey: "servicios.combo.title",
         descKey: "servicios.combo.desc",
+        image: "/imgs/services/gen-servicios-combo.jpg",
         price: 265900,
       },
       {
@@ -47,6 +51,7 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.chakras",
         descKey: "servicios.chakras.desc",
         durationKey: "servicios.chakras.duration",
+        image: "/imgs/services/terapias-chakras.jpg",
         price: 130000,
       },
       {
@@ -54,6 +59,7 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.meditacion",
         descKey: "servicios.meditacion.desc",
         durationKey: "servicios.meditacion.duration",
+        image: "/imgs/services/terapias-meditacion.jpg",
         price: 90000,
       },
       {
@@ -61,6 +67,7 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.facelight",
         descKey: "servicios.facelight.desc",
         durationKey: "servicios.facelight.duration",
+        image: "/imgs/services/gen-servicios-facelight.jpg",
         price: 110000,
       },
       {
@@ -68,6 +75,7 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.coaching",
         descKey: "servicios.coaching.desc",
         durationKey: "servicios.coaching.duration",
+        image: "/imgs/services/gen-servicios-coaching.jpg",
         price: 160000,
       },
       {
@@ -75,6 +83,7 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.oraculos",
         descKey: "servicios.oraculos.desc",
         durationKey: "servicios.oraculos.duration",
+        image: "/imgs/services/gen-servicios-oraculos-terapia.jpg",
         price: 100000,
       },
     ],
@@ -87,18 +96,21 @@ export const catalog: CatalogCategory[] = [
         id: "medium",
         titleKey: "servicios.talleres.medium.title",
         descKey: "servicios.talleres.medium.desc",
+        image: "/imgs/services/gen-talleres-medium.jpg",
         price: 90000,
       },
       {
         id: "reiki-usui",
         titleKey: "servicios.talleres.reiki.title",
         descKey: "servicios.talleres.reiki.desc",
+        image: "/imgs/services/talleres-reiki.jpg",
         price: 150000,
       },
       {
         id: "access-taller",
         titleKey: "servicios.talleres.access.title",
         descKey: "servicios.talleres.access.desc",
+        image: "/imgs/services/talleres-access.jpg",
         price: 180000,
       },
     ],
@@ -111,18 +123,21 @@ export const catalog: CatalogCategory[] = [
         id: "nina",
         titleKey: "servicios.sanaciones.nina.title",
         descKey: "servicios.sanaciones.nina.desc",
+        image: "/imgs/services/gen-sanaciones-nina.jpg",
         price: 180000,
       },
       {
         id: "mama",
         titleKey: "servicios.sanaciones.mama.title",
         descKey: "servicios.sanaciones.mama.desc",
+        image: "/imgs/services/gen-sanaciones-mama.jpg",
         price: 180000,
       },
       {
         id: "papa",
         titleKey: "servicios.sanaciones.papa.title",
         descKey: "servicios.sanaciones.papa.desc",
+        image: "/imgs/services/gen-sanaciones-papa.jpg",
         price: 180000,
       },
     ],
@@ -135,18 +150,21 @@ export const catalog: CatalogCategory[] = [
         id: "basica",
         titleKey: "servicios.lecturaAngelical.basica.title",
         descKey: "servicios.lecturaAngelical.basica.desc",
+        image: "/imgs/services/lectura-basica.jpg",
         price: 50000,
       },
       {
         id: "angelical",
         titleKey: "servicios.lecturaAngelical.angelical.title",
         descKey: "servicios.lecturaAngelical.angelical.desc",
+        image: "/imgs/services/lectura-angelical.jpg",
         price: 120000,
       },
       {
         id: "oraculo",
         titleKey: "servicios.lecturaAngelical.oraculo.title",
         descKey: "servicios.lecturaAngelical.oraculo.desc",
+        image: "/imgs/services/lectura-oraculo.jpg",
         price: 120000,
       },
     ],
@@ -159,12 +177,14 @@ export const catalog: CatalogCategory[] = [
         id: "charla-1",
         titleKey: "servicios.charlas.0.title",
         descKey: "servicios.charlas.0.desc",
+        image: "/imgs/services/gen-charlas-1.jpg",
         price: null,
       },
       {
         id: "charla-2",
         titleKey: "servicios.charlas.1.title",
         descKey: "servicios.charlas.1.desc",
+        image: "/imgs/services/gen-charlas-2.jpg",
         price: null,
       },
     ],
@@ -177,12 +197,14 @@ export const catalog: CatalogCategory[] = [
         id: "retiro-1",
         titleKey: "servicios.retiros.0.title",
         descKey: "servicios.retiros.0.desc",
+        image: "/imgs/services/retiros-1.jpg",
         price: null,
       },
       {
         id: "retiro-2",
         titleKey: "servicios.retiros.1.title",
         descKey: "servicios.retiros.1.desc",
+        image: "/imgs/services/retiros-2.jpg",
         price: null,
       },
     ],

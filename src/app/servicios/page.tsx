@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import { useLanguage } from "@/context/LanguageContext";
 import { EnergyWaves, FloatingOrbs } from "@/components/HeroDecoration";
@@ -198,22 +199,34 @@ function ServiceBlock({
 
       <div className={`relative reveal ${index % 2 === 1 ? "lg:order-1" : ""}`}>
         <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20">
-          <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10`} />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div
-              className={`w-32 h-32 rounded-full bg-gradient-to-br ${color} opacity-20 blur-2xl animate-float`}
+          {item.image ? (
+            <Image
+              src={item.image}
+              alt={t(item.titleKey)}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            className="w-24 h-24 mx-auto text-reiki-400 opacity-30"
-          >
-            <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="1" />
-            <circle cx="24" cy="24" r="12" stroke="currentColor" strokeWidth="1" />
-            <circle cx="24" cy="24" r="6" stroke="currentColor" strokeWidth="1" />
-            <circle cx="24" cy="24" r="2" fill="currentColor" />
-          </svg>
+          ) : (
+            <>
+              <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10`} />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div
+                  className={`w-32 h-32 rounded-full bg-gradient-to-br ${color} opacity-20 blur-2xl animate-float`}
+                />
+              </div>
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                className="w-24 h-24 mx-auto text-reiki-400 opacity-30"
+              >
+                <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="1" />
+                <circle cx="24" cy="24" r="12" stroke="currentColor" strokeWidth="1" />
+                <circle cx="24" cy="24" r="6" stroke="currentColor" strokeWidth="1" />
+                <circle cx="24" cy="24" r="2" fill="currentColor" />
+              </svg>
+            </>
+          )}
         </div>
       </div>
     </div>
