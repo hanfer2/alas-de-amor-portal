@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "https://alas-de-amor.vercel.app"
   ),
   alternates: {
-    canonical: "/",
     languages: {
       "es-CO": "/",
       "en-US": "/",
