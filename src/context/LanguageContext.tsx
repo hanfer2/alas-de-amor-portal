@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, type ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from "react";
 import { defaultLanguage } from "@/lib/translations";
 
 type LanguageContextType = {
@@ -14,11 +14,17 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState(() => {
-    if (typeof window === "undefined") return defaultLanguage;
+  const [hydrated, setHydrated] = useState(false);
+  const [lang, setLangState] = useState(defaultLanguage);
+
+  useEffect(() => {
     const saved = localStorage.getItem("alang");
-    return saved === "es" || saved === "en" ? saved : defaultLanguage;
-  });
+    if (saved === "es" || saved === "en") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- sync localStorage after hydration
+      setLangState(saved);
+    }
+    setHydrated(true);
+  }, []);
 
   const setLang = useCallback((l: string) => {
     setLangState(l);
@@ -26,7 +32,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang }}>
+    <LanguageContext.Provider value={{ lang: hydrated ? lang : defaultLanguage, setLang }}>
       {children}
     </LanguageContext.Provider>
   );
