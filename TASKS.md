@@ -49,12 +49,12 @@ Se actualizan SOLO los precios y el catálogo en `src/lib/prices.ts` (fuente ún
 - `lecturaAngelical.basica.title/desc`, `lecturaAngelical.angelical.title/desc`, `lecturaAngelical.oraculo.title/desc`
 Textos provisionales según SPEC (copy section). En EN, traducción equivalente. No tocar claves existentes de otras categorías.
 **DOR:**
-- [ ] `es.json`/`en.json` son JSON válidos antes de editar
-- [ ] Las claves `servicios.talleres.medium.title` y `.desc` existen (se reutilizan)
+- [x] `es.json`/`en.json` son JSON válidos antes de editar
+- [x] Las claves `servicios.talleres.medium.title` y `.desc` existen (se reutilizan)
 **DOF:**
-- [ ] Ambos JSON siguen siendo válidos (parsing OK)
-- [ ] Cada clave nueva existe en ES y EN (misma estructura)
-- [ ] `npm run build` no falla por claves faltantes
+- [x] Ambos JSON siguen siendo válidos (parsing OK)
+- [x] Cada clave nueva existe en ES y EN (misma estructura)
+- [x] `npm run build` no falla por claves faltantes
 **Criterio de aceptación relacionado:** CA1, CA2, CA3, CA5
 **Prioridad:** Alta
 **Riesgo:** Bajo — riesgo de olvidar un idioma.
@@ -63,11 +63,11 @@ Textos provisionales según SPEC (copy section). En EN, traducción equivalente.
 **Archivos:** `src/app/servicios/page.tsx`
 **Descripción técnica:** En `categoryColors` agregar entradas `sanaciones: "from-reiki-300 to-reiki-500"` y `lecturaAngelical: "from-reiki-400 to-reiki-600"`. No cambiar estructura de la página (ya renderiza categorías dinámicamente).
 **DOR:**
-- [ ] `categoryColors` existe en `servicios/page.tsx`
+- [x] `categoryColors` existe en `servicios/page.tsx`
 **DOF:**
-- [ ] `sanaciones` y `lecturaAngelical` tienen color asignado
-- [ ] `npm run build` pasa sin errores
-- [ ] Paleta violeta (sin verde/amarillo)
+- [x] `sanaciones` y `lecturaAngelical` tienen color asignado
+- [x] `npm run build` pasa sin errores
+- [x] Paleta violeta (sin verde/amarillo)
 **Criterio de aceptación relacionado:** CA1, CA2, CA3
 **Prioridad:** Media
 **Riesgo:** Bajo.
@@ -76,11 +76,11 @@ Textos provisionales según SPEC (copy section). En EN, traducción equivalente.
 **Archivos:** `src/components/AppointmentForm.tsx` (verificación, sin cambio esperado)
 **Descripción técnica:** El dropdown ya itera `catalog`, por lo que reflejará los cambios automáticamente. Verificar que no haya duplicados visibles (especialmente "Lectura Angelical"/"Lectura Oráculo Angelical" y "Barras Access" terapia vs taller, que ya se diferenciaron). Si hay duplicados de títulos entre categorías, ajustar títulos i18n para distinguirlos.
 **DOR:**
-- [ ] T1-T3 completadas
+- [x] T1-T3 completadas
 **DOF:**
-- [ ] El select de /agendar muestra todos los ítems del nuevo catálogo sin duplicados exactos
-- [ ] Seleccionar un ítem nuevo no rompe el form
-- [ ] `npm run build` pasa sin errores
+- [x] El select de /agendar muestra todos los ítems del nuevo catálogo sin duplicados exactos
+- [x] Seleccionar un ítem nuevo no rompe el form
+- [x] `npm run build` pasa sin errores
 **Criterio de aceptación relacionado:** CA6
 **Prioridad:** Media
 **Riesgo:** Medio — posibles duplicados de títulos entre categorías.
@@ -89,11 +89,11 @@ Textos provisionales según SPEC (copy section). En EN, traducción equivalente.
 **Archivos:** todos los anteriores (verificación)
 **Descripción técnica:** Verificar build+lint y que las 6 páginas sigan cargando; verificar switch ES/EN en /servicios y en /agendar.
 **DOR:**
-- [ ] T1-T4 completadas
+- [x] T1-T4 completadas
 **DOF:**
-- [ ] `npm run build` y `npm run lint` pasan
-- [ ] Las otras páginas cargan sin errores
-- [ ] Switch ES/EN en /servicios y /agendar funcionan
+- [x] `npm run build` y `npm run lint` pasan
+- [x] Las otras páginas cargan sin errores
+- [x] Switch ES/EN en /servicios y /agendar funcionan
 **Criterio de aceptación relacionado:** CA7
 **Prioridad:** Media
 **Riesgo:** Bajo.

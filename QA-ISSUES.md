@@ -1,3 +1,61 @@
+# QA ISSUES — Ronda 3
+Fecha: 2026-08-06
+Deploy verificado: https://alas-de-amor-portal.vercel.app (commit 8e36c99)
+Resultado global: ✅ APROBADO (0 issues abiertos)
+
+## Alcance de esta ronda
+Actualización de precios reales y nuevo catálogo de servicios: nuevas categorías "Sanaciones" y "Lectura Angelical", Combo Barras + Reiki, reasignación de ítems entre categorías, y conversión COP→USD verificada.
+
+## Checklist de verificación del nuevo catálogo
+
+| Verificación | Resultado | Evidencia |
+|--------------|-----------|-----------|
+| Terapias: Reiki 160.000, Barras Access 230.000, Combo 265.900 | ✅ | /servicios ES: "$ 160.000", "$ 230.000", "$ 265.900" |
+| Terapias conserva chakras/meditacion/facelight/coaching/oraculos | ✅ | presentes con sus precios previos |
+| Talleres: Medium 90.000, Reiki Usui 150.000, Taller Barras Access 180.000 | ✅ | "$ 90.000", "$ 150.000", "$ 180.000" |
+| Talleres ya NO incluyen "niña interior" ni "Lectura Oráculo Angelical" | ✅ | ausentes; trasladados a sus categorías nuevas |
+| Nueva categoría "Sanaciones": niño interior, mamá, papá (180.000 c/u) | ✅ | 3 ítems, "$ 180.000" cada uno |
+| Nueva categoría "Lectura Angelical": básica 50.000, angelical 120.000, oráculo 120.000 | ✅ | "$ 50.000", "$ 120.000", "$ 120.000" |
+| Charlas/Retiros sin precio → "Consultar" | ✅ | presente en ambos |
+| Dropdown /agendar sincronizado (21 ítems) | ✅ | 21 opciones + placeholder, sin duplicados exactos |
+| Switch ES/EN traduce categorías y textos nuevos | ✅ | ES "Sanaciones" → EN "Healings"; "Inner Child Healing" $56.34; "Bars + Reiki Combo" $83.23 |
+| Regresión: 6 páginas sin errores de consola | ✅ | /, /nosotros, /contacto, /testimonios: 0 errores |
+
+## Observaciones (pre-existentes, ajenas al feature, sin cambio)
+
+- OBS-001: error de hidratación #418 en home cuando localStorage guarda "en" (patrón i18n + SSR). No aparece en /servicios ni con localStorage limpio.
+- OBS-002: video `/videos/alas-de-amor.mp4` no carga (ERR_CACHE_OPERATION_NOT_SUPPORTED).
+
+## Verificación del feature (CA del SPECS.md)
+
+- CA1: ✅ | CA2: ✅ | CA3: ✅ | CA4: ✅ | CA5: ✅ | CA6: ✅ | CA7: ✅
+
+## Checklist DOF de TASKS.md (Ronda 3)
+
+| Tarea | DOF | Resultado | Evidencia |
+|-------|-----|-----------|-----------|
+| T1 | 6 categorías (Terapias, Talleres, Sanaciones, Lectura Angelical, Charlas, Retiros) | ✅ | /servicios muestra las 6 secciones |
+| T1 | Precios correctos (reiki 160000, access 230000, combo 265900, medium 90000, nina/mama/papa 180000, basica 50000, angelical/oraculo 120000) | ✅ | ES muestra los valores exactos |
+| T1 | Sin ids huérfanos en i18n | ✅ | 48 claves del catálogo resuelven en ES y EN |
+| T1 | `npm run lint` sin errores | ✅ | 0 errores, 2 warnings ajenos (.agents/skills) |
+| T2 | JSON válidos + claves en ambos idiomas | ✅ | parsing OK; ES/EN traducen los textos nuevos |
+| T2 | build sin claves faltantes | ✅ | build OK |
+| T3 | `sanaciones` y `lecturaAngelical` con color | ✅ | categorías renderizadas con gradiente violeta |
+| T3 | build pasa | ✅ | build OK |
+| T4 | select /agendar sin duplicados exactos | ✅ | 21 ítems distintos; "Barras Access" vs "Taller Barras Access" diferenciados |
+| T4 | seleccionar ítem nuevo no rompe el form | ✅ | dropdown cargó todos los ítems nuevos sin error |
+| T5 | build y lint pasan | ✅ | ambos OK |
+| T5 | páginas cargan sin errores | ✅ | 6 páginas revisadas, 0 console errors |
+| T5 | switch ES/EN en /servicios funciona | ✅ | categorías y textos cambian correctamente |
+
+## Issues abiertos
+
+Ninguno.
+
+## Cambios previos resueltos
+
+- ISS-001 (Ronda 2, ya corregido): el taller "Access Bars" se distingue como "Taller Barras Access" / "Access Bars Workshop". Se mantiene y re-verificó en esta ronda.
+
 # QA ISSUES — Ronda 2
 Fecha: 2026-08-06
 Deploy verificado: https://alas-de-amor-portal.vercel.app (commit 196961d)
