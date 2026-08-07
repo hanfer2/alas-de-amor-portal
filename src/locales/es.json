@@ -243,6 +243,21 @@
       "title": "Agendar Cita",
       "subtitle": "Selecciona el servicio que necesitas y encuentra el horario que mejor se adapte a ti."
     },
+    "steps": {
+      "title": "¿Cómo agendar tu cita?",
+      "step1": {
+        "title": "Selecciona tu servicio",
+        "desc": "Elige la terapia o taller que mejor se adapte a tus necesidades entre nuestras opciones disponibles."
+      },
+      "step2": {
+        "title": "Elige fecha y hora",
+        "desc": "Selecciona el horario que más te convenga. Te recomendamos elegir un momento tranquilo para tu sesión."
+      },
+      "step3": {
+        "title": "Confirma y recibe tu cita",
+        "desc": "Recibirás una confirmación por WhatsApp con los detalles de tu sesión. Si tienes dudas, puedes contactarnos."
+      }
+    },
     "form": {
       "title": "Solicita tu Cita",
       "name": "Nombre completo",

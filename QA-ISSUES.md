@@ -1,205 +1,101 @@
-# QA ISSUES — Ronda 4
+# QA ISSUES — Ronda 5 (Barrido Completo)
 Fecha: 2026-08-07
-Deploy verificado: https://alas-de-amor-portal.vercel.app (commit fa3fa09)
-Resultado global: ✅ APROBADO (0 issues abiertos)
+Deploy verificado: https://alas-de-amor-portal.vercel.app (commit 878cb8d)
+Resultado global: ❌ RECHAZADO (5 issues abiertos)
 
-## Alcance de esta ronda
-Reemplazo de los 21 placeholders SVG en `/servicios` por imágenes reales (fotos de Liliana + fallbacks de galería) usando `next/image`. Cada `CatalogItem` ahora tiene campo `image` con ruta a `public/imgs/services/`.
+## Casos de prueba
 
-## Issues detectados y corregidos
+| # | Caso | Tarea/DOF | Criterio de éxito | Prioridad | Resultado |
+|---|------|-----------|-------------------|-----------|-----------|
+| CP1 | Home carga sin errores consola | Regresión | 0 console errors | Alta | ❌ ISS-001 |
+| CP2 | /nosotros carga sin errores | Regresión | 0 console errors | Alta | ❌ ISS-001 |
+| CP3 | /servicios: 21 imágenes visibles | T2 DOF1 | 21 img naturalWidth > 0 | Alta | ✅ |
+| CP4 | /servicios: 0 imágenes duplicadas | T2 DOF4 | Ningún src repetido | Media | ✅ |
+| CP5 | /servicios: imágenes coherentes con el servicio | T2 DOF5 | Imagen evoca el servicio descrito | Media | ❌ ISS-IMG-CTX-001 |
+| CP6 | /servicios: peso imágenes < 500 KB | TI-2 DOF3 | Todas < 500 KB | Baja | ❌ ISS-IMG-003 |
+| CP7 | /agendar: dropdown funcional con 21 ítems | T4 DOF1 | Select con 21 opciones | Alta | ✅ |
+| CP8 | /contacto: form visible | Regresión | Form renderiza correctamente | Alta | ✅ |
+| CP9 | /testimonios: contenido visible | Regresión | main > 100 chars | Alta | ✅ |
+| CP10 | /blog: contenido visible | Regresión | main > 100 chars | Alta | ✅ |
+| CP11 | Responsive 375px en todas las páginas | Regresión | scrollWidth ≤ 375 | Alta | ✅ |
+| CP12 | Switch ES/EN funcional | T3 DOF2 | lang cambia, textos traducen | Alta | ✅ |
+| CP13 | Imagen de persona con rostro visible | T2 DOF3 | Rostro centrado, no cortado | Media | ✅ N/A (no hay personas con rostro) |
 
-| Issue | Severidad | Descripción | Estado |
-|-------|-----------|-------------|--------|
-| ISS-IMG-001 | Alta | Las 21 imágenes en `public/imgs/services/` no estaban en git → 404 en Vercel. Todas mostraban `naturalWidth: 0`. | ✅ CORREGIDO — commit fa3fa09 agregó los 21 archivos |
+## Checklist DOF de TASKS.md (solo tareas completadas previamente)
 
-## Checklist DOF de TASKS.md
-
-| Tarea | DOF | Resultado | Evidencia |
-|-------|-----|-----------|-----------|
-| TI-1 | 11 archivos en `public/imgs/services/` | ✅ | 21 archivos totales, incluyendo los 11 de fotos reales |
-| TI-1 | IMAGES.md actualizado | ✅ | Sección `/servicios` con 21 fichas técnicas documentadas |
-| TI-2 | 10 imágenes con prefijo `gen-` existen | ✅ | 10 archivos `gen-*` en `public/imgs/services/` |
-| TI-2 | IMAGES.md con fichas | ✅ | Cada imagen documentada con uso, peso y origen |
-| T1 | `CatalogItem` tiene campo `image` | ✅ | `src/lib/prices.ts:8: image?: string` |
-| T1 | 21 ítems con `image` asignado | ✅ | Todas las rutas apuntan a `/imgs/services/*.jpg` |
-| T1 | build + lint pasan | ✅ | 0 errores, 0 warnings propios |
-| T2 | ServiceBlock renderiza `<Image>` | ✅ | `next/image` con `fill` + `object-cover` |
-| T2 | `naturalWidth > 0` en 21 imágenes | ✅ | 21/21 cargan (683px width via next/image optimization) |
-| T2 | Layout responsive sin overflow | ✅ | 375px: scrollWidth 360, sin overflow horizontal |
-| T3 | Regresión: 6 páginas sin errores | ✅ | / /nosotros /contacto /testimonios: 0 console errors |
-| T3 | Switch ES/EN en /servicios | ✅ | lang=es→"Terapias Holísticas", lang=en→"Holistic Therapies", 0 errors |
-| T3 | IMAGES.md completo | ✅ | 21 imágenes en /servicios + estado actualizado de disponibles |
-
-## Resultados por página
-
-| Página | Console Errors | Imágenes | Lang Switch | Responsive |
-|--------|---------------|----------|-------------|------------|
-| `/servicios` | 0 | 21/21 ✅ | ES/EN ✅ | 375px ✅ |
-| `/` | 0 | N/A | N/A | N/A |
-| `/nosotros` | 0 | N/A | N/A | N/A |
-| `/contacto` | 0 | N/A | N/A | N/A |
-| `/testimonios` | 0 | N/A | N/A | N/A |
-
-## Observaciones
-
-- OBS-001: hydration error #418 en home (pre-existente, i18n+SSR)
-- OBS-002: `/videos/alas-de-amor.mp4` no carga (pre-existente)
-- OBS-003: `lectura-oraculo.jpg` pesa 1853 KB — excede el umbral de 500 KB recomendado para imágenes de servicio. Considerar optimizar a WebP.
+| Tarea | DOF | Resultado |
+|-------|-----|-----------|
+| TI-1 | 11 archivos en services/ | ✅ |
+| TI-2 | 10 imágenes gen-* | ✅ |
+| T1 | CatalogItem con image | ✅ |
+| T2 | ServiceBlock con <Image> | ✅ |
+| T2 | 21 naturalWidth > 0 | ✅ |
+| T2 | Responsive sin overflow | ✅ |
+| T3 | 6 páginas cargan | ✅ |
+| T3 | Switch ES/EN | ✅ |
 
 ## Issues abiertos
 
-Ninguno.
+### ISS-001 — Hydration error #418 en TODAS las páginas
+**Severidad:** Alta
+**Ruta:** Todas (/, /nosotros, /servicios, /agendar, /contacto, /testimonios, /blog)
+**Descripción:** Minified React error #418 en consola al cargar cualquier página del portal. Es un error de hidratación: el servidor renderiza en ES (default) pero el cliente detecta `localStorage alang=en` y rehidrata en EN, causando mismatch entre el HTML del servidor y el primer render del cliente.
+**Evidencia:** 7/7 páginas muestran el mismo error: `Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]=`
+**Contador de persistencia:** 4 (reportado como OBS-001 en Rondas 1-3, ahora escalado a ISS por ser sistémico)
+**Estado:** 🔴 ABIERTO
+**Fix sugerido:** Leer `localStorage` en el servidor vía cookie (`document.cookie`) o middleware de Next.js. Alternativa: usar `suppressHydrationWarning` en el elemento raíz o implementar un provider que sincronice idioma antes del primer render.
 
-## Alcance de esta ronda
-Actualización de precios reales y nuevo catálogo de servicios: nuevas categorías "Sanaciones" y "Lectura Angelical", Combo Barras + Reiki, reasignación de ítems entre categorías, y conversión COP→USD verificada.
+### ISS-IMG-CTX-001 — 18 imágenes fallback no son coherentes con el servicio
+**Severidad:** Media
+**Ruta:** /servicios → múltiples ServiceBlocks
+**Descripción:** 18 de 21 imágenes están marcadas como ⚠️ FALLBACK en IMAGES.md. Las imágenes de galería y PPTX reutilizadas no representan fielmente el servicio. Ejemplos críticos:
+- "Oráculos" (Terapias): usa IMG_3559 (foto de cartas oráculo, 1561 KB) — la imagen muestra cartas de oráculo reales, lo cual es coherente pero pesa demasiado
+- "Charla 1" y "Charla 2": usan image20.jpeg/image21.jpeg del PPTX original — no muestran un espacio de charla o comunidad
+- "Sanación niño interior/mamá/papá": usan gallery-3, gallery-4, image18 — fotos genéricas de espacio que no evocan sanación
+- "Combo Barras + Reiki": gallery-9 — no evoca la fusión de energías
+- "Facelight Energético": gallery-10 — no evoca rejuvenecimiento facial
+- "Coaching Espiritual": gallery-11 — no evoca acompañamiento espiritual
+**Evidencia:** IMAGES.md sección /servicios marca 18 imágenes como ⚠️ FALLBACK
+**Contador de persistencia:** 1 (primera vez)
+**Estado:** 🔴 ABIERTO — requiere DISEÑADOR para generar imágenes IA cuando API esté configurada
 
-## Checklist de verificación del nuevo catálogo
+### ISS-IMG-003 — lectura-oraculo.jpg excede 500 KB
+**Severidad:** Baja
+**Ruta:** /servicios → Lectura Oráculo Angelical
+**Imagen:** `/imgs/services/lectura-oraculo.jpg` — 1853 KB
+**Descripción:** La imagen de Lectura Oráculo Angelical pesa 1853 KB, más de 3x el umbral de 500 KB recomendado. Ralentiza la carga de la página.
+**Estado:** 🔴 ABIERTO — optimizar con sharp a WebP
 
-| Verificación | Resultado | Evidencia |
-|--------------|-----------|-----------|
-| Terapias: Reiki 160.000, Barras Access 230.000, Combo 265.900 | ✅ | /servicios ES: "$ 160.000", "$ 230.000", "$ 265.900" |
-| Terapias conserva chakras/meditacion/facelight/coaching/oraculos | ✅ | presentes con sus precios previos |
-| Talleres: Medium 90.000, Reiki Usui 150.000, Taller Barras Access 180.000 | ✅ | "$ 90.000", "$ 150.000", "$ 180.000" |
-| Talleres ya NO incluyen "niña interior" ni "Lectura Oráculo Angelical" | ✅ | ausentes; trasladados a sus categorías nuevas |
-| Nueva categoría "Sanaciones": niño interior, mamá, papá (180.000 c/u) | ✅ | 3 ítems, "$ 180.000" cada uno |
-| Nueva categoría "Lectura Angelical": básica 50.000, angelical 120.000, oráculo 120.000 | ✅ | "$ 50.000", "$ 120.000", "$ 120.000" |
-| Charlas/Retiros sin precio → "Consultar" | ✅ | presente en ambos |
-| Dropdown /agendar sincronizado (21 ítems) | ✅ | 21 opciones + placeholder, sin duplicados exactos |
-| Switch ES/EN traduce categorías y textos nuevos | ✅ | ES "Sanaciones" → EN "Healings"; "Inner Child Healing" $56.34; "Bars + Reiki Combo" $83.23 |
-| Regresión: 6 páginas sin errores de consola | ✅ | /, /nosotros, /contacto, /testimonios: 0 errores |
-
-## Observaciones (pre-existentes, ajenas al feature, sin cambio)
-
-- OBS-001: error de hidratación #418 en home cuando localStorage guarda "en" (patrón i18n + SSR). No aparece en /servicios ni con localStorage limpio.
-- OBS-002: video `/videos/alas-de-amor.mp4` no carga (ERR_CACHE_OPERATION_NOT_SUPPORTED).
-
-## Verificación del feature (CA del SPECS.md)
-
-- CA1: ✅ | CA2: ✅ | CA3: ✅ | CA4: ✅ | CA5: ✅ | CA6: ✅ | CA7: ✅
-
-## Checklist DOF de TASKS.md (Ronda 3)
-
-| Tarea | DOF | Resultado | Evidencia |
-|-------|-----|-----------|-----------|
-| T1 | 6 categorías (Terapias, Talleres, Sanaciones, Lectura Angelical, Charlas, Retiros) | ✅ | /servicios muestra las 6 secciones |
-| T1 | Precios correctos (reiki 160000, access 230000, combo 265900, medium 90000, nina/mama/papa 180000, basica 50000, angelical/oraculo 120000) | ✅ | ES muestra los valores exactos |
-| T1 | Sin ids huérfanos en i18n | ✅ | 48 claves del catálogo resuelven en ES y EN |
-| T1 | `npm run lint` sin errores | ✅ | 0 errores, 2 warnings ajenos (.agents/skills) |
-| T2 | JSON válidos + claves en ambos idiomas | ✅ | parsing OK; ES/EN traducen los textos nuevos |
-| T2 | build sin claves faltantes | ✅ | build OK |
-| T3 | `sanaciones` y `lecturaAngelical` con color | ✅ | categorías renderizadas con gradiente violeta |
-| T3 | build pasa | ✅ | build OK |
-| T4 | select /agendar sin duplicados exactos | ✅ | 21 ítems distintos; "Barras Access" vs "Taller Barras Access" diferenciados |
-| T4 | seleccionar ítem nuevo no rompe el form | ✅ | dropdown cargó todos los ítems nuevos sin error |
-| T5 | build y lint pasan | ✅ | ambos OK |
-| T5 | páginas cargan sin errores | ✅ | 6 páginas revisadas, 0 console errors |
-| T5 | switch ES/EN en /servicios funciona | ✅ | categorías y textos cambian correctamente |
-
-## Issues abiertos
-
-Ninguno.
-
-## Cambios previos resueltos
-
-- ISS-001 (Ronda 2, ya corregido): el taller "Access Bars" se distingue como "Taller Barras Access" / "Access Bars Workshop". Se mantiene y re-verificó en esta ronda.
-
-# QA ISSUES — Ronda 2
-Fecha: 2026-08-06
-Deploy verificado: https://alas-de-amor-portal.vercel.app (commit 196961d)
-Resultado global: ✅ APROBADO (0 issues abiertos)
-
-## Re-verificación de fixes de la Ronda 1
-
-| Issue | Fix del Dev | Resultado | Evidencia |
-|-------|-------------|-----------|-----------|
-| ISS-001 | Renombrar taller a "Taller Barras Access" / "Access Bars Workshop" | ✅ CORREGIDO | /agendar dropdown: "Barras Access" (terapia) + "Taller Barras Access" (taller) en ES; "Access Bars" + "Access Bars Workshop" en EN. Sin duplicado exacto en ninguno de los 2 idiomas. |
-
-## Checklist DOF (re-verificación del feature tras el fix)
-
-| Tarea | DOF | Resultado | Evidencia |
-|-------|-----|-----------|-----------|
-| T3 | 4 categorías con ítems y precios | ✅ | /servicios: Terapias, Talleres personalizados, Charlas, Retiros presentes |
-| T3 | ES → COP; EN → USD calculado | ✅ | ES "$ 150.000"; EN "$46.95" (verificado en Ronda 1) |
-| T3 | "Consultar" en ítems sin precio | ✅ | "Consultar" presente en charlas/retiros |
-| T3 | Responsive 375px sin overflow | ✅ | scrollWidth 360 ≤ 375 (Ronda 1) |
-| T3 | 0 errores consola | ✅ | /servicios ES: 0 errores con localStorage limpio |
-| T4 | select incluye 17 ítems | ✅ | 17 opciones + placeholder en /agendar |
-| T4 | seleccionar ítem nuevo no rompe envío | ✅ | selección OK + validación funciona (Ronda 1) |
-| T6 | switch ES/EN en /servicios cambia traducciones | ✅ | lang es→en; textos nuevos cambian |
-
-## Issues abiertos
-
-Ninguno.
-
-## Observaciones (pre-existentes, ajenas al feature, sin cambio)
-
-- OBS-001: error de hidratación #418 en home cuando localStorage guarda "en" (patrón i18n + SSR). No aparece en /servicios ni con localStorage limpio.
-- OBS-002: video `/videos/alas-de-amor.mp4` no carga (ERR_CACHE_OPERATION_NOT_SUPPORTED).
-
-## Verificación del feature (CA del SPECS.md)
-
-- CA1: ✅ | CA2: ✅ | CA3: ✅ | CA4: ✅ | CA5: ✅ | CA6: ✅ | CA7: ✅ | CA8: ✅ | CA9: ✅ (implementado; API respondió 200 en ambos tests)
-
-## Checklist DOF de TASKS.md
-
-| Tarea | DOF | Resultado | Evidencia |
-|-------|-----|-----------|-----------|
-| T1 | `prices.ts` exporta todos los ítems con precios COP (o null) | ✅ | 17 ítems en catálogo; precios visibles en UI |
-| T1 | `formatCOP(150000)` produce "$ 150.000" y `formatUSD` equivalente | ✅ | UI ES muestra "$ 150.000"; EN muestra "$46.95" (150.000 × 0.000313) |
-| T1 | `npm run lint` pasa sin errores | ✅ | 0 errores, 2 warnings ajenos (.agents/skills) |
-| T2 | es.json y en.json JSON válido | ✅ | parsing OK en ambos |
-| T2 | Cada clave nueva existe en AMBOS idiomas | ✅ | ES y EN muestran categorías/talleres/etiquetas |
-| T2 | build no falla por claves faltantes | ✅ | build OK |
-| T3 | /servicios muestra 4 categorías con ítems y precios | ✅ | Terapias, Talleres, Charlas, Retiros presentes; 13 precios visibles |
-| T3 | ES → COP; EN → USD calculado | ✅ | lang=es → "$ 150.000"; lang=en → "$46.95" |
-| T3 | ítems con price:null muestran "Consultar" | ✅ | "Consultar" (ES) / "Contact for pricing" (EN) en charlas y retiros |
-| T3 | Responsive 375px sin overflow | ✅ | scrollWidth 360 ≤ 375 en /servicios (EN) |
-| T3 | build pasa | ✅ | next build OK |
-| T3 | 0 errores consola | ✅ | 0 errores en /servicios ES y EN (localStorage limpio) |
-| T4 | select incluye 8 terapias + 5 talleres + 2 charlas + 2 retiros | ✅ | 17 opciones en dropdown /agendar |
-| T4 | seleccionar ítem nuevo no rompe envío | ✅ | "Healing Your Inner Child Workshop" seleccionado sin error; validación funciona |
-| T4 | build pasa | ✅ | build OK |
-| T5 | fallback de tasa sin romper página | ✅ | catch + fallbackUsdRate; la API respondió 200 en este test |
-| T5 | tasa se consulta una vez por sesión | ✅ | 1 request a open.er-api.com en network |
-| T5 | 0 errores consola cuando API no responde | ⚠️ NO VERIFICABLE | No se pudo simular fallo de red en este entorno; cubierto por código (timeout 10s + catch) |
-| T6 | otras 6 páginas cargan sin errores | ✅ | /, /nosotros, /contacto, /blog, /testimonios, /agendar: main>100 chars, 0 overflow, 0 console errors |
-| T6 | switch ES/EN en /servicios cambia traducciones | ✅ | lang es→en, textos nuevos cambian |
-| T6 | build y lint pasan | ✅ | ambos OK |
-
-## Issues abiertos
-
-### ISS-001 — Dropdown de /agendar tiene "Access Bars" duplicado
+### ISS-CONTENT-001 — /agendar tiene poco contenido (559 chars)
 **Severidad:** Baja
 **Ruta:** /agendar
-**Descripción:** En el select de servicio, "Access Bars" aparece 2 veces: una en "Terapias" (íd: access, precio COP 180.000) y otra en "Talleres personalizados" (íd: access-taller, precio COP 180.000). Mismo nombre visible para el usuario → confusión al elegir.
-**Evidencia:** snapshot del select (17 opciones, "Access Bars" x2).
-**Contador de persistencia:** 1 (primera vez)
-**Estado:** 🔧 FIX EN CURSO → ✅ CORREGIDO
-**Fix (dev):** el taller se renombró a "Taller Barras Access" (ES) / "Access Bars Workshop" (EN) para distinguirlo de la terapia. Build y lint pasan. Pendiente re-verificación de QA.
+**Descripción:** El contenido de `<main>` en /agendar tiene solo 559 caracteres. Las demás páginas tienen >1000 chars. La página parece mínima: solo el formulario y el shortcut de WhatsApp, sin sección informativa sobre el proceso de agendamiento.
+**Evidencia:** `document.querySelector('main').textContent.length = 559`
+**Estado:** 🔴 ABIERTO
 
-## Observaciones (no bloqueantes)
-
-### OBS-001 — Error de hidratación #418 en home cuando localStorage tiene idioma "en"
-**Severidad:** Media
-**Ruta:** /
-**Descripción:** Con localStorage `alang=en` guardado, la home muestra "Minified React error #418" en consola al recargar directo. Con localStorage limpio (es) → 0 errores. Es un comportamiento del patrón i18n con SSR (server renderiza "es", cliente hidrata "en"), NO del feature de precios (no aparece en /servicios con mismo estado).
-**Evidencia:** consola home con localStorage en → error #418; tras localStorage.clear() → 0 errores.
-**Estado:** ⚠️ PRE-EXISTENTE (ajeno a este feature; recomendable tratar en iteración futura de i18n/SSR).
-
-### OBS-002 — Video de fondo de home no carga
+### ISS-DESIGN-001 — /servicios no tiene imagen de héroe ni decoración visual por categoría
 **Severidad:** Baja
-**Ruta:** /
-**Descripción:** `/videos/alas-de-amor.mp4` falla con `net::ERR_CACHE_OPERATION_NOT_SUPPORTED`. Ajeno a este cambio.
-**Estado:** ⚠️ PRE-EXISTENTE
+**Ruta:** /servicios
+**Descripción:** El héroe de /servicios usa solo gradientes y orbes flotantes (FloatingOrbs + EnergyWaves). No tiene una imagen de fondo o banner visual que —a diferencia de la home que tiene foto de Liliana. Cada categoría de servicio podría beneficiarse de un banner o ícono distintivo.
+**Evidencia:** snapshot del héroe muestra solo `FloatingOrbs` + `EnergyWaves`, sin `<img>`.
+**Estado:** 🔴 ABIERTO
 
-## Verificación del feature (CA del SPECS.md)
+## Observaciones (pre-existentes)
 
-- CA1: ✅ 4 categorías con sus ítems en /servicios
-- CA2: ✅ cada ítem muestra precio
-- CA3: ✅ precios en COP en ES
-- CA4: ✅ precios en USD calculados en EN (tasa open.er-api.com)
-- CA5: ✅ precios fuera de idiomas (src/lib/prices.ts, COP canónico)
-- CA6: ✅ títulos/descripciones desde claves de idioma; talleres con texto provisional
-- CA7: ✅ móvil 375px sin overflow
-- CA8: ✅ build y lint pasan; 0 errores consola en páginas con localStorage limpio
-- CA9: ✅ fallback de tasa implementado (código); API respondió 200 en este test
+- OBS-002: `/videos/alas-de-amor.mp4` no carga (ERR_CACHE_OPERATION_NOT_SUPPORTED) — pre-existente
+
+## Resumen
+
+| Métrica | Resultado |
+|---------|-----------|
+| Páginas evaluadas | 7 |
+| Páginas con error consola | 7 (ISS-001, hydration #418 sistémico) |
+| Imágenes totales en /servicios | 21 |
+| Imágenes rotas | 0 |
+| Imágenes duplicadas | 0 |
+| Imágenes > 500 KB | 1 (lectura-oraculo.jpg = 1853 KB) |
+| Imágenes coherentes | 3/21 (solo Lectura Angelical) |
+| Responsive 375px | ✅ Todas |
+| Switch ES/EN | ✅ Funcional |
+| Issues abiertos | 5 |
+| Issues bloqueantes | 1 (ISS-001 hydration #418) |

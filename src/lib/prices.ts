@@ -164,7 +164,7 @@ export const catalog: CatalogCategory[] = [
         id: "oraculo",
         titleKey: "servicios.lecturaAngelical.oraculo.title",
         descKey: "servicios.lecturaAngelical.oraculo.desc",
-        image: "/imgs/services/lectura-oraculo.jpg",
+        image: "/imgs/services/lectura-oraculo.webp",
         price: 120000,
       },
     ],

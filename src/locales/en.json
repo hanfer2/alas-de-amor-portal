@@ -243,6 +243,21 @@
       "title": "Book Appointment",
       "subtitle": "Select the service you need and find the schedule that best suits you."
     },
+    "steps": {
+      "title": "How to book your appointment?",
+      "step1": {
+        "title": "Select your service",
+        "desc": "Choose the therapy or workshop that best fits your needs from our available options."
+      },
+      "step2": {
+        "title": "Choose date and time",
+        "desc": "Pick the schedule that works best for you. We recommend choosing a quiet moment for your session."
+      },
+      "step3": {
+        "title": "Confirm and receive your appointment",
+        "desc": "You'll receive a confirmation via WhatsApp with your session details. Contact us if you have any questions."
+      }
+    },
     "form": {
       "title": "Request Your Appointment",
       "name": "Full name",

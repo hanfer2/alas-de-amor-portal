@@ -92,3 +92,92 @@ Se reemplazan los 21 placeholders SVG del componente `ServiceBlock` en `/servici
 - Peso objetivo: < 200 KB
 - Deben verse naturales junto a las fotos reales (mismo nivel de saturación y calidez)
 
+---
+
+# TAREAS ADICIONALES — Barrido QA Ronda 5
+Generado por: agente tech-lead
+Basado en: QA-ISSUES.md (Ronda 5, 2026-08-07)
+Fecha: 2026-08-07
+
+## Resumen técnico
+El QA encontró 5 issues en el barrido completo. Se crean tareas para resolver cada uno: 1 fix de hydration (dev), 1 optimización de imagen (diseñador), 1 mejora de contenido (dev), 1 generación de imágenes IA para reemplazar fallbacks (diseñador, requiere API configurada), 1 banner opcional (diseñador).
+
+### T1 — Fix hydration error #418 en todas las páginas
+**Archivos:** `src/context/LanguageContext.tsx`, posiblemente `src/app/layout.tsx`
+**Descripción técnica:** Error #418 ocurre porque el servidor renderiza en ES (default) pero el cliente rehidrata en EN si `localStorage alang=en`. Esto causa mismatch HTML. Opciones de fix (en orden de simplicidad):
+1. Agregar `suppressHydrationWarning` al `<html>` en layout.tsx
+2. Leer idioma de cookie en servidor vía middleware
+3. Sincronizar idioma en el provider antes del primer render con useEffect + useState inicial vacío (mostrar nada hasta que hidrate)
+**DOR:**
+- [ ] ISS-001 documentado en QA-ISSUES.md (4 rondas de persistencia)
+- [ ] Conocer el patrón actual de LanguageContext (localStorage + estado inicial "es")
+**DOF:**
+- [ ] 0 hydration errors en consola al navegar con localStorage `alang=en`
+- [ ] 0 hydration errors con localStorage limpio
+- [ ] El switch ES/EN sigue funcionando
+- [ ] `npm run build` + `npm run lint` pasan
+- [ ] Las 7 páginas cargan sin error #418
+**Criterio de aceptación relacionado:** QA-ISSUES.md ISS-001
+**Prioridad:** Alta
+**Riesgo:** Medio — tocar el sistema de i18n puede romper el switch de idioma
+
+### TI-1 — Optimizar lectura-oraculo.jpg (1853 KB → <500 KB)
+**Tipo:** Optimización de imagen existente (diseñador)
+**Archivo:** `public/imgs/services/lectura-oraculo.jpg`
+**Descripción técnica:** Convertir a WebP con calidad 80% y redimensionar a 800×600 máximo. Usar `npx sharp-cli -i public/imgs/services/lectura-oraculo.jpg -o public/imgs/services/lectura-oraculo.webp --resize 800 600`. Luego actualizar la referencia en `src/lib/prices.ts` de `.jpg` a `.webp`.
+**DOR:**
+- [ ] `sharp` instalado en el proyecto
+- [ ] ISS-IMG-003 documentado en QA-ISSUES.md
+**DOF:**
+- [ ] `lectura-oraculo.webp` existe con peso < 500 KB
+- [ ] La referencia en prices.ts apunta a `.webp`
+- [ ] La imagen se ve correctamente en /servicios
+**Prioridad:** Baja
+**Riesgo:** Bajo
+
+### T2 — Mejorar contenido de /agendar
+**Archivos:** `src/app/agendar/page.tsx`, `src/locales/es.json`, `src/locales/en.json`
+**Descripción técnica:** Agregar una sección informativa sobre el proceso de agendamiento antes del formulario: pasos (1. Selecciona servicio, 2. Elige horario, 3. Confirma), información de contacto, y qué esperar después de agendar. Sin cambios en el formulario existente.
+**DOR:**
+- [ ] ISS-CONTENT-001 documentado en QA-ISSUES.md
+- [ ] `es.json`/`en.json` existen y son válidos
+**DOF:**
+- [ ] `/agendar` tiene > 1000 chars en `<main>`
+- [ ] El form sigue funcionando correctamente
+- [ ] ES/EN traducen el nuevo contenido
+- [ ] `npm run build` + `npm run lint` pasan
+**Prioridad:** Baja
+**Riesgo:** Bajo
+
+### TI-2 — Generar imágenes IA para reemplazar los 18 fallbacks en /servicios
+**Tipo:** Imagen nueva (diseñador — requiere API configurada)
+**Archivos:** 18 imágenes según el briefing del SPECS.md original (ver abajo)
+**Descripción técnica:** Generar imágenes IA que representen fielmente cada servicio, reemplazando los fallbacks de galería/PPTX. Priorizar los servicios más críticos: Sanaciones (3), Charlas (2), y terapias con fallback genérico (Facelight, Coaching, Combo, Oráculos).
+**DOR:**
+- [ ] ISS-IMG-CTX-001 documentado
+- [ ] IMAGES.md tiene el mapeo actual de fallbacks
+- [ ] `IMAGE_API_KEY` configurada en `.env.local`
+**DOF:**
+- [ ] Las imágenes generadas existen en `public/imgs/`
+- [ ] Formato WebP, peso < 200 KB
+- [ ] IMAGES.md actualizado — los ⚠️ FALLBACK pasan a ✅ IA generada
+- [ ] Las imágenes son coherentes con la descripción de cada servicio
+**Prioridad:** Media
+**Riesgo:** Alto — requiere API externa. Si no está configurada, mantener fallbacks actuales.
+
+### TI-3 — Agregar banner visual al héroe de /servicios
+**Tipo:** Imagen nueva (diseñador)
+**Archivo:** `public/imgs/gen-servicios-hero.webp`
+**Descripción técnica:** Crear un banner etéreo para el héroe de /servicios (1920×600) con la paleta del portal. Actualmente usa solo orbes flotantes sin imagen de fondo.
+**DOR:**
+- [ ] ISS-DESIGN-001 documentado
+**DOF:**
+- [ ] `gen-servicios-hero.webp` existe
+- [ ] El héroe de /servicios tiene imagen de fondo
+- [ ] `npm run build` + `npm run lint` pasan
+**Prioridad:** Baja
+**Riesgo:** Bajo
+
+## Dependencias
+T1 (hydration) es independiente. TI-1 (optimizar jpg) es independiente. T2 (/agendar contenido) es independiente. TI-2 (IA images) depende de API configurada y bloquea los demás si no está. TI-3 (banner) depende de TI-2 o es independiente.
+
