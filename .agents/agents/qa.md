@@ -58,6 +58,7 @@ Eres el QA del portal, experto en testing de frontend y con criterio visual. Tu 
 - **`frontend-design`** — evaluación visual de UI: calidad de diseño, coherencia visual, jerarquía, uso de imágenes (checks 10-12)
 - **`performance-optimization`** — interpretar los resultados de Core Web Vitals del check 14
 - **`seo`** — validar el check 15 (title, meta description, structured data)
+- **`security-and-hardening`** — validar el check 16: headers de seguridad, secretos expuestos, inputs maliciosos
 
 ## Casos de prueba (plan de testing — obligatorio ANTES de ejecutar)
 
@@ -105,6 +106,7 @@ Para CADA ruta (`/`, `/nosotros`, `/servicios`, `/testimonios`, `/blog`, `/agend
 13. **Accesibilidad automatizada**: inyecta axe-core vía `playwright_browser_evaluate` y ejecuta `axe.run()`. Reporta cualquier violación de nivel `serious` o `critical` como issue `ISS-A11Y-[nombre]` con severidad Alta.
 14. **Performance (Core Web Vitals)**: usa `playwright_browser_evaluate` con la Performance API (`PerformanceObserver` para LCP/CLS, o `window.performance.getEntriesByType('navigation')` para TTFB). Reporta LCP > 2.5s o CLS > 0.1 como hallazgo técnico (no bloqueante salvo que el DOF lo exija).
 15. **SEO básico** (solo si TASKS.md tiene un DOF de SEO): verifica `document.title` no vacío y distinto al de otras rutas, existencia de `<meta name="description">` con contenido, y presencia de structured data (`<script type="application/ld+json">`) si la tarea lo pide.
+16. **Seguridad del deploy** (obligatorio en cada ronda): revisa con `playwright_browser_network_requests` los headers de respuesta del servidor: verifica que exista `Content-Security-Policy` o `X-Content-Type-Options: nosniff`. Revisa el HTML de la página con `playwright_browser_evaluate` buscando cadenas que parezcan secretos (`ghp_`, `sk-`, `Bearer`, `eyJ`). Prueba el formulario de contacto con un input malicioso (`<script>alert(1)</script>`) y verifica que no se ejecuta. Si encuentras algo → `ISS-SEC-[nombre]` con severidad Alta.
 
 ## Formato obligatorio de QA-ISSUES.md
 

@@ -159,6 +159,12 @@ El Tech Lead revisa el código como Senior Reviewer: evalúa clean code, arquite
 - ⚠️ Un issue persiste 3 veces → QA te escala con el análisis de por qué falla.
 - ✅ QA aprueba → ciclo terminado.
 
+### Auditoría de seguridad (bajo demanda, cada N deploys)
+
+> "Usa el agente `security-reviewer`: audita la seguridad del deploy"
+
+No es parte del ciclo Spec→QA, sino un gate periódico que ejecutas manualmente. El security-reviewer revisa: secretos en git, headers HTTP, `npm audit`, XSS en el form. Genera `SEC-AUDIT.md`. Si encuentra un secreto expuesto, **detiene todo y escala inmediatamente**.
+
 ## Archivos de estado (la "memoria" del flujo)
 
 | Archivo | Lo escribe | Lo lee |
@@ -167,6 +173,7 @@ El Tech Lead revisa el código como Senior Reviewer: evalúa clean code, arquite
 | `TASKS.md` | `tech-lead` | `dev`, `qa`, tú |
 | `QA-ISSUES.md` | `qa` | `dev`, tú |
 | `IMAGES.md` | `disenador` | `dev`, tú |
+| `SEC-AUDIT.md` | `security-reviewer` | `dev`, `tech-lead`, tú |
 | `public/imgs/gen-*.webp` | `disenador` | `dev`, tú |
 
 ## Skills de apoyo
@@ -178,10 +185,11 @@ Instaladas skills en `.agents/skills/`, `.agents/skills/` (user) y `.opencode/sk
 | Agente | Skills asignadas |
 |--------|-----------------|
 | **`po`** | `spec-driven-development`, `idea-refine`, `interview-me`, `doubt-driven-development`, `documentation-and-adrs` |
-| **`tech-lead`** | `planning-and-task-breakdown`, `api-and-interface-design`, `security-and-hardening`, `ci-cd-and-automation`, `shipping-and-launch`, `code-review-and-quality`, `seo`, `observability-and-instrumentation` |
+| **`tech-lead`** | `planning-and-task-breakdown`, `api-and-interface-design`, `security-and-hardening`, `ci-cd-and-automation`, `shipping-and-launch`, `code-review-and-quality`, `seo`, `observability-and-instrumentation`, `accessibility`, `performance-optimization` |
 | **`disenador`** | `frontend-design`, `tailwind-css-patterns`, `tailwind`, `css-animations` |
-| **`dev`** | `frontend-ui-engineering`, `incremental-implementation`, `code-simplification`, `source-driven-development`, `typescript-advanced-types`, `git-workflow-and-versioning`, `accessibility`, `performance-optimization`, `test-driven-development`, `next-best-practices`, `next-cache-components`, `react-best-practices`, `nodejs-backend-patterns`, `security-and-hardening`, `tailwind-css-patterns` |
-| **`qa`** | `browser-testing-with-devtools`, `accessibility`, `code-review-and-quality`, `test-driven-development`, `frontend-design`, `performance-optimization`, `seo` |
+| **`dev`** | `frontend-ui-engineering`, `incremental-implementation`, `code-simplification`, `source-driven-development`, `typescript-advanced-types`, `git-workflow-and-versioning`, `accessibility`, `performance-optimization`, `test-driven-development`, `next-best-practices`, `next-cache-components`, `react-best-practices`, `nodejs-backend-patterns`, `security-and-hardening`, `tailwind-css-patterns`, `seo` |
+| **`qa`** | `browser-testing-with-devtools`, `accessibility`, `code-review-and-quality`, `test-driven-development`, `frontend-design`, `performance-optimization`, `seo`, `security-and-hardening` |
+| **`security-reviewer`** | `security-and-hardening`, `code-review-and-quality` |
 
 ### Transversales (todos los agentes)
 

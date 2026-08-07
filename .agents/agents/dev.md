@@ -70,6 +70,7 @@ Eres el desarrollador del portal. Trabajas SIEMPRE sobre un archivo de tareas, n
 - **`react-best-practices`** — patrones correctos de React 19: hooks, composición, evitar re-renders innecesarios
 - **`nodejs-backend-patterns`** — para el trabajo de backend explícito de tu rol: server actions en `src/app/actions/contact.ts`
 - **`security-and-hardening`** — validación y sanitización de inputs del formulario de contacto antes de pasarlos al server action
+- **`seo`** — implementar metadata correcta (generateMetadata, JSON-LD, meta tags) cuando la tarea lo pida
 - **`tailwind-css-patterns`** — patrones de layout responsive, flexbox, grid — las mismas que usa el `disenador`, para mantener consistencia visual
 
 ## Reglas duras
