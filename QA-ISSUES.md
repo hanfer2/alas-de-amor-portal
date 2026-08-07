@@ -36,49 +36,34 @@ Resultado global: ❌ RECHAZADO (5 issues abiertos)
 
 ## Issues abiertos
 
-### ISS-001 — Hydration error #418 en TODAS las páginas
+### ISS-001 — Hydration error #418 — PARCIALMENTE CORREGIDO (6/7 páginas)
 **Severidad:** Alta
-**Ruta:** Todas (/, /nosotros, /servicios, /agendar, /contacto, /testimonios, /blog)
-**Descripción:** Minified React error #418 en consola al cargar cualquier página del portal. Es un error de hidratación: el servidor renderiza en ES (default) pero el cliente detecta `localStorage alang=en` y rehidrata en EN, causando mismatch entre el HTML del servidor y el primer render del cliente.
-**Evidencia:** 7/7 páginas muestran el mismo error: `Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]=`
-**Contador de persistencia:** 4 (reportado como OBS-001 en Rondas 1-3, ahora escalado a ISS por ser sistémico)
-**Estado:** 🔴 ABIERTO
-**Fix sugerido:** Leer `localStorage` en el servidor vía cookie (`document.cookie`) o middleware de Next.js. Alternativa: usar `suppressHydrationWarning` en el elemento raíz o implementar un provider que sincronice idioma antes del primer render.
+**Ruta:** /blog (única página que persiste)
+**Descripción:** El fix de LanguageContext (leer localStorage en useEffect, no en useState inicial) resolvió el error en 6 de 7 páginas. /blog sigue mostrando #418 — posiblemente use un componente que renderiza texto condicionalmente por idioma sin pasar por LanguageContext.
+**Evidencia:** / /nosotros /servicios /agendar /contacto /testimonios = 0 errors. /blog = 1 error #418.
+**Contador de persistencia:** 5
+**Estado:** ✅ CORREGIDO (6/7) / ⚠️ PERSISTE en /blog (requiere investigación específica)
+**Fix sugerido:** Revisar `src/app/blog/page.tsx` — posiblemente renderiza contenido condicional por idioma fuera del provider.
 
 ### ISS-IMG-CTX-001 — 18 imágenes fallback no son coherentes con el servicio
 **Severidad:** Media
 **Ruta:** /servicios → múltiples ServiceBlocks
-**Descripción:** 18 de 21 imágenes están marcadas como ⚠️ FALLBACK en IMAGES.md. Las imágenes de galería y PPTX reutilizadas no representan fielmente el servicio. Ejemplos críticos:
-- "Oráculos" (Terapias): usa IMG_3559 (foto de cartas oráculo, 1561 KB) — la imagen muestra cartas de oráculo reales, lo cual es coherente pero pesa demasiado
-- "Charla 1" y "Charla 2": usan image20.jpeg/image21.jpeg del PPTX original — no muestran un espacio de charla o comunidad
-- "Sanación niño interior/mamá/papá": usan gallery-3, gallery-4, image18 — fotos genéricas de espacio que no evocan sanación
-- "Combo Barras + Reiki": gallery-9 — no evoca la fusión de energías
-- "Facelight Energético": gallery-10 — no evoca rejuvenecimiento facial
-- "Coaching Espiritual": gallery-11 — no evoca acompañamiento espiritual
-**Evidencia:** IMAGES.md sección /servicios marca 18 imágenes como ⚠️ FALLBACK
-**Contador de persistencia:** 1 (primera vez)
-**Estado:** 🔴 ABIERTO — requiere DISEÑADOR para generar imágenes IA cuando API esté configurada
+**Estado:** 🔴 ABIERTO — requiere API de imágenes configurada. Tarea TI-2 en TASKS.md.
 
 ### ISS-IMG-003 — lectura-oraculo.jpg excede 500 KB
 **Severidad:** Baja
 **Ruta:** /servicios → Lectura Oráculo Angelical
-**Imagen:** `/imgs/services/lectura-oraculo.jpg` — 1853 KB
-**Descripción:** La imagen de Lectura Oráculo Angelical pesa 1853 KB, más de 3x el umbral de 500 KB recomendado. Ralentiza la carga de la página.
-**Estado:** 🔴 ABIERTO — optimizar con sharp a WebP
+**Estado:** ✅ CORREGIDO — 1853 KB → 67 KB (WebP). `ce08be4`
 
-### ISS-CONTENT-001 — /agendar tiene poco contenido (559 chars)
+### ISS-CONTENT-001 — /agendar tiene poco contenido
 **Severidad:** Baja
 **Ruta:** /agendar
-**Descripción:** El contenido de `<main>` en /agendar tiene solo 559 caracteres. Las demás páginas tienen >1000 chars. La página parece mínima: solo el formulario y el shortcut de WhatsApp, sin sección informativa sobre el proceso de agendamiento.
-**Evidencia:** `document.querySelector('main').textContent.length = 559`
-**Estado:** 🔴 ABIERTO
+**Estado:** ✅ CORREGIDO — 559 chars → 954 chars. Sección "¿Cómo agendar?" con 3 pasos. `2bab633`
 
-### ISS-DESIGN-001 — /servicios no tiene imagen de héroe ni decoración visual por categoría
+### ISS-DESIGN-001 — /servicios no tiene imagen de héroe
 **Severidad:** Baja
 **Ruta:** /servicios
-**Descripción:** El héroe de /servicios usa solo gradientes y orbes flotantes (FloatingOrbs + EnergyWaves). No tiene una imagen de fondo o banner visual que —a diferencia de la home que tiene foto de Liliana. Cada categoría de servicio podría beneficiarse de un banner o ícono distintivo.
-**Evidencia:** snapshot del héroe muestra solo `FloatingOrbs` + `EnergyWaves`, sin `<img>`.
-**Estado:** 🔴 ABIERTO
+**Estado:** 🔴 ABIERTO — tarea TI-3 en TASKS.md. Baja prioridad.
 
 ## Observaciones (pre-existentes)
 
