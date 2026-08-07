@@ -36,35 +36,35 @@ Se reemplazan los 21 placeholders SVG del componente `ServiceBlock` en `/servici
 **Archivos:** `src/lib/prices.ts`
 **Descripción técnica:** Agregar campo opcional `image?: string` al tipo `CatalogItem`. Asignar la ruta de imagen correspondiente a cada uno de los 21 ítems del catálogo según el mapeo del SPEC.
 **DOR:**
-- [ ] TI-1 y TI-2 completadas (todas las imágenes existen)
+- [x] TI-1 y TI-2 completadas (todas las imágenes existen)
 **DOF:**
-- [ ] `CatalogItem` tiene campo `image?: string`
-- [ ] Los 21 ítems del catálogo tienen `image` asignado (ruta relativa desde /public)
-- [ ] `npm run build` pasa sin errores
-- [ ] `npm run lint` pasa (0 errores)
+- [x] `CatalogItem` tiene campo `image?: string`
+- [x] Los 21 ítems del catálogo tienen `image` asignado (ruta relativa desde /public)
+- [x] `npm run build` pasa sin errores
+- [x] `npm run lint` pasa (0 errores)
 **Criterio de aceptación relacionado:** CA1, CA2, CA3, CA4
 
 ### T2 — Reemplazar placeholder SVG por next/image en ServiceBlock
 **Archivos:** `src/app/servicios/page.tsx`
 **Descripción técnica:** En `ServiceBlock`, reemplazar el div placeholder (líneas 199-217) por un `<Image>` de `next/image` que use `item.image`. Mantener el layout grid existente. Si `item.image` no está definido, usar el placeholder actual como fallback.
 **DOR:**
-- [ ] T1 completada
+- [x] T1 completada
 **DOF:**
-- [ ] Cada ServiceBlock en /servicios renderiza una imagen real (no el placeholder SVG)
-- [ ] `naturalWidth > 0` para las 21 imágenes
-- [ ] Layout responsive no se rompe (grid 2 cols en lg, stack en mobile)
-- [ ] `npm run build` y `npm run lint` pasan
+- [x] Cada ServiceBlock en /servicios renderiza una imagen real (no el placeholder SVG)
+- [x] `naturalWidth > 0` para las 21 imágenes
+- [x] Layout responsive no se rompe (grid 2 cols en lg, stack en mobile)
+- [x] `npm run build` y `npm run lint` pasan
 **Criterio de aceptación relacionado:** CA1, CA5
 
 ### T3 — Regresión y actualización de IMAGES.md
 **Archivos:** `IMAGES.md`, todas las páginas
 **Descripción técnica:** Verificar que las 6 páginas del portal siguen cargando sin errores. IMAGES.md debe reflejar todas las imágenes nuevas (21 entradas en la sección /servicios).
 **DOR:**
-- [ ] T1 y T2 completadas
+- [x] T1 y T2 completadas
 **DOF:**
-- [ ] IMAGES.md tiene sección `/servicios` con 21 imágenes documentadas
-- [ ] Las otras 6 páginas cargan sin errores de consola
-- [ ] `npm run build` y `npm run lint` pasan
+- [x] IMAGES.md tiene sección `/servicios` con 21 imágenes documentadas
+- [x] Las otras 6 páginas cargan sin errores de consola
+- [x] `npm run build` y `npm run lint` pasan
 **Criterio de aceptación relacionado:** CA7
 
 ## Briefing para el diseñador — Imágenes a generar
@@ -91,3 +91,4 @@ Se reemplazan los 21 placeholders SVG del componente `ServiceBlock` en `/servici
 - Sin caras de personas reales, sin texto, sin logos
 - Peso objetivo: < 200 KB
 - Deben verse naturales junto a las fotos reales (mismo nivel de saturación y calidez)
+

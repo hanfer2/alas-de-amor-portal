@@ -1,7 +1,54 @@
-# QA ISSUES — Ronda 3
-Fecha: 2026-08-06
-Deploy verificado: https://alas-de-amor-portal.vercel.app (commit 8e36c99)
+# QA ISSUES — Ronda 4
+Fecha: 2026-08-07
+Deploy verificado: https://alas-de-amor-portal.vercel.app (commit fa3fa09)
 Resultado global: ✅ APROBADO (0 issues abiertos)
+
+## Alcance de esta ronda
+Reemplazo de los 21 placeholders SVG en `/servicios` por imágenes reales (fotos de Liliana + fallbacks de galería) usando `next/image`. Cada `CatalogItem` ahora tiene campo `image` con ruta a `public/imgs/services/`.
+
+## Issues detectados y corregidos
+
+| Issue | Severidad | Descripción | Estado |
+|-------|-----------|-------------|--------|
+| ISS-IMG-001 | Alta | Las 21 imágenes en `public/imgs/services/` no estaban en git → 404 en Vercel. Todas mostraban `naturalWidth: 0`. | ✅ CORREGIDO — commit fa3fa09 agregó los 21 archivos |
+
+## Checklist DOF de TASKS.md
+
+| Tarea | DOF | Resultado | Evidencia |
+|-------|-----|-----------|-----------|
+| TI-1 | 11 archivos en `public/imgs/services/` | ✅ | 21 archivos totales, incluyendo los 11 de fotos reales |
+| TI-1 | IMAGES.md actualizado | ✅ | Sección `/servicios` con 21 fichas técnicas documentadas |
+| TI-2 | 10 imágenes con prefijo `gen-` existen | ✅ | 10 archivos `gen-*` en `public/imgs/services/` |
+| TI-2 | IMAGES.md con fichas | ✅ | Cada imagen documentada con uso, peso y origen |
+| T1 | `CatalogItem` tiene campo `image` | ✅ | `src/lib/prices.ts:8: image?: string` |
+| T1 | 21 ítems con `image` asignado | ✅ | Todas las rutas apuntan a `/imgs/services/*.jpg` |
+| T1 | build + lint pasan | ✅ | 0 errores, 0 warnings propios |
+| T2 | ServiceBlock renderiza `<Image>` | ✅ | `next/image` con `fill` + `object-cover` |
+| T2 | `naturalWidth > 0` en 21 imágenes | ✅ | 21/21 cargan (683px width via next/image optimization) |
+| T2 | Layout responsive sin overflow | ✅ | 375px: scrollWidth 360, sin overflow horizontal |
+| T3 | Regresión: 6 páginas sin errores | ✅ | / /nosotros /contacto /testimonios: 0 console errors |
+| T3 | Switch ES/EN en /servicios | ✅ | lang=es→"Terapias Holísticas", lang=en→"Holistic Therapies", 0 errors |
+| T3 | IMAGES.md completo | ✅ | 21 imágenes en /servicios + estado actualizado de disponibles |
+
+## Resultados por página
+
+| Página | Console Errors | Imágenes | Lang Switch | Responsive |
+|--------|---------------|----------|-------------|------------|
+| `/servicios` | 0 | 21/21 ✅ | ES/EN ✅ | 375px ✅ |
+| `/` | 0 | N/A | N/A | N/A |
+| `/nosotros` | 0 | N/A | N/A | N/A |
+| `/contacto` | 0 | N/A | N/A | N/A |
+| `/testimonios` | 0 | N/A | N/A | N/A |
+
+## Observaciones
+
+- OBS-001: hydration error #418 en home (pre-existente, i18n+SSR)
+- OBS-002: `/videos/alas-de-amor.mp4` no carga (pre-existente)
+- OBS-003: `lectura-oraculo.jpg` pesa 1853 KB — excede el umbral de 500 KB recomendado para imágenes de servicio. Considerar optimizar a WebP.
+
+## Issues abiertos
+
+Ninguno.
 
 ## Alcance de esta ronda
 Actualización de precios reales y nuevo catálogo de servicios: nuevas categorías "Sanaciones" y "Lectura Angelical", Combo Barras + Reiki, reasignación de ítems entre categorías, y conversión COP→USD verificada.
