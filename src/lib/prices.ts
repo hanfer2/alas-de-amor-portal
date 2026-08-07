@@ -86,6 +86,14 @@ export const catalog: CatalogCategory[] = [
         image: "/imgs/services/gen-servicios-oraculos-terapia.jpg",
         price: 100000,
       },
+      {
+        id: "meditacion-online",
+        titleKey: "servicios.meditacion-online.title",
+        descKey: "servicios.meditacion-online.desc",
+        durationKey: "servicios.meditacion-online.duration",
+        image: "/imgs/gen-terapias-meditacion-online.jpg",
+        price: 70000,
+      },
     ],
   },
   {

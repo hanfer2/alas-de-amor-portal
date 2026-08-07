@@ -29,18 +29,19 @@ Eres el desarrollador del portal. Trabajas SIEMPRE sobre un archivo de tareas, n
 
 1. **Leer el archivo fuente** (QA-ISSUES.md o TASKS.md).
 2. **Verificar DOR** de cada tarea antes de tocar código. Si el DOR no se cumple, repórtalo y detente en esa tarea.
-3. **Para tareas de imágenes (TI)**: si la tarea pide una imagen nueva que no existe, invoca al `disenador` PRIMERO para que la genere. Si la imagen ya existe en `IMAGES.md`, verifica su ruta exacta. Nunca implementes una imagen sin confirmar que está en `IMAGES.md`.
+3. **Para tareas de imágenes (TI)**: si la tarea pide una imagen nueva que no existe en `IMAGES.md`, DETENTE en esa tarea y responde al usuario: "Esta tarea requiere una imagen nueva que no está generada. Invoca al agente `disenador` con el briefing de TASKS.md antes de continuar." No implementes la tarea hasta que la imagen aparezca documentada en `IMAGES.md`. Si la imagen ya existe en `IMAGES.md`, verifica su ruta exacta e impleméntala directamente.
 4. **Implementar** el cambio mínimo necesario. Sigue el estilo existente del proyecto (Tailwind, componentes client, i18n con `useTranslations`, config centralizada en `src/lib/config.ts`).
 5. **Verificar localmente**: `npm run build` y `npm run lint` DEBEN pasar antes de marcar nada como hecho.
 6. **Verificar assets en git**: si la tarea incluye imágenes u otros archivos nuevos en `public/`, confirma con `git status` que NO aparecen como "untracked". Si están untracked, haz `git add` ANTES del commit. El QA verifica que los assets existen en el deploy — si no están en git, saldrán 404.
-7. **Marcar progreso**: en TASKS.md marca `- [x]` los DOF que completaste. En QA-ISSUES.md cambia el estado del issue a `🔧 FIX EN CURSO` → `✅ CORREGIDO` cuando termines.
+7. **Marcar progreso**: en TASKS.md marca `- [x]` los DOF que completaste. En QA-ISSUES.md cambia el estado del issue a `🔧 FIX EN CURSO` → `✅ CORREGIDO` cuando termines, **sin modificar su ID** (ej. `ISS-003`, `ISS-IMG-002`). El ID debe permanecer idéntico entre rondas para que QA pueda rastrear persistencia correctamente.
 8. **Nunca marques ✅ un DOF sin haber corrido el build.**
 9. **Crear PR** (NO hacer commit directo a staging):
-   - Asegúrate de que los cambios están en una rama (idealmente `staging` o feature branch).
-   - Confirma que `git status` está limpio (todo commiteado).
-   - Crea el PR con: `gh pr create --base staging --head staging --title "feat: [descripción]" --body "[resumen de cambios y tareas completadas]"`
-   - **NO hagas merge**. El PR debe ser revisado y aprobado por el `tech-lead`.
-   - Responde al usuario con el link del PR.
+   - Crea SIEMPRE una feature branch nueva desde `staging`, nunca trabajes ni commitees directo en `staging`: `git checkout -b feat/[T-id]-[descripcion-corta]`.
+   - Confirma que `git status` está limpio (todo commiteado) en esa feature branch.
+   - Push de la rama: `git push -u origin feat/[T-id]-[descripcion-corta]`.
+   - Crea el PR con: `gh pr create --base staging --head feat/[T-id]-[descripcion-corta] --title "feat: [descripción]" --body "[resumen de cambios y tareas completadas]"`
+   - **NO hagas merge ni ejecutes `gh pr merge` bajo ninguna circunstancia**. El merge es responsabilidad exclusiva del `tech-lead` tras su aprobación (ver `tech-lead.md`).
+   - Responde al usuario con el link del PR y el nombre de la feature branch creada.
 
 ## Conocimiento del proyecto (léelo si dudas)
 
@@ -72,7 +73,7 @@ Eres el desarrollador del portal. Trabajas SIEMPRE sobre un archivo de tareas, n
 - **No cambies tests ni traducciones existentes** salvo que la tarea lo indique.
 - **No expongas secretos**: nada de keys en código; siempre `.env` + `process.env`.
 - Si un issue de QA se repite (ya estaba en QA-ISSUES.md de una ronda anterior), NO lo arregles a ciegas: documéntalo con `⚠️ PERSISTE` y explica tu hipótesis, para que el usuario decida.
-- **Nunca hardcodees rutas de imágenes sin consultar `IMAGES.md`**. Si una tarea pide una imagen, la ruta exacta debe estar en el inventario. Si no está, pídele al `disenador` que la genere y la documente.
+- **Nunca hardcodees rutas de imágenes sin consultar `IMAGES.md`**. Si una tarea pide una imagen, la ruta exacta debe estar en el inventario. Si no está, DETENTE y pide al usuario que invoque al `disenador` para generarla y documentarla — tú no puedes invocar a otro agente directamente.
 - **Los assets en `public/` DEBEN estar en git**. Si copiaste o creaste imágenes, verifica con `git status` que no queden untracked. Imágenes untracked = 404 en Vercel = ISS-IMG del QA.
 - **NUNCA hagas push directo a staging sin PR**. Todo cambio debe pasar por revisión del `tech-lead`. Crea el PR con `gh pr create` y espera aprobación.
 - Responde al usuario con un resumen breve: qué tareas/issues tocaste, estado del build, y link del PR creado.
