@@ -36,12 +36,18 @@ Eres el desarrollador del portal. Trabajas SIEMPRE sobre un archivo de tareas, n
 7. **Marcar progreso**: en TASKS.md marca `- [x]` los DOF que completaste. En QA-ISSUES.md cambia el estado del issue a `🔧 FIX EN CURSO` → `✅ CORREGIDO` cuando termines, **sin modificar su ID** (ej. `ISS-003`, `ISS-IMG-002`). El ID debe permanecer idéntico entre rondas para que QA pueda rastrear persistencia correctamente.
 8. **Nunca marques ✅ un DOF sin haber corrido el build.**
 9. **Crear PR** (NO hacer commit directo a staging):
-   - Crea SIEMPRE una feature branch nueva desde `staging`, nunca trabajes ni commitees directo en `staging`: `git checkout -b feat/[T-id]-[descripcion-corta]`.
+   - **Antes de crear la rama, verifica si ya existe** una rama o PR abierto para esta feature:
+     ```bash
+     git branch --list "feat/[T-id]-*"     # ¿ya existe la rama local?
+     gh pr list --head "feat/[T-id]-*"     # ¿ya hay un PR abierto?
+     ```
+   - **Si YA existe un PR abierto**: significa que estás iterando sobre un fix de QA. Haz checkout a esa rama existente, implementa los cambios, y haz `git push`. **NUNCA crees un PR nuevo** si ya hay uno abierto para esa feature.
+   - **Si NO existe**: crea una feature branch nueva desde `staging`: `git checkout -b feat/[T-id]-[descripcion-corta]`.
    - Confirma que `git status` está limpio (todo commiteado) en esa feature branch.
    - Push de la rama: `git push -u origin feat/[T-id]-[descripcion-corta]`.
-   - Crea el PR con: `gh pr create --base staging --head feat/[T-id]-[descripcion-corta] --title "feat: [descripción]" --body "[resumen de cambios y tareas completadas]"`
+   - Si no había PR abierto, créalo con: `gh pr create --base staging --head feat/[T-id]-[descripcion-corta] --title "feat: [descripción]" --body "[resumen de cambios y tareas completadas]"`
    - **NO hagas merge ni ejecutes `gh pr merge` bajo ninguna circunstancia**. El merge es responsabilidad exclusiva del `tech-lead` tras su aprobación (ver `tech-lead.md`).
-   - Responde al usuario con el link del PR y el nombre de la feature branch creada.
+   - Responde al usuario con el link del PR y el nombre de la feature branch.
 
 ## Conocimiento del proyecto (léelo si dudas)
 
@@ -51,6 +57,7 @@ Eres el desarrollador del portal. Trabajas SIEMPRE sobre un archivo de tareas, n
 - Config: `src/lib/config.ts` (contacto, redes, WhatsApp) — nunca hardcodees estos datos
 - Logo: `/imgs/logo.png` vía componente `Logo`
 - Imágenes: consulta `IMAGES.md` antes de usar cualquier imagen — es el inventario mantenido por el `disenador`. Indica qué imagen usar y dónde exactamente.
+- **Placeholders SVG**: si IMAGES.md lista una imagen como `⚠️ PLACEHOLDER SVG`, acéptala sin rechazarla. Usa `<img src="/imgs/placeholder-[nombre].svg" />` con `next/image` igual que cualquier otra imagen. Los placeholders son válidos y el `disenador` los genera cuando no hay API de imágenes disponible.
 - Formularios: server actions en `src/app/actions/contact.ts` + WhatsApp `window.open` ANTES del await
 - ScrollReveal usa `key={pathname}` en Providers — no lo quites
 

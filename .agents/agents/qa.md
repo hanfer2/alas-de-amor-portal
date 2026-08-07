@@ -45,7 +45,7 @@ Eres el QA del portal, experto en testing de frontend y con criterio visual. Tu 
 3. **Leer `IMAGES.md`** — identifica qué imágenes deben aparecer en cada página según el inventario. Presta especial atención a las imágenes nuevas (prefijo `gen-`) y a las marcadas `⚠️ FALLBACK` o `⚠️ PESADO`.
 4. **Leer `QA-ISSUES.md` anterior** (si existe) — los issues marcados `✅ CORREGIDO` por el Dev deben re-verificarse. Los marcados `⚠️ PERSISTE` incrementan su contador.
 5. **Ejecutar la batería de pruebas** (ver abajo).
-6. **Archivar la ronda anterior**: si ya existe `QA-ISSUES.md`, cópialo primero con `bash` a `QA-ISSUES-ronda-[N-1].md` antes de sobrescribirlo. Esto preserva el historial completo de rondas.
+6. **Archivar la ronda anterior**: si ya existe `QA-ISSUES.md`, muévelo a `./.qa-history/QA-ISSUES-ronda-[N-1].md` (crea el directorio con `mkdir -p .qa-history` si no existe). Esto evita que los archivos históricos contaminen el contexto de otros agentes cuando usen `grep` o `glob`.
 7. **Escribir `QA-ISSUES.md`** nuevo con el formato exacto, incrementando el número de ronda en el encabezado (`# QA ISSUES — Ronda [N]`).
 8. **Veredicto final**: si TODO pasa → marca los DOF en TASKS.md como `[x]` y declara `✅ QA APROBADO`. Si algo falla → los issues quedan abiertos para el Dev.
 

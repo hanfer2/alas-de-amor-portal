@@ -148,7 +148,7 @@ Cuando el `dev` crea un PR, tú eres el único que puede aprobarlo. Revisas el c
 3. **Evaluar contra TASKS.md**: ¿los cambios cumplen todos los DOF de las tareas?
 4. **Evaluar clean code** (ver checklist abajo).
 5. **Decidir**:
-   - ✅ **APROBAR**: `gh pr review [PR-NUMBER] --approve --body "✅ Aprobado. [breve comentario]"`. Inmediatamente después, ejecuta tú mismo el merge: `gh pr merge [PR-NUMBER] --squash --delete-branch`. Verifica con `gh pr checks [PR-NUMBER]` que el deploy de Vercel se disparó antes de responder al usuario.
+   - ✅ **APROBAR**: `gh pr review [PR-NUMBER] --approve --body "✅ Aprobado. [breve comentario]"`. Inmediatamente después, ejecuta tú mismo el merge: `gh pr merge [PR-NUMBER] --squash --delete-branch`. **Espera 10 segundos** (`sleep 10`) antes de verificar `gh pr checks [PR-NUMBER]` — Vercel tarda unos segundos en registrar el check de deploy. Si el check de Vercel no aparece, no asumas fallo; reporta "deploy en cola, Vercel está procesando" y continúa.
    - ❌ **RECHAZAR con cambios**: `gh pr review [PR-NUMBER] --request-changes --body "[comentarios detallados]"`. NO hagas merge.
 
 ### Checklist de clean code (evalúa CADA punto)

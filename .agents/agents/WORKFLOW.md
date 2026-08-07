@@ -201,6 +201,12 @@ Instaladas skills en `.agents/skills/`, `.agents/skills/` (user) y `.opencode/sk
 | `context-engineering` | Optimización de contexto entre sesiones |
 | `documentation-and-adrs` | Registro de decisiones de arquitectura |
 
+### Reglas de aislamiento de estado
+
+- **`.qa-history/`**: el `qa` archiva cada ronda en este subdirectorio. Todos los agentes deben EXCLUIR este directorio al usar `grep` o `glob` (`--exclude-dir=.qa-history` o `glob('**/*.md', {ignore: '.qa-history/**'})`). De lo contrario, el contexto se contamina con issues de rondas pasadas.
+- **`.agents/`**: es de solo-lectura para `dev` y `qa`. Solo `po`, `tech-lead`, `disenador` y `security-reviewer` editan agentes.
+- **`node_modules/`**: siempre excluido de búsquedas.
+
 ## Ejemplo concreto: nuevo módulo con imágenes
 
 > PO: "Crear módulo de extractos financieros. Nueva página /extractos con diseño actual pero imágenes nuevas: header, tabla, estado vacío."

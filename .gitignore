@@ -44,3 +44,5 @@ next-env.d.ts
 # qa artifacts
 *.png
 .playwright-mcp/
+
+.qa-history/
