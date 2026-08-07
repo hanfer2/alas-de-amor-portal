@@ -150,6 +150,11 @@
       "duration": "30 minutes",
       "benefits": ["Guidance on your life path", "Clarity in relationships and decisions", "Connection with ancestral wisdom", "Tools for self-knowledge", "Messages from your spiritual guides"]
     },
+    "meditacion-online": {
+      "title": "Online Guided Meditation",
+      "desc": "Live guided meditation session via video call with Liliana. Connect from anywhere and receive an experience of calm, connection, and energetic healing at a distance.",
+      "duration": "45 minutes (video call)"
+    },
     "categories": {
       "terapias": "Therapies",
       "talleres": "Custom Workshops",

@@ -145,8 +145,8 @@ Cuando el `dev` crea un PR, tú eres el único que puede aprobarlo. Revisas el c
 3. **Evaluar contra TASKS.md**: ¿los cambios cumplen todos los DOF de las tareas?
 4. **Evaluar clean code** (ver checklist abajo).
 5. **Decidir**:
-   - ✅ **APROBAR**: `gh pr review [PR-NUMBER] --approve --body "✅ Aprobado. [breve comentario]"`
-   - ❌ **RECHAZAR con cambios**: `gh pr review [PR-NUMBER] --request-changes --body "[comentarios detallados]"`
+   - ✅ **APROBAR**: `gh pr review [PR-NUMBER] --approve --body "✅ Aprobado. [breve comentario]"`. Inmediatamente después, ejecuta tú mismo el merge: `gh pr merge [PR-NUMBER] --squash --delete-branch`. Verifica con `gh pr checks [PR-NUMBER]` que el deploy de Vercel se disparó antes de responder al usuario.
+   - ❌ **RECHAZAR con cambios**: `gh pr review [PR-NUMBER] --request-changes --body "[comentarios detallados]"`. NO hagas merge.
 
 ### Checklist de clean code (evalúa CADA punto)
 
@@ -179,6 +179,7 @@ Cuando el `dev` crea un PR, tú eres el único que puede aprobarlo. Revisas el c
 - Cada tarea debe ser **atómica** (una cosa) y mapear a al menos un criterio de aceptación del spec.
 - Todo DOF debe ser **verificable objetivamente** (QA lo probará con Playwright o comandos).
 - Siempre incluir DOF de regresión: "las otras 6 páginas siguen cargando", "build pasa", "0 errores consola".
+- Si la tarea crea o modifica una página, incluye SIEMPRE un DOF de SEO básico (usa el skill `seo`): título único, `meta description` con contenido, y structured data si aplica.
 - Si el spec tiene "Preguntas abiertas", resuélvelas en las tareas o escálalas al usuario.
 - Ordena las tareas por dependencia (primero lo que desbloquea lo demás). Las tareas de generación de imágenes (TI) siempre van ANTES que las tareas de implementación que las usan.
 - Si el SPEC tiene "Imágenes necesarias", crea una tarea TI por cada imagen. Marca claramente si es nueva (requiere `disenador`) o existente (el `dev` la integra directo).
@@ -190,4 +191,4 @@ Cuando el `dev` crea un PR, tú eres el único que puede aprobarlo. Revisas el c
 - **Eres el único que aprueba PRs del `dev`**. No aceptes código que no cumpla el checklist de clean code.
 - Si rechazas un PR, **SIEMPRE explica por qué** con referencias específicas (archivo:línea). El `dev` debe saber exactamente qué corregir.
 - **No apruebes PRs que no pasen build/lint**. Verifica con `gh pr checks [PR-NUMBER]`.
-- El orden del ciclo es: dev crea PR → tú revisas → apruebas o rechazas → si apruebas, el dev hace merge → QA prueba el deploy.
+- El orden del ciclo es: dev crea PR → tú revisas → apruebas o rechazas → si apruebas, TÚ (tech-lead) ejecutas `gh pr merge` → QA prueba el deploy. El `dev` nunca mergea sus propios PRs.

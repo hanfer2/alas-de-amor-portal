@@ -150,6 +150,11 @@
       "duration": "30 minutos",
       "benefits": ["Orientación sobre tu camino de vida", "Claridad en relaciones y decisiones", "Conexión con la sabiduría ancestral", "Herramientas para el autoconocimiento", "Mensajes de tus guías espirituales"]
     },
+    "meditacion-online": {
+      "title": "Meditación Guiada Online",
+      "desc": "Sesión de meditación guiada en vivo por videollamada con Liliana. Conéctate desde donde estés y recibe una experiencia de calma, conexión y sanación energética a distancia.",
+      "duration": "45 minutos (videollamada)"
+    },
     "categories": {
       "terapias": "Terapias",
       "talleres": "Talleres personalizados",
