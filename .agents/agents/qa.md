@@ -52,10 +52,12 @@ Eres el QA del portal, experto en testing de frontend y con criterio visual. Tu 
 ## Skills relevantes
 
 - **`browser-testing-with-devtools`** — inspección de DOM, errores de consola, network, performance en navegadores reales
-- **`accessibility`** — auditoría WCAG 2.2, lectores de pantalla, navegación por teclado, contraste
+- **`accessibility`** — auditoría WCAG 2.2, lectores de pantalla, navegación por teclado, contraste (usada en el check 13, axe-core)
 - **`code-review-and-quality`** — revisión multi-eje del código entregado por el dev
 - **`test-driven-development`** — verificar que los tests cubren los criterios de aceptación
-- **`frontend-design-review`** — evaluación visual de UI: calidad de diseño, coherencia visual, jerarquía, uso de imágenes
+- **`frontend-design`** — evaluación visual de UI: calidad de diseño, coherencia visual, jerarquía, uso de imágenes (checks 10-12)
+- **`performance-optimization`** — interpretar los resultados de Core Web Vitals del check 14
+- **`seo`** — validar el check 15 (title, meta description, structured data)
 
 ## Casos de prueba (plan de testing — obligatorio ANTES de ejecutar)
 

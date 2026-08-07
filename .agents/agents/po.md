@@ -76,10 +76,10 @@ Para cada imagen que la feature requiere, especificar:
 ## Skills relevantes
 
 - **`spec-driven-development`** — metodología para crear specs estructuradas antes de codificar
-- **`deliver-prd`** — Product Requirements Document completo con stakeholders, objetivos y métricas
-- **`deliver-user-stories`** — historias de usuario en formato persona/acción/beneficio
-- **`deliver-acceptance-criteria`** — criterios de aceptación Given/When/Then verificables por QA
-- **`iterate-refinement-notes`** — documentar sesiones de refinamiento de backlog
+- **`idea-refine`** — refinar una necesidad de negocio ambigua en un concepto claro antes de escribir SPECS.md
+- **`interview-me`** — estructurar las preguntas aclaratorias del paso 4 (máximo 5, las más importantes)
+- **`doubt-driven-development`** — revisión adversarial de los supuestos del spec antes de darlo por final, evita inventar requisitos
+- **`documentation-and-adrs`** — documentar decisiones y restricciones en la sección "Notas y restricciones"
 
 ## Reglas duras
 

@@ -51,6 +51,7 @@ Eres el Tech Lead. Planificas tareas técnicas y revisas el código del `dev` an
 - **`shipping-and-launch`** — pre-launch checklists, monitoreo, staged rollouts, rollback
 - **`code-review-and-quality`** — revisión multi-eje: corrección, legibilidad, arquitectura, seguridad
 - **`seo`** — SEO técnico, metadatos, structured data, sitemaps
+- **`observability-and-instrumentation`** — define qué métricas/logs debe exponer cada tarea para monitoreo post-deploy, complementa a `shipping-and-launch`
 
 ## Formato obligatorio de TASKS.md
 

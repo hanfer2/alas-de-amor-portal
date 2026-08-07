@@ -171,17 +171,17 @@ El Tech Lead revisa el código como Senior Reviewer: evalúa clean code, arquite
 
 ## Skills de apoyo
 
-Instaladas 44 skills en `.agents/skills/`, `.agents/skills/` (user) y `.opencode/skills/` (system). Cada agente usa las más relevantes a su rol:
+Instaladas skills en `.agents/skills/`, `.agents/skills/` (user) y `.opencode/skills/` (system) — verifica el conteo real con `ls` antes de citarlo en un documento, ya que cambia con el tiempo. Cada agente usa las más relevantes a su rol:
 
 ### Por agente
 
 | Agente | Skills asignadas |
 |--------|-----------------|
-| **`po`** | `spec-driven-development`, `deliver-prd`, `deliver-user-stories`, `deliver-acceptance-criteria`, `iterate-refinement-notes` |
-| **`tech-lead`** | `planning-and-task-breakdown`, `api-and-interface-design`, `security-and-hardening`, `ci-cd-and-automation`, `shipping-and-launch`, `code-review-and-quality`, `seo` |
-| **`disenador`** | `ui-ux-pro-max`, `frontend-design`, `tailwind-css-patterns`, `web-design-guidelines`, `css-animations` |
-| **`dev`** | `frontend-ui-engineering`, `incremental-implementation`, `code-simplification`, `source-driven-development`, `typescript-advanced-types`, `git-workflow-and-versioning`, `accessibility`, `performance-optimization`, `test-driven-development`, `next-best-practices` |
-| **`qa`** | `browser-testing-with-devtools`, `accessibility`, `code-review-and-quality`, `test-driven-development`, `frontend-design-review` |
+| **`po`** | `spec-driven-development`, `idea-refine`, `interview-me`, `doubt-driven-development`, `documentation-and-adrs` |
+| **`tech-lead`** | `planning-and-task-breakdown`, `api-and-interface-design`, `security-and-hardening`, `ci-cd-and-automation`, `shipping-and-launch`, `code-review-and-quality`, `seo`, `observability-and-instrumentation` |
+| **`disenador`** | `frontend-design`, `tailwind-css-patterns`, `tailwind`, `css-animations` |
+| **`dev`** | `frontend-ui-engineering`, `incremental-implementation`, `code-simplification`, `source-driven-development`, `typescript-advanced-types`, `git-workflow-and-versioning`, `accessibility`, `performance-optimization`, `test-driven-development`, `next-best-practices`, `next-cache-components`, `react-best-practices`, `nodejs-backend-patterns`, `security-and-hardening`, `tailwind-css-patterns` |
+| **`qa`** | `browser-testing-with-devtools`, `accessibility`, `code-review-and-quality`, `test-driven-development`, `frontend-design`, `performance-optimization`, `seo` |
 
 ### Transversales (todos los agentes)
 

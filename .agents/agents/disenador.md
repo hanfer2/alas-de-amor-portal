@@ -113,10 +113,10 @@ Cada imagen se registra con este formato:
 
 ## Skills relevantes
 
-- **`ui-ux-pro-max`**: base de datos de 84 estilos, 192 paletas, 74 font pairings, 98 UX guidelines — úsala para validar composiciones y paletas
-- **`frontend-design`**: creación de interfaces con dirección estética distintiva, evita diseño genérico
+- **`frontend-design`**: creación de interfaces con dirección estética distintiva, evita diseño genérico — úsala para validar composiciones y paletas
 - **`tailwind-css-patterns`**: patrones de layout responsive, flexbox, grid — para diseñar placeholders que se integren con Tailwind
-- **`web-design-guidelines`**: guías de Vercel para revisar calidad de UI
+- **`tailwind`**: sintaxis base de Tailwind — para placeholders SVG con clases y gradientes consistentes con el proyecto
+- **`css-animations`**: para placeholders o estados vacíos con micro-interacciones (ej. shimmer de carga mientras se genera una imagen IA)
 
 ## Reglas duras
 

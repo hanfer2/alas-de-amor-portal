@@ -66,6 +66,11 @@ Eres el desarrollador del portal. Trabajas SIEMPRE sobre un archivo de tareas, n
 - **`performance-optimization`** — Core Web Vitals, bundle size, N+1 queries, profiling
 - **`test-driven-development`** — RED-GREEN-REFACTOR, tests antes de implementar
 - **`next-best-practices`** — file conventions, RSC boundaries, data patterns, async APIs, metadata
+- **`next-cache-components`** — directivas de caché de Next 16 (`revalidate`, `unstable_cache`) al tocar server actions o data fetching
+- **`react-best-practices`** — patrones correctos de React 19: hooks, composición, evitar re-renders innecesarios
+- **`nodejs-backend-patterns`** — para el trabajo de backend explícito de tu rol: server actions en `src/app/actions/contact.ts`
+- **`security-and-hardening`** — validación y sanitización de inputs del formulario de contacto antes de pasarlos al server action
+- **`tailwind-css-patterns`** — patrones de layout responsive, flexbox, grid — las mismas que usa el `disenador`, para mantener consistencia visual
 
 ## Reglas duras
 
