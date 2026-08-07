@@ -28,7 +28,7 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.reiki",
         descKey: "servicios.reiki.desc",
         durationKey: "servicios.reiki.duration",
-        image: "/imgs/services/terapias-reiki.jpg",
+        image: "/imgs/services/terapias-reiki-v2.jpg",
         price: 160000,
       },
       {
@@ -59,7 +59,7 @@ export const catalog: CatalogCategory[] = [
         titleKey: "nosotros.services.meditacion",
         descKey: "servicios.meditacion.desc",
         durationKey: "servicios.meditacion.duration",
-        image: "/imgs/services/terapias-meditacion.jpg",
+        image: "/imgs/services/terapias-meditacion-v2.jpg",
         price: 90000,
       },
       {

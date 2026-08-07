@@ -1,79 +1,48 @@
-# TASKS — Meditación Guiada Online
+# TASKS — Corrección de rostros en imágenes de /servicios
 Generado por: agente tech-lead
-Basado en: SPECS.md (2026-08-07, ✅ Aprobado)
+Basado en: QA-ISSUES.md (Ronda 7, ISS-IMG-FACE-001, ISS-IMG-FACE-002)
 Fecha: 2026-08-07
 
 ## Resumen técnico
-Agregar un ítem al catálogo de Terapias en `src/lib/prices.ts`, claves i18n en ES/EN, una imagen nueva vía diseñador, y verificar que el dropdown de /agendar lo incluya automáticamente. Sin cambios de estructura — el sistema de catálogo dinámico ya soporta nuevos ítems.
+El PO reportó 2 imágenes en /servicios con problemas de rostros: Meditación Guiada (gallery-1.jpg — cara de coach no visible) y Reiki (WhatsApp therapy photo — personas recortadas). Se deben reemplazar con imágenes alternativas que tengan rostros visibles, centrados y sin recorte.
 
 ## Tareas
 
-### TI-1 — Generar imagen para Meditación Guiada Online
-**Tipo:** Imagen nueva (diseñador)
-**Archivo destino:** `public/imgs/gen-terapias-meditacion-online.webp`
-**Página:** /servicios
-**Sección / Componente:** Terapias → ServiceBlock "Meditación Guiada Online"
-**Descripción visual:** Silueta meditando frente a un portal de luz etéreo, elemento de conexión digital sutil (pantalla translúcida, ondas de luz), tonos violeta y dorado, sin rostros definidos
-**Dimensiones:** 800×600
-**Prioridad:** Alta
+### TI-1 — Reemplazar imagen de Meditación Guiada (terapias-meditacion.jpg)
+**Tipo:** Imagen existente (reemplazar con alternativa)
+**Archivo:** `public/imgs/services/terapias-meditacion.jpg`
+**Página:** /servicios → Terapias → Meditación Guiada
+**Descripción técnica:** Reemplazar la copia de gallery-1.jpg con una imagen que tenga el rostro de Liliana visible. Buscar en `imgs/couch/` (couch.jpeg, IMG_3438.HEIC) o en `imgs/services/therapies/` fotos alternativas donde la cara sea visible y esté centrada.
 **DOR:**
-- [ ] IMAGES.md consultado — esta imagen no existe
+- [ ] ISS-IMG-FACE-001 documentado en QA-ISSUES.md
+- [ ] IMAGES.md confirma que terapias-meditacion.jpg es ⚠️ FALLBACK
 **DOF:**
-- [ ] Imagen existe en `public/imgs/gen-terapias-meditacion-online.webp`
-- [ ] Peso < 200 KB, formato WebP
-- [ ] IMAGES.md actualizado con ficha técnica
-
-### T1 — Agregar Meditación Guiada Online al catálogo
-**Archivos:** `src/lib/prices.ts`, `src/locales/es.json`, `src/locales/en.json`
-**Descripción técnica:** Agregar ítem en el array `terapias.items` con `id: "meditacion-online"`, `titleKey: "servicios.meditacion-online.title"`, `descKey: "servicios.meditacion-online.desc"`, `durationKey: "servicios.meditacion-online.duration"`, `image: "/imgs/gen-terapias-meditacion-online.webp"`, `price: 70000`. Agregar las claves i18n correspondientes en ambos idiomas según el SPEC.
-**DOR:**
-- [ ] TI-1 completada (imagen generada)
-- [ ] SPECS.md aprobado con textos definitivos
-**DOF:**
-- [ ] "Meditación Guiada Online" visible en /servicios → Terapias con precio 70.000 COP
-- [ ] Duración "45 minutos (videollamada)" visible
-- [ ] Imagen cargada con `naturalWidth > 0`
-- [ ] Switch EN muestra "Online Guided Meditation" y "$ [USD]"
+- [ ] Nueva imagen reemplaza a terapias-meditacion.jpg con nombre terapias-meditacion-v2.jpg
+- [ ] Referencia en `src/lib/prices.ts` actualizada a la nueva ruta
 - [ ] `npm run build` + `npm run lint` pasan
-**Criterio de aceptación relacionado:** CA1, CA2, CA3, CA4
 **Prioridad:** Alta
 
-### T2 — Verificar dropdown de /agendar
-**Archivos:** `src/components/AppointmentForm.tsx` (verificación, sin cambio esperado)
-**Descripción técnica:** El dropdown itera `catalog` automáticamente, por lo que debe incluir el nuevo ítem sin cambios. Verificar que aparece en la lista de opciones.
+### TI-2 — Reemplazar imagen de Reiki (terapias-reiki.jpg)
+**Tipo:** Imagen existente (reemplazar con alternativa)
+**Archivo:** `public/imgs/services/terapias-reiki.jpg`
+**Página:** /servicios → Terapias → Reiki
+**Descripción técnica:** Reemplazar la foto de WhatsApp donde las personas están recortadas. Intercambiar con otra de las 3 fotos de terapia disponibles en `imgs/services/therapies/` que tenga mejor encuadre y rostros visibles.
 **DOR:**
-- [ ] T1 completada
+- [ ] ISS-IMG-FACE-002 documentado en QA-ISSUES.md
 **DOF:**
-- [ ] Dropdown de /agendar incluye "Meditación Guiada Online"
-- [ ] Seleccionar el ítem no rompe el form
-**Criterio de aceptación relacionado:** CA5
-**Prioridad:** Media
-
-### T3 — Regresión + SEO
-**Archivos:** todos
-**Descripción técnica:** Verificar build/lint, las 7 páginas cargan sin errores, y SEO básico (title, meta description).
-**DOR:**
-- [ ] T1 y T2 completadas
-**DOF:**
+- [ ] Nueva imagen reemplaza a terapias-reiki.jpg
 - [ ] `npm run build` + `npm run lint` pasan
-- [ ] Las 7 páginas cargan sin errores de consola
-- [ ] SEO: `document.title` contiene "Meditación Guiada" o el nombre del portal
-**Criterio de aceptación relacionado:** CA6
+**Prioridad:** Alta
+
+### T1 — Verificar object-fit en ServiceBlock (causa raíz del recorte)
+**Archivos:** `src/app/servicios/page.tsx`
+**Descripción técnica:** El ServiceBlock usa `object-fit: cover` en `<Image fill>`. Para imágenes con personas, esto puede recortar rostros. Evaluar si cambiar a `object-contain` o agregar `object-[position]` para controlar la posición del recorte. Como mínimo, asegurar que las imágenes de servicios con personas estén pre-recortadas/encuadradas correctamente en origen.
+**DOR:**
+- [ ] TI-1 y TI-2 completadas
+**DOF:**
+- [ ] Las nuevas imágenes no muestran rostros recortados en viewport 1280×900
+- [ ] `npm run build` + `npm run lint` pasan
 **Prioridad:** Media
 
 ## Dependencias
-TI-1 → T1 → T2 → T3
-
-## Briefing para el diseñador — Imágenes a generar
-
-> **Instrucción**: invoca al agente `disenador` y entrégale este briefing. Debe generar la imagen ANTES de pasar al `dev`.
-
-| # | Archivo destino | Página | Sección / Componente | Dim | Prioridad | Descripción visual |
-|---|----------------|--------|---------------------|-----|-----------|-------------------|
-| 1 | `public/imgs/gen-terapias-meditacion-online.webp` | /servicios | Terapias → ServiceBlock "Meditación Guiada Online" | 800×600 | Alta | Silueta femenina etérea meditando en posición de loto frente a un portal de luz violeta-dorada con forma de pantalla translúcida, ondas de energía digital sutiles, conexión entre lo espiritual y lo virtual, sin rostro definido, atmósfera de calma y tecnología orgánica |
-
-**Restricciones globales:**
-- Paleta: violeta/índigo, dorado, crema, cálido-blanco — SIN verde, SIN amarillo
-- Estilo: etéreo, profesional, cálido
-- Formato: WebP, peso < 200 KB
-- Sin caras de personas reales, sin texto, sin logos
+TI-1, TI-2 (paralelo) → T1
