@@ -292,6 +292,10 @@
       "title": "Contacto",
       "subtitle": "¿Tienes preguntas? Escríbenos y te responderemos lo antes posible."
     },
+    "sidebar": {
+      "title": "Hablemos",
+      "subtitle": "Estamos aquí para escucharte. Cada consulta es una oportunidad para iniciar tu camino de sanación."
+    },
     "form": {
       "title": "Envíanos un Mensaje",
       "name": "Nombre",
