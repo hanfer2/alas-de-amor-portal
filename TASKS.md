@@ -1,102 +1,53 @@
-# TASKS — Refactor Épico: Portal Etéreo y Fluido
+# TASKS — Compactar heroes de sub-páginas
 Generado por: agente tech-lead
-Basado en: SPECS.md (2026-08-07, ✅ Aprobado)
-Fecha: 2026-08-07
+Basado en: UI-IMPROVEMENTS.md (diseñador auditor) + QA Ronda 10
+Fecha: 2026-08-08
 
 ## Resumen técnico
-Se instalan 2 dependencias (`framer-motion`, `lenis`), se crean 2 componentes reutilizables (`FadeInWrapper`, `LenisProvider`), se integran en `layout.tsx`, y se refactorizan todas las páginas con los nuevos componentes, mesh gradients y micro-interacciones. /contacto recibe split layout (mismo patrón de /agendar).
+Las 6 sub-páginas tienen heroes que ocupan >50% del viewport. Se reduce padding, tamaño de título y espaciado interno para que el contenido real sea visible sin scroll a 1280×900.
 
 ## Tareas
 
-### T1 — Instalar dependencias
-**Archivos:** `package.json`
-**Descripción técnica:** `npm install framer-motion lenis`. Verificar que no haya conflictos con versiones existentes.
+### T1 — Reducir padding del hero en 6 sub-páginas
+**Archivos:** `src/app/servicios/page.tsx`, `src/app/nosotros/page.tsx`, `src/app/agendar/page.tsx`, `src/app/contacto/page.tsx`, `src/app/testimonios/page.tsx`, `src/app/blog/page.tsx`
+**Descripción técnica:** Reemplazar `pt-20 pb-8` por `pt-16 pb-4` en el `<section className="relative pt-20 pb-8 gradient-hero...">` de cada página. Testimonios usa `pt-14 pb-4` por ser el peor caso (63% vh).
 **DOR:**
-- [ ] Node.js v25.9.0 disponible
+- [ ] UI-IMPROVEMENTS.md existe con parche 1
+- [ ] QA midió heroes actuales (53%-63% vh)
 **DOF:**
-- [ ] `framer-motion` y `lenis` aparecen en `package.json` dependencies
-- [ ] `npm run build` pasa sin errores de import
-**Prioridad:** Alta
-
-### T2 — Crear FadeInWrapper (animaciones DRY)
-**Archivos:** `src/components/FadeInWrapper.tsx` (nuevo)
-**Descripción técnica:** Componente wrapper con `motion.div` de framer-motion: `initial={{ opacity: 0, y: 20 }}`, `whileInView={{ opacity: 1, y: 0 }}`, `viewport={{ once: true, margin: "-50px" }}`, `transition={{ duration: 0.8, ease: "easeOut" }}`. Acepta `children`, `className`, y `delay` opcional para stagger.
-**DOF:**
-- [ ] Componente renderiza hijos con animación fade-in-up al entrar en viewport
-- [ ] Soporta prop `delay` para stagger (ej. delay={i * 0.1})
-- [ ] `npm run build` pasa
-**Prioridad:** Alta
-
-### T3 — Crear LenisProvider (smooth scroll global)
-**Archivos:** `src/components/LenisProvider.tsx` (nuevo)
-**Descripción técnica:** Provider que inicializa Lenis con configuración de fricción suave (`lerp: 0.08`, `duration: 1.2`, `smoothWheel: true`). Usa `useEffect` + `useRef` para inicializar/destruir Lenis. Integra con `requestAnimationFrame`. No afecta SSR.
-**DOF:**
-- [ ] Scroll suave funciona en todas las páginas
-- [ ] No rompe la navegación cliente-side de Next.js
-- [ ] Se limpia correctamente al desmontar (useEffect cleanup)
-- [ ] `npm run build` pasa
-**Prioridad:** Alta
-
-### T4 — Integrar en layout.tsx
-**Archivos:** `src/app/layout.tsx`
-**Descripción técnica:** Envolver `{children}` con `<LenisProvider>` y `<FadeInWrapper>` (solo Lenis va en layout; FadeInWrapper se usa por página). Reemplazar `className` del body para mesh gradient global.
-**DOF:**
-- [ ] Lenis activo globalmente
-- [ ] Layout no rompe otras páginas
-**Prioridad:** Alta
-
-### T5 — Refactor / (home) — mesh gradient hero
-**Archivos:** `src/app/page.tsx`
-**Descripción técnica:** 
-- Hero: mesh gradient animado de fondo (`bg-gradient-to-br from-violet-100 via-warm-white to-rose-gold-50` con animación `animate-gradient-shift`)
-- Título enorme con Playfair Display (`text-6xl lg:text-8xl`)
-- Botón principal con `animate-pulse` sutil
-- Envolver secciones con `<FadeInWrapper>`
-**DOF:**
-- [ ] Hero tiene mesh gradient visible
-- [ ] Títulos y tarjetas hacen fade-in-up al scroll
-- [ ] `npm run build` pasa
-**Prioridad:** Media
-
-### T6 — Refactor /servicios — glow hover en tarjetas
-**Archivos:** `src/app/servicios/page.tsx`
-**Descripción técnica:** 
-- Reemplazar `reveal` class por `<FadeInWrapper>` en cada ServiceBlock
-- Agregar glow hover a la tarjeta de imagen: `transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.3)]`
-- Mantener layout grid existente
-**DOF:**
-- [ ] Tarjetas hacen glow violeta al hover + lift suave
-- [ ] Fade-in-up funciona al scroll
-- [ ] `npm run build` pasa
-**Prioridad:** Media
-
-### T7 — Refactor /nosotros — fade-in secciones
-**Archivos:** `src/app/nosotros/page.tsx`
-**Descripción técnica:** Reemplazar `reveal` class por `<FadeInWrapper>` en secciones principales.
-**DOF:**
-- [ ] Secciones hacen fade-in-up al scroll
-- [ ] `npm run build` pasa
-**Prioridad:** Baja
-
-### T8 — Split layout /contacto
-**Archivos:** `src/app/contacto/page.tsx`, `src/locales/es.json`, `src/locales/en.json`
-**Descripción técnica:** Aplicar mismo patrón de /agendar: grid 2 cols lg+, columna izquierda con imagen (`gen-agendar-lateral.jpg`) + mensaje, columna derecha con ContactForm. Agregar i18n `contacto.sidebar.title` y `.subtitle`.
-**DOF:**
-- [ ] /contacto tiene split layout en lg+
-- [ ] En mobile se apila verticalmente
-- [ ] Textos sidebar en ES/EN
-- [ ] `npm run build` pasa
-**Prioridad:** Alta
-
-### T9 — Regresión
-**Archivos:** todas las páginas
-**Descripción técnica:** Verificar que las 7 páginas cargan sin errores, responsive funciona, y no hay regresión de performance.
-**DOF:**
-- [ ] 7 páginas con 0 errores consola
-- [ ] Responsive 375px sin overflow
-- [ ] LCP < 3s, CLS < 0.1
+- [ ] Hero height < 40% vh en 1280×900 para las 6 sub-páginas
 - [ ] `npm run build` + `npm run lint` pasan
+- [ ] 0 errores de consola
+**Prioridad:** Alta
+
+### T2 — Reducir tamaño de título en sub-páginas
+**Archivos:** mismos 6 archivos
+**Descripción técnica:** Reemplazar `text-5xl sm:text-6xl` por `text-4xl sm:text-5xl` en el `<h1>` del hero de cada sub-página.
+**DOR:**
+- [ ] T1 completada (el padding ya está reducido)
+**DOF:**
+- [ ] El título se ve proporcionado al nuevo padding
+- [ ] `npm run build` pasa
+**Prioridad:** Media
+
+### T3 — Compactar espaciado vertical en hero
+**Archivos:** mismos 6 archivos
+**Descripción técnica:** En el `<h1>`, cambiar `mt-3` por `mt-2`. En el `<p>` del subtítulo, cambiar `mt-6` por `mt-3`.
+**DOR:**
+- [ ] T1 completada
+**DOF:**
+- [ ] Badge, título y subtítulo se ven agrupados y compactos
+- [ ] `npm run build` pasa
+**Prioridad:** Media
+
+### T4 — Regresión
+**Archivos:** todos
+**Descripción técnica:** Verificar 7 páginas cargan sin errores, responsive 375px sin overflow, hero height medido.
+**DOF:**
+- [ ] 7 páginas con 0 console errors (excepto blog #418 pre-existente)
+- [ ] Hero height < 40% vh en 1280×900
+- [ ] Responsive 375px sin overflow
 **Prioridad:** Alta
 
 ## Dependencias
-T1 → T2, T3 (paralelas) → T4 → T5, T6, T7, T8 (paralelas) → T9
+T1 → T2, T3 (paralelas) → T4
