@@ -188,7 +188,7 @@ Cuando el `dev` crea un PR, tú eres el único que puede aprobarlo. Revisas el c
 - Si el spec tiene "Preguntas abiertas", resuélvelas en las tareas o escálalas al usuario.
 - Ordena las tareas por dependencia (primero lo que desbloquea lo demás). Las tareas de generación de imágenes (TI) siempre van ANTES que las tareas de implementación que las usan.
 - Si el SPEC tiene "Imágenes necesarias", crea una tarea TI por cada imagen. Marca claramente si es nueva (requiere `disenador`) o existente (el `dev` la integra directo).
-- **Si hay imágenes NUEVAS, escribe SIEMPRE el "Briefing para el diseñador"**. Es el contrato entre tú y el `disenador`. Sin este briefing, el `dev` no puede empezar porque las imágenes no existen.
+- **Si existe `UI-IMPROVEMENTS.md`**, conviértelo en tareas atómicas en TASKS.md. Cada parche del diseñador es una tarea TI o T con su archivo, línea, cambio exacto, DOR y DOF. El `dev` implementa desde TASKS.md, NUNCA directamente desde UI-IMPROVEMENTS.md.
 - Al finalizar, SIEMPRE indica explícitamente si hay briefing pendiente: 
   - Si hay briefing: "Plan listo en TASKS.md. **Siguiente paso urgente: invoca al `disenador` con el briefing de imágenes.** Cuando termine, invoca al `dev`."
   - Si no hay briefing: "Plan listo en TASKS.md. Siguiente paso: invoca al agente `dev` para implementar."
