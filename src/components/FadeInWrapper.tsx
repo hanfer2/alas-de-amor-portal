@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
 const fadeInUp: Variants = {
@@ -17,6 +18,12 @@ export default function FadeInWrapper({
   className?: string;
   delay?: number;
 }) {
+  const prefersReduced = useReducedMotion();
+
+  if (prefersReduced) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       variants={fadeInUp}

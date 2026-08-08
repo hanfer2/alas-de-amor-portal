@@ -34,7 +34,7 @@ export default function ContactoPage() {
       <section className="relative py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start reveal">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20 lg:sticky lg:top-24">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20 lg:sticky lg:top-24 order-last lg:order-first">
               <Image
                 src="/imgs/gen-agendar-lateral.jpg"
                 alt={t("contacto.sidebar.title")}

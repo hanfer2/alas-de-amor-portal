@@ -59,7 +59,7 @@ export default function AgendarPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start reveal">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20 lg:sticky lg:top-24">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20 lg:sticky lg:top-24 order-last lg:order-first">
               <Image
                 src="/imgs/gen-agendar-lateral.jpg"
                 alt={t("agendar.sidebar.title")}
