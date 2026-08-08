@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { useTranslations } from "@/hooks/useTranslations";
 import config from "@/lib/config";
@@ -9,7 +10,7 @@ export default function ContactoPage() {
   const t = useTranslations();
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-gradient-to-br from-warm-white to-violet-50/30">
       <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
         <FloatingOrbs />
         <div className="absolute top-8 right-8 opacity-20">
@@ -30,14 +31,32 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div className="reveal">
-              <ContactForm />
+          <div className="grid lg:grid-cols-2 gap-12 items-start reveal">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20 lg:sticky lg:top-24">
+              <Image
+                src="/imgs/gen-agendar-lateral.jpg"
+                alt={t("contacto.sidebar.title")}
+                width={600}
+                height={800}
+                className="w-full h-[400px] lg:h-[550px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-reiki-900/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <h3 className="font-display text-2xl lg:text-3xl font-bold text-white mb-3">
+                  {t("contacto.sidebar.title")}
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  {t("contacto.sidebar.subtitle")}
+                </p>
+              </div>
             </div>
-            <div className="reveal">
-              <ContactInfo />
+            <div>
+              <ContactForm />
+              <div className="mt-8 reveal">
+                <ContactInfo />
+              </div>
             </div>
           </div>
         </div>

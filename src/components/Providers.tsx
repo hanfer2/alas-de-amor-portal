@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import StructuredData from "@/components/StructuredData";
 import ScrollReveal from "@/components/ScrollReveal";
+import LenisProvider from "@/components/LenisProvider";
 
 function LangUpdater() {
   const { lang } = useLanguage();
@@ -41,7 +42,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         Saltar al contenido
       </a>
       <Header />
-      <MainContent>{children}</MainContent>
+      <LenisProvider>
+        <MainContent>{children}</MainContent>
+      </LenisProvider>
       <Footer />
       <BackToTop />
     </LanguageProvider>

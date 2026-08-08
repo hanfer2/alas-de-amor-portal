@@ -1,55 +1,45 @@
-# SPEC — Refactor visual de /agendar (Split Layout + Fix i18n)
+# SPEC — Refactor Épico: Portal Etéreo y Fluido
 Generado por: agente po
 Fecha: 2026-08-07
 Estado: ✅ Aprobado
 
 ## Objetivo de negocio
-Elevar la calidad visual de la página de agendamiento a un nivel profesional usando un diseño a dos columnas (Split Layout) que transmita confianza antes del formulario. Corregir el bug de claves i18n visibles en el select de servicios.
+Elevar la experiencia visual de todo el portal al estándar de sitios modernos de bienestar: scrolling suave (Lenis), animaciones de entrada al scroll (Framer Motion), fondos de mesh gradient animados, micro-interacciones en tarjetas, y split layout en /contacto (igual que /agendar). El portal debe sentirse como un espacio de sanación digital, no como un sitio web estático.
 
 ## Usuario objetivo
-Visitante del portal que está a un paso de agendar. La columna izquierda con imagen y mensaje de confianza reduce la fricción y aumenta la conversión.
+Visitante del portal que experimenta calma y fluidez al navegar. Las transiciones suaves y las animaciones orgánicas refuerzan la marca de terapia holística.
 
 ## Alcance
 ### Incluye
-- Refactor visual de /agendar: split layout 2 columnas en lg+
-- Columna izquierda: imagen lateral etérea + mensaje de calma + info de contacto directa
-- Columna derecha: formulario con glassmorphism (tarjeta flotante)
-- Estilo etéreo en inputs: fondos suaves, bordes tenues, focus ring violeta
-- Botón de submit con gradiente vibrante y micro-interacción hover
-- Fix del bug: select muestra claves i18n en lugar de texto traducido
-- Fondo de la página con gradiente sutil (warm-white → violet-50)
+- Smooth scrolling global con Lenis (fricción suave, sensación de deslizamiento)
+- Animaciones de fade-in-up al scroll en todas las páginas (Framer Motion)
+- Mesh gradients animados (fondos de aurora) en hero sections
+- Micro-interacciones en tarjetas de servicios (glow hover, lift suave)
+- Split layout en /contacto (imagen lateral + form)
+- Hero de /inicio con tipografía grande + gradiente animado
+- Componente reutilizable `<FadeInWrapper>` para animaciones DRY
 
 ### NO incluye
-- Cambios en el componente Logo o Header
-- Cambios en otras páginas
-- Modificaciones en la lógica del formulario (envío, validación, WhatsApp)
+- Cambios en textos existentes
+- Cambios en lógica de formularios
+- Nuevas funcionalidades de negocio
+- Imágenes IA nuevas (se reutiliza fallback de /agendar para /contacto)
 
 ## Historia(s) de usuario
-- Como visitante, quiero sentir confianza y calma al llenar el formulario de agendamiento para completar mi reserva sin fricción visual.
+- Como visitante, quiero navegar el portal con transiciones suaves que me transmitan calma y profesionalismo.
 
 ## Criterios de aceptación
-- [ ] CA1: En pantallas lg+, la página muestra 2 columnas (imagen a la izquierda, form a la derecha)
-- [ ] CA2: La columna izquierda tiene una imagen etérea sin rostros, mensaje de calma y datos de contacto
-- [ ] CA3: El formulario tiene glassmorphism (fondo translúcido, blur, borde sutil)
-- [ ] CA4: Los inputs tienen estilo etéreo (bg-gray-50, border suave, focus ring violeta)
-- [ ] CA5: El select de servicios muestra NOMBRES traducidos, no claves i18n (`services.reiki`)
-- [ ] CA6: El botón de submit tiene gradiente y micro-interacción
-- [ ] CA7: Responsive: en mobile (<lg) se apila verticalmente
-- [ ] CA8: 0 errores de consola, 0 hydration errors
+- [ ] CA1: El scroll en todas las páginas es suave (Lenis activo en layout.tsx)
+- [ ] CA2: Los elementos (títulos, tarjetas) hacen fade-in-up al entrar en viewport
+- [ ] CA3: El héroe de / tiene un mesh gradient animado de fondo
+- [ ] CA4: Las tarjetas de /servicios tienen glow hover (sombra violeta expandida + lift)
+- [ ] CA5: /contacto tiene split layout 2 columnas con imagen lateral + form
+- [ ] CA6: 0 errores de consola en todas las páginas
+- [ ] CA7: Performance: no hay regresión en LCP/CLS
+- [ ] CA8: Responsive 375px funciona sin overflow
 - [ ] CA9: build + lint pasan
 
-## Contenido / copy
-- ES columna izquierda título: "Tu bienestar comienza aquí"
-- ES columna izquierda subtítulo: "Cada sesión es un espacio seguro para tu sanación. Liliana te acompañará con calidez y profesionalismo en cada paso del camino."
-- EN columna izquierda título: "Your well-being starts here"
-- EN columna izquierda subtítulo: "Every session is a safe space for your healing. Liliana will accompany you with warmth and professionalism every step of the way."
-
 ## Imágenes necesarias
-| Página | Sección / Componente | Descripción visual | ¿Existe en IMAGES.md? | Acción |
-|--------|---------------------|--------------------|---------------------|--------|
-| /agendar | Columna izquierda → imagen lateral | Imagen etérea cálida, silueta en espacio de sanación, luz violeta y dorada, sin rostros, atmósfera de calma y confianza | ❌ No | Diseñador: generar `gen-agendar-lateral.webp` (600×800) |
-
-## Notas y restricciones
-- Paleta violeta/índigo, dorado, crema — SIN verde, SIN amarillo
-- Glassmorphism sutil, no exagerado
-- Mantener la funcionalidad del form intacta (validación, WhatsApp, server action)
+| Página | Sección | Descripción | ¿Existe? | Acción |
+|--------|---------|-------------|----------|--------|
+| /contacto | Columna izquierda | Imagen etérea cálida de contacto/conexión | ❌ No | Reutilizar `gen-agendar-lateral.jpg` como fallback temporal |

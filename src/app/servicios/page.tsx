@@ -198,7 +198,7 @@ function ServiceBlock({
       </div>
 
       <div className={`relative reveal ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-        <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20">
+        <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.3)]">
           {item.image ? (
             <Image
               src={item.image}
