@@ -25,6 +25,7 @@ El `disenador` NO forma parte del ciclo Spec → QA. Se invoca **bajo demanda** 
 - "Genera un banner para la página de servicios"
 - "No tenemos foto de \[terapia\], crea una"
 - "Quiero un fondo etéreo para el hero"
+- **Modo auditor**: "audita el diseño de /servicios", "¿por qué se ve plano el hero?", "mejora la jerarquía visual", "revisa la consistencia entre páginas"
 
 ## Trazabilidad de imágenes (ciclo completo)
 
@@ -173,6 +174,7 @@ No es parte del ciclo Spec→QA, sino un gate periódico que ejecutas manualment
 | `TASKS.md` | `tech-lead` | `dev`, `qa`, tú |
 | `QA-ISSUES.md` | `qa` | `dev`, tú |
 | `IMAGES.md` | `disenador` | `dev`, tú |
+| `UI-IMPROVEMENTS.md` | `disenador` (modo auditor) | `tech-lead`, `dev`, tú |
 | `SEC-AUDIT.md` | `security-reviewer` | `dev`, `tech-lead`, tú |
 | `public/imgs/gen-*.webp` | `disenador` | `dev`, tú |
 
@@ -186,7 +188,7 @@ Instaladas skills en `.agents/skills/`, `.agents/skills/` (user) y `.opencode/sk
 |--------|-----------------|
 | **`po`** | `spec-driven-development`, `idea-refine`, `interview-me`, `doubt-driven-development`, `documentation-and-adrs` |
 | **`tech-lead`** | `planning-and-task-breakdown`, `api-and-interface-design`, `security-and-hardening`, `ci-cd-and-automation`, `shipping-and-launch`, `code-review-and-quality`, `seo`, `observability-and-instrumentation`, `accessibility`, `performance-optimization` |
-| **`disenador`** | `frontend-design`, `tailwind-css-patterns`, `tailwind`, `css-animations` |
+| **`disenador`** | `frontend-design`, `tailwind-css-patterns`, `tailwind`, `css-animations`, `accessibility` |
 | **`dev`** | `frontend-ui-engineering`, `incremental-implementation`, `code-simplification`, `source-driven-development`, `typescript-advanced-types`, `git-workflow-and-versioning`, `accessibility`, `performance-optimization`, `test-driven-development`, `next-best-practices`, `next-cache-components`, `react-best-practices`, `nodejs-backend-patterns`, `security-and-hardening`, `tailwind-css-patterns`, `seo` |
 | **`qa`** | `browser-testing-with-devtools`, `accessibility`, `code-review-and-quality`, `test-driven-development`, `frontend-design`, `performance-optimization`, `seo`, `security-and-hardening` |
 | **`security-reviewer`** | `security-and-hardening`, `code-review-and-quality` |
