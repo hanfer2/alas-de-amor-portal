@@ -263,6 +263,10 @@
         "desc": "You'll receive a confirmation via WhatsApp with your session details. Contact us if you have any questions."
       }
     },
+    "sidebar": {
+      "title": "Your well-being starts here",
+      "subtitle": "Every session is a safe space for your healing. Liliana will accompany you with warmth and professionalism every step of the way."
+    },
     "form": {
       "title": "Request Your Appointment",
       "name": "Full name",
