@@ -11,6 +11,8 @@ type FormErrors = {
   email?: string;
   phone?: string;
   service?: string;
+  date?: string;
+  message?: string;
 };
 
 export default function AppointmentForm() {
@@ -224,7 +226,7 @@ export default function AppointmentForm() {
                 required
                 value={formData.date}
                 onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-reiki-200 focus:border-reiki-400 focus:ring-2 focus:ring-reiki-200 outline-none transition-all bg-white/60"
+                className={inputClass("date")}
               />
             </div>
           </div>
@@ -233,14 +235,14 @@ export default function AppointmentForm() {
             <label className="block text-sm font-medium text-reiki-700 mb-2" htmlFor="apt-message">
               {t("agendar.form.message")}
             </label>
-            <textarea
-              id="apt-message"
-              rows={4}
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder={t("agendar.form.messagePlaceholder")}
-              className="w-full px-4 py-3 rounded-xl border border-reiki-200 focus:border-reiki-400 focus:ring-2 focus:ring-reiki-200 outline-none transition-all bg-white/60 resize-none"
-            />
+              <textarea
+                id="apt-message"
+                rows={4}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                placeholder={t("agendar.form.messagePlaceholder")}
+                className={inputClass("message")}
+              />
           </div>
 
           {sendError && (

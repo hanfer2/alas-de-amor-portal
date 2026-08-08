@@ -22,14 +22,18 @@ export default function ContactoPage() {
               {t("contacto.hero.badge")}
             </span>
             <h1 className="font-display text-5xl sm:text-6xl font-bold text-reiki-900 mt-3">
-              {t("contacto.hero.title")}
+              {t("contacto.hero.title").split(" ").map((word, i) => (
+                <span key={i}>
+                  {i === 0 ? <span className="text-gradient">{word} </span> : `${word} `}
+                </span>
+              ))}
             </h1>
             <p className="text-xl text-reiki-600 mt-6 leading-relaxed">
               {t("contacto.hero.subtitle")}
             </p>
           </div>
         </div>
-      </section>
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />      </section>
 
       <section className="relative py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +64,7 @@ export default function ContactoPage() {
             </div>
           </div>
         </div>
-      </section>
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />      </section>
     </div>
   );
 }

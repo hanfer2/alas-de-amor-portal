@@ -32,7 +32,7 @@ export default function AgendarPage() {
             </p>
           </div>
         </div>
-      </section>
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />      </section>
 
       <section className="relative py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +82,7 @@ export default function AgendarPage() {
             </div>
           </div>
         </div>
-      </section>
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />      </section>
     </div>
   );
 }
