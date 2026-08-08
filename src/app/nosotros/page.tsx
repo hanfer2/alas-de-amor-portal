@@ -18,7 +18,7 @@ export default function NosotrosPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-20 pb-8 gradient-hero overflow-hidden">
+      <section className="relative pt-16 pb-4 gradient-hero overflow-hidden">
         <FloatingOrbs />
         <div className="absolute top-10 right-10 opacity-30">
           <LotusMandala className="w-48 h-48" />
@@ -28,14 +28,14 @@ export default function NosotrosPage() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("nosotros.hero.badge")}
             </span>
-            <h1 className="font-display text-5xl sm:text-6xl font-bold text-reiki-900 mt-3">
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-2">
               {t("nosotros.hero.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i === 1 ? <span className="text-gradient">{word} </span> : `${word} `}
                 </span>
               ))}
             </h1>
-            <p className="text-xl text-reiki-600 mt-6 leading-relaxed">
+            <p className="text-lg text-reiki-600 mt-3 leading-relaxed">
               {t("nosotros.hero.subtitle")}
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function NosotrosPage() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("nosotros.credentials.badge")}
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-2">
               {t("nosotros.credentials.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i === 1 ? <span className="text-gradient">{word} </span> : `${word} `}
@@ -167,7 +167,7 @@ export default function NosotrosPage() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("nosotros.certificates.badge")}
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-2">
               {t("nosotros.certificates.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i === 2 ? <span className="text-gradient">{word} </span> : `${word} `}
@@ -205,7 +205,7 @@ export default function NosotrosPage() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("nosotros.experience.badge")}
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-2">
               {t("nosotros.experience.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i === 1 ? <span className="text-gradient">{word} </span> : `${word} `}

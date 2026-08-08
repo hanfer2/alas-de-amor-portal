@@ -36,7 +36,7 @@ export default function ServiciosPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-20 pb-8 gradient-hero overflow-hidden">
+      <section className="relative pt-16 pb-4 gradient-hero overflow-hidden">
         <FloatingOrbs />
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 opacity-20">
           <EnergyWaves className="w-[600px] h-[200px]" />
@@ -46,14 +46,14 @@ export default function ServiciosPage() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("servicios.hero.badge")}
             </span>
-            <h1 className="font-display text-5xl sm:text-6xl font-bold text-reiki-900 mt-3">
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-2">
               {t("servicios.hero.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i === 1 ? <span className="text-gradient">{word} </span> : `${word} `}
                 </span>
               ))}
             </h1>
-            <p className="text-xl text-reiki-600 mt-6 leading-relaxed">
+            <p className="text-lg text-reiki-600 mt-3 leading-relaxed">
               {t("servicios.hero.subtitle")}
             </p>
           </div>

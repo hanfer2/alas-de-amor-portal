@@ -11,7 +11,7 @@ export default function ContactoPage() {
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-warm-white to-violet-50/30">
-      <section className="relative pt-20 pb-8 gradient-hero overflow-hidden">
+      <section className="relative pt-16 pb-4 gradient-hero overflow-hidden">
         <FloatingOrbs />
         <div className="absolute top-8 right-8 opacity-20">
           <DovePeace className="w-64 h-28" />
@@ -21,14 +21,14 @@ export default function ContactoPage() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("contacto.hero.badge")}
             </span>
-            <h1 className="font-display text-5xl sm:text-6xl font-bold text-reiki-900 mt-3">
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-2">
               {t("contacto.hero.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i === 0 ? <span className="text-gradient">{word} </span> : `${word} `}
                 </span>
               ))}
             </h1>
-            <p className="text-xl text-reiki-600 mt-6 leading-relaxed">
+            <p className="text-lg text-reiki-600 mt-3 leading-relaxed">
               {t("contacto.hero.subtitle")}
             </p>
           </div>
