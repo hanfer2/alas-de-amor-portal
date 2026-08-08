@@ -78,14 +78,14 @@ export default function AppointmentForm() {
   };
 
   const inputClass = (field: keyof FormErrors) =>
-    `w-full px-4 py-3 rounded-xl border ${
+    `w-full px-4 py-3 rounded-xl bg-gray-50 border ${
       errors[field]
-        ? "border-red-400 focus:border-red-500 focus:ring-red-200"
-        : "border-reiki-200 focus:border-reiki-400 focus:ring-reiki-200"
-    } focus:ring-2 outline-none transition-all bg-white/60`;
+        ? "border-red-300 focus:ring-red-300"
+        : "border-gray-100 focus:ring-reiki-500"
+    } focus:ring-2 focus:border-transparent outline-none transition-all`;
 
   return (
-    <div className="gradient-card rounded-3xl p-8 sm:p-12 shadow-xl shadow-reiki-200/20 border border-white/50">
+    <div className="bg-white/90 backdrop-blur-sm shadow-xl shadow-indigo-900/5 rounded-3xl border border-white/50 p-8 sm:p-12">
       <h2 className="font-display text-2xl font-bold text-reiki-900 mb-8 text-center">
         {t("agendar.form.title")}
       </h2>
@@ -252,7 +252,7 @@ export default function AppointmentForm() {
           <button
             type="submit"
             disabled={sending}
-            className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white font-semibold text-lg shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:shadow-reiki-400/40 hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+            className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-reiki-600 to-reiki-400 text-white font-semibold text-lg shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:shadow-reiki-400/40 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           >
             {sending ? (
               <span className="inline-flex items-center gap-2">

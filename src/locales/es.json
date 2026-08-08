@@ -263,6 +263,10 @@
         "desc": "Recibirás una confirmación por WhatsApp con los detalles de tu sesión. Si tienes dudas, puedes contactarnos."
       }
     },
+    "sidebar": {
+      "title": "Tu bienestar comienza aquí",
+      "subtitle": "Cada sesión es un espacio seguro para tu sanación. Liliana te acompañará con calidez y profesionalismo en cada paso del camino."
+    },
     "form": {
       "title": "Solicita tu Cita",
       "name": "Nombre completo",
