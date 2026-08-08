@@ -103,7 +103,7 @@ export default function Home() {
         delay={4}
       />
 
-      <section className="relative min-h-screen flex items-center gradient-hero pt-24 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center gradient-hero pt-28 overflow-hidden">
         <div className="absolute top-0 right-0 opacity-[0.07]">
           <AngelFeathers className="w-[500px] h-[250px]" />
         </div>
@@ -186,7 +186,7 @@ export default function Home() {
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
-            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("home.services.badge")}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
@@ -265,7 +265,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-6 reveal">
-              <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
                 {t("home.about.badge")}
               </span>
               <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900">
@@ -351,10 +351,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-24 gradient-hero">
+      <section className="relative py-16 gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
-            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("home.testimonials.badge")}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">

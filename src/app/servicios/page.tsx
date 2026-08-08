@@ -36,14 +36,14 @@ export default function ServiciosPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
+      <section className="relative pt-20 pb-8 gradient-hero overflow-hidden">
         <FloatingOrbs />
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 opacity-20">
           <EnergyWaves className="w-[600px] h-[200px]" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
-            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("servicios.hero.badge")}
             </span>
             <h1 className="font-display text-5xl sm:text-6xl font-bold text-reiki-900 mt-3">

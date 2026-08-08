@@ -18,14 +18,14 @@ export default function NosotrosPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
+      <section className="relative pt-20 pb-8 gradient-hero overflow-hidden">
         <FloatingOrbs />
         <div className="absolute top-10 right-10 opacity-30">
           <LotusMandala className="w-48 h-48" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
-            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("nosotros.hero.badge")}
             </span>
             <h1 className="font-display text-5xl sm:text-6xl font-bold text-reiki-900 mt-3">
@@ -40,6 +40,8 @@ export default function NosotrosPage() {
             </p>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
 
       <section className="relative py-24 bg-warm-white">
@@ -107,12 +109,14 @@ export default function NosotrosPage() {
             </div>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
 
       <section className="relative py-24 gradient-spiritual">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
-            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("nosotros.credentials.badge")}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
@@ -153,12 +157,14 @@ export default function NosotrosPage() {
             ))}
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
 
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
-            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("nosotros.certificates.badge")}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
@@ -189,12 +195,14 @@ export default function NosotrosPage() {
             )}
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
 
       <section className="relative py-24 gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
-            <span className="text-reiki-500 font-medium tracking-wider uppercase text-sm">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("nosotros.experience.badge")}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
