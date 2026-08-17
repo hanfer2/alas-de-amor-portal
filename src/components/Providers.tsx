@@ -9,6 +9,7 @@ import BackToTop from "@/components/BackToTop";
 import StructuredData from "@/components/StructuredData";
 import ScrollReveal from "@/components/ScrollReveal";
 import LenisProvider from "@/components/LenisProvider";
+import ContactLauncher from "@/components/ContactLauncher";
 
 function LangUpdater() {
   const { lang } = useLanguage();
@@ -47,6 +48,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       </LenisProvider>
       <Footer />
       <BackToTop />
+      <ContactLauncher />
     </LanguageProvider>
   );
 }

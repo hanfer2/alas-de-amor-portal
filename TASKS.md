@@ -1,73 +1,63 @@
-# TASKS — Liquid Gooey fase 2: piloto visual en servicios
+# TASKS — Botón transversal Liquid: WhatsApp + Chat
 Generado por: agente tech-lead
 Basado en: SPECS.md (2026-08-17, ✅ Aprobado)
 Fecha: 2026-08-17
 
 ## Resumen técnico
-Se extiende `liquid-gooey` únicamente a la categoría `Terapias` de
-`/servicios`. El piloto debe preservar el layout alternado actual de
-`ServiceBlock`, mantener el DOM accesible y permitir rollback eliminando el
-flag del piloto y los wrappers Liquid.
+Crear un componente cliente único `ContactLauncher` montado desde
+`Providers`, con estado cerrado/abierto/chat. Usará `liquid-gooey` para la
+superficie, pero conservará botones y enlaces DOM reales. Añadirá copy ES/EN
+en locales y no tocará la lógica existente de formularios.
 
 ## Tareas
 
-### T1 — Definir flag y límites del piloto
-**Archivos:** `src/app/servicios/page.tsx`
-**Descripción técnica:** Identificar la categoría `terapias` y pasar un flag
-explícito a `ServiceBlock` (`liquidPilot`). Las demás categorías deben seguir
-renderizando exactamente el comportamiento actual.
+### T1 — Crear ContactLauncher reutilizable
+**Archivos:** `src/components/ContactLauncher.tsx`
+**Descripción técnica:** Crear componente client con estado `isOpen` y
+`showChat`. Estado cerrado: botón flotante accesible. Estado abierto: grupo
+Liquid con opciones WhatsApp y Chat. Chat muestra una superficie visual con
+respuesta fija y botón de cierre. Implementar Escape y click fuera con cleanup.
 **DOR:**
 - [x] `liquid-gooey` instalado y validado en fase 1
-- [x] Fase 1 aprobada por QA en `QA-ISSUES.md` Ronda 11
+- [x] Config WhatsApp disponible en `src/lib/config.ts`
 **DOF:**
-- [x] Solo Terapias activa el piloto
-- [x] Talleres, Sanaciones, Lectura Angelical, Charlas y Retiros no usan Liquid
-- [x] Rollback posible eliminando el flag y los wrappers
+- [ ] Botón tiene `aria-label`, `aria-expanded` y focus visible
+- [ ] WhatsApp conserva `href`, `target` y `rel`
+- [ ] Chat no hace requests ni abre servicios externos
+- [ ] Escape y click fuera cierran el panel
+- [ ] Reduced motion funciona
 
-### T2 — Aplicar Morph a una superficie acotada de ServiceBlock
-**Archivos:** `src/app/servicios/page.tsx`
-**Descripción técnica:** Para los ServiceBlock de Terapias, crear un grupo
-`Liquid` que envuelva únicamente elementos visuales relacionados (imagen y
-superficie de acción/badge), manteniendo texto y controles reales nítidos.
-No aplicar filtros directamente a `<Image>`, headings, párrafos o links.
-Usar `fill="var(--color-warm-white)"`, blur/contrast moderados y sombra de los
-tokens existentes. No usar `dissolve`.
+### T2 — Integrar una sola vez en Providers
+**Archivos:** `src/components/Providers.tsx`
+**Descripción técnica:** Montar `ContactLauncher` una sola vez junto a
+`BackToTop`. Usar z-index coordinado para no tapar el Header ni el contenido.
 **DOR:**
-- [x] T1 completada
-- [x] El DOM actual de ServiceBlock está identificado antes de envolverlo
+- [ ] T1 completada
 **DOF:**
-- [x] El efecto solo aparece en Terapias
-- [x] Texto, precio, imagen, focus ring y CTA siguen siendo DOM real
-- [x] CTA sigue navegando a `/agendar`
-- [x] No se aplica `filter` directamente a texto o imágenes
-- [x] No hay salto de layout al entrar/salir del estado Morph
+- [ ] Launcher aparece en las 7 rutas
+- [ ] No existe duplicación por página
+- [ ] No hay overflow horizontal en 375px
 
-### T3 — Reduced motion, touch y tokens
-**Archivos:** `src/app/servicios/page.tsx`, `src/components/*` si aplica
-**Descripción técnica:** Reutilizar las garantías de fase 1: no competir con
-scroll táctil, respetar `prefers-reduced-motion`, y usar únicamente tokens
-`reiki-*`, `warm-white` y sombras existentes.
+### T3 — Agregar traducciones ES/EN
+**Archivos:** `src/locales/es.json`, `src/locales/en.json`
+**Descripción técnica:** Agregar las claves `contactLauncher.*` definidas en
+SPECS.md. No dejar claves visibles en el DOM.
 **DOF:**
-- [x] Reduced motion desactiva o simplifica el Morph
-- [x] Mobile 375px sin overflow
-- [x] Focus visible y contraste WCAG conservados
-- [x] No se introducen colores arbitrarios
+- [ ] ES muestra copy español
+- [ ] EN muestra copy inglés
+- [ ] Todas las claves resuelven en ambos locales
 
-### T4 — Regresión y decisión de adopción
-**Archivos:** `QA-ISSUES.md`, `TASKS.md`
-**Descripción técnica:** QA crea casos antes de probar: desktop, mobile,
-reduced-motion, consola, imágenes, navegación, accesibilidad y performance.
-Safari queda fuera de esta fase por decisión del usuario.
+### T4 — Regresión y QA
+**Archivos:** `QA-ISSUES.md`
+**Descripción técnica:** QA debe crear casos antes de probar y validar 7
+ráutas, desktop/mobile, teclado, reduced-motion, contraste, enlaces sin
+disparar WhatsApp y consola.
 **DOF:**
-- [x] 7 rutas sin errores de consola
-- [x] 0 imágenes rotas
-- [x] LCP/CLS sin regresión significativa
-- [x] QA documenta: aprobar extensión, iterar o descartar
+- [ ] `npm run build` + `npm run lint` pasan
+- [ ] 7 rutas sin errores de consola
+- [ ] 0 imágenes rotas
+- [ ] CTA WhatsApp inspeccionado sin click real
+- [ ] QA documenta decisión final
 
 ## Dependencias
-T1 → T2 → T3 → T4
-
-## Rollback
-Eliminar el flag `liquidPilot`, los wrappers `Liquid` y conservar el
-`ServiceBlock` original. La dependencia se elimina solo si Tech-Lead decide
-descartar definitivamente el prototipo.
+T1 → T2 y T3 → T4
