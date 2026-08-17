@@ -7,6 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useTranslations } from "@/hooks/useTranslations";
 import { languages } from "@/lib/translations";
 import Logo from "@/components/Logo";
+import { Liquid } from "liquid-gooey";
 
 const navLinks = [
   { href: "/", labelKey: "nav.inicio" },
@@ -92,53 +93,62 @@ export default function Header() {
             </div>
           </nav>
 
-          <div className="flex items-center gap-2 lg:hidden">
-            <div className="flex items-center gap-1">
-              {languages.map((l) => (
-                <button
-                  key={l.code}
-                  onClick={() => setLang(l.code)}
-                  className={`px-2 py-1 rounded-lg text-lg transition-all duration-200 hover:scale-110 ${
-                    lang === l.code
-                      ? "bg-reiki-100 shadow-sm"
-                      : "opacity-60 hover:opacity-100"
-                  }`}
-                  title={l.name}
-                  aria-label={`Switch to ${l.name}`}
-                >
-                  {flagEmoji[l.code]}
-                </button>
-              ))}
-            </div>
-
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-full hover:bg-reiki-50 transition-colors"
-              aria-label={isOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isOpen}
-            >
-              <svg
-                className="w-6 h-6 text-reiki-700"
-                fill="none"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
+          <Liquid
+            blur={6}
+            contrast={18}
+            fill="rgba(255,255,255,0.85)"
+            shadow="0 4px 14px rgba(139,92,246,0.16)"
+            className="flex items-center gap-2 lg:hidden"
+          >
+            <Liquid.Item>
+              <div className="flex items-center gap-1">
+                {languages.map((l) => (
+                  <button
+                    key={l.code}
+                    onClick={() => setLang(l.code)}
+                    className={`px-2 py-1 rounded-lg text-lg transition-all duration-200 hover:scale-110 ${
+                      lang === l.code
+                        ? "bg-reiki-100 shadow-sm"
+                        : "opacity-60 hover:opacity-100"
+                    }`}
+                    title={l.name}
+                    aria-label={`Switch to ${l.name}`}
+                  >
+                    {flagEmoji[l.code]}
+                  </button>
+                ))}
+              </div>
+            </Liquid.Item>
+            <Liquid.Item>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 rounded-full hover:bg-reiki-50 transition-colors"
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isOpen}
               >
-                {isOpen ? (
-                  <path
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
+                <svg
+                  className="w-6 h-6 text-reiki-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  {isOpen ? (
+                    <path
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  ) : (
+                    <path
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  )}
+                </svg>
+              </button>
+            </Liquid.Item>
+          </Liquid>
         </div>
 
         {isOpen && (
