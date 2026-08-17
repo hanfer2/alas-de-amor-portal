@@ -1,35 +1,30 @@
-# QA ISSUES — Ronda 13 (Liquid Gooey fase 2)
+# QA ISSUES — Ronda 14
 Fecha: 2026-08-17
-Deploy verificado: https://alas-de-amor-portal.vercel.app
-Resultado global: ✅ APROBADO — piloto Terapias
+Deploy verificado: https://alas-de-amor-portal.vercel.app (PR #10)
+Resultado global: ✅ APROBADO
 
-## Casos de prueba
+## Re-verificación
 
-| Caso | Resultado | Evidencia |
-|------|-----------|-----------|
-| Liquid solo en Terapias | ✅ | `/servicios` muestra el filtro Liquid en la superficie piloto; categorías posteriores mantienen su estructura |
-| 7 rutas cargan | ✅ | `/`, `/nosotros`, `/servicios`, `/agendar`, `/contacto`, `/testimonios`, `/blog` |
-| Consola | ✅ | 0 errores capturados durante navegación `networkidle` |
-| Imágenes | ✅ | 0 imágenes rotas; 24 imágenes detectadas en `/servicios` |
-| CTA a `/agendar` | ✅ | Links de ServiceBlock conservan destino |
-| Mobile | ✅ | Fase 1: viewport 375px, `scrollWidth: 360`, sin overflow |
-| Reduced motion | ✅ | Fase 1 emulada y validada; garantía preservada en fase 2 |
-| DOM real | ✅ | headings, precios, imágenes y links siguen siendo nodos DOM |
-| Safari | ⚠️ NO VERIFICABLE | Fuera de alcance por decisión del usuario |
+### ISS-001 — Hydration #418 en `/blog`
+**Estado:** ✅ CORREGIDO
+**Contador de persistencia:** 6 → cerrado
+**Causa:** `toLocaleDateString()` producía distinto HTML entre servidor y cliente.
+**Fix:** `Intl.DateTimeFormat` con locale ES/EN explícito y `timeZone: "UTC"`.
+**Evidencia:** `/blog` 0 errores de consola; regresión completa 7/7 rutas sin errores.
+
+## Regresión completa
+
+| Ruta | Console errors | Main chars | Imágenes rotas |
+|------|----------------|------------|----------------|
+| `/` | 0 | 1678 | 0 |
+| `/nosotros` | 0 | 4578 | 0 |
+| `/servicios` | 0 | 4201 | 0 |
+| `/agendar` | 0 | 2285 | 0 |
+| `/contacto` | 0 | 1746 | 0 |
+| `/testimonios` | 0 | 5118 | 0 |
+| `/blog` | 0 | 1065 | 0 |
 
 ## Decisión
 
-✅ **Aprobado el piloto Liquid Gooey en Terapias.**
-
-No se autoriza todavía la extensión a Talleres, Sanaciones, Lectura Angelical,
-Charlas o Retiros, ni el uso de `dissolve` sobre imágenes. Requiere una nueva
-fase con medición específica.
-
-## Issues abiertos
-
-Ninguno nuevo.
-
-## Issues persistentes conocidos
-
-- `ISS-001`: hydration #418 histórico en `/blog`; conservar el ID y verificar
-  en la próxima ronda. No fue capturado por el listener de esta navegación.
+✅ QA aprobado. El Dev tomó el issue de QA, mantuvo el ID estable, creó PR #10,
+Tech-Lead lo mergeó y QA re-verificó el fix y las 7 rutas.
