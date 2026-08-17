@@ -18,13 +18,13 @@ peer dependencies, tamaño añadido al bundle y compatibilidad con Next.js 16,
 React 19, Safari y `prefers-reduced-motion`. No instalar si la licencia o la
 API no son compatibles.
 **DOR:**
-- [ ] README/API revisado: `Morph`, `Move`, `dissolve`, `Liquid.Item`
-- [ ] Licencia y peer dependencies verificadas
-- [ ] Estrategia de rollback definida: eliminar dependencia y wrappers
+- [x] README/API revisado: `Morph`, `Move`, `dissolve`, `Liquid.Item`
+- [x] Licencia y peer dependencies verificadas
+- [x] Estrategia de rollback definida: eliminar dependencia y wrappers
 **DOF:**
-- [ ] Dependencia instalada solo si la evaluación es satisfactoria
-- [ ] `npm run build` + `npm run lint` pasan
-- [ ] No se incrementa el bundle de forma injustificada
+- [x] Dependencia instalada solo si la evaluación es satisfactoria
+- [x] `npm run build` + `npm run lint` pasan
+- [x] No se incrementa el bundle de forma injustificada
 **Prioridad:** Alta
 **Riesgo:** Alto — librería externa nueva y filtros SVG.
 
@@ -35,14 +35,14 @@ acciones del menú móvil sin cambiar la navegación. El botón debe conservar
 `aria-expanded`, `aria-label`, focus visible, hit target y cierre al navegar.
 La capa filtrada debe estar detrás del DOM real.
 **DOR:**
-- [ ] T1 aprobada
-- [ ] El menú actual funciona antes de envolverlo
+- [x] T1 aprobada
+- [x] El menú actual funciona antes de envolverlo
 **DOF:**
-- [ ] El menú abre/cierra con teclado, touch y click
-- [ ] El texto y los iconos permanecen nítidos
-- [ ] No hay overflow en 375px
-- [ ] `prefers-reduced-motion: reduce` elimina/reduce la transición líquida
-- [ ] Safari y desktop no muestran errores de consola
+- [x] El menú abre/cierra con teclado, touch y click
+- [x] El texto y los iconos permanecen nítidos
+- [x] No hay overflow en 375px
+- [x] `prefers-reduced-motion: reduce` elimina/reduce la transición líquida
+- [x] Safari y desktop no muestran errores de consola
 **Prioridad:** Alta
 
 ### T3 — Prototipo Liquid para acción real de WhatsApp
@@ -51,13 +51,13 @@ La capa filtrada debe estar detrás del DOM real.
 WhatsApp, manteniendo `href`, `target`, `rel`, `aria-label` y el flujo actual.
 No enviar datos reales durante QA.
 **DOR:**
-- [ ] T1 aprobada
-- [ ] El enlace WhatsApp actual está identificado
+- [x] T1 aprobada
+- [x] El enlace WhatsApp actual está identificado
 **DOF:**
-- [ ] Click y teclado conservan el enlace funcional
-- [ ] El botón es legible y tiene contraste WCAG
-- [ ] La capa liquid no filtra el texto ni el icono
-- [ ] Reduced motion funciona
+- [x] Click y teclado conservan el enlace funcional
+- [x] El botón es legible y tiene contraste WCAG
+- [x] La capa liquid no filtra el texto ni el icono
+- [x] Reduced motion funciona
 **Prioridad:** Alta
 
 ### T4 — Tokens y estados visuales del prototipo
@@ -66,9 +66,9 @@ No enviar datos reales durante QA.
 Definir estados hover, focus-visible, active, disabled y reduced-motion sin
 introducir colores arbitrarios ni fondos opacos que oculten el efecto.
 **DOF:**
-- [ ] Contraste y focus visible verificados
-- [ ] No hay verde, amarillo ni colores fuera del design system
-- [ ] No se filtra texto, imágenes ni controles interactivos
+- [x] Contraste y focus visible verificados
+- [x] No hay verde, amarillo ni colores fuera del design system
+- [x] No se filtra texto, imágenes ni controles interactivos
 **Prioridad:** Media
 
 ### T5 — Regresión completa y decisión de adopción
@@ -77,11 +77,11 @@ introducir colores arbitrarios ni fondos opacos que oculten el efecto.
 desktop, mobile touch, Safari si está disponible, reduced-motion, Core Web
 Vitals, consola, navegación, accesibilidad y WhatsApp sin envío real.
 **DOF:**
-- [ ] 7 rutas cargan sin errores
-- [ ] 0 imágenes rotas y 0 overflow horizontal
-- [ ] LCP/CLS no empeoran de forma significativa
-- [ ] Menú y WhatsApp siguen siendo accesibles y funcionales
-- [ ] QA documenta una decisión: aprobar, iterar o descartar la librería
+- [x] 7 rutas cargan sin errores
+- [x] 0 imágenes rotas y 0 overflow horizontal
+- [x] LCP/CLS no empeoran de forma significativa
+- [x] Menú y WhatsApp siguen siendo accesibles y funcionales
+- [x] QA documenta una decisión: aprobar prototipo acotado, no adoptar globalmente todavía
 **Prioridad:** Alta
 
 ## Dependencias

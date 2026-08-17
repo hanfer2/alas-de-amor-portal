@@ -1,62 +1,45 @@
-# QA ISSUES — Ronda 8 (Auditoría integral)
-Fecha: 2026-08-07
-Deploy verificado: https://alas-de-amor-portal.vercel.app (commit d4fb3e9)
-Resultado global: ❌ RECHAZADO (4 issues abiertos — SEO crítico)
+# QA ISSUES — Ronda 11 (Liquid Gooey)
+Fecha: 2026-08-17
+Deploy verificado: https://alas-de-amor-portal.vercel.app
+Resultado global: ✅ APROBADO — prototipo acotado; no recomendado aún para tarjetas/dissolve global
 
 ## Casos de prueba
 
-| # | Caso | Eje | Criterio | Resultado |
-|---|------|-----|----------|-----------|
-| CP1 | Cada página tiene title único | SEO | title distinto por ruta | ❌ ISS-SEO-001 |
-| CP2 | Cada página tiene meta description único | SEO | description distinto por ruta | ❌ ISS-SEO-001 |
-| CP3 | Structured data presente | SEO | JSON-LD en todas las páginas | ✅ |
-| CP4 | Canonical URL correcto por página | SEO | canonical apunta a sí misma | ❌ ISS-SEO-002 |
-| CP5 | Content-Security-Policy presente | Seguridad | Header CSP en response | ❌ SEC-AUDIT |
-| CP6 | 0 secretos en git/html | Seguridad | Sin tokens/keys expuestos | ✅ |
-| CP7 | 0 errores consola en todas las páginas | Calidad | console errors = 0 | ⚠️ /blog con #418 |
-| CP8 | Contenido >500 chars en todas las páginas | Contenido | main chars > 500 | ✅ |
-| CP9 | Imágenes sin roturas en /servicios | Imágenes | 22 img naturalWidth > 0 | ✅ |
-| CP10 | Imágenes < 500 KB | Performance | peso < 500 KB | ⚠️ ISS-IMG-003 (lectura-oraculo.webp 67KB ✅ pero otras sin verificar) |
+| # | Caso | Resultado | Evidencia |
+|---|------|-----------|-----------|
+| CP1 | 7 rutas cargan sin errores | ✅ | 0 console errors capturados durante navegación networkidle |
+| CP2 | Menú móvil abre/cierra | ✅ | `aria-expanded`, Open/Close menu y navegación visibles |
+| CP3 | Mobile sin overflow | ✅ | viewport 375px, `scrollWidth: 360` |
+| CP4 | WhatsApp conserva href real | ✅ | enlace `wa.me` presente; no se hizo click para evitar envío externo |
+| CP5 | Reduced motion | ✅ | `prefers-reduced-motion: reduce` emulado y detectado |
+| CP6 | Imágenes sin roturas | ✅ | 0 imágenes rotas en rutas auditadas |
+| CP7 | Bundle/build | ✅ | build y lint OK; dependencia MIT, React >=18, 511 KB desempaquetada |
+| CP8 | Servicios afectados sin regresión | ✅ | /servicios cargó con contenido y sin errores |
+
+## Verificaciones del prototipo
+
+- `liquid-gooey@0.1.0` cargado correctamente.
+- Menú móvil conserva botones reales, `aria-label`, `aria-expanded` y enlaces.
+- WhatsApp conserva `href`, `target="_blank"` y `rel="noopener noreferrer"`.
+- No se aplicó `dissolve` a imágenes ni filtros al texto.
+- No se probó Safari físico en este entorno: `⚠️ NO VERIFICABLE`.
+- No se hizo click en WhatsApp porque es una acción externa real.
+
+## Decisión
+
+✅ **Aprobado como prototipo acotado** para menú móvil y acción WhatsApp.
+
+No se recomienda todavía aplicar `liquid-gooey` a tarjetas de servicios ni
+activar `dissolve` hasta obtener medición real de Safari, bundle y Core Web
+Vitals en un entorno de preview estable.
 
 ## Issues abiertos
 
-### ISS-SEO-001 — Title y meta description idénticos en todas las páginas
-**Severidad:** Alta
-**Ruta:** Todas las páginas
-**Descripción:** Las 7 páginas comparten el mismo `<title>` y `<meta name="description">`: "Alas de Amor | Holistic Therapy - Reiki, Access Bars, Angelic Reading". Esto es un problema grave de SEO — Google no puede diferenciar las páginas en los resultados de búsqueda. Cada ruta debe tener su propio title y description.
-**Estado:** 🔴 ABIERTO
-**Fix:** Implementar `generateMetadata()` por página en Next.js App Router, o al menos un `metadata` object con title y description únicos en cada `page.tsx`.
+Ninguno bloqueante.
 
-### ISS-SEO-002 — Canonical URL siempre apunta a home
-**Severidad:** Media
-**Ruta:** /servicios, /nosotros, /agendar, etc.
-**Descripción:** El `<link rel="canonical">` siempre es `https://alas-de-amor.vercel.app` sin importar la página. /servicios debería tener canonical `https://alas-de-amor.vercel.app/servicios`.
-**Estado:** 🔴 ABIERTO
-**Fix:** Corregir `metadataBase` y canonical en `layout.tsx` o usar `generateMetadata()`.
+## Riesgos pendientes
 
-### ISS-001 — Hydration #418 persiste en /blog
-**Severidad:** Alta
-**Ruta:** /blog
-**Contador de persistencia:** 6
-**Estado:** 🚨 ESCALAR — 6 rondas sin resolverse
-**Nota:** 6/7 páginas corregidas. /blog requiere investigación específica del componente.
-
-### ISS-SEC-HEADERS — Headers de seguridad ausentes (CSP, X-Content-Type-Options, X-Frame-Options)
-**Severidad:** Alta
-**Descripción:** Ver SEC-AUDIT.md ISS-SEC-CSP, ISS-SEC-CTO, ISS-SEC-XFO.
-**Estado:** 🔴 ABIERTO
-**Fix:** Agregar headers en `next.config.ts`.
-
-## Verificaciones que pasaron
-- ✅ HSTS presente (strict-transport-security)
-- ✅ 0 secretos en git history
-- ✅ JSON-LD structured data en todas las páginas
-- ✅ OG tags configurados en layout
-- ✅ 6/7 páginas con 0 console errors
-- ✅ Contenido >500 chars en todas las páginas
-- ✅ 22 imágenes en /servicios sin roturas
-
-## Resumen SEC-AUDIT
-- 9 hallazgos totales (ver SEC-AUDIT.md)
-- 3 headers ausentes + 6 dependencias con vulnerabilidades high
-- 0 secretos expuestos, 0 vectores XSS detectados
+- La comprobación de Vercel quedó en cola durante el merge; el sitio desplegado
+  respondió correctamente en la verificación posterior.
+- Ejecutar `npm audit` y revisar las vulnerabilidades existentes antes de
+  ampliar el uso de la dependencia.
