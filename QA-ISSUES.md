@@ -1,30 +1,31 @@
-# QA ISSUES — Ronda 14
+# QA ISSUES — Ronda 15 (Contact Launcher)
 Fecha: 2026-08-17
-Deploy verificado: https://alas-de-amor-portal.vercel.app (PR #10)
+Deploy verificado: https://alas-de-amor-portal.vercel.app (PR #11)
 Resultado global: ✅ APROBADO
 
-## Re-verificación
+## Casos ejecutados
 
-### ISS-001 — Hydration #418 en `/blog`
-**Estado:** ✅ CORREGIDO
-**Contador de persistencia:** 6 → cerrado
-**Causa:** `toLocaleDateString()` producía distinto HTML entre servidor y cliente.
-**Fix:** `Intl.DateTimeFormat` con locale ES/EN explícito y `timeZone: "UTC"`.
-**Evidencia:** `/blog` 0 errores de consola; regresión completa 7/7 rutas sin errores.
+| Caso | Resultado | Evidencia |
+|------|-----------|-----------|
+| Launcher transversal en 7 rutas | ✅ | Providers lo monta una sola vez; regresión completa |
+| Estado cerrado accesible | ✅ | `aria-label="Abrir opciones de contacto"`, `aria-expanded` |
+| Menú WhatsApp + Chat | ✅ | Aparecen exactamente las dos opciones |
+| WhatsApp | ✅ | `href` `wa.me` presente; no se hizo click para evitar acción real |
+| Chat | ✅ | Dialog muestra `Chat en construcción, por favor usar WhatsApp` |
+| Cierre Escape | ✅ | Dialog desaparece al presionar Escape |
+| Mobile | ✅ | viewport 375px, `scrollWidth: 360`, sin overflow |
+| Regresión 7 rutas | ✅ | 0 errores capturados, 0 imágenes rotas |
+| Traducciones | ✅ | Copy del launcher ES/EN disponible |
 
-## Regresión completa
+## Issues abiertos
 
-| Ruta | Console errors | Main chars | Imágenes rotas |
-|------|----------------|------------|----------------|
-| `/` | 0 | 1678 | 0 |
-| `/nosotros` | 0 | 4578 | 0 |
-| `/servicios` | 0 | 4201 | 0 |
-| `/agendar` | 0 | 2285 | 0 |
-| `/contacto` | 0 | 1746 | 0 |
-| `/testimonios` | 0 | 5118 | 0 |
-| `/blog` | 0 | 1065 | 0 |
+Ninguno nuevo.
 
 ## Decisión
 
-✅ QA aprobado. El Dev tomó el issue de QA, mantuvo el ID estable, creó PR #10,
-Tech-Lead lo mergeó y QA re-verificó el fix y las 7 rutas.
+✅ Aprobado. El botón transversal funciona como prototipo de contacto. Chat no
+realiza llamadas externas y WhatsApp mantiene su enlace real.
+
+## Issues persistentes conocidos
+
+- `ISS-001` hydration histórico en `/blog`: no apareció en esta ronda.

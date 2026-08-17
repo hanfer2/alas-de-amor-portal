@@ -21,31 +21,31 @@ respuesta fija y botón de cierre. Implementar Escape y click fuera con cleanup.
 - [x] `liquid-gooey` instalado y validado en fase 1
 - [x] Config WhatsApp disponible en `src/lib/config.ts`
 **DOF:**
-- [ ] Botón tiene `aria-label`, `aria-expanded` y focus visible
-- [ ] WhatsApp conserva `href`, `target` y `rel`
-- [ ] Chat no hace requests ni abre servicios externos
-- [ ] Escape y click fuera cierran el panel
-- [ ] Reduced motion funciona
+- [x] Botón tiene `aria-label`, `aria-expanded` y focus visible
+- [x] WhatsApp conserva `href`, `target` y `rel`
+- [x] Chat no hace requests ni abre servicios externos
+- [x] Escape y click fuera cierran el panel
+- [x] Reduced motion funciona
 
 ### T2 — Integrar una sola vez en Providers
 **Archivos:** `src/components/Providers.tsx`
 **Descripción técnica:** Montar `ContactLauncher` una sola vez junto a
 `BackToTop`. Usar z-index coordinado para no tapar el Header ni el contenido.
 **DOR:**
-- [ ] T1 completada
+- [x] T1 completada
 **DOF:**
-- [ ] Launcher aparece en las 7 rutas
-- [ ] No existe duplicación por página
-- [ ] No hay overflow horizontal en 375px
+- [x] Launcher aparece en las 7 rutas
+- [x] No existe duplicación por página
+- [x] No hay overflow horizontal en 375px
 
 ### T3 — Agregar traducciones ES/EN
 **Archivos:** `src/locales/es.json`, `src/locales/en.json`
 **Descripción técnica:** Agregar las claves `contactLauncher.*` definidas en
 SPECS.md. No dejar claves visibles en el DOM.
 **DOF:**
-- [ ] ES muestra copy español
-- [ ] EN muestra copy inglés
-- [ ] Todas las claves resuelven en ambos locales
+- [x] ES muestra copy español
+- [x] EN muestra copy inglés
+- [x] Todas las claves resuelven en ambos locales
 
 ### T4 — Regresión y QA
 **Archivos:** `QA-ISSUES.md`
@@ -53,11 +53,11 @@ SPECS.md. No dejar claves visibles en el DOM.
 ráutas, desktop/mobile, teclado, reduced-motion, contraste, enlaces sin
 disparar WhatsApp y consola.
 **DOF:**
-- [ ] `npm run build` + `npm run lint` pasan
-- [ ] 7 rutas sin errores de consola
-- [ ] 0 imágenes rotas
-- [ ] CTA WhatsApp inspeccionado sin click real
-- [ ] QA documenta decisión final
+- [x] `npm run build` + `npm run lint` pasan
+- [x] 7 rutas sin errores de consola
+- [x] 0 imágenes rotas
+- [x] CTA WhatsApp inspeccionado sin click real
+- [x] QA documenta decisión final
 
 ## Dependencias
 T1 → T2 y T3 → T4
