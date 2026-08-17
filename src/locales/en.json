@@ -478,5 +478,15 @@
         "Authenticity"
       ]
     }
+  },
+  "contactLauncher": {
+    "toggle": "Open contact options",
+    "close": "Close",
+    "whatsapp": "WhatsApp",
+    "chat": {
+      "label": "Chat",
+      "title": "Chat",
+      "message": "Chat under construction, please use WhatsApp"
+    }
   }
 }
