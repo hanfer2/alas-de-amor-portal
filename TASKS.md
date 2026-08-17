@@ -1,93 +1,73 @@
-# TASKS — Prototipo Liquid Gooey para interacciones del portal
+# TASKS — Liquid Gooey fase 2: piloto visual en servicios
 Generado por: agente tech-lead
 Basado en: SPECS.md (2026-08-17, ✅ Aprobado)
 Fecha: 2026-08-17
 
 ## Resumen técnico
-Se evaluará e integrará `liquid-gooey` de forma acotada, reversible y sin
-aplicar filtros a texto, imágenes o focus rings. El primer prototipo cubrirá
-el menú móvil y una acción real de WhatsApp; tarjetas de servicios y
-`dissolve` quedan fuera de esta iteración hasta tener evidencia de rendimiento.
+Se extiende `liquid-gooey` únicamente a la categoría `Terapias` de
+`/servicios`. El piloto debe preservar el layout alternado actual de
+`ServiceBlock`, mantener el DOM accesible y permitir rollback eliminando el
+flag del piloto y los wrappers Liquid.
 
 ## Tareas
 
-### T1 — Evaluar paquete antes de instalar
-**Archivos:** `package.json`, `package-lock.json`
-**Descripción técnica:** Verificar versión publicada de `liquid-gooey`, licencia,
-peer dependencies, tamaño añadido al bundle y compatibilidad con Next.js 16,
-React 19, Safari y `prefers-reduced-motion`. No instalar si la licencia o la
-API no son compatibles.
+### T1 — Definir flag y límites del piloto
+**Archivos:** `src/app/servicios/page.tsx`
+**Descripción técnica:** Identificar la categoría `terapias` y pasar un flag
+explícito a `ServiceBlock` (`liquidPilot`). Las demás categorías deben seguir
+renderizando exactamente el comportamiento actual.
 **DOR:**
-- [x] README/API revisado: `Morph`, `Move`, `dissolve`, `Liquid.Item`
-- [x] Licencia y peer dependencies verificadas
-- [x] Estrategia de rollback definida: eliminar dependencia y wrappers
+- [x] `liquid-gooey` instalado y validado en fase 1
+- [x] Fase 1 aprobada por QA en `QA-ISSUES.md` Ronda 11
 **DOF:**
-- [x] Dependencia instalada solo si la evaluación es satisfactoria
-- [x] `npm run build` + `npm run lint` pasan
-- [x] No se incrementa el bundle de forma injustificada
-**Prioridad:** Alta
-**Riesgo:** Alto — librería externa nueva y filtros SVG.
+- [ ] Solo Terapias activa el piloto
+- [ ] Talleres, Sanaciones, Lectura Angelical, Charlas y Retiros no usan Liquid
+- [ ] Rollback posible eliminando el flag y los wrappers
 
-### T2 — Prototipo Liquid del menú móvil
-**Archivos:** `src/components/Header.tsx`, componente auxiliar si aplica
-**Descripción técnica:** Integrar `Liquid`/`Liquid.Item` en el grupo de
-acciones del menú móvil sin cambiar la navegación. El botón debe conservar
-`aria-expanded`, `aria-label`, focus visible, hit target y cierre al navegar.
-La capa filtrada debe estar detrás del DOM real.
+### T2 — Aplicar Morph a una superficie acotada de ServiceBlock
+**Archivos:** `src/app/servicios/page.tsx`
+**Descripción técnica:** Para los ServiceBlock de Terapias, crear un grupo
+`Liquid` que envuelva únicamente elementos visuales relacionados (imagen y
+superficie de acción/badge), manteniendo texto y controles reales nítidos.
+No aplicar filtros directamente a `<Image>`, headings, párrafos o links.
+Usar `fill="var(--color-warm-white)"`, blur/contrast moderados y sombra de los
+tokens existentes. No usar `dissolve`.
 **DOR:**
-- [x] T1 aprobada
-- [x] El menú actual funciona antes de envolverlo
+- [ ] T1 completada
+- [ ] El DOM actual de ServiceBlock está identificado antes de envolverlo
 **DOF:**
-- [x] El menú abre/cierra con teclado, touch y click
-- [x] El texto y los iconos permanecen nítidos
-- [x] No hay overflow en 375px
-- [x] `prefers-reduced-motion: reduce` elimina/reduce la transición líquida
-- [x] Safari y desktop no muestran errores de consola
-**Prioridad:** Alta
+- [ ] El efecto solo aparece en Terapias
+- [ ] Texto, precio, imagen, focus ring y CTA siguen siendo DOM real
+- [ ] CTA sigue navegando a `/agendar`
+- [ ] No se aplica `filter` directamente a texto o imágenes
+- [ ] No hay salto de layout al entrar/salir del estado Morph
 
-### T3 — Prototipo Liquid para acción real de WhatsApp
-**Archivos:** `src/components/AppointmentForm.tsx` o componente reutilizable
-**Descripción técnica:** Aplicar el efecto a un único botón existente de
-WhatsApp, manteniendo `href`, `target`, `rel`, `aria-label` y el flujo actual.
-No enviar datos reales durante QA.
-**DOR:**
-- [x] T1 aprobada
-- [x] El enlace WhatsApp actual está identificado
+### T3 — Reduced motion, touch y tokens
+**Archivos:** `src/app/servicios/page.tsx`, `src/components/*` si aplica
+**Descripción técnica:** Reutilizar las garantías de fase 1: no competir con
+scroll táctil, respetar `prefers-reduced-motion`, y usar únicamente tokens
+`reiki-*`, `warm-white` y sombras existentes.
 **DOF:**
-- [x] Click y teclado conservan el enlace funcional
-- [x] El botón es legible y tiene contraste WCAG
-- [x] La capa liquid no filtra el texto ni el icono
-- [x] Reduced motion funciona
-**Prioridad:** Alta
+- [ ] Reduced motion desactiva o simplifica el Morph
+- [ ] Mobile 375px sin overflow
+- [ ] Focus visible y contraste WCAG conservados
+- [ ] No se introducen colores arbitrarios
 
-### T4 — Tokens y estados visuales del prototipo
-**Archivos:** `src/app/globals.css`, componentes del prototipo
-**Descripción técnica:** Usar `reiki-*`, `warm-white` y sombras existentes.
-Definir estados hover, focus-visible, active, disabled y reduced-motion sin
-introducir colores arbitrarios ni fondos opacos que oculten el efecto.
+### T4 — Regresión y decisión de adopción
+**Archivos:** `QA-ISSUES.md`, `TASKS.md`
+**Descripción técnica:** QA crea casos antes de probar: desktop, mobile,
+reduced-motion, consola, imágenes, navegación, accesibilidad y performance.
+Safari queda fuera de esta fase por decisión del usuario.
 **DOF:**
-- [x] Contraste y focus visible verificados
-- [x] No hay verde, amarillo ni colores fuera del design system
-- [x] No se filtra texto, imágenes ni controles interactivos
-**Prioridad:** Media
-
-### T5 — Regresión completa y decisión de adopción
-**Archivos:** `QA-ISSUES.md`, todos los componentes afectados
-**Descripción técnica:** QA debe crear casos de prueba antes de validar. Medir
-desktop, mobile touch, Safari si está disponible, reduced-motion, Core Web
-Vitals, consola, navegación, accesibilidad y WhatsApp sin envío real.
-**DOF:**
-- [x] 7 rutas cargan sin errores
-- [x] 0 imágenes rotas y 0 overflow horizontal
-- [x] LCP/CLS no empeoran de forma significativa
-- [x] Menú y WhatsApp siguen siendo accesibles y funcionales
-- [x] QA documenta una decisión: aprobar prototipo acotado, no adoptar globalmente todavía
-**Prioridad:** Alta
+- [ ] 7 rutas sin errores de consola
+- [ ] 0 imágenes rotas
+- [ ] LCP/CLS sin regresión significativa
+- [ ] QA documenta: aprobar extensión, iterar o descartar
 
 ## Dependencias
-T1 → T2, T3, T4 → T5
+T1 → T2 → T3 → T4
 
 ## Rollback
-Si la librería genera errores, regresión de rendimiento, incompatibilidad
-Safari o problemas de accesibilidad, eliminar la dependencia y los wrappers
-Liquid; mantener los controles y estilos actuales.
+Eliminar el flag `liquidPilot`, los wrappers `Liquid` y conservar el
+`ServiceBlock` original. La dependencia se elimina solo si Tech-Lead decide
+descartar definitivamente el prototipo.

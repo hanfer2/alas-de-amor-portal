@@ -1,7 +1,7 @@
 # SPEC — Liquid Gooey fase 2: piloto visual en servicios
 Generado por: agente po
 Fecha: 2026-08-17
-Estado: 📝 Borrador
+Estado: ✅ Aprobado
 
 ## Objetivo de negocio
 Continuar el prototipo `liquid-gooey` en una superficie donde el efecto sea
