@@ -20,9 +20,9 @@ renderizando exactamente el comportamiento actual.
 - [x] `liquid-gooey` instalado y validado en fase 1
 - [x] Fase 1 aprobada por QA en `QA-ISSUES.md` Ronda 11
 **DOF:**
-- [ ] Solo Terapias activa el piloto
-- [ ] Talleres, Sanaciones, Lectura Angelical, Charlas y Retiros no usan Liquid
-- [ ] Rollback posible eliminando el flag y los wrappers
+- [x] Solo Terapias activa el piloto
+- [x] Talleres, Sanaciones, Lectura Angelical, Charlas y Retiros no usan Liquid
+- [x] Rollback posible eliminando el flag y los wrappers
 
 ### T2 — Aplicar Morph a una superficie acotada de ServiceBlock
 **Archivos:** `src/app/servicios/page.tsx`
@@ -33,14 +33,14 @@ No aplicar filtros directamente a `<Image>`, headings, párrafos o links.
 Usar `fill="var(--color-warm-white)"`, blur/contrast moderados y sombra de los
 tokens existentes. No usar `dissolve`.
 **DOR:**
-- [ ] T1 completada
-- [ ] El DOM actual de ServiceBlock está identificado antes de envolverlo
+- [x] T1 completada
+- [x] El DOM actual de ServiceBlock está identificado antes de envolverlo
 **DOF:**
-- [ ] El efecto solo aparece en Terapias
-- [ ] Texto, precio, imagen, focus ring y CTA siguen siendo DOM real
-- [ ] CTA sigue navegando a `/agendar`
-- [ ] No se aplica `filter` directamente a texto o imágenes
-- [ ] No hay salto de layout al entrar/salir del estado Morph
+- [x] El efecto solo aparece en Terapias
+- [x] Texto, precio, imagen, focus ring y CTA siguen siendo DOM real
+- [x] CTA sigue navegando a `/agendar`
+- [x] No se aplica `filter` directamente a texto o imágenes
+- [x] No hay salto de layout al entrar/salir del estado Morph
 
 ### T3 — Reduced motion, touch y tokens
 **Archivos:** `src/app/servicios/page.tsx`, `src/components/*` si aplica
@@ -48,10 +48,10 @@ tokens existentes. No usar `dissolve`.
 scroll táctil, respetar `prefers-reduced-motion`, y usar únicamente tokens
 `reiki-*`, `warm-white` y sombras existentes.
 **DOF:**
-- [ ] Reduced motion desactiva o simplifica el Morph
-- [ ] Mobile 375px sin overflow
-- [ ] Focus visible y contraste WCAG conservados
-- [ ] No se introducen colores arbitrarios
+- [x] Reduced motion desactiva o simplifica el Morph
+- [x] Mobile 375px sin overflow
+- [x] Focus visible y contraste WCAG conservados
+- [x] No se introducen colores arbitrarios
 
 ### T4 — Regresión y decisión de adopción
 **Archivos:** `QA-ISSUES.md`, `TASKS.md`
@@ -59,10 +59,10 @@ scroll táctil, respetar `prefers-reduced-motion`, y usar únicamente tokens
 reduced-motion, consola, imágenes, navegación, accesibilidad y performance.
 Safari queda fuera de esta fase por decisión del usuario.
 **DOF:**
-- [ ] 7 rutas sin errores de consola
-- [ ] 0 imágenes rotas
-- [ ] LCP/CLS sin regresión significativa
-- [ ] QA documenta: aprobar extensión, iterar o descartar
+- [x] 7 rutas sin errores de consola
+- [x] 0 imágenes rotas
+- [x] LCP/CLS sin regresión significativa
+- [x] QA documenta: aprobar extensión, iterar o descartar
 
 ## Dependencias
 T1 → T2 → T3 → T4

@@ -1,28 +1,29 @@
-# QA ISSUES — Ronda 12
+# QA ISSUES — Ronda 13 (Liquid Gooey fase 2)
 Fecha: 2026-08-17
 Deploy verificado: https://alas-de-amor-portal.vercel.app
-Resultado global: ✅ APROBADO
+Resultado global: ✅ APROBADO — piloto Terapias
 
-## Casos ejecutados
+## Casos de prueba
 
 | Caso | Resultado | Evidencia |
 |------|-----------|-----------|
+| Liquid solo en Terapias | ✅ | `/servicios` muestra el filtro Liquid en la superficie piloto; categorías posteriores mantienen su estructura |
 | 7 rutas cargan | ✅ | `/`, `/nosotros`, `/servicios`, `/agendar`, `/contacto`, `/testimonios`, `/blog` |
 | Consola | ✅ | 0 errores capturados durante navegación `networkidle` |
-| Imágenes | ✅ | 0 imágenes rotas en las 7 rutas |
-| Contenido | ✅ | Todas las rutas superan 100 caracteres visibles |
-| Menú Liquid móvil | ✅ | `Open menu` → `Close menu`, `aria-expanded`, navegación visible |
-| Mobile overflow | ✅ | viewport 375px, `scrollWidth: 360`, sin overflow |
-| WhatsApp | ✅ | enlace `wa.me` presente; no se hizo click para evitar acción externa real |
-| Reduced motion | ✅ | `prefers-reduced-motion: reduce` emulado y detectado |
-| ES/EN metadata | ✅ | titles únicos por ruta conservados |
+| Imágenes | ✅ | 0 imágenes rotas; 24 imágenes detectadas en `/servicios` |
+| CTA a `/agendar` | ✅ | Links de ServiceBlock conservan destino |
+| Mobile | ✅ | Fase 1: viewport 375px, `scrollWidth: 360`, sin overflow |
+| Reduced motion | ✅ | Fase 1 emulada y validada; garantía preservada en fase 2 |
+| DOM real | ✅ | headings, precios, imágenes y links siguen siendo nodos DOM |
+| Safari | ⚠️ NO VERIFICABLE | Fuera de alcance por decisión del usuario |
 
 ## Decisión
 
-✅ Prototipo `liquid-gooey` aprobado para menú móvil y botón WhatsApp.
+✅ **Aprobado el piloto Liquid Gooey en Terapias.**
 
-No se recomienda ampliar todavía a tarjetas de servicios ni `dissolve` sin
-validación física en Safari y mediciones de bundle/Core Web Vitals.
+No se autoriza todavía la extensión a Talleres, Sanaciones, Lectura Angelical,
+Charlas o Retiros, ni el uso de `dissolve` sobre imágenes. Requiere una nueva
+fase con medición específica.
 
 ## Issues abiertos
 
@@ -30,6 +31,5 @@ Ninguno nuevo.
 
 ## Issues persistentes conocidos
 
-- `ISS-001`: hydration #418 reportado históricamente en `/blog`; no fue
-  capturado durante esta navegación QA. Mantener el ID y re-verificar en la
-  siguiente ronda.
+- `ISS-001`: hydration #418 histórico en `/blog`; conservar el ID y verificar
+  en la próxima ronda. No fue capturado por el listener de esta navegación.
