@@ -1,50 +1,93 @@
-# TASKS — Remover badges y compactar heroes v2
+# TASKS — Prototipo Liquid Gooey para interacciones del portal
 Generado por: agente tech-lead
-Basado en: UI-IMPROVEMENTS.md (diseñador auditor)
-Fecha: 2026-08-08
+Basado en: SPECS.md (2026-08-17, ✅ Aprobado)
+Fecha: 2026-08-17
 
 ## Resumen técnico
-Los badges pill en el hero de sub-páginas no aportan información (repiten el título) y ocupan ~38px verticales. Se eliminan. El padding del hero se reduce a pt-12 y el título pierde el mt-2.
+Se evaluará e integrará `liquid-gooey` de forma acotada, reversible y sin
+aplicar filtros a texto, imágenes o focus rings. El primer prototipo cubrirá
+el menú móvil y una acción real de WhatsApp; tarjetas de servicios y
+`dissolve` quedan fuera de esta iteración hasta tener evidencia de rendimiento.
 
 ## Tareas
 
-### T1 — Eliminar badges de las 6 sub-páginas
-**Archivos:** `src/app/servicios/page.tsx`, `src/app/nosotros/page.tsx`, `src/app/agendar/page.tsx`, `src/app/contacto/page.tsx`, `src/app/testimonios/page.tsx`, `src/app/blog/page.tsx`
-**Descripción técnica:** Remover la línea del `<span>` badge dentro de cada hero section. Mantener el `{t("xxx.hero.badge")}` en los locales por si se reutiliza en otro contexto.
+### T1 — Evaluar paquete antes de instalar
+**Archivos:** `package.json`, `package-lock.json`
+**Descripción técnica:** Verificar versión publicada de `liquid-gooey`, licencia,
+peer dependencies, tamaño añadido al bundle y compatibilidad con Next.js 16,
+React 19, Safari y `prefers-reduced-motion`. No instalar si la licencia o la
+API no son compatibles.
 **DOR:**
-- [ ] UI-IMPROVEMENTS.md parche 1
-- [ ] QA midió badge en 30px height
+- [ ] README/API revisado: `Morph`, `Move`, `dissolve`, `Liquid.Item`
+- [ ] Licencia y peer dependencies verificadas
+- [ ] Estrategia de rollback definida: eliminar dependencia y wrappers
 **DOF:**
-- [ ] 0 badges pill visibles en el hero de 6 sub-páginas
+- [ ] Dependencia instalada solo si la evaluación es satisfactoria
 - [ ] `npm run build` + `npm run lint` pasan
+- [ ] No se incrementa el bundle de forma injustificada
+**Prioridad:** Alta
+**Riesgo:** Alto — librería externa nueva y filtros SVG.
+
+### T2 — Prototipo Liquid del menú móvil
+**Archivos:** `src/components/Header.tsx`, componente auxiliar si aplica
+**Descripción técnica:** Integrar `Liquid`/`Liquid.Item` en el grupo de
+acciones del menú móvil sin cambiar la navegación. El botón debe conservar
+`aria-expanded`, `aria-label`, focus visible, hit target y cierre al navegar.
+La capa filtrada debe estar detrás del DOM real.
+**DOR:**
+- [ ] T1 aprobada
+- [ ] El menú actual funciona antes de envolverlo
+**DOF:**
+- [ ] El menú abre/cierra con teclado, touch y click
+- [ ] El texto y los iconos permanecen nítidos
+- [ ] No hay overflow en 375px
+- [ ] `prefers-reduced-motion: reduce` elimina/reduce la transición líquida
+- [ ] Safari y desktop no muestran errores de consola
 **Prioridad:** Alta
 
-### T2 — Reducir padding hero a pt-12
-**Archivos:** mismos 6 archivos
-**Descripción técnica:** `pt-16 pb-4` → `pt-12 pb-4`. Testimonios: `pt-14 pb-4` → `pt-10 pb-4`.
+### T3 — Prototipo Liquid para acción real de WhatsApp
+**Archivos:** `src/components/AppointmentForm.tsx` o componente reutilizable
+**Descripción técnica:** Aplicar el efecto a un único botón existente de
+WhatsApp, manteniendo `href`, `target`, `rel`, `aria-label` y el flujo actual.
+No enviar datos reales durante QA.
 **DOR:**
-- [ ] T1 completada
+- [ ] T1 aprobada
+- [ ] El enlace WhatsApp actual está identificado
 **DOF:**
-- [ ] Hero height < 35% vh en 1280×900
-- [ ] `npm run build` pasa
+- [ ] Click y teclado conservan el enlace funcional
+- [ ] El botón es legible y tiene contraste WCAG
+- [ ] La capa liquid no filtra el texto ni el icono
+- [ ] Reduced motion funciona
 **Prioridad:** Alta
 
-### T3 — Título mt-2 → mt-0
-**Archivos:** mismos 6 archivos
-**Descripción técnica:** En el `<h1>`, `mt-2` → `mt-0`.
-**DOR:**
-- [ ] T1 completada
+### T4 — Tokens y estados visuales del prototipo
+**Archivos:** `src/app/globals.css`, componentes del prototipo
+**Descripción técnica:** Usar `reiki-*`, `warm-white` y sombras existentes.
+Definir estados hover, focus-visible, active, disabled y reduced-motion sin
+introducir colores arbitrarios ni fondos opacos que oculten el efecto.
 **DOF:**
-- [ ] Título empieza a 48px del top (pt-12 = 48px)
-- [ ] `npm run build` pasa
+- [ ] Contraste y focus visible verificados
+- [ ] No hay verde, amarillo ni colores fuera del design system
+- [ ] No se filtra texto, imágenes ni controles interactivos
 **Prioridad:** Media
 
-### T4 — Regresión
+### T5 — Regresión completa y decisión de adopción
+**Archivos:** `QA-ISSUES.md`, todos los componentes afectados
+**Descripción técnica:** QA debe crear casos de prueba antes de validar. Medir
+desktop, mobile touch, Safari si está disponible, reduced-motion, Core Web
+Vitals, consola, navegación, accesibilidad y WhatsApp sin envío real.
 **DOF:**
-- [ ] 7 páginas con 0 console errors (excepto blog #418)
-- [ ] Hero height < 35% vh
-- [ ] Responsive 375px sin overflow
+- [ ] 7 rutas cargan sin errores
+- [ ] 0 imágenes rotas y 0 overflow horizontal
+- [ ] LCP/CLS no empeoran de forma significativa
+- [ ] Menú y WhatsApp siguen siendo accesibles y funcionales
+- [ ] QA documenta una decisión: aprobar, iterar o descartar la librería
 **Prioridad:** Alta
 
 ## Dependencias
-T1 → T2 → T3 → T4
+T1 → T2, T3, T4 → T5
+
+## Rollback
+Si la librería genera errores, regresión de rendimiento, incompatibilidad
+Safari o problemas de accesibilidad, eliminar la dependencia y los wrappers
+Liquid; mantener los controles y estilos actuales.
