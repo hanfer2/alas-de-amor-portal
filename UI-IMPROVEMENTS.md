@@ -1,47 +1,60 @@
-# UI-IMPROVEMENTS — Remover badges y compactar heroes de sub-páginas
+# UI-IMPROVEMENTS — ContactLauncher
 Generado por: agente disenador (modo auditor)
-Basado en: QA mediciones 2026-08-08
-Fecha: 2026-08-08
+Basado en: QA-ISSUES.md Ronda 16
+Fecha: 2026-08-17
 
 ## Diagnóstico visual
-Todas las sub-páginas tienen un badge pill ("Terapias Holísticas", "Reserva tu Sesión", "Nuestra Historia", etc.) que ocupa 30px de altura más el margen inferior (mt-2 al título = 8px). Este badge repite información que ya está en el título principal y no aporta valor. Adicionalmente, el hero de 237px (41% vh) sigue siendo alto para páginas de contenido.
+El launcher funciona técnicamente, pero la affordance cerrada muestra solo
+`✦`, por lo que no comunica chat/contacto. Al abrir, el grupo Liquid queda
+desconectado visualmente del botón principal y el estado de cierre aparece
+debajo sin un eje claro. El montaje condicional de React produce una entrada
+y salida bruscas, sin continuidad espacial.
 
 ## Design tokens mapeados
-- Badge: `inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30`
-- Badge mide 30px de altura
-- Margen badge→título: `mt-2` (8px)
-- Padding hero actual: `pt-16 pb-4 gradient-hero`
+- **Paleta:** `reiki-600`, `reiki-100`, `warm-white`, sombras violeta.
+- **Forma:** `rounded-full` en acciones; `rounded-3xl` en dialog.
+- **Posición:** `fixed bottom-24 right-6 z-40`.
+- **Movimiento existente:** Liquid Gooey; no añadir otro motor físico.
+- **Motor recomendado para transición:** Framer Motion ya instalado y con
+  `prefers-reduced-motion` disponible.
 
-## Matriz de cambios (Delta)
+## Matriz de cambios
 
-| # | Archivo | Elemento | Estado actual | Problema | Cambio | Prioridad |
-|---|---------|----------|---------------|----------|--------|-----------|
-| 1 | 6 sub-páginas | Badge `<span>` | 30px pill con texto redundante | No aporta información nueva, ocupa espacio vertical | Eliminar el span completo | Alta |
-| 2 | 6 sub-páginas | Hero section | `pt-16 pb-4` | 237px (41% vh) | `pt-12 pb-4` | Alta |
-| 3 | 6 sub-páginas | Título h1 | `mt-2` (dependía del badge) | Al quitar badge, ya no necesita margen superior | Cambiar a `mt-0` (el pt-12 del section ya da el espacio) | Media |
+| ID | Archivo:línea | Estado actual | Problema | Cambio propuesto | Prioridad |
+|----|---------------|---------------|----------|------------------|-----------|
+| ISS-UI-001 | `ContactLauncher.tsx:118-128` | Botón solo muestra `✦` | Affordance ambigua | Icono de chat + etiqueta visible corta (`Chat`/`Contactar`) | Alta |
+| ISS-UI-002 | `ContactLauncher.tsx:42,78-131` | Grupo y trigger en flujo separado | Cierre queda desalineado y el grupo parece desprendido | `flex flex-col items-end`; grupo `self-end`; reservar eje y ancho | Alta |
+| ISS-UI-003 | `ContactLauncher.tsx:43,78` | Condicionales montan/desmontan paneles | Entrada y salida bruscas | `AnimatePresence` + `motion.div` con opacity/scale/y; reduced-motion instantáneo | Alta |
 
-## Instrucciones para el Dev (parches atómicos)
+## Instrucciones para el Dev
 
-### Parche 1 — Eliminar badge de las 6 sub-páginas (ALTA)
-**Archivos:** `src/app/servicios/page.tsx`, `src/app/nosotros/page.tsx`, `src/app/agendar/page.tsx`, `src/app/contacto/page.tsx`, `src/app/testimonios/page.tsx`, `src/app/blog/page.tsx`
-**Cambio:** Eliminar la línea completa del badge span y su contenido. Buscar y remover:
-```jsx
-<span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
-  {t("xxx.hero.badge")}
-</span>
-```
-**Riesgo:** Bajo — elemento puramente decorativo.
-**Verificación QA:** No debe existir ningún badge pill en el hero de sub-páginas. Ahorro: ~38px (30px badge + 8px mt-2).
+### Parche 1 — Affordance de chat
+**Archivo:** `src/components/ContactLauncher.tsx`
+**Cambio:** Sustituir `✦` por icono SVG de burbuja de conversación con
+`aria-hidden="true"` y un label visual corto. Mantener el `aria-label` y
+`aria-expanded`. El botón debe comunicar contacto/chat incluso cerrado.
+**Verificación:** screenshot del estado cerrado muestra una burbuja/chat,
+no una estrella abstracta.
 
-### Parche 2 — Reducir padding hero (ALTA)  
-**Archivos:** mismas 6 sub-páginas
-**Cambio:** Reemplazar `pt-16 pb-4 gradient-hero` por `pt-12 pb-4 gradient-hero`
-**Testimonios:** Reemplazar `pt-14 pb-4 gradient-hero` por `pt-10 pb-4 gradient-hero`
-**Riesgo:** Bajo.
-**Verificación QA:** Hero height < 35% vh en 1280×900.
+### Parche 2 — Alinear grupo y trigger
+**Archivo:** `src/components/ContactLauncher.tsx:42,78-131`
+**Cambio:** root: `flex flex-col items-end`; grupo de opciones: `self-end` y
+un ancho estable; el trigger permanece alineado al borde derecho del grupo.
+No usar posiciones negativas ni `translate` que rompan mobile.
+**Verificación:** en 375px y desktop, WhatsApp, Chat y cierre comparten eje
+derecho; no quedan elementos flotando debajo o desplazados a la izquierda.
 
-### Parche 3 — Ajustar margen del título (MEDIA)
-**Archivos:** mismas 6 sub-páginas
-**Cambio:** En el h1, cambiar `mt-2` por `mt-0` (el pt-12 del section ya da el espacio superior necesario).
-**Riesgo:** Bajo.
-**Verificación QA:** El título debe empezar a 48px del top (pt-12 = 48px), sin espacio extra.
+### Parche 3 — Transición coordinada
+**Archivo:** `src/components/ContactLauncher.tsx`
+**Cambio:** importar `AnimatePresence` y `motion` desde `framer-motion`.
+Envolver menú y dialog con `AnimatePresence`, usando entrada:
+`initial={{ opacity: 0, y: 8, scale: 0.96 }}` y salida equivalente. Usar
+`transition={{ duration: 0.2, ease: "easeOut" }}`. Con reduced motion,
+usar duración 0 o render estático.
+**Verificación:** abrir/cerrar no genera salto brusco; Escape y click fuera
+siguen cerrando correctamente.
+
+## Fuera de alcance
+- No cambiar enlaces reales de WhatsApp.
+- No cambiar copy del mensaje de chat.
+- No aplicar Liquid a otras partes del portal.

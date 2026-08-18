@@ -1,63 +1,55 @@
-# TASKS — Botón transversal Liquid: WhatsApp + Chat
+# TASKS — ContactLauncher: affordance, alineación y transición
 Generado por: agente tech-lead
-Basado en: SPECS.md (2026-08-17, ✅ Aprobado)
+Basado en: UI-IMPROVEMENTS.md + QA-ISSUES.md Ronda 16
 Fecha: 2026-08-17
-
-## Resumen técnico
-Crear un componente cliente único `ContactLauncher` montado desde
-`Providers`, con estado cerrado/abierto/chat. Usará `liquid-gooey` para la
-superficie, pero conservará botones y enlaces DOM reales. Añadirá copy ES/EN
-en locales y no tocará la lógica existente de formularios.
 
 ## Tareas
 
-### T1 — Crear ContactLauncher reutilizable
-**Archivos:** `src/components/ContactLauncher.tsx`
-**Descripción técnica:** Crear componente client con estado `isOpen` y
-`showChat`. Estado cerrado: botón flotante accesible. Estado abierto: grupo
-Liquid con opciones WhatsApp y Chat. Chat muestra una superficie visual con
-respuesta fija y botón de cierre. Implementar Escape y click fuera con cleanup.
+### T1 — Mejorar affordance del botón cerrado
+**Archivo:** `src/components/ContactLauncher.tsx`
+**Descripción:** Reemplazar la estrella `✦` por un icono SVG de conversación
+y un label visual corto. Mantener `aria-label`, `aria-expanded` y focus.
 **DOR:**
-- [x] `liquid-gooey` instalado y validado en fase 1
-- [x] Config WhatsApp disponible en `src/lib/config.ts`
+- [x] ISS-UI-001 documentado
+- [x] UI-IMPROVEMENTS.md parche 1
 **DOF:**
-- [x] Botón tiene `aria-label`, `aria-expanded` y focus visible
-- [x] WhatsApp conserva `href`, `target` y `rel`
-- [x] Chat no hace requests ni abre servicios externos
-- [x] Escape y click fuera cierran el panel
-- [x] Reduced motion funciona
+- [ ] Estado cerrado comunica visualmente chat/contacto
+- [ ] Icono tiene `aria-hidden="true"` y botón mantiene nombre accesible
 
-### T2 — Integrar una sola vez en Providers
-**Archivos:** `src/components/Providers.tsx`
-**Descripción técnica:** Montar `ContactLauncher` una sola vez junto a
-`BackToTop`. Usar z-index coordinado para no tapar el Header ni el contenido.
+### T2 — Alinear opciones Liquid y botón trigger
+**Archivo:** `src/components/ContactLauncher.tsx`
+**Descripción:** Cambiar el root a `flex flex-col items-end`; alinear el grupo
+de opciones al borde derecho y reservar un eje estable entre opciones y trigger.
+No usar offsets negativos.
 **DOR:**
-- [x] T1 completada
+- [x] ISS-UI-002 documentado
+- [x] UI-IMPROVEMENTS.md parche 2
 **DOF:**
-- [x] Launcher aparece en las 7 rutas
-- [x] No existe duplicación por página
-- [x] No hay overflow horizontal en 375px
+- [ ] WhatsApp, Chat y trigger comparten eje derecho en desktop y 375px
+- [ ] No hay overflow horizontal ni salto de layout
 
-### T3 — Agregar traducciones ES/EN
-**Archivos:** `src/locales/es.json`, `src/locales/en.json`
-**Descripción técnica:** Agregar las claves `contactLauncher.*` definidas en
-SPECS.md. No dejar claves visibles en el DOM.
+### T3 — Animar entrada y salida con Framer Motion
+**Archivo:** `src/components/ContactLauncher.tsx`
+**Descripción:** Importar `AnimatePresence`/`motion`. Animar menú y diálogo
+con fade, scale y y reducido (`duration: 0.2`). Respetar reduced motion con
+duración 0 o estado estático.
+**DOR:**
+- [x] Framer Motion ya instalado
+- [x] ISS-UI-003 documentado
+- [x] UI-IMPROVEMENTS.md parche 3
 **DOF:**
-- [x] ES muestra copy español
-- [x] EN muestra copy inglés
-- [x] Todas las claves resuelven en ambos locales
+- [ ] Apertura/cierre suave, sin montaje brusco
+- [ ] Escape, click fuera y cierre siguen funcionando
+- [ ] Reduced motion no ejecuta movimiento perceptible
 
-### T4 — Regresión y QA
-**Archivos:** `QA-ISSUES.md`
-**Descripción técnica:** QA debe crear casos antes de probar y validar 7
-ráutas, desktop/mobile, teclado, reduced-motion, contraste, enlaces sin
-disparar WhatsApp y consola.
+### T4 — Regresión
+**Archivos:** `QA-ISSUES.md`, todos los componentes afectados
 **DOF:**
-- [x] `npm run build` + `npm run lint` pasan
-- [x] 7 rutas sin errores de consola
-- [x] 0 imágenes rotas
-- [x] CTA WhatsApp inspeccionado sin click real
-- [x] QA documenta decisión final
+- [ ] 7 rutas sin errores de consola
+- [ ] 0 imágenes rotas
+- [ ] 375px sin overflow
+- [ ] WhatsApp no se dispara durante QA
+- [ ] QA re-verifica ISS-UI-001, ISS-UI-002 e ISS-UI-003
 
 ## Dependencias
-T1 → T2 y T3 → T4
+T1 y T2 → T3 → T4
