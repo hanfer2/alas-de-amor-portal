@@ -1,46 +1,52 @@
-# QA ISSUES — Ronda 19 (re-verificación post-PR #13)
+# QA ISSUES — Ronda 21 (aprobación post-PR #15)
 Fecha: 2026-08-18
-Deploy verificado: https://alas-de-amor-portal.vercel.app (PR #13 mergeado en staging)
+Deploy verificado: https://alas-de-amor-portal.vercel.app (PR #15 mergeado en staging)
 Resultado global: ✅ APROBADO
 
 ## Casos de prueba
 
-| # | Caso | Tarea/Issue | Criterio de éxito | Resultado |
-|---|------|-------------|-------------------|-----------|
-| CP1 | Header y hero en `/testimonios` | ISS-LAYOUT-001 | `h1.top >= header.bottom` a 375px | ✅ |
-| CP2 | Headers HTTP en `/contacto` | ISS-SEC-001 | CSP y `X-Content-Type-Options: nosniff` presentes | ✅ |
-| CP3 | Regresión de 7 rutas | T4 | 0 errores, imágenes cargadas y sin overflow | ✅ |
-| CP4 | Launcher en `/agendar` | ISS-UI-001/002/003 | Affordance, alineación y transiciones conservadas | ✅ |
-| CP5 | Interacción segura | T4 | Escape, click fuera, reduced-motion; sin WhatsApp real | ✅ |
+| # | Caso | Tarea/DOF | Criterio de éxito | Resultado |
+|---|------|-----------|-------------------|-----------|
+| CP1 | Corrección ISS-UI-004 | T12 / CA15 | H1 y descripción tienen colores computados distintos y legibles | ✅ |
+| CP2 | Regresión de 7 rutas | T22 | Carga, consola, red, imágenes y overflow correctos | ✅ |
+| CP3 | Variante A Sanaciones | T20 | 3 cards, iconos WebP, precios y CTA intactos | ✅ |
+| CP4 | Testimonios | T21 | 6 avatares, 30 estrellas y fallback disponible | ✅ |
+| CP5 | Shell e interacciones | T22 | Menu, ContactLauncher, Escape, click fuera y reduced-motion | ✅ |
+| CP6 | Seguridad y formularios | T22 | Headers presentes y XSS de input no ejecuta | ✅ |
 
 ## Re-verificación de issues
 
 | ID | Resultado | Evidencia |
 |----|-----------|-----------|
-| ISS-UI-001 | ✅ CORREGIDO | Botón cerrado muestra icono de conversación + label `Chat` |
-| ISS-UI-002 | ✅ CORREGIDO | WhatsApp right `264.125`, Chat right `336`, trigger right `336` en 375px |
+| ISS-UI-001 | ✅ CORREGIDO | Botón cerrado muestra icono + label `Chat` |
+| ISS-UI-002 | ✅ CORREGIDO | WhatsApp right `264.125`, Chat/trigger right `336` en 375px |
 | ISS-UI-003 | ✅ CORREGIDO | Entrada/salida, Escape, click fuera y reduced-motion funcionan |
-| ISS-LAYOUT-001 | ✅ CORREGIDO | `/testimonios`: `header.bottom:107`, `h1.top:144`, `overlap:false` |
-| ISS-SEC-001 | ✅ CORREGIDO | `/contacto` HTTP 200 incluye CSP y `X-Content-Type-Options: nosniff` |
+| ISS-LAYOUT-001 | ✅ CORREGIDO | `/testimonios`: header bottom `107`, H1 top `144`, overlap false |
+| ISS-SEC-001 | ✅ CORREGIDO | `/contacto` expone CSP y `X-Content-Type-Options: nosniff` |
+| ISS-UI-004 | ✅ CORREGIDO | `/nosotros`: H1 `rgb(76,29,149)`, subtítulo `rgb(80,75,115)` |
 
-## Regresión
+## Checklist T22
 
 | Verificación | Resultado | Evidencia |
 |--------------|-----------|-----------|
-| 7 rutas | ✅ | `/`, `/nosotros`, `/servicios`, `/testimonios`, `/blog`, `/agendar`, `/contacto` |
-| Console errors/warnings | ✅ | 0 errores y 0 warnings capturados en deploy |
-| Network | ✅ | 0 respuestas con status >= 400 |
-| Imágenes rotas | ✅ | 0 imágenes con `naturalWidth === 0` |
-| Imágenes duplicadas | ✅ | Ningún `src` duplicado por ruta |
-| Mobile 375px | ✅ | `scrollWidth: 360` en las 7 rutas |
-| Chat copy | ✅ | `Chat en construcción, por favor usar WhatsApp` |
-| Escape | ✅ | Dialog desmontado y `aria-expanded="false"` |
-| Click fuera | ✅ | Menú desmontado y `aria-expanded="false"` |
-| Reduced motion | ✅ | `matchMedia(...).matches: true`; sin movimiento perceptible |
-| Idioma ES/EN | ✅ | `/testimonios`: `lang es → en → es`; h1 cambió a `What Our Clients Say` |
-| WhatsApp | ✅ | Enlace presente; no se hizo click real |
-| Formulario malicioso | ✅ | Input `<script>alert(1)</script>` no creó script ni diálogo |
-| Seguridad | ✅ | CSP, `nosniff`, `X-Frame-Options`, Referrer-Policy y Permissions-Policy presentes |
+| 7 rutas ES a 375px | ✅ | `main` visible, `scrollWidth:360`, 0 respuestas >=400 |
+| 7 rutas sin errores | ✅ | 0 errores, 0 warnings y 0 `pageerror` capturados |
+| Títulos/subtítulos | ✅ | Todas las rutas usan H1 `rgb(76,29,149)` y subtítulo `rgb(80,75,115)` |
+| Contraste | ✅ | H1 9.23:1; subtítulo 6.82:1 sobre superficie clara |
+| Sanaciones mobile | ✅ | 3 cards en una columna, iconos 128×128 cargados, overflow false |
+| Sanaciones desktop | ✅ | 3 cards comparables, CTAs `/agendar`, precios `$ 180.000` intactos |
+| Testimonios | ✅ | 6 cards, cada avatar 64×64 cargado tras entrar en viewport |
+| Rating | ✅ | 5 estrellas por card, `aria-label="5 / 5"`, 30 en total |
+| Assets | ✅ | 3 iconos y 6 avatares WebP cargan sin 404 |
+| ES/EN | ✅ | `/nosotros`: `es → en → es`, copy y layout cargan |
+| Menu móvil | ✅ | 7 links, apertura/cierre, foco en `Close menu`, sin overflow |
+| ContactLauncher | ✅ | Alineación, Chat, dialog, Escape y click fuera conservados |
+| Reduced motion | ✅ | `matchMedia: true`; animación/transición computada `0.00001s` |
+| Fallbacks 404 | ✅ | 3 iconos muestran SVG fallback y 6 avatares muestran monograma; 0 imágenes rotas |
+| Performance básica | ✅ | `/` TTFB `124 ms`, FCP `368 ms`; no se observó CLS perceptible |
+| Seguridad | ✅ | CSP, `nosniff`, X-Frame-Options, Referrer y Permissions presentes |
+| Formulario malicioso | ✅ | `<script>alert(1)</script>` no creó script ni diálogo |
+| WhatsApp/formularios reales | ✅ | No se ejecutaron acciones externas |
 
 ## Issues abiertos
 
@@ -49,9 +55,3 @@ Ninguno.
 ## Issues persistentes conocidos
 
 - `ISS-001` hydration histórico en `/blog`: no fue capturado en esta ronda.
-
-## Ronda 20 — corrección puntual
-
-| ID | Resultado | Evidencia |
-|----|-----------|-----------|
-| ISS-UI-004 | ✅ CORREGIDO — pendiente de re-verificación QA | Roles reutilizables `.role-h1` y `.role-subtitle` diferenciados en `globals.css`; validación completa pendiente |
