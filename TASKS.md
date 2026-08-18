@@ -13,8 +13,8 @@ y un label visual corto. Mantener `aria-label`, `aria-expanded` y focus.
 - [x] ISS-UI-001 documentado
 - [x] UI-IMPROVEMENTS.md parche 1
 **DOF:**
-- [ ] Estado cerrado comunica visualmente chat/contacto
-- [ ] Icono tiene `aria-hidden="true"` y botón mantiene nombre accesible
+- [x] Estado cerrado comunica visualmente chat/contacto
+- [x] Icono tiene `aria-hidden="true"` y botón mantiene nombre accesible
 
 ### T2 — Alinear opciones Liquid y botón trigger
 **Archivo:** `src/components/ContactLauncher.tsx`
@@ -25,8 +25,8 @@ No usar offsets negativos.
 - [x] ISS-UI-002 documentado
 - [x] UI-IMPROVEMENTS.md parche 2
 **DOF:**
-- [ ] WhatsApp, Chat y trigger comparten eje derecho en desktop y 375px
-- [ ] No hay overflow horizontal ni salto de layout
+- [x] WhatsApp, Chat y trigger comparten eje derecho en desktop y 375px
+- [x] No hay overflow horizontal ni salto de layout
 
 ### T3 — Animar entrada y salida con Framer Motion
 **Archivo:** `src/components/ContactLauncher.tsx`
@@ -38,18 +38,18 @@ duración 0 o estado estático.
 - [x] ISS-UI-003 documentado
 - [x] UI-IMPROVEMENTS.md parche 3
 **DOF:**
-- [ ] Apertura/cierre suave, sin montaje brusco
-- [ ] Escape, click fuera y cierre siguen funcionando
-- [ ] Reduced motion no ejecuta movimiento perceptible
+- [x] Apertura/cierre suave, sin montaje brusco
+- [x] Escape, click fuera y cierre siguen funcionando
+- [x] Reduced motion no ejecuta movimiento perceptible
 
 ### T4 — Regresión
 **Archivos:** `QA-ISSUES.md`, todos los componentes afectados
 **DOF:**
-- [ ] 7 rutas sin errores de consola
-- [ ] 0 imágenes rotas
-- [ ] 375px sin overflow
-- [ ] WhatsApp no se dispara durante QA
-- [ ] QA re-verifica ISS-UI-001, ISS-UI-002 e ISS-UI-003
+- [x] 7 rutas sin errores de consola
+- [x] 0 imágenes rotas
+- [x] 375px sin overflow
+- [x] WhatsApp no se dispara durante QA
+- [x] QA re-verifica ISS-UI-001, ISS-UI-002 e ISS-UI-003
 
 ## Dependencias
 T1 y T2 → T3 → T4

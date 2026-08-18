@@ -1,52 +1,33 @@
-# QA ISSUES — Ronda 16 (ContactLauncher visual)
-Fecha: 2026-08-17
-Deploy verificado: https://alas-de-amor-portal.vercel.app
-Resultado global: ❌ RECHAZADO (3 issues visuales)
+# QA ISSUES — Ronda 17 (ContactLauncher visual)
+Fecha: 2026-08-18
+Deploy verificado: https://alas-de-amor-portal.vercel.app (PR #12)
+Resultado global: ✅ APROBADO
 
-## Casos de prueba
+## Re-verificación de issues
 
-| Caso | Resultado | Evidencia |
-|------|-----------|-----------|
-| Affordance del botón cerrado | ❌ ISS-UI-001 | Solo muestra `✦`; no comunica contacto/chat |
-| Menú abierto alineado | ❌ ISS-UI-002 | Acciones y botón de cierre quedan desalineados verticalmente |
-| Transición de estados | ❌ ISS-UI-003 | Montaje condicional produce aparición/desaparición brusca |
-| WhatsApp conserva enlace | ✅ | `wa.me` presente |
-| Chat muestra respuesta | ✅ | Copy correcto visible |
-| Mobile sin overflow | ✅ | No se observó overflow en 375px |
+| ID | Resultado | Evidencia |
+|----|-----------|-----------|
+| ISS-UI-001 | ✅ CORREGIDO | Botón cerrado muestra icono de conversación + label `Chat` |
+| ISS-UI-002 | ✅ CORREGIDO | WhatsApp, Chat y trigger comparten eje derecho en 375px |
+| ISS-UI-003 | ✅ CORREGIDO | Entrada/salida usa AnimatePresence + motion; no hubo errores |
+
+## Regresión
+
+| Verificación | Resultado |
+|--------------|-----------|
+| 7 rutas | ✅ |
+| Console errors | ✅ 0 capturados |
+| Imágenes rotas | ✅ 0 |
+| Mobile 375px | ✅ `scrollWidth: 360` |
+| Chat copy | ✅ `Chat en construcción, por favor usar WhatsApp` |
+| Escape | ✅ Dialog se cierra |
+| WhatsApp | ✅ enlace presente; no se hizo click real |
+| QA visual | ✅ affordance y alineación corregidas |
 
 ## Issues abiertos
 
-### ISS-UI-001 — El botón cerrado no comunica que es chat/contacto
-**Severidad:** Media
-**Ruta:** Todas las páginas → ContactLauncher cerrado
-**Descripción:** El botón muestra únicamente un símbolo de estrella (`✦`). No
-existe una affordance visual clara de conversación, contacto o WhatsApp. El
-usuario debe adivinar qué acción abre.
-**Evidencia:** screenshot proporcionado por PO.
-**Estado:** 🔴 ABIERTO
+Ninguno nuevo.
 
-### ISS-UI-002 — Acciones Liquid desalineadas al abrir
-**Severidad:** Alta
-**Ruta:** Todas las páginas → ContactLauncher abierto
-**Descripción:** WhatsApp y Chat aparecen en una línea mientras el botón de
-cierre queda separado debajo. El grupo no tiene un eje visual único y la
-superficie Liquid no comunica una expansión ordenada.
-**Evidencia:** screenshot proporcionado por PO: botón `×` debajo del grupo.
-**Estado:** 🔴 ABIERTO
+## Issues persistentes conocidos
 
-### ISS-UI-003 — Transición de apertura/cierre brusca
-**Severidad:** Media
-**Ruta:** Todas las páginas → ContactLauncher
-**Descripción:** El menú abierto y el diálogo de Chat se montan/desmontan con
-render condicional inmediato. La entrada no tiene una transición coordinada y
-el cambio de posición se percibe abrupto.
-**Evidencia:** screenshots de estado cerrado, abierto y chat.
-**Estado:** 🔴 ABIERTO
-
-## Issues cerrados previamente
-
-- `ISS-001` hydration de `/blog`: cerrado en Ronda 14.
-
-## Restricción de QA
-
-No se hizo click en WhatsApp para evitar disparar una acción externa real.
+- `ISS-001` hydration histórico en `/blog`: no fue capturado en esta ronda.
