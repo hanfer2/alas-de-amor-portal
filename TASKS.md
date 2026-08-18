@@ -689,31 +689,31 @@ la excepción de T20 contiene solo sus tres campos `image`. Cualquier otro halla
 debe volver al agente responsable como corrección acotada.
 **DOR:**
 
-- [ ] TI1-TI9 y T10 están completos.
-- [ ] T11-T21 están implementadas y cada tarea tiene evidencia de su DOF.
-- [ ] El servidor de producción local está disponible con `npm run build` y
+- [x] TI1-TI9 y T10 están completos.
+- [x] T11-T21 están implementadas y cada tarea tiene evidencia de su DOF.
+- [x] El servidor de producción local está disponible con `npm run build` y
       `npm run start`, o el entorno equivalente para Playwright.
       **DOF:**
-- [ ] `npm run lint` pasa sin errores y `npm run build` pasa sin errores.
-- [ ] Las siete rutas cargan en ES y EN con título único, meta description no vacía,
+- [x] `npm run lint` pasa sin errores y `npm run build` pasa sin errores.
+- [x] Las siete rutas cargan en ES y EN con título único, meta description no vacía,
       structured data sin error y cero errores en consola.
-- [ ] A 375 px y desktop no existe overflow horizontal; Header fijo, logo, flags,
+- [x] A 375 px y desktop no existe overflow horizontal; Header fijo, logo, flags,
       menú abre/cierra, foco, cierre por ruta y Footer siguen funcionando sin cambio de
       estructura.
-- [ ] Los fondos cálidos, degradados violetas, orbes, Header, Footer y menú móvil
+- [x] Los fondos cálidos, degradados violetas, orbes, Header, Footer y menú móvil
       se conservan; `ContactLauncher` conserva apertura, cierre, teclado y enlaces.
-- [ ] Precios, duración, moneda, CTA de agenda, formularios, server actions,
+- [x] Precios, duración, moneda, CTA de agenda, formularios, server actions,
       WhatsApp y enlaces no cambian ni se disparan durante la inspección.
-- [ ] La prueba de contraste usa el peor pixel real de cada degradado detrás de H1,
+- [x] La prueba de contraste usa el peor pixel real de cada degradado detrás de H1,
       subtítulo, cuerpo, metadata, CTA, iconos y estrellas; texto normal alcanza 4.5:1
       y texto grande 3:1, con placa local cuando sea necesario.
-- [ ] Con `prefers-reduced-motion: reduce`, desaparecen animaciones decorativas
+- [x] Con `prefers-reduced-motion: reduce`, desaparecen animaciones decorativas
       perceptibles sin ocultar contenido, y hover/focus no cambia el significado.
-- [ ] Se comprueba navegación por teclado, nombres accesibles, alt/fallbacks y
+- [x] Se comprueba navegación por teclado, nombres accesibles, alt/fallbacks y
       estrellas equivalentes para lector de pantalla.
-- [ ] Se simula 404 de los nueve assets nuevos: se conserva layout, contenido y
+- [x] Se simula 404 de los nueve assets nuevos: se conserva layout, contenido y
       fallback, sin imagen rota visible.
-- [ ] No se observa incremento significativo de bundle; imágenes nuevas mantienen
+- [x] No se observa incremento significativo de bundle; imágenes nuevas mantienen
       sus dimensiones y el layout no presenta CLS perceptible. Verificar LCP objetivo
       menor a 2.5 s cuando el entorno permita medirlo.
       **Criterio de aceptación relacionado:** CA2, CA3, CA8, CA9, CA10, CA12, CA13,
@@ -741,9 +741,9 @@ debe volver al agente responsable como corrección acotada.
 
 ### Checkpoint C — Entrega
 
-- [ ] T22 completo con `npm run lint`, `npm run build` y matriz Playwright ES/EN.
-- [ ] 375 px y desktop aprobados en las siete rutas.
-- [ ] Contraste real, teclado, reduced-motion, fallbacks y no overflow aprobados.
+- [x] T22 completo con `npm run lint`, `npm run build` y matriz Playwright ES/EN.
+- [x] 375 px y desktop aprobados en las siete rutas.
+- [x] Contraste real, teclado, reduced-motion, fallbacks y no overflow aprobados.
 
 ## Briefing para el diseñador — Imágenes a generar
 
