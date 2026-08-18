@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
@@ -34,12 +35,12 @@ export default function ServiciosPage() {
     <div className="relative overflow-hidden">
       <section className="relative pt-28 pb-4 gradient-hero overflow-hidden">
         <FloatingOrbs />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 opacity-20">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 hero-icon-halo opacity-90">
           <EnergyWaves className="w-[600px] h-[200px]" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto reveal">
-            <h1 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-0">
+            <h1 className="role-h1 mt-0">
               {t("servicios.hero.title")
                 .split(" ")
                 .map((word, i) => (
@@ -52,7 +53,7 @@ export default function ServiciosPage() {
                   </span>
                 ))}
             </h1>
-            <p className="text-lg text-reiki-600 mt-3 leading-relaxed">
+            <p className="role-subtitle mt-4 leading-relaxed">
               {t("servicios.hero.subtitle")}
             </p>
           </div>
@@ -72,21 +73,28 @@ export default function ServiciosPage() {
             return (
               <div key={category.id} className="mb-24 last:mb-0">
                 <div className="text-center mb-12 reveal">
-                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900">
+                  <h2 className="role-h2">
                     {t(category.titleKey)}
                   </h2>
                   <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-reiki-300 to-reiki-500" />
                 </div>
-                {category.items.map((item, i) => (
-                  <ServiceBlock
-                    key={item.id}
-                    item={item}
-                    index={i}
-                    color={color}
-                    priceText={formatPrice(item.price)}
-                    liquidPilot={category.id === "terapias"}
+                {category.id === "sanaciones" ? (
+                  <SanacionesGrid
+                    items={category.items}
+                    formatPrice={formatPrice}
                   />
-                ))}
+                ) : (
+                  category.items.map((item, i) => (
+                    <ServiceBlock
+                      key={item.id}
+                      item={item}
+                      index={i}
+                      color={color}
+                      priceText={formatPrice(item.price)}
+                      liquidPilot={category.id === "terapias"}
+                    />
+                  ))
+                )}
               </div>
             );
           })}
@@ -95,15 +103,15 @@ export default function ServiciosPage() {
       </section>
       <section className="relative py-24 gradient-spiritual">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900 mb-4">
+          <h2 className="role-h2 mb-4">
             {t("servicios.cta.title")}
           </h2>
-          <p className="text-reiki-600 text-lg mb-8">
+          <p className="role-description text-lg mb-8">
             {t("servicios.cta.subtitle")}
           </p>
           <Link
             href="/contacto"
-            className="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white font-semibold text-lg shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="role-cta inline-flex items-center gap-2 px-10 py-5 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white text-lg shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             <span>{t("servicios.cta.button")}</span>
           </Link>
@@ -115,19 +123,17 @@ export default function ServiciosPage() {
 }
 
 function ServiceMeta({
-  color,
   duration,
   priceText,
   liquidPilot,
 }: {
-  color: string;
   duration: string;
   priceText: string;
   liquidPilot: boolean;
 }) {
   const durationBadge = (
     <div
-      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${color} text-white text-sm font-medium`}
+      className="role-metadata role-metadata-neutral inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm"
     >
       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -138,7 +144,7 @@ function ServiceMeta({
 
   const priceBadge = (
     <span
-      className={`inline-flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r ${color} text-white text-sm font-semibold`}
+      className="role-metadata role-metadata-gold inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm"
     >
       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0l3 3m-3-3l-3 3M6 3h12a3 3 0 013 3v6a3 3 0 01-3 3H9l-3 3v-3a3 3 0 01-3-3V6a3 3 0 013-3z" />
@@ -185,20 +191,19 @@ function ServiceBlock({
     >
       <div className={`reveal ${index % 2 === 1 ? "lg:order-2" : ""}`}>
         <ServiceMeta
-          color={color}
           duration={item.durationKey ? t(item.durationKey) : t("servicios.scheduleButton")}
           priceText={priceText}
           liquidPilot={liquidPilot}
         />
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900 mb-4">
+        <h2 className="role-card-title mb-4">
           {t(item.titleKey)}
         </h2>
-        <p className="text-reiki-700 text-lg leading-relaxed mb-8">
+        <p className="role-description text-lg mb-8">
           {t(item.descKey)}
         </p>
         <Link
           href="/agendar"
-          className={`inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r ${color} text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300`}
+          className={`role-cta inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r ${color} text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300`}
         >
           <span>{t("servicios.scheduleButton")}</span>
           <svg
@@ -269,5 +274,119 @@ function ServiceBlock({
         </div>
       </div>
     </div>
+  );
+}
+
+function SanacionesGrid({
+  items,
+  formatPrice,
+}: {
+  items: CatalogItem[];
+  formatPrice: (price: number | null) => string;
+}) {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+      {items.map((item) => (
+        <SanacionCard
+          key={item.id}
+          item={item}
+          priceText={formatPrice(item.price)}
+        />
+      ))}
+    </div>
+  );
+}
+
+function SanacionCard({
+  item,
+  priceText,
+}: {
+  item: CatalogItem;
+  priceText: string;
+}) {
+  const t = useTranslations();
+  const [imageFailed, setImageFailed] = useState(false);
+  const cardVariant = item.id === "mama" ? "sanacion-card--coral" : item.id === "papa" ? "sanacion-card--gold" : "";
+
+  return (
+    <article className={`sanacion-card ${cardVariant} flex h-full flex-col reveal`}>
+      <div className="sanacion-card__accent" aria-hidden="true" />
+      <div className="flex h-full flex-col p-6 sm:p-8">
+        <div className="mb-6 flex justify-center">
+          <div className="role-icon-halo flex h-28 w-28 items-center justify-center rounded-full">
+            {item.image && !imageFailed ? (
+              <Image
+                src={item.image}
+                alt=""
+                width={112}
+                height={112}
+                className="h-24 w-24 object-contain"
+                onError={() => setImageFailed(true)}
+              />
+            ) : (
+              <SanacionFallback itemId={item.id} />
+            )}
+          </div>
+        </div>
+        <h3 className="role-card-title mb-4 text-center">
+          {t(item.titleKey)}
+        </h3>
+        <p className="role-description flex-1 text-center leading-relaxed">
+          {t(item.descKey)}
+        </p>
+        <div className="mt-8 flex flex-wrap justify-center gap-2 border-t border-reiki-100 pt-5">
+          <span className="role-metadata role-metadata-neutral inline-flex items-center gap-2 rounded-full px-3 py-2">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {t("servicios.scheduleButton")}
+          </span>
+          <span className="role-metadata role-metadata-gold inline-flex items-center gap-2 rounded-full px-3 py-2">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0l3 3m-3-3l-3 3M6 3h12a3 3 0 013 3v6a3 3 0 01-3 3H9l-3 3v-3a3 3 0 01-3-3V6a3 3 0 013-3z" />
+            </svg>
+            {priceText}
+          </span>
+        </div>
+        <Link
+          href="/agendar"
+          className="role-cta mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 px-6 py-4 text-white shadow-lg shadow-reiki-400/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          <span>{t("servicios.scheduleButton")}</span>
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </Link>
+      </div>
+    </article>
+  );
+}
+
+function SanacionFallback({ itemId }: { itemId: string }) {
+  if (itemId === "mama") {
+    return (
+      <svg className="role-icon h-20 w-20" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M18 50c5-16 14-25 22-25s17 9 22 25" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+        <path d="M24 53c6 8 12 12 16 12s10-4 16-12" stroke="#b4233f" strokeWidth="4" strokeLinecap="round" />
+        <circle cx="40" cy="36" r="8" fill="#f2c46d" stroke="#8a5a00" strokeWidth="3" />
+      </svg>
+    );
+  }
+
+  if (itemId === "papa") {
+    return (
+      <svg className="role-icon h-20 w-20" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <circle cx="40" cy="40" r="13" fill="#f2c46d" stroke="#8a5a00" strokeWidth="3" />
+        <path d="M40 8v17M40 55v17M8 40h17M55 40h17" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+        <path d="M18 18l12 12M50 50l12 12M62 18L50 30M30 50L18 62" stroke="#0f6675" strokeWidth="3" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className="role-icon h-20 w-20" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+      <path d="M40 64C25 53 18 45 18 35c0-8 6-13 13-13 4 0 7 2 9 5 2-3 5-5 9-5 7 0 13 5 13 13 0 10-7 18-22 29Z" fill="#fff1f3" stroke="#b4233f" strokeWidth="3" />
+      <path d="M40 22V12M35 16l5-5 5 5" stroke="#0f6675" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }

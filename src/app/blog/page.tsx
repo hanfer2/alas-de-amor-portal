@@ -26,7 +26,7 @@ export default function BlogPage() {
       <section className="relative pt-28 pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-        <div className="absolute bottom-5 right-10 opacity-20">
+         <div className="absolute bottom-5 right-10 hero-icon-halo opacity-90">
           {" "}
           <OpenBook className="w-52 h-40" />{" "}
         </div>{" "}
@@ -34,7 +34,7 @@ export default function BlogPage() {
           {" "}
           <div className="text-center max-w-3xl mx-auto reveal">
             {" "}
-            <h1 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-0">
+             <h1 className="role-h1 mt-0">
               {" "}
               {t("blog.hero.title")
                 .split(" ")
@@ -49,7 +49,7 @@ export default function BlogPage() {
                   </span>
                 ))}{" "}
             </h1>{" "}
-            <p className="text-lg text-reiki-600 mt-3 leading-relaxed">
+             <p className="role-subtitle mt-4 leading-relaxed">
               {" "}
               {t("blog.hero.subtitle")}{" "}
             </p>{" "}
@@ -71,28 +71,28 @@ export default function BlogPage() {
                 {" "}
                 <div className="flex items-center gap-3 mb-4">
                   {" "}
-                  <span className="px-3 py-1 rounded-full bg-gradient-to-r from-reiki-500/20 to-reiki-400/20 text-xs font-medium text-reiki-600">
+                   <span className="role-metadata rounded-full bg-reiki-50 px-3 py-1">
                     {" "}
                     {post.category}{" "}
                   </span>{" "}
-                  <span className="text-reiki-400 text-sm">
+                   <span className="role-metadata text-reiki-700">
                     {" "}
                     {new Intl.DateTimeFormat(lang === "en" ? "en-US" : "es-CO", {
                       timeZone: "UTC",
                     }).format(new Date(post.date))}{" "}
                   </span>{" "}
                 </div>{" "}
-                <h2 className="font-display text-2xl font-bold text-reiki-800 mb-3">
+                 <h2 className="role-card-title mb-3">
                   {" "}
                   {post.title}{" "}
                 </h2>{" "}
-                <p className="text-reiki-600 mb-6 leading-relaxed">
+                 <p className="role-description mb-6 leading-relaxed">
                   {" "}
                   {post.excerpt}{" "}
                 </p>{" "}
                 <Link
                   href="#"
-                  className="inline-flex items-center gap-2 text-reiki-600 hover:text-reiki-800 font-semibold transition-colors group"
+                   className="role-cta inline-flex items-center gap-2 text-reiki-600 hover:text-reiki-800 transition-colors group"
                 >
                   {" "}
                   <span>{t("home.services.learnMore")}</span>{" "}
@@ -121,11 +121,11 @@ export default function BlogPage() {
         {" "}
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
           {" "}
-          <h2 className="font-display text-3xl font-bold text-reiki-900 mb-4">
+           <h2 className="role-h2 mb-4">
             {" "}
             {t("blog.newsletter.title")}{" "}
           </h2>{" "}
-          <p className="text-reiki-600 mb-8">
+           <p className="role-description mb-8">
             {" "}
             {t("blog.newsletter.subtitle")}{" "}
           </p>{" "}
@@ -145,7 +145,7 @@ export default function BlogPage() {
             />{" "}
             <button
               type="submit"
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+               className="role-cta px-8 py-4 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all"
             >
               {" "}
               {t("blog.newsletter.button")}{" "}
