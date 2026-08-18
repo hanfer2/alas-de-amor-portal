@@ -11,7 +11,7 @@ const serviceIcons = [
     titleKey: "credentials.reiki.title",
     descKey: "credentials.reiki.desc",
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
         <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="2" />
         <path d="M24 4v8M24 36v8M4 24h8M36 24h8M10 10l5.5 5.5M32.5 32.5l5.5 5.5M38 10l-5.5 5.5M15.5 32.5L10 38" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
@@ -21,7 +21,7 @@ const serviceIcons = [
     titleKey: "credentials.access.title",
     descKey: "credentials.access.desc",
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
         <circle cx="24" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
         <circle cx="12" cy="28" r="4" stroke="currentColor" strokeWidth="2" />
         <circle cx="36" cy="28" r="4" stroke="currentColor" strokeWidth="2" />
@@ -33,7 +33,7 @@ const serviceIcons = [
     titleKey: "credentials.angelical.title",
     descKey: "credentials.angelical.desc",
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
         <path d="M12 28c0-8 5-16 12-16s12 8 12 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         <path d="M16 28c0-6 4-12 8-12s8 6 8 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         <circle cx="24" cy="32" r="4" stroke="currentColor" strokeWidth="2" />
@@ -45,7 +45,7 @@ const serviceIcons = [
     titleKey: "credentials.facelight.title",
     descKey: "credentials.facelight.desc",
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
         <ellipse cx="24" cy="24" rx="12" ry="14" stroke="currentColor" strokeWidth="2" />
         <circle cx="19" cy="20" r="1.5" fill="currentColor" />
         <circle cx="29" cy="20" r="1.5" fill="currentColor" />
@@ -58,7 +58,7 @@ const serviceIcons = [
     titleKey: "credentials.medium.title",
     descKey: "credentials.medium.desc",
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
         <circle cx="24" cy="24" r="16" stroke="currentColor" strokeWidth="2" />
         <path d="M24 12c-4 0-8 4-8 10s4 10 8 10 8-4 8-10-4-10-8-10z" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="24" cy="8" r="2" fill="currentColor" />
@@ -69,7 +69,7 @@ const serviceIcons = [
     titleKey: "credentials.espiritual.title",
     descKey: "credentials.espiritual.desc",
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
         <path d="M24 4l3 8h8l-6.5 5 2.5 8L24 20l-7 5 2.5-8L13 12h8l3-8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         <circle cx="24" cy="32" r="8" stroke="currentColor" strokeWidth="2" />
         <path d="M24 28v8M20 32h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -104,13 +104,17 @@ export default function Home() {
       />
 
       <section className="relative min-h-[70vh] flex items-center gradient-hero pt-28 overflow-hidden">
-        <div className="absolute top-0 right-0 opacity-[0.07]">
-          <AngelFeathers className="w-[500px] h-[250px]" />
+         <div className="absolute top-0 right-0 hero-icon-halo opacity-70">
+           <AngelFeathers className="w-[500px] h-[250px]" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <Logo className="w-full max-w-xs sm:max-w-sm h-auto" size={200} />
+
+              <h1 className="role-h1 max-w-xl">
+                {t("home.hero.title1")} {t("home.hero.title2")}
+              </h1>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm shadow-sm">
                 <div className="w-2 h-2 rounded-full bg-reiki-400 animate-pulse" />
@@ -119,20 +123,20 @@ export default function Home() {
                 </span>
               </div>
 
-              <p className="text-xl text-reiki-700 max-w-lg leading-relaxed">
+              <p className="role-subtitle max-w-lg mt-4">
                 {t("home.hero.subtitle")}
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/agendar"
-                  className="px-8 py-4 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white font-semibold shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:shadow-reiki-400/40 hover:scale-105 transition-all duration-300"
+                  className="role-cta px-8 py-4 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:shadow-reiki-400/40 hover:scale-105 transition-all duration-300"
                 >
                   {t("home.hero.ctaPrimary")}
                 </Link>
                 <Link
                   href="/servicios"
-                  className="px-8 py-4 rounded-full glass text-reiki-700 font-semibold hover:bg-white/80 hover:scale-105 transition-all duration-300"
+                  className="role-cta px-8 py-4 rounded-full glass text-reiki-700 hover:bg-white/80 hover:scale-105 transition-all duration-300"
                 >
                   {t("home.hero.ctaSecondary")}
                 </Link>
@@ -189,14 +193,14 @@ export default function Home() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("home.services.badge")}
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
+            <h2 className="role-h2 mt-3">
               {t("home.services.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i === 1 ? <span className="text-gradient">{word} </span> : `${word} `}
                 </span>
               ))}
             </h2>
-            <p className="text-reiki-600 mt-4 max-w-2xl mx-auto text-lg">
+            <p className="role-subtitle mt-4 max-w-2xl mx-auto">
               {t("home.services.subtitle")}
             </p>
           </div>
@@ -209,16 +213,19 @@ export default function Home() {
                 className="group gradient-card rounded-3xl p-8 shadow-sm hover:shadow-xl hover:shadow-reiki-200/30 transition-all duration-500 hover:-translate-y-2 border border-white/50 reveal"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-reiki-100 to-reiki-100 flex items-center justify-center text-reiki-600 group-hover:from-reiki-200 group-hover:to-reiki-200 group-hover:scale-110 transition-all duration-300 mb-6">
+                <div
+                  className="role-icon-halo w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 mb-6"
+                  data-accent={["aqua", "coral", "gold", "aqua", "coral", "gold"][i]}
+                >
                   {service.icon}
                 </div>
-                <h3 className="font-display text-xl font-bold text-reiki-800 mb-3 group-hover:text-gradient transition-all">
+                <h3 className="role-card-title mb-3 group-hover:text-reiki-900 transition-colors">
                   {t(service.titleKey)}
                 </h3>
-                <p className="text-reiki-600 text-sm leading-relaxed">
+                <p className="role-description text-sm">
                   {t(service.descKey)}
                 </p>
-                <div className="mt-6 flex items-center text-reiki-500 text-sm font-medium group-hover:text-reiki-700 transition-colors">
+                <div className="role-cta mt-6 flex items-center text-reiki-600 text-sm group-hover:text-reiki-800 transition-colors">
                   <span>{t("home.services.learnMore")}</span>
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
@@ -268,7 +275,7 @@ export default function Home() {
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
                 {t("home.about.badge")}
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900">
+              <h2 className="role-h2">
                 {t("home.about.title")}
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -288,12 +295,12 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-              <p className="text-reiki-700 text-lg leading-relaxed">
+              <p className="role-description text-lg">
                 {t("home.about.bio")}
               </p>
               <Link
                 href="/nosotros"
-                className="inline-flex items-center gap-2 text-reiki-600 hover:text-reiki-800 font-semibold transition-colors group"
+                className="role-cta inline-flex items-center gap-2 text-reiki-600 hover:text-reiki-800 transition-colors group"
               >
                 <span>{t("home.about.cta")}</span>
                 <svg
@@ -317,20 +324,20 @@ export default function Home() {
 
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-          <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-reiki-200/20 border border-white/50">
+            <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-reiki-200/20 border border-white/50">
             <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-reiki-400 to-reiki-600 flex items-center justify-center animate-glow">
               <Logo className="w-12 h-12" />
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-reiki-900 mb-4">
+            <h2 className="role-h2 mb-4">
               <span>{t("home.cta.title1")}</span>{" "}
               <span className="text-gradient">{t("home.cta.title2")}</span>
             </h2>
-            <p className="text-reiki-600 text-lg mb-8 max-w-xl mx-auto">
+            <p className="role-description text-lg mb-8 max-w-xl mx-auto">
               {t("home.cta.subtitle")}
             </p>
             <Link
               href="/agendar"
-              className="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white font-semibold text-lg shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:shadow-reiki-400/40 hover:scale-105 transition-all duration-300"
+              className="role-cta inline-flex items-center gap-2 px-10 py-5 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 text-white text-lg shadow-lg shadow-reiki-400/30 hover:shadow-xl hover:shadow-reiki-400/40 hover:scale-105 transition-all duration-300"
             >
               <span>{t("home.cta.button")}</span>
               <svg
@@ -357,7 +364,7 @@ export default function Home() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("home.testimonials.badge")}
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-reiki-900 mt-3">
+            <h2 className="role-h2 mt-3">
               {t("home.testimonials.title").split(" ").map((word, i) => (
                 <span key={i}>
                   {i >= 2 ? <span className="text-gradient">{word} </span> : `${word} `}
@@ -375,11 +382,11 @@ export default function Home() {
                   key={i}
                   className="gradient-card rounded-3xl p-8 shadow-sm border border-white/50 hover:shadow-lg transition-shadow reveal"
                 >
-                  <div className="flex gap-1 mb-4">
+                    <div className="flex gap-1 mb-4" role="img" aria-label="Rating: 5 out of 5">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <svg
                         key={j}
-                        className="w-5 h-5 text-reiki-400"
+                        className="role-star w-5 h-5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -387,7 +394,7 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-reiki-700 italic mb-6 leading-relaxed">
+                  <p className="role-description italic mb-6">
                     &ldquo;{quote}&rdquo;
                   </p>
                   <div className="flex items-center gap-3">
