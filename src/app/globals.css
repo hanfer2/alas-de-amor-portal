@@ -172,7 +172,7 @@ body {
 
 @layer utilities {
   .role-h1 {
-    color: #1e1b4b;
+    color: #4c1d95;
     font-family: Georgia, "Times New Roman", ui-serif, serif;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 700;
@@ -199,17 +199,18 @@ body {
 
   .role-subtitle,
   .role-description {
-    color: #1e1b4b;
     font-family: var(--font-sans);
     line-height: 1.55;
   }
 
   .role-subtitle {
+    color: #504b73;
     font-size: clamp(1rem, 1.5vw, 1.125rem);
     font-weight: 500;
   }
 
   .role-description {
+    color: #1e1b4b;
     font-size: 1rem;
     font-weight: 400;
   }

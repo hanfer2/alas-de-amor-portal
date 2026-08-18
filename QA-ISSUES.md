@@ -49,3 +49,9 @@ Ninguno.
 ## Issues persistentes conocidos
 
 - `ISS-001` hydration histórico en `/blog`: no fue capturado en esta ronda.
+
+## Ronda 20 — corrección puntual
+
+| ID | Resultado | Evidencia |
+|----|-----------|-----------|
+| ISS-UI-004 | ✅ CORREGIDO — pendiente de re-verificación QA | Roles reutilizables `.role-h1` y `.role-subtitle` diferenciados en `globals.css`; validación completa pendiente |
