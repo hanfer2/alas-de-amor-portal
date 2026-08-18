@@ -108,6 +108,13 @@
 
 html { scroll-behavior: smooth; }
 
+@media (max-width: 1023px) {
+  /* Keep the testimonials hero clear of the fixed mobile header. */
+  section.pt-26 {
+    padding-top: 9rem;
+  }
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--color-warm-white);

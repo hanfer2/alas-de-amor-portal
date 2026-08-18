@@ -67,7 +67,7 @@ Resultado global: ✅ APROBADO (alcance PR #12; 0 issues funcionales abiertos)
 **Descripción:** El borde superior del `h1` está en `y:104`, mientras el header fijo termina en `y:107`; existe una invasión de 3px.
 **Evidencia:** `header.bottom: 107`, `h1.top: 104`; snapshot mobile `qa-ronda-16-testimonios-mobile.png`.
 **Contador de persistencia:** 1 (primera vez)
-**Estado:** 🔴 ABIERTO — fuera del alcance de PR #12
+**Estado:** ✅ CORREGIDO — pendiente de re-verificación QA
 
 ### ISS-SEC-001 — Headers de protección ausentes
 **Severidad:** Alta
@@ -75,7 +75,7 @@ Resultado global: ✅ APROBADO (alcance PR #12; 0 issues funcionales abiertos)
 **Descripción:** La respuesta HTML no expone `Content-Security-Policy` ni `X-Content-Type-Options: nosniff`.
 **Evidencia:** Headers de respuesta HTTP 200 de `/contacto`: no contienen ninguno de los dos headers requeridos por el checklist QA.
 **Contador de persistencia:** 1 (primera vez)
-**Estado:** 🔴 ABIERTO — fuera del alcance de PR #12
+**Estado:** ✅ CORREGIDO — pendiente de re-verificación QA
 
 ## Issues persistentes conocidos
 
