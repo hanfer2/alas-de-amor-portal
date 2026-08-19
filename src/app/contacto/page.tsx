@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import { useTranslations } from "@/hooks/useTranslations";
 import config from "@/lib/config";
 import { DovePeace, FloatingOrbs } from "@/components/HeroDecoration";
+import SocialLinks from "@/components/SocialLinks";
 export default function ContactoPage() {
   const t = useTranslations();
   return (
@@ -219,6 +220,14 @@ function ContactInfo() {
             </div>{" "}
           </div>{" "}
         </div>{" "}
+      </div>{" "}
+      <div className="gradient-card rounded-3xl p-8 shadow-lg shadow-reiki-200/20 border border-white/50">
+        {" "}
+        <h3 className="role-card-title text-xl mb-6">
+          {" "}
+          {t("social.followTitle")}{" "}
+        </h3>{" "}
+        <SocialLinks variant="chip" showLabel showHandle />{" "}
       </div>{" "}
       <div className="gradient-card rounded-3xl p-8 shadow-lg shadow-reiki-200/20 border border-white/50">
         {" "}

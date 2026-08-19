@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import config from "@/lib/config";
 import { SparkleStars, FloatingOrbs } from "@/components/HeroDecoration";
+import SocialLinks from "@/components/SocialLinks";
 
 const testimonialAvatars = [
   "/imgs/testimonials/gen-testimonio-avatar-01.webp",
@@ -140,6 +141,15 @@ export default function TestimoniosPage() {
             </svg>{" "}
             <span>{t("testimonios.share.button")}</span>{" "}
           </a>{" "}
+          <div className="mt-8">
+            {" "}
+            <SocialLinks
+              variant="quiet"
+              showLabel
+              networks={["instagram", "facebook", "tiktok"]}
+              className="justify-center"
+            />{" "}
+          </div>{" "}
         </div>{" "}
       </section>{" "}
     </div>

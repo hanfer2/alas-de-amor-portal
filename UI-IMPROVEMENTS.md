@@ -409,3 +409,130 @@ La ilustración es 100% original y dibujada para este proyecto con primitivas ge
 - **Dónde:** en `src/app/page.tsx:145` reemplazar `<AngelFeathers className="h-full w-full" />` por `<HeroChakras className="h-full w-full" />` y ajustar el import en `src/app/page.tsx:7`.
 - **CSS asociado:** en `src/app/globals.css:391-399` cambiar `aspect-ratio: 2` por `aspect-ratio: 0.68`, reducir `max-width` a `17.5rem` (280px desktop / 190px mobile), y en `src/app/page.tsx:144` pasar el rail de `rounded-full` a `rounded-[2rem]` conservando `bg-cream/70`, sombra y `p-2`. El rail queda `pointer-events-none` y `z-0`, debajo del contenido (`hero-copy` es `z-1`).
 - **Verificación QA:** `npm run lint`, `npm run build`, regresión ES/EN y screenshots a 375/768/1440 sin crop ni scroll horizontal; SVG sigue `aria-hidden="true"`.
+
+---
+
+## Redes Sociales — Visibilidad integral
+
+**Estado:** ✅ APROBADA AUTOMÁTICAMENTE por negocio — pendiente implementación
+**Base:** `SPECS.md` (Visibilidad de redes sociales en el portal), `visual-harmony-audit`, `frontend-design`
+**Fecha:** 2026-08-19
+**Alcance:** Footer, Hero `/`, sección «Síguenos» en `/`, Blog con embeds, Contacto, Testimonios, ContactLauncher.
+**Prototipo:** `design-proposals/redes-sociales/index.html` (autocontenido, sin CDN, responsive 375/768/1440).
+
+Este documento es una propuesta de diseño, no una implementación. No se modificaron `src/`, `AGENTS.md`, agentes, `TASKS.md` ni `SPECS.md`. La integración queda descrita al final para `dev`.
+
+### Inventario de superficies (antes → después)
+
+| Superficie | Archivo actual | Antes | Después | CA |
+|---|---|---|---|---|
+| Footer | `src/components/Footer.tsx:39-82` | 4 iconos grises `40×40px` (`text-reiki-600`), sin TikTok, sin labels, columna 1 | 5 chips de color por red (`48px` táctil / `44px` desktop), glifo blanco, heading «Síguenos en redes», label visible por chip, TikTok nuevo, `noopener noreferrer`, sin romper grid | CA1, CA3, CA5 |
+| Hero inicio | `src/app/page.tsx:127-140` | Sin redes | Mini-fila de 5 iconos `40px` (variante quiet: glifo de color de red sobre chip blanco suave) bajo los CTAs, caption sr-only «Síguenos en redes» | CA2, CA3 |
+| Sección «Síguenos» | nueva, al final de `/` tras testimonios | No existe | Sección dedicada: 5 cards (chip `64px` + nombre + handle + enlace), grid 1/2/5 | CA2, CA3 |
+| Blog | `src/app/blog/page.tsx` | Sin redes | Banda «Vida en redes» entre posts y newsletter: fila de 5 enlaces + 2 slots de embed (Instagram post + TikTok video) lazy con fallback a perfil | CA4 |
+| Contacto | `src/app/contacto/page.tsx:89-256` | Solo canales (WhatsApp como fila de info) | Card «Síguenos en redes» bajo la tarjeta de información de contacto, 5 enlaces con chip + nombre + handle | CA2 |
+| Testimonios | `src/app/testimonios/page.tsx:130-143` | Solo botón «Dejar Testimonio» (WhatsApp) | Se conserva el CTA de WhatsApp intacto + fila secundaria discreta de 3 perfiles (Instagram, Facebook, TikTok) con `aria-label` | CA7 |
+| Header | `src/components/Header.tsx` | Sin redes | Sin cambios (decisión: no saturar navegación primaria) | CA7 |
+| ContactLauncher | `src/components/ContactLauncher.tsx` | WhatsApp + Chat | Sin cambios (decisión: widget de conversión para agendar, no vitrina social) | CA7 |
+
+### Paleta por red
+
+| Red | Color / degradado | Glifo | Superficie del chip | Ratio glifo blanco | Handle / destino |
+|---|---|---|---|---|---|
+| Facebook | `#1877F2` | "f" | `#1877F2` | 4.2:1 ✓ | `/liliana.rodas.9615` |
+| Instagram | `#F58529 → #DD2A7B → #8134AF` | cámara | degradado 135° + anillo `#B13A8A` (2px) | ≥3:1 ✓ (píxel peor naranja 2.5:1 mitigado con anillo + label redundante; QA mide píxel real) | `@alasdeamor` |
+| TikTok | `#010101` + acentos `#25F4EE` / `#FE2C55` | nota musical | `#010101` | 21:1 ✓ | `@lilianarodas155` |
+| WhatsApp | `#128C7E` (verde oscuro accesible; `#25D366` solo como acento) | burbuja + teléfono | `#128C7E` | 4.1:1 ✓ | `wa.me/573043732955` |
+| Email | `#4c1d95` (ciruela de marca) | sobre | `#4c1d95` | 11:1 ✓ | `Lilo_rodas87@hotmail.com` |
+
+**Regla de accesibilidad de color:** `#25D366` como fondo con glifo blanco queda en 1.9:1 y **no** se usa como chip; queda como acento (punto/burbuja del icono) y color de hover. Ninguna superficie depende solo del color: cada enlace tiene `aria-label` con el nombre de la red y, donde hay espacio, label visible.
+
+### Decisiones de diseño
+
+1. **Footer** — Mantiene el grid de 4 columnas. Los 5 chips viven en la columna 1 (span 2, bajo la descripción) como una fila `flex-wrap gap-3`. Chip circular con color de red, glifo blanco, `aria-label` = nombre de red y label visible a su lado en desktop. Se agrega heading «Síguenos en redes» y TikTok. Todos los links externos con `rel="noopener noreferrer"` y `target="_blank"`.
+2. **Hero inicio** — Mini-fila discreta bajo los dos CTAs: 5 iconos `40px` en variante quiet (glifo de color de red sobre chip blanco suave + borde fino del color). No compite con CTAs ni con la foto; es indicador de comunidad. Caption sr-only.
+3. **Sección «Síguenos»** — Se coloca al final de `/`, después de la sección de testimonios, como cierre social antes del Footer. 5 cards: chip grande `64px` con color de red, nombre, handle y enlace «Visitar». Grid 1 col (375) / 2 cols (768) / 5 cols (1440).
+4. **Blog** — Banda «Vida en redes» entre la grilla de posts y la newsletter: fila de 5 enlaces + 2 slots de embed (Instagram post + TikTok video). Implementación en «Viabilidad de embeds» y en «Integración para `dev`».
+5. **Contacto** — Card «Síguenos en redes» bajo la tarjeta de información de contacto, con los 5 enlaces (chip + nombre + handle). No toca formulario ni el sticky lateral.
+6. **Testimonios** — Se conserva intacto el CTA «Dejar Testimonio» (WhatsApp). Debajo, una fila discreta de 3 enlaces a perfiles (Instagram, Facebook, TikTok) con `aria-label`. Sin cambio de copy ni de cards.
+7. **ContactLauncher** — Se deja solo WhatsApp + Chat. Razón: es un widget de conversión para agendar; sumar objetivos sube el riesgo de taps erróneos en 375px y la altura del panel, y la vitrina social ya vive en Footer, Hero, Blog y Contacto. Mejora futura (fuera de alcance): tercer botón «Redes» que abra un mini-menú.
+8. **Header** — Sin redes: la navegación ya tiene 7 ítems + conmutador de idioma; saturarla rompería el balance. Las redes no son navegación primaria.
+
+### Viabilidad de embeds en el Blog (conclusión técnica)
+
+**Instagram — VIABLE (oficial, vía oEmbed).** Desde el 2026-06-15 Meta permite llamar `GET https://graph.facebook.com/v25.0/instagram_oembed?url=<post>` **sin token** (anuncio oficial «Tokenless Access to Meta oEmbed APIs»). Devuelve el HTML oficial = `<blockquote class="instagram-media">` + script `https://www.instagram.com/embed.js`. El iframe directo `instagram.com/p/{código}/embed/` **no se recomienda como primario** porque los headers de la plataforma (`frame-ancestors`) pueden bloquearlo según entorno. Implementación estable: Route Handler de Next (`/api/instagram-oembed?url=…`) que llama a Graph API, cachea 24 h, y renderiza el blockquote; `embed.js` se inyecta una sola vez mediante IntersectionObserver cuando el slot entra en viewport (lazy). Fallback: card de perfil con avatar/handle si la llamada falla, el post es privado o la cuenta desactivó embeds.
+
+**TikTok — VIABLE (oficial, vía embed player).** TikTok ofrece iframe oficial `https://www.tiktok.com/player/v1/{post_id}?music_info=1&description=1` (sin JS externo) y oEmbed `https://www.tiktok.com/oembed?url=<video>` que devuelve blockquote + `embed.js`. **Recomendado:** el iframe player puro (cero dependencias externas, `loading="lazy"`, `allow="fullscreen; autoplay; encrypted-media"`) dentro de una caja con `aspect-ratio: 9/16` y alto mínimo reservado (sin layout shift). El blockquote del oEmbed queda como fallback semántico. Requisito: URLs de videos públicos del perfil `@lilianarodas155` (IDs numéricos); el prototipo usa slots placeholder rotulados «embed oficial». Si aún no hay videos que compartir, la banda muestra cards de perfil con preview.
+
+**Reglas transversales de embed:** lazy (`loading="lazy"` + IntersectionObserver), sin autoplay con sonido, `prefers-reduced-motion` respetado (los embeds se cargan por interacción, no se animan), caja con proporción fija para no estirar el layout, y fallback al perfil si el embed no carga. Sin librerías externas en el bundle del portal.
+
+### SVG finales (inline, listos para copiar)
+
+Uso: `fill="currentColor"` salvo donde se indique `stroke`; el color lo aplica el chip (`text-white`) o el glifo quiet (color de red). Todos con `aria-hidden="true"`; el significado lo entrega el `aria-label` del enlace y el label visible.
+
+**Facebook — glifo "f"**
+
+```svg
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path d="M14.5 21.5v-7.2h2.4l.36-2.8h-2.76V9.6c0-.81.22-1.36 1.39-1.36h1.45V5.77c-.25-.03-1.12-.11-2.13-.11-2.11 0-3.55 1.29-3.55 3.65v2.19H9.5v2.8h2.16v7.2h2.84z"/>
+</svg>
+```
+
+**Instagram — cámara (glifo en stroke; en chip usar `text-white`)**
+
+```svg
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+  <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/>
+  <circle cx="12" cy="12" r="4.1"/>
+  <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+</svg>
+```
+
+**TikTok — nota musical con acentos cian/rojo**
+
+```svg
+<svg viewBox="0 0 24 24" aria-hidden="true">
+  <path fill="currentColor" d="M16.2 3.6c.1-1-1.3-1.7-2.1-1.2l-5.4 2.1c-.6.2-1 .8-1 1.4v8.4c-.3-.1-.7-.1-1-.1-1.8 0-3.3 1.4-3.3 3.2s1.5 3.2 3.3 3.2 3.3-1.4 3.3-3.2V9.1l4.9-1.9v4.7c-.3-.1-.7-.1-1-.1-1.8 0-3.3 1.4-3.3 3.2s1.5 3.2 3.3 3.2 3.3-1.4 3.3-3.2V3.6z"/>
+  <circle cx="5.4" cy="19.4" r="1" fill="#25F4EE"/>
+  <circle cx="16.8" cy="19.4" r="1" fill="#FE2C55"/>
+</svg>
+```
+
+**WhatsApp — burbuja + teléfono (glifo en stroke; en chip usar `text-white`)**
+
+```svg
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M12 4.2c-4.7 0-8.5 3.6-8.5 8 0 1.6.5 3 1.3 4.2L4 20l3.8-1.2c1.2.6 2.6 1 4.2 1 4.7 0 8.5-3.6 8.5-8s-3.8-7.6-8.5-7.6z"/>
+  <path d="M9.4 9.1c-.3 1.2.2 2.6 1.2 3.6.9.9 2.3 1.5 3.5 1.2l.4-1.1-1.7-.9-1 .9c-.9-.5-1.6-1.2-2-2.1l.9-1-.9-1.7-1.1.5c-.2.1-.3.3-.4.7z"/>
+</svg>
+```
+
+**Email — sobre (glifo en stroke; en chip usar `text-white`)**
+
+```svg
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M3 8l7.9 5.3a2 2 0 002.2 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+</svg>
+```
+
+**Chips (patrón Tailwind para `dev`)**
+
+```
+chip = rounded-full flex items-center justify-center
+       h-12 w-12 (móvil) / h-11 w-11 (desktop ≥1024)
+       text-white shadow-md
+       + color de red (bg-[#1877F2], bg-[#010101], bg-[#128C7E], bg-[#4c1d95])
+       + Instagram: bg-[linear-gradient(135deg,#F58529,#DD2A7B_50%,#8134AF)]
+         con ring-2 ring-[#B13A8A] ring-offset-2
+       + focus-visible:outline-2 outline-offset-2
+```
+
+### Integración para `dev`
+
+- **Config:** en `src/lib/config.ts` añadir `social.tiktok` (fallback `https://www.tiktok.com/@lilianarodas155?lang=es-419`) y documentar `NEXT_PUBLIC_SOCIAL_TIKTOK` en `.env.example` (ya iniciado por el PO).
+- **Componente compartido:** crear `src/components/SocialLinks.tsx` con las 5 redes (chip + `aria-label` + label opcional), reutilizable en Footer, Hero, Síguenos, Blog, Contacto y Testimonios.
+- **Sección «Síguenos»:** nuevo bloque al final de `/` (tras testimonios) consumiendo el componente con el prop `variant="card"`.
+- **Blog embeds:** Route Handler `/api/instagram-oembed` (Graph API tokenless, cache 24 h) + componente `SocialEmbeds` con IntersectionObserver que inyecta `embed.js` una vez; TikTok como iframe `https://www.tiktok.com/player/v1/{id}?music_info=1&description=1` con `loading="lazy"`, caja `aspect-ratio: 9/16` y fallback a card de perfil. Slots placeholder hasta obtener URLs reales del perfil.
+- **Verificación QA:** `npm run lint`, `npm run build`, regresión ES/EN, screenshots 375/768/1440 sin overflow ni crop, foco visible, teclado, `prefers-reduced-motion`, contraste ≥3:1 por píxel real, `noopener noreferrer`, y regresión en Header, menú, Footer, precios, formularios, agenda y WhatsApp.
+
+**Cierre:** ✅ APROBADA AUTOMÁTICAMENTE por negocio — pendiente implementación.

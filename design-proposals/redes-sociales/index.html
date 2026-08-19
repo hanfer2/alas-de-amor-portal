@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redes Sociales · Visibilidad integral · Alas de Amor</title>
+  <style>
+    :root {
+      --warm: #fefcfb; --lavender: #f5f3ff; --violet: #4c1d95; --plum: #1e1b4b;
+      --aqua: #0f6675; --coral: #b4233f; --gold: #b7791f; --gold-dark: #8a5a00;
+      --line: rgba(76, 29, 149, .15); --shadow: 0 18px 48px rgba(76, 29, 149, .12);
+      --fb: #1877F2; --ig1: #F58529; --ig2: #DD2A7B; --ig3: #8134AF; --ig-ring: #B13A8A;
+      --tt: #010101; --tt-cyan: #25F4EE; --tt-red: #FE2C55; --wa: #128C7E;
+      --mail: #4c1d95;
+      --display: Georgia, "Times New Roman", ui-serif, serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--warm); color: var(--plum); font-family: var(--sans); scroll-behavior: smooth; }
+    body { margin: 0; background: var(--warm); }
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: rgba(254, 252, 251, .94); backdrop-filter: blur(14px); }
+    .topbar-inner { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 1.02rem; font-weight: 700; color: var(--violet); }
+    .brand-mark { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--violet), var(--coral)); box-shadow: 0 0 0 5px rgba(183, 121, 31, .12); }
+    .badge { border: 1px solid rgba(180, 35, 63, .35); border-radius: 999px; padding: 8px 12px; color: var(--coral); background: #fff1f3; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+    .intro { padding: 64px 0 40px; text-align: center; background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 32%, #fce7f3 62%, #f5f3ff 100%); }
+    .eyebrow { color: var(--gold-dark); font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3, h4 { font-family: var(--display); color: var(--violet); }
+    h1 { max-width: 820px; margin: 12px auto 0; font-size: clamp(2.1rem, 6vw, 4.4rem); line-height: .98; letter-spacing: -.04em; }
+    .intro p { max-width: 700px; margin: 18px auto 0; color: #504b73; line-height: 1.6; }
+    .section { padding: 64px 0; }
+    .section.alt { background: linear-gradient(135deg, #ddd6fe 0%, #ede9fe 25%, #f5f3ff 55%, #fce7f3 100%); }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 26px; }
+    .section-head h2 { margin: 6px 0 0; font-size: clamp(1.8rem, 4vw, 2.9rem); line-height: 1; }
+    .section-head p { max-width: 520px; margin: 0; color: #504b73; line-height: 1.55; }
+    .ico { width: 24px; height: 24px; display: block; }
+    .chip { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; color: #fff; text-decoration: none; box-shadow: 0 6px 14px rgba(76, 29, 149, .16); transition: transform .2s, box-shadow .2s; }
+    .chip .ico { width: 24px; height: 24px; }
+    .chip:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(76, 29, 149, .24); }
+    .chip:focus-visible { outline: 2px solid #7c3aed; outline-offset: 2px; }
+    .chip-fb { background: var(--fb); }
+    .chip-ig { background: linear-gradient(135deg, var(--ig1), var(--ig2) 50%, var(--ig3)); box-shadow: inset 0 0 0 2px var(--ig-ring), 0 6px 14px rgba(177, 58, 138, .28); }
+    .chip-tt { background: var(--tt); }
+    .chip-wa { background: var(--wa); }
+    .chip-mail { background: var(--mail); }
+    .chip--quiet { background: #fff; box-shadow: 0 0 0 1px rgba(76, 29, 149, .12), 0 4px 10px rgba(76, 29, 149, .1); }
+    .chip--quiet.chip-fb { color: var(--fb); }
+    .chip--quiet.chip-ig { color: var(--ig3); box-shadow: 0 0 0 1px rgba(177, 58, 138, .28), 0 4px 10px rgba(76, 29, 149, .1); }
+    .chip--quiet.chip-tt { color: var(--tt); }
+    .chip--quiet.chip-wa { color: var(--wa); }
+    .chip--quiet.chip-mail { color: var(--mail); }
+    .chip--sm { width: 40px; height: 40px; }
+    .chip--sm .ico { width: 20px; height: 20px; }
+    .chip--lg { width: 64px; height: 64px; }
+    .chip--lg .ico { width: 32px; height: 32px; }
+    .chip-label { display: block; margin-top: 6px; font-size: .68rem; font-weight: 700; color: #504b73; text-align: center; }
+    .social-label { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 999px; background: #fff; box-shadow: 0 0 0 1px var(--line), 0 4px 10px rgba(76, 29, 149, .08); color: var(--plum); font-size: .8rem; font-weight: 600; text-decoration: none; }
+    .social-label .chip { box-shadow: none; }
+    .social-label .handle { color: #504b73; font-weight: 500; }
+    .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .swatch { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: rgba(255, 255, 255, .82); box-shadow: var(--shadow); }
+    .swatch-face { height: 108px; display: grid; place-items: center; }
+    .swatch-face.fb { background: var(--fb); }
+    .swatch-face.ig { background: linear-gradient(135deg, var(--ig1), var(--ig2) 50%, var(--ig3)); }
+    .swatch-face.tt { background: var(--tt); }
+    .swatch-face.wa { background: var(--wa); }
+    .swatch-face.mail { background: var(--mail); }
+    .swatch-body { padding: 14px; }
+    .swatch-body h3 { margin: 0; font-size: 1.05rem; }
+    .swatch-body p { margin: 5px 0 0; color: #504b73; font-size: .78rem; line-height: 1.45; }
+    .swatch-body code { display: block; margin-top: 7px; color: var(--violet); font-size: .74rem; font-weight: 700; }
+    .note { margin-top: 18px; padding: 12px 16px; border-left: 3px solid var(--gold); border-radius: 0 12px 12px 0; background: #fff8e8; color: #504b73; font-size: .84rem; line-height: 1.55; }
+    .compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .compare { position: relative; overflow: hidden; min-height: 260px; padding: 22px; border: 1px solid var(--line); border-radius: 26px; background: rgba(255, 255, 255, .8); box-shadow: var(--shadow); }
+    .compare.proposed { border-color: rgba(15, 102, 117, .3); background: linear-gradient(145deg, rgba(255, 255, 255, .92), rgba(245, 243, 255, .9)); }
+    .compare-label { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 18px; padding: 7px 10px; border-radius: 999px; color: var(--gold-dark); background: #fff8e8; font-size: .7rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+    .proposed .compare-label { color: var(--aqua); background: #e7f7f8; }
+    .micro-copy { margin: 16px 0 0; color: #504b73; font-size: .86rem; line-height: 1.5; }
+    .micro-copy strong { color: var(--plum); }
+    .footer-mock { border-radius: 20px; background: linear-gradient(180deg, #fefcfb, #f5f3ff); box-shadow: var(--shadow); overflow: hidden; }
+    .footer-mock .fm-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 28px; padding: 30px; }
+    .fm-title { font-family: var(--display); font-weight: 700; color: var(--violet); }
+    .fm-col h4 { margin: 0 0 10px; font-family: var(--display); font-size: .95rem; color: var(--violet); }
+    .fm-col ul { list-style: none; margin: 0; padding: 0; }
+    .fm-col li { padding: 4px 0; color: #504b73; font-size: .82rem; }
+    .fm-bar { padding: 14px 30px; border-top: 1px solid var(--line); color: #8b83a5; font-size: .76rem; text-align: center; }
+    .fm-social-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .fm-old-row { display: flex; gap: 12px; margin-top: 14px; }
+    .fm-old-row .chip { background: #f5f3ff; color: #7c3aed; box-shadow: none; }
+    .fm-subhead { display: block; margin-top: 14px; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-dark); }
+    .hero-mock { position: relative; min-height: 320px; display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 16px; padding: 26px; border-radius: 22px; overflow: hidden; background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 30%, #fce7f3 60%, #f5f3ff 100%); }
+    .hero-mock::before, .hero-mock::after { content: ""; position: absolute; border-radius: 50%; background: rgba(167, 139, 250, .22); filter: blur(20px); }
+    .hero-mock::before { width: 170px; height: 170px; right: -40px; top: -30px; }
+    .hero-mock::after { width: 120px; height: 120px; left: -30px; bottom: -25px; background: rgba(253, 164, 175, .18); }
+    .hm-copy { position: relative; z-index: 1; }
+    .hm-logo { width: 130px; height: 44px; border-radius: 10px; background: linear-gradient(90deg, var(--violet), var(--coral)); opacity: .9; }
+    .hm-h1 { width: 78%; height: 26px; margin-top: 16px; border-radius: 8px; background: var(--violet); }
+    .hm-h1.s2 { width: 52%; height: 26px; margin-top: 9px; }
+    .hm-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 6px 12px; border-radius: 999px; background: rgba(255, 255, 255, .7); box-shadow: 0 0 0 1px rgba(76, 29, 149, .1); font-size: .72rem; font-weight: 700; color: var(--violet); }
+    .hm-badge i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+    .hm-sub { width: 88%; height: 9px; margin-top: 12px; border-radius: 6px; background: #a89fc4; opacity: .55; }
+    .hm-sub.s2 { width: 62%; margin-top: 7px; }
+    .hm-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .hm-cta { padding: 10px 18px; border-radius: 999px; font-size: .8rem; font-weight: 700; }
+    .hm-cta.pri { background: linear-gradient(90deg, #8b5cf6, #7c3aed); color: #fff; box-shadow: 0 8px 18px rgba(139, 92, 246, .3); }
+    .hm-cta.sec { background: rgba(255, 255, 255, .8); color: var(--violet); box-shadow: 0 0 0 1px var(--line); }
+    .hm-social { display: flex; align-items: center; gap: 9px; margin-top: 14px; flex-wrap: wrap; }
+    .hm-social .cap { font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #8b83a5; }
+    .hm-photo-wrap { position: relative; z-index: 1; text-align: center; }
+    .hm-photo { width: 150px; height: 150px; margin: auto; border: 9px solid rgba(221, 214, 254, .9); border-radius: 50%; background: radial-gradient(circle at 50% 36%, #f2c46d 0 13%, var(--violet) 14% 31%, #b8a7e8 32% 100%); box-shadow: 0 0 0 9px rgba(255, 255, 255, .6), 0 16px 30px rgba(76, 29, 149, .2); }
+    .hm-rail { width: 168px; height: 108px; margin: 14px auto 0; border-radius: 18px; background: rgba(254, 252, 251, .7); box-shadow: 0 0 0 1px rgba(180, 35, 63, .14), 0 10px 22px rgba(76, 29, 149, .1); display: grid; place-items: center; color: var(--violet); font: 700 .72rem var(--display); }
+    .hm-tag { display: inline-block; margin-top: 8px; font-size: .62rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--aqua); background: #e7f7f8; padding: 4px 8px; border-radius: 6px; }
+    .follow-stage { border-radius: 26px; padding: 34px; background: linear-gradient(145deg, rgba(255, 255, 255, .92), rgba(245, 243, 255, .9)); box-shadow: var(--shadow); }
+    .follow-head { text-align: center; margin-bottom: 28px; }
+    .follow-head h3 { margin: 8px 0 0; font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+    .follow-head p { margin: 10px auto 0; max-width: 500px; color: #504b73; line-height: 1.55; }
+    .follow-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .follow-card { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 22px 12px; border: 1px solid var(--line); border-radius: 22px; background: #fff; text-align: center; box-shadow: 0 10px 24px rgba(76, 29, 149, .07); }
+    .follow-card b { font-family: var(--display); color: var(--violet); font-size: 1rem; }
+    .follow-card span { color: #504b73; font-size: .78rem; }
+    .follow-card a { margin-top: 2px; padding: 7px 16px; border-radius: 999px; background: var(--violet); color: #fff; font-size: .76rem; font-weight: 700; text-decoration: none; }
+    .blog-stage { border-radius: 26px; padding: 30px; background: linear-gradient(135deg, #f5f3ff, #fce7f3 60%, #f5f3ff); box-shadow: var(--shadow); }
+    .post-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .post-card { padding: 20px; border-radius: 20px; background: rgba(255, 255, 255, .9); box-shadow: 0 0 0 1px var(--line), 0 10px 24px rgba(76, 29, 149, .07); }
+    .post-card .meta { display: flex; gap: 8px; margin-bottom: 12px; font-size: .72rem; }
+    .post-card .meta i { padding: 4px 9px; border-radius: 999px; background: var(--lavender); color: var(--gold-dark); font-style: normal; font-weight: 700; }
+    .post-card .meta em { color: #504b73; font-style: normal; }
+    .post-card h4 { margin: 0 0 8px; font-size: 1.15rem; line-height: 1.2; }
+    .post-card p { margin: 0; color: #504b73; font-size: .84rem; line-height: 1.5; }
+    .social-band { margin-top: 26px; border-radius: 22px; padding: 24px; background: rgba(255, 255, 255, .85); box-shadow: 0 0 0 1px rgba(15, 102, 117, .16), 0 12px 28px rgba(76, 29, 149, .09); }
+    .band-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .band-head h4 { margin: 0; font-size: 1.3rem; }
+    .band-head p { margin: 4px 0 0; color: #504b73; font-size: .82rem; }
+    .band-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .embed-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 22px; }
+    .embed-slot { border: 1px dashed rgba(180, 35, 63, .45); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, .7); }
+    .slot-label { display: inline-block; margin-bottom: 10px; padding: 5px 9px; border-radius: 999px; color: var(--coral); background: #fff1f3; font-size: .62rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .embed-frame { position: relative; width: 100%; aspect-ratio: 9 / 16; max-height: 460px; border-radius: 14px; overflow: hidden; background: linear-gradient(160deg, #1e1b4b, #4c1d95 60%, #b4233f); display: grid; place-items: center; color: #fff; text-align: center; }
+    .embed-frame .inner { max-width: 76%; font-size: .8rem; line-height: 1.5; }
+    .embed-frame .inner b { display: block; margin-bottom: 6px; font-family: var(--display); font-size: 1rem; }
+    .embed-frame .inner small { display: block; margin-top: 8px; color: rgba(255, 255, 255, .75); font-size: .66rem; letter-spacing: .04em; text-transform: uppercase; }
+    .fb-chip { position: absolute; top: 12px; left: 12px; display: inline-flex; align-items: center; gap: 7px; padding: 5px 10px; border-radius: 999px; background: rgba(255, 255, 255, .92); color: var(--plum); font-size: .7rem; font-weight: 800; }
+    .embed-fallback { margin-top: 14px; display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 14px; background: #fff; box-shadow: 0 0 0 1px var(--line); }
+    .embed-fallback .av { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, #f2c46d, var(--violet)); flex-shrink: 0; }
+    .embed-fallback .tx b { display: block; color: var(--plum); font-size: .86rem; }
+    .embed-fallback .tx span { color: #504b73; font-size: .76rem; }
+    .embed-note { margin-top: 14px; padding: 11px 14px; border-radius: 12px; background: #e7f7f8; color: var(--aqua); font-size: .78rem; line-height: 1.5; }
+    .contact-stage { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 20px; align-items: start; border-radius: 26px; padding: 26px; background: linear-gradient(145deg, rgba(255, 255, 255, .92), rgba(245, 243, 255, .9)); box-shadow: var(--shadow); }
+    .contact-img { height: 340px; border-radius: 20px; background: linear-gradient(180deg, #4c1d95, #7c3aed 55%, #b4233f); position: relative; overflow: hidden; color: #fff; padding: 22px; display: flex; align-items: flex-end; }
+    .contact-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(30, 27, 75, .55)); }
+    .contact-img > div { position: relative; z-index: 1; }
+    .contact-img b { font-family: var(--display); font-size: 1.4rem; }
+    .contact-img p { margin: 6px 0 0; font-size: .82rem; color: rgba(255, 255, 255, .85); }
+    .c-card { border-radius: 20px; padding: 20px; background: #fff; box-shadow: 0 0 0 1px var(--line), 0 10px 24px rgba(76, 29, 149, .08); }
+    .c-card + .c-card { margin-top: 14px; }
+    .c-card h4 { margin: 0 0 14px; font-size: 1.05rem; }
+    .c-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; font-size: .84rem; color: #504b73; }
+    .c-row .ico-well { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: #e7f7f8; color: var(--aqua); flex-shrink: 0; }
+    .c-row b { color: var(--plum); }
+    .c-social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+    .c-social .social-label { flex: 1 1 auto; min-width: 170px; }
+    .t-stage { border-radius: 26px; padding: 26px; background: linear-gradient(135deg, #f5f3ff, #fce7f3 60%, #f5f3ff); box-shadow: var(--shadow); text-align: center; }
+    .t-stage h4 { margin: 0 0 6px; font-size: 1.4rem; }
+    .t-stage > p { margin: 0 0 18px; color: #504b73; font-size: .86rem; }
+    .t-wa { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border-radius: 999px; background: linear-gradient(90deg, #8b5cf6, #7c3aed); color: #fff; font-weight: 700; font-size: .88rem; box-shadow: 0 8px 18px rgba(139, 92, 246, .3); }
+    .t-wa .ico { width: 20px; height: 20px; }
+    .t-social { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 14px; }
+    .t-social a { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; background: #fff; color: #504b73; font-size: .76rem; font-weight: 600; text-decoration: none; box-shadow: 0 0 0 1px var(--line); }
+    .t-social a .chip { width: 26px; height: 26px; }
+    .t-social a .chip .ico { width: 14px; height: 14px; }
+    .t-note { margin-top: 14px; color: #8b83a5; font-size: .78rem; }
+    .launcher-stage { min-height: 300px; display: grid; place-items: center; border-radius: 26px; background: linear-gradient(160deg, #ede9fe, #fce7f3); box-shadow: var(--shadow); position: relative; }
+    .launcher-mock { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .launcher-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: #7c3aed; color: #fff; font-size: .8rem; font-weight: 700; box-shadow: 0 8px 18px rgba(124, 58, 237, .35); }
+    .launcher-pill.ghost { background: #ede9fe; color: var(--violet); box-shadow: none; }
+    .launcher-bubble { width: 250px; border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, .95); box-shadow: 0 10px 24px rgba(76, 29, 149, .16); font-size: .78rem; color: #504b73; }
+    .launcher-bubble b { display: block; margin-bottom: 4px; color: var(--violet); font-size: .95rem; }
+    .launcher-bubble a { display: inline-block; margin-top: 10px; width: 100%; text-align: center; padding: 9px 0; border-radius: 999px; background: #7c3aed; color: #fff; font-weight: 700; font-size: .78rem; text-decoration: none; }
+    .matrix { width: 100%; border-collapse: collapse; margin-top: 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: rgba(255, 255, 255, .78); font-size: .82rem; }
+    .matrix th, .matrix td { padding: 13px 14px; border-bottom: 1px solid rgba(76, 29, 149, .1); text-align: left; vertical-align: top; }
+    .matrix th { color: var(--violet); background: rgba(245, 243, 255, .86); font-family: var(--display); }
+    .matrix tr:last-child td { border-bottom: 0; }
+    .mini-list { margin: 0; padding: 0; list-style: none; }
+    .mini-list li { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px dashed rgba(76, 29, 149, .12); font-size: .86rem; line-height: 1.5; }
+    .mini-list li:last-child { border-bottom: 0; }
+    .mini-list b { min-width: 160px; color: var(--violet); font-family: var(--display); }
+    .mini-list .ok { color: var(--aqua); font-weight: 800; }
+    .mini-list .kept { color: var(--gold-dark); font-weight: 800; }
+    .placeholder-note { display: inline-block; margin-top: 14px; padding: 6px 10px; border: 1px dashed rgba(180, 35, 63, .45); border-radius: 8px; background: rgba(255, 255, 255, .92); color: var(--coral); font-size: .64rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .approval { display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; padding: 12px 18px; border-radius: 999px; background: #e7f7f8; color: var(--aqua); font-weight: 800; font-size: .84rem; box-shadow: inset 0 0 0 1px rgba(15, 102, 117, .25); }
+    footer.site { padding: 34px 0 56px; color: #504b73; text-align: center; font-size: .8rem; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      html { scroll-behavior: auto; }
+    }
+    @media (max-width: 1020px) {
+      .palette-grid { grid-template-columns: repeat(3, 1fr); }
+      .follow-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 24px, 560px); }
+      .topbar-inner { min-height: 58px; }
+      .brand { font-size: .9rem; }
+      .badge { max-width: 150px; padding: 7px 9px; font-size: .6rem; text-align: center; }
+      .intro { padding: 44px 0 22px; }
+      .section { padding: 42px 0; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .palette-grid { grid-template-columns: 1fr 1fr; }
+      .footer-mock .fm-grid { grid-template-columns: 1fr; padding: 22px; }
+      .fm-bar { padding: 12px 22px; }
+      .hero-mock { grid-template-columns: 1fr; padding: 22px; }
+      .hm-photo-wrap { order: -1; }
+      .hm-rail { width: 150px; height: 92px; }
+      .follow-grid { grid-template-columns: 1fr; }
+      .embed-grid { grid-template-columns: 1fr; }
+      .post-cards { grid-template-columns: 1fr; }
+      .contact-stage { grid-template-columns: 1fr; }
+      .contact-img { height: 220px; }
+      .matrix { display: block; overflow-x: auto; white-space: nowrap; }
+      .matrix th, .matrix td { min-width: 160px; }
+      .mini-list b { min-width: 120px; }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="igGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#F58529"/>
+        <stop offset=".5" stop-color="#DD2A7B"/>
+        <stop offset="1" stop-color="#8134AF"/>
+      </linearGradient>
+    </defs>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14.5 21.5v-7.2h2.4l.36-2.8h-2.76V9.6c0-.81.22-1.36 1.39-1.36h1.45V5.77c-.25-.03-1.12-.11-2.13-.11-2.11 0-3.55 1.29-3.55 3.65v2.19H9.5v2.8h2.16v7.2h2.84z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-ig-g" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="url(#igGrad)" stroke-width="2"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="url(#igGrad)" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.1" fill="url(#igGrad)"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.2 3.6c.1-1-1.3-1.7-2.1-1.2l-5.4 2.1c-.6.2-1 .8-1 1.4v8.4c-.3-.1-.7-.1-1-.1-1.8 0-3.3 1.4-3.3 3.2s1.5 3.2 3.3 3.2 3.3-1.4 3.3-3.2V9.1l4.9-1.9v4.7c-.3-.1-.7-.1-1-.1-1.8 0-3.3 1.4-3.3 3.2s1.5 3.2 3.3 3.2 3.3-1.4 3.3-3.2V3.6z"/><circle cx="5.4" cy="19.4" r="1.1" fill="#25F4EE"/><circle cx="16.6" cy="19.4" r="1.1" fill="#FE2C55"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 4.2c-4.7 0-8.5 3.6-8.5 8 0 1.6.5 3 1.3 4.2L4 20l3.8-1.2c1.2.6 2.6 1 4.2 1 4.7 0 8.5-3.6 8.5-8s-3.8-7.6-8.5-7.6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.4 9.1c-.3 1.2.2 2.6 1.2 3.6.9.9 2.3 1.5 3.5 1.2l.4-1.1-1.7-.9-1 .9c-.9-.5-1.6-1.2-2-2.1l.9-1-.9-1.7-1.1.5c-.2.1-.3.3-.4.7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 8l7.9 5.3a2 2 0 002.2 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span> Alas de Amor · redes sociales</div>
+      <div class="badge">Prototipo no productivo</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="shell">
+        <div class="eyebrow">Redes sociales · visibilidad integral · 375 / 768 / 1440</div>
+        <h1>Redes que se ven, se tocan y se siguen</h1>
+        <p>De 4 iconos grises en el Footer a 5 redes con color distintivo, TikTok incluido, visibles en Footer, Hero, sección «Síguenos», Blog (con embeds), Contacto y Testimonios — sin romper Header, menú, precios, formularios, agenda ni WhatsApp.</p>
+        <span class="approval">✅ APROBADA AUTOMÁTICAMENTE por negocio — pendiente implementación</span>
+      </div>
+    </section>
+
+    <section class="section" id="paleta">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">01 · Paleta</div><h2>Un color por red</h2></div><p>Cada red usa su color de marca como protagonista del chip. El glifo blanco mantiene contraste ≥3:1 y el label redundante evita depender solo del color.</p></div>
+        <div class="palette-grid">
+          <article class="swatch">
+            <div class="swatch-face fb"><svg class="ico" style="width:34px;height:34px;color:#fff"><use href="#i-fb"/></svg></div>
+            <div class="swatch-body"><h3>Facebook</h3><p>Glifo "f" sobre azul. Ratio 4.2:1.</p><code>#1877F2</code></div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-face ig"><svg class="ico" style="width:34px;height:34px;color:#fff"><use href="#i-ig"/></svg></div>
+            <div class="swatch-body"><h3>Instagram</h3><p>Cámara sobre degradado + anillo oscuro.</p><code>#F58529 → #DD2A7B → #8134AF</code></div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-face tt"><svg class="ico" style="width:34px;height:34px;color:#fff"><use href="#i-tt"/></svg></div>
+            <div class="swatch-body"><h3>TikTok</h3><p>Nota musical con acentos cian y rojo.</p><code>#010101 · #25F4EE · #FE2C55</code></div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-face wa"><svg class="ico" style="width:34px;height:34px;color:#fff"><use href="#i-wa"/></svg></div>
+            <div class="swatch-body"><h3>WhatsApp</h3><p>Burbuja + teléfono en verde oscuro.</p><code>#128C7E · acento #25D366</code></div>
+          </article>
+          <article class="swatch">
+            <div class="swatch-face mail"><svg class="ico" style="width:34px;height:34px;color:#fff"><use href="#i-mail"/></svg></div>
+            <div class="swatch-body"><h3>Email</h3><p>Sobre en ciruela de marca.</p><code>#4c1d95</code></div>
+          </article>
+        </div>
+        <div class="note">
+          <b>Accesibilidad:</b> el verde claro de WhatsApp <code>#25D366</code> con glifo blanco queda en 1.9:1, por eso se usa <code>#128C7E</code> (4.1:1) como chip y <code>#25D366</code> solo como acento/hover. En Instagram el píxel peor es el naranja (glifo blanco 2.5:1); se mitiga con el anillo <code>#B13A8A</code> de 2px + label redundante, y QA debe medir el píxel real. Nunca el color es el único indicador: cada enlace lleva <code>aria-label</code> y, donde hay espacio, label visible.
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="iconos">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">02 · Showcase</div><h2>Iconos SVG inline, sin librerías</h2></div><p>Dos variantes: chip de color con glifo blanco (Footer, Síguenos, Contacto) y variante quiet para zonas discretas (Hero). Ambos comparten el mismo SVG.</p></div>
+        <div class="compare-grid">
+          <article class="compare">
+            <div class="compare-label">Variante principal · chip de color</div>
+            <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start">
+              <span style="text-align:center"><a class="chip chip-fb" href="#" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a><span class="chip-label">Facebook</span></span>
+              <span style="text-align:center"><a class="chip chip-ig" href="#" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a><span class="chip-label">Instagram</span></span>
+              <span style="text-align:center"><a class="chip chip-tt" href="#" aria-label="TikTok @lilianarodas155"><svg class="ico"><use href="#i-tt"/></svg></a><span class="chip-label">TikTok</span></span>
+              <span style="text-align:center"><a class="chip chip-wa" href="#" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a><span class="chip-label">WhatsApp</span></span>
+              <span style="text-align:center"><a class="chip chip-mail" href="#" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a><span class="chip-label">Email</span></span>
+            </div>
+            <p class="micro-copy"><strong>48×48px</strong> táctil / <strong>44px</strong> desktop. <code>aria-label</code> con el nombre de la red y label visible. Links con <code>noopener noreferrer</code>.</p>
+          </article>
+          <article class="compare proposed">
+            <div class="compare-label">Variante quiet · glifo de color</div>
+            <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start">
+              <span style="text-align:center"><a class="chip chip--quiet chip-fb" href="#" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a><span class="chip-label">Facebook</span></span>
+              <span style="text-align:center"><a class="chip chip--quiet chip-ig" href="#" aria-label="Instagram"><svg class="ico"><use href="#i-ig-g"/></svg></a><span class="chip-label">Instagram</span></span>
+              <span style="text-align:center"><a class="chip chip--quiet chip-tt" href="#" aria-label="TikTok @lilianarodas155"><svg class="ico"><use href="#i-tt"/></svg></a><span class="chip-label">TikTok</span></span>
+              <span style="text-align:center"><a class="chip chip--quiet chip-wa" href="#" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a><span class="chip-label">WhatsApp</span></span>
+              <span style="text-align:center"><a class="chip chip--quiet chip-mail" href="#" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a><span class="chip-label">Email</span></span>
+            </div>
+            <p class="micro-copy"><strong>Hero y zonas discretas:</strong> mismo SVG, chip blanco suave. El degradado de Instagram se aplica como trazo <code>url(#igGrad)</code> para mantener identidad sin romper contraste.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="footer">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">03 · Footer</div><h2>Del gris a la identidad</h2></div><p>Los 5 chips viven en la columna 1 bajo la descripción, con heading «Síguenos en redes», sin romper el grid ni la navegación.</p></div>
+        <div class="compare-grid">
+          <article class="compare">
+            <div class="compare-label">Actual · 4 iconos grises 40px</div>
+            <div class="footer-mock">
+              <div class="fm-grid">
+                <div>
+                  <div class="fm-title">Alas de Amor</div>
+                  <p style="margin:8px 0 0;color:#504b73;font-size:.82rem;line-height:1.5">Restauramos el equilibrio integral de tu ser a través de terapias holísticas…</p>
+                  <div class="fm-old-row">
+                    <span class="chip"><svg class="ico"><use href="#i-fb"/></svg></span>
+                    <span class="chip"><svg class="ico"><use href="#i-wa"/></svg></span>
+                    <span class="chip"><svg class="ico"><use href="#i-ig"/></svg></span>
+                    <span class="chip"><svg class="ico"><use href="#i-mail"/></svg></span>
+                  </div>
+                  <span class="placeholder-note">Sin TikTok · sin labels · gris</span>
+                </div>
+                <div class="fm-col"><h4>Navegación</h4><ul><li>Inicio</li><li>Quiénes Somos</li><li>Servicios</li><li>Blog</li></ul></div>
+                <div class="fm-col"><h4>Servicios</h4><ul><li>Reiki</li><li>Barras Access</li><li>Lectura Angelical</li><li>Meditación</li></ul></div>
+              </div>
+              <div class="fm-bar">© 2026 Alas de Amor · Liliana Rodas · Todos los derechos reservados.</div>
+            </div>
+          </article>
+          <article class="compare proposed">
+            <div class="compare-label">Propuesta · 5 chips de color + labels</div>
+            <div class="footer-mock">
+              <div class="fm-grid">
+                <div>
+                  <div class="fm-title">Alas de Amor</div>
+                  <p style="margin:8px 0 0;color:#504b73;font-size:.82rem;line-height:1.5">Restauramos el equilibrio integral de tu ser a través de terapias holísticas…</p>
+                  <span class="fm-subhead">Síguenos en redes</span>
+                  <div class="fm-social-row">
+                    <a class="chip chip-fb" href="#" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
+                    <a class="chip chip-ig" href="#" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
+                    <a class="chip chip-tt" href="#" aria-label="TikTok @lilianarodas155"><svg class="ico"><use href="#i-tt"/></svg></a>
+                    <a class="chip chip-wa" href="#" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+                    <a class="chip chip-mail" href="#" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a>
+                  </div>
+                  <span class="placeholder-note">48px táctil · aria-label · noopener</span>
+                </div>
+                <div class="fm-col"><h4>Navegación</h4><ul><li>Inicio</li><li>Quiénes Somos</li><li>Servicios</li><li>Blog</li></ul></div>
+                <div class="fm-col"><h4>Servicios</h4><ul><li>Reiki</li><li>Barras Access</li><li>Lectura Angelical</li><li>Meditación</li></ul></div>
+              </div>
+              <div class="fm-bar">© 2026 Alas de Amor · Liliana Rodas · Todos los derechos reservados.</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="hero">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">04 · Hero de inicio</div><h2>Comunidad, sin invadir</h2></div><p>Mini-fila de 5 iconos quiet bajo los CTAs. No compite con «Agenda tu Cita» ni con la foto; es un puente hacia la comunidad, no un CTA.</p></div>
+        <article class="compare proposed" style="min-height:0">
+          <div class="compare-label">Propuesta · badge de comunidad</div>
+          <div class="hero-mock">
+            <div class="hm-copy">
+              <div class="hm-logo"></div>
+              <div class="hm-h1"></div><div class="hm-h1 s2"></div>
+              <div class="hm-badge"><i></i> Terapia Holística Certificada</div>
+              <div class="hm-sub"></div><div class="hm-sub s2"></div>
+              <div class="hm-ctas">
+                <span class="hm-cta pri">Agenda tu Cita</span>
+                <span class="hm-cta sec">Ver Servicios</span>
+              </div>
+              <div class="hm-social">
+                <span class="cap">Síguenos</span>
+                <a class="chip chip--quiet chip-fb chip--sm" href="#" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
+                <a class="chip chip--quiet chip-ig chip--sm" href="#" aria-label="Instagram"><svg class="ico"><use href="#i-ig-g"/></svg></a>
+                <a class="chip chip--quiet chip-tt chip--sm" href="#" aria-label="TikTok @lilianarodas155"><svg class="ico"><use href="#i-tt"/></svg></a>
+                <a class="chip chip--quiet chip-wa chip--sm" href="#" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+                <a class="chip chip--quiet chip-mail chip--sm" href="#" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a>
+              </div>
+              <span class="hm-tag">40px · quiet · caption sr-only</span>
+            </div>
+            <div class="hm-photo-wrap">
+              <div class="hm-photo"></div>
+              <div class="hm-rail">rail de chakras (hero aprobado)</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="siguenos">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">05 · Sección «Síguenos»</div><h2>El cierre social de la home</h2></div><p>Se coloca al final de <code>/</code>, después de testimonios y antes del Footer. Cards con chip grande, nombre, handle y enlace. Grid 1 / 2 / 5 columnas.</p></div>
+        <div class="follow-stage">
+          <div class="follow-head">
+            <div class="eyebrow">Comunidad Alas de Amor</div>
+            <h3>Síguenos en redes</h3>
+            <p>Contenido diario de sanación, meditaciones guiadas y la comunidad que crece con Liliana Rodas.</p>
+          </div>
+          <div class="follow-grid">
+            <article class="follow-card">
+              <a class="chip chip-fb chip--lg" href="#" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
+              <b>Facebook</b><span>@liliana.rodas.9615</span>
+              <a href="#">Visitar →</a>
+            </article>
+            <article class="follow-card">
+              <a class="chip chip-ig chip--lg" href="#" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
+              <b>Instagram</b><span>@alasdeamor</span>
+              <a href="#">Visitar →</a>
+            </article>
+            <article class="follow-card">
+              <a class="chip chip-tt chip--lg" href="#" aria-label="TikTok @lilianarodas155"><svg class="ico"><use href="#i-tt"/></svg></a>
+              <b>TikTok</b><span>@lilianarodas155</span>
+              <a href="#">Visitar →</a>
+            </article>
+            <article class="follow-card">
+              <a class="chip chip-wa chip--lg" href="#" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+              <b>WhatsApp</b><span>+57 304 3732955</span>
+              <a href="#">Escribir →</a>
+            </article>
+            <article class="follow-card">
+              <a class="chip chip-mail chip--lg" href="#" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a>
+              <b>Email</b><span>Lilo_rodas87@hotmail.com</span>
+              <a href="#">Escribir →</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="blog">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">06 · Blog</div><h2>Embeds oficiales de Instagram y TikTok</h2></div><p>Banda «Vida en redes» entre los posts y la newsletter: fila de enlaces + 2 slots de embed lazy con fallback al perfil.</p></div>
+        <div class="blog-stage">
+          <div class="post-cards">
+            <article class="post-card">
+              <div class="meta"><i>Reiki</i><em>15 ene 2024</em></div>
+              <h4>El Poder del Reiki en Tiempos de Cambio</h4>
+              <p>El Reiki es una fuerza de sanación universal que nos conecta con la energía restauradora del universo…</p>
+            </article>
+            <article class="post-card">
+              <div class="meta"><i>Crecimiento</i><em>1 feb 2024</em></div>
+              <h4>Sanar Tu Niño Interior</h4>
+              <p>El niño interior guarda las heridas más profundas. Sanarlo nos permite vivir con mayor libertad emocional…</p>
+            </article>
+          </div>
+
+          <div class="social-band">
+            <div class="band-head">
+              <div>
+                <h4>Vida en redes</h4>
+                <p>Publicaciones de la comunidad y contenido de Liliana.</p>
+              </div>
+              <div class="band-strip">
+                <a class="chip chip-fb" href="#" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
+                <a class="chip chip-ig" href="#" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
+                <a class="chip chip-tt" href="#" aria-label="TikTok @lilianarodas155"><svg class="ico"><use href="#i-tt"/></svg></a>
+                <a class="chip chip-wa" href="#" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+                <a class="chip chip-mail" href="#" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a>
+              </div>
+            </div>
+
+            <div class="embed-grid">
+              <div class="embed-slot">
+                <span class="slot-label">Embed oficial · Instagram post</span>
+                <div class="embed-frame" style="background:linear-gradient(160deg,#4c1d95,#DD2A7B 55%,#F58529)">
+                  <span class="fb-chip"><svg class="ico" style="width:16px;height:16px"><use href="#i-ig-g"/></svg> @alasdeamor</span>
+                  <div class="inner">
+                    <b>Slot oEmbed oficial</b>
+                    <small>blockquote .instagram-media + embed.js · lazy vía IntersectionObserver · cache 24 h</small>
+                  </div>
+                </div>
+                <div class="embed-fallback">
+                  <div class="av"></div>
+                  <div class="tx"><b>Instagram · @alasdeamor</b><span>Fallback: card de perfil si el embed no carga o el post es privado.</span></div>
+                </div>
+              </div>
+              <div class="embed-slot">
+                <span class="slot-label">Embed oficial · TikTok video</span>
+                <div class="embed-frame">
+                  <span class="fb-chip"><svg class="ico" style="width:16px;height:16px;color:#000"><use href="#i-tt"/></svg> @lilianarodas155</span>
+                  <div class="inner">
+                    <b>Slot iframe player oficial</b>
+                    <small>tiktok.com/player/v1/{id} · loading="lazy" · aspect 9/16 · sin JS externo</small>
+                  </div>
+                </div>
+                <div class="embed-fallback">
+                  <div class="av" style="background:linear-gradient(135deg,#010101,#FE2C55)"></div>
+                  <div class="tx"><b>TikTok · @lilianarodas155</b><span>Fallback: card de perfil hasta tener URLs de video público.</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="embed-note">
+              <b>Conclusión técnica:</b> Instagram es viable vía oEmbed oficial de Meta (Graph API <code>instagram_oembed</code>, tokenless desde 2026-06-15) → blockquote + <code>embed.js</code> lazy. TikTok es viable vía iframe player oficial <code>tiktok.com/player/v1/{id}</code> (cero dependencias). Ambos con <code>loading="lazy"</code>, caja de proporción fija (sin layout shift), <code>prefers-reduced-motion</code> y fallback al perfil. Los slots de este prototipo son placeholders marcados como embeds oficiales.
+            </div>
+            <span class="placeholder-note">Slots placeholder · se conectan a posts reales del perfil</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">07 · Contacto</div><h2>Redes junto a los canales</h2></div><p>Nueva card «Síguenos en redes» bajo la información de contacto. El formulario y el sticky lateral no cambian.</p></div>
+        <div class="contact-stage">
+          <div class="contact-img"><div><b>Hablemos</b><p>Estamos aquí para escucharte. Cada consulta es el inicio de tu camino de sanación.</p></div></div>
+          <div>
+            <div class="c-card">
+              <h4>Información de Contacto</h4>
+              <div class="c-row"><span class="ico-well"><svg class="ico" style="width:20px;height:20px"><use href="#i-wa"/></svg></span><span><b>WhatsApp</b> · +57 304 3732955</span></div>
+              <div class="c-row"><span class="ico-well"><svg class="ico" style="width:20px;height:20px"><use href="#i-mail"/></svg></span><span><b>Email</b> · Lilo_rodas87@hotmail.com</span></div>
+              <div class="c-row"><span class="ico-well" style="color:#8a5a00"><svg class="ico" style="width:20px;height:20px"><use href="#i-mail"/></svg></span><span><b>Horario</b> · Lun–Sáb 8:00–18:00</span></div>
+            </div>
+            <div class="c-card">
+              <h4>Síguenos en redes</h4>
+              <div class="c-social">
+                <a class="social-label" href="#" aria-label="Facebook"><span class="chip chip-fb"><svg class="ico" style="width:16px;height:16px"><use href="#i-fb"/></svg></span> Facebook <span class="handle">@liliana.rodas.9615</span></a>
+                <a class="social-label" href="#" aria-label="Instagram"><span class="chip chip-ig"><svg class="ico" style="width:16px;height:16px"><use href="#i-ig"/></svg></span> Instagram <span class="handle">@alasdeamor</span></a>
+                <a class="social-label" href="#" aria-label="TikTok @lilianarodas155"><span class="chip chip-tt"><svg class="ico" style="width:16px;height:16px"><use href="#i-tt"/></svg></span> TikTok <span class="handle">@lilianarodas155</span></a>
+                <a class="social-label" href="#" aria-label="WhatsApp"><span class="chip chip-wa"><svg class="ico" style="width:16px;height:16px"><use href="#i-wa"/></svg></span> WhatsApp <span class="handle">+57 304 3732955</span></a>
+                <a class="social-label" href="#" aria-label="Email"><span class="chip chip-mail"><svg class="ico" style="width:16px;height:16px"><use href="#i-mail"/></svg></span> Email <span class="handle">Lilo_rodas87</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="testimonios">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">08 · Testimonios</div><h2>Compartir se mantiene, redes aparecen</h2></div><p>El CTA «Dejar Testimonio» (WhatsApp) queda intacto. Debajo, una fila discreta de perfiles con <code>aria-label</code>.</p></div>
+        <div class="t-stage">
+          <h4>Comparte Tu Experiencia</h4>
+          <p>¿Ya has tenido una sesión con nosotros? Nos encantaría escuchar tu historia.</p>
+          <span class="t-wa"><svg class="ico"><use href="#i-wa"/></svg> Dejar Testimonio</span>
+          <div class="t-social">
+            <a href="#" aria-label="Instagram"><span class="chip chip-ig"><svg class="ico"><use href="#i-ig"/></svg></span> Instagram</a>
+            <a href="#" aria-label="Facebook"><span class="chip chip-fb"><svg class="ico"><use href="#i-fb"/></svg></span> Facebook</a>
+            <a href="#" aria-label="TikTok @lilianarodas155"><span class="chip chip-tt"><svg class="ico"><use href="#i-tt"/></svg></span> TikTok</a>
+          </div>
+          <p class="t-note">La fila social es secundaria y discreta; el botón principal de WhatsApp no cambia.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="launcher">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">09 · ContactLauncher</div><h2>Se queda solo WhatsApp</h2></div><p>Widget de conversión para agendar: añadir redes sube el riesgo de taps erróneos en 375px y la altura del panel. Decisión documentada.</p></div>
+        <div class="compare-grid">
+          <article class="compare">
+            <div class="compare-label">Actual · WhatsApp + Chat</div>
+            <div class="launcher-stage">
+              <div class="launcher-mock">
+                <div class="launcher-bubble"><b>Chat</b>Chat en construcción, por favor usar WhatsApp.<a href="#">WhatsApp</a></div>
+                <div class="launcher-pill ghost">Chat</div>
+                <div class="launcher-pill">WhatsApp</div>
+              </div>
+            </div>
+            <p class="micro-copy"><strong>Sin cambios.</strong> El launcher flotante conserva su rol de conversión.</p>
+          </article>
+          <article class="compare proposed">
+            <div class="compare-label">Decisión · se descarta ampliar ahora</div>
+            <div class="launcher-stage">
+              <div class="launcher-mock">
+                <div class="launcher-bubble" style="filter:saturate(0);opacity:.55"><b>Opción descartada</b>Mini-menú con las 5 redes.<a href="#">WhatsApp</a></div>
+                <div class="launcher-pill ghost" style="filter:saturate(0);opacity:.55">Redes · WhatsApp · Chat</div>
+                <div class="launcher-pill">WhatsApp</div>
+              </div>
+            </div>
+            <p class="micro-copy"><strong>Razón:</strong> la vitrina social ya vive en Footer, Hero, Blog y Contacto. Mejora futura (fuera de alcance): botón «Redes» que abra un mini-menú.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="matriz">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">QA visual</div><h2>Matriz de superficies y viewports</h2></div><p>Resumen de decisiones por superficie y el gate de QA por viewport. La revisión final cubre ES/EN, foco, teclado, reduced motion y fallbacks.</p></div>
+        <div class="compare proposed">
+          <div class="compare-label">Inventario de superficies · decisión</div>
+          <ul class="mini-list">
+            <li><b>Footer</b><span><span class="ok">CAMBIAR</span> — 5 chips de color 48/44px + heading «Síguenos» + TikTok + labels</span></li>
+            <li><b>Hero /</b><span><span class="ok">AÑADIR</span> — mini-fila quiet de 5 iconos bajo CTAs</span></li>
+            <li><b>Sección «Síguenos»</b><span><span class="ok">NUEVA</span> — al final de /, grid 1/2/5</span></li>
+            <li><b>Blog</b><span><span class="ok">AÑADIR</span> — banda «Vida en redes» + 2 embeds lazy con fallback</span></li>
+            <li><b>Contacto</b><span><span class="ok">AÑADIR</span> — card «Síguenos en redes» bajo la info</span></li>
+            <li><b>Testimonios</b><span><span class="ok">AÑADIR</span> — fila discreta de perfiles; CTA WhatsApp intacto</span></li>
+            <li><b>Header</b><span><span class="kept">SIN CAMBIOS</span> — navegación primaria, no se satura</span></li>
+            <li><b>ContactLauncher</b><span><span class="kept">SIN CAMBIOS</span> — widget de conversión, se documenta decisión</span></li>
+          </ul>
+        </div>
+        <table class="matrix">
+          <thead><tr><th>Viewport</th><th>Composición</th><th>Gate</th></tr></thead>
+          <tbody>
+            <tr><td>375px</td><td>Footer: chips envuelven sin overflow; Hero: fila quiet cabe bajo CTAs; «Síguenos» 1 col; Blog: embeds 1 col (aspect 9/16); Contacto: card apilada</td><td>Sin scroll horizontal, sin crop, chips ≥44px, foco visible, ES/EN sin romper wraps</td></tr>
+            <tr><td>768px</td><td>Footer grid 2 cols; «Síguenos» 2 cols; Blog embeds 2 col; Contacto 1 col</td><td>Sin cambio de significado, labels legibles, contraste por píxel real ≥3:1</td></tr>
+            <tr><td>1440px</td><td>Footer 4 cols con fila social en columna 1; «Síguenos» 5 col; Blog posts + banda embeds; Contacto sticky + card social</td><td>Header/menú/footer/precios/formularios/agenda/WhatsApp sin regresión; teclado y reduced motion OK</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <p><span class="approval">✅ APROBADA AUTOMÁTICAMENTE por negocio — pendiente implementación</span></p>
+    <p style="margin-top:14px">Prototipo no productivo · autocontenido, sin CDN, sin dependencias externas · Alas de Amor</p>
+  </footer>
+</body>
+</html>
