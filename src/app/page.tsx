@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
-import { AngelFeathers } from "@/components/HeroDecoration";
+import { HeroChakras } from "@/components/HeroChakras";
 
 const serviceIcons = [
   {
@@ -141,8 +141,8 @@ export default function Home() {
             </div>
 
              <div className="relative z-10 flex flex-col items-center">
-               <div className="hero-decoration-rail home-wings-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
-                 <AngelFeathers className="h-full w-full" />
+               <div className="hero-decoration-rail home-wings-rail flex items-center justify-center rounded-[2rem] bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
+                 <HeroChakras className="h-full w-full" />
                </div>
                <div className="home-photo relative w-80 h-80 sm:w-96 sm:h-96 animate-float-slow">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-reiki-200 via-reiki-300 to-reiki-100 opacity-60 blur-2xl" />
