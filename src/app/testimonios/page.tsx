@@ -42,16 +42,16 @@ export default function TestimoniosPage() {
   return (
     <div className="relative overflow-hidden">
       {" "}
-      <section className="relative pt-26 pb-4 gradient-hero overflow-hidden">
+       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-        <div className="absolute top-5 right-5 hero-icon-halo opacity-90">
+         <div className="hero-decoration-rail hero-testimonial-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
           {" "}
           <SparkleStars className="w-80 h-32" />{" "}
         </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center max-w-3xl mx-auto reveal">
+           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
             {" "}
             <h1 className="role-h1 mt-0">
               {" "}

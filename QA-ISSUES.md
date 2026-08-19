@@ -55,3 +55,26 @@ Ninguno.
 ## Issues persistentes conocidos
 
 - `ISS-001` hydration histórico en `/blog`: no fue capturado en esta ronda.
+
+## Issues Visuales Implementados
+
+| ID | Resultado | Evidencia |
+|----|-----------|-----------|
+| ISS-VIS-OVERLAP-HOME-HERO | ✅ CORREGIDO | Alas ancladas al rail de foto, z-index 0, bajo Header en ES/EN y 375/768/1440 |
+| ISS-VIS-CROP-HOME-HERO | ✅ CORREGIDO | Rail completo dentro de viewport; sin overflow horizontal |
+| ISS-VIS-LOW-ENERGY-NOSOTROS | ✅ CORREGIDO | Loto coral/aqua/dorado y seis siluetas SVG diferenciadas |
+| ISS-VIS-OVERLAP-NOSOTROS-HERO | ✅ CORREGIDO | Caja del loto bajo safe zone en 42 combinaciones |
+| ISS-VIS-LOW-ENERGY-SERVICIOS | ✅ CORREGIDO | Ondas asimétricas convergen en semilla/chispa |
+| ISS-VIS-BLUR-SERVICIOS-FALLBACK | ✅ CORREGIDO | Fallback contextual, caja 328x320 estable ante `/next/image` abortado |
+| ISS-VIS-SPACING-AGENDAR-STEPS | ✅ CORREGIDO | Marcadores 64x64 mobile y 72x72 desktop; conector solo desde 1024px |
+| ISS-VIS-LOW-ENERGY-AGENDAR | ✅ CORREGIDO | Fondo crema, borde 3px, anillo 1px, número Georgia sin filter |
+| ISS-VIS-LOW-ENERGY-CONTACTO | ✅ CORREGIDO | Paloma con contorno coral, ala aqua y núcleo dorado |
+| ISS-VIS-CONTRAST-CONTACTO | ✅ CORREGIDO | Canales con acentos aqua/coral/dorado y halos identificables |
+| ISS-VIS-LOW-ENERGY-TESTIMONIOS | ✅ CORREGIDO | Comillas coral, chispa dorada y trazos aqua |
+| ISS-VIS-BLUR-TESTIMONIOS-HERO | ✅ CORREGIDO | Decoración estática sin blur sobre copy; fallback de monograma conservado |
+| ISS-VIS-LOW-ENERGY-BLOG | ✅ CORREGIDO | Marcador editorial con páginas, lomo, cinta y líneas de lectura |
+| ISS-VIS-OUT-OF-PLACE-BLOG | ✅ CORREGIDO | Marcador conectado al rail del título y al contenido editorial |
+| ISS-VIS-OVERLAP-BLOG-HERO | ✅ CORREGIDO | Marcador bajo safe zone, encima del copy en mobile y lateral en desktop |
+| ISS-VIS-CONTRAST-GLOBAL-ROLES | ✅ CORREGIDO | H1 Georgia 700 y descripción Inter 500 con gap medido de 16px |
+| ISS-VIS-SPACING-GLOBAL-HERO | ✅ CORREGIDO | Rails con pointer-events none, z-index 0 y reduced-motion estático |
+| ISS-VIS-SAFEZONE-SHELL | ✅ CORREGIDO | Safe zone comprobada en 42 combinaciones, `bad=[]` |

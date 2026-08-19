@@ -8,16 +8,16 @@ export default function AgendarPage() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-warm-white to-violet-50/30">
       {" "}
-      <section className="relative pt-28 pb-4 gradient-hero overflow-hidden">
+       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-        <div className="absolute top-10 right-16 hero-icon-halo opacity-90">
+         <div className="hero-decoration-rail hero-calendar-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
           {" "}
           <CalendarWings className="w-36 h-36" />{" "}
         </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center max-w-3xl mx-auto reveal">
+           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
             {" "}
             <h1 className="role-h1 mt-0">
               {" "}
@@ -54,12 +54,12 @@ export default function AgendarPage() {
             </h2>{" "}
             <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-reiki-300 to-reiki-500" />{" "}
           </div>{" "}
-          <div className="grid sm:grid-cols-3 gap-8 mb-16 lg:mb-20 reveal">
+           <div className="steps-grid grid sm:grid-cols-3 gap-8 mb-16 lg:mb-20 reveal">
             {" "}
             {[1, 2, 3].map((n) => (
               <div key={n} className="text-center group">
                 {" "}
-                <div className="role-icon-halo mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-reiki-400 to-reiki-600 text-2xl font-bold text-white shadow-lg shadow-reiki-300/30 transition-transform duration-300 group-hover:scale-110">
+                 <div className={`step-marker mx-auto mb-4 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 ${n === 1 ? "step-marker--coral" : n === 2 ? "step-marker--aqua" : "step-marker--gold"}`}>
                   {" "}
                   {n}{" "}
                 </div>{" "}
