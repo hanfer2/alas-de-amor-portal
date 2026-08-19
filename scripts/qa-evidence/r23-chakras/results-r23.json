@@ -1,0 +1,6183 @@
+[
+  {
+    "label": "home-es-375",
+    "url": "https://alas-de-amor-portal.vercel.app/?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "viewport": {
+        "vw": 375,
+        "vh": 812,
+        "dpr": 1
+      },
+      "elements": {
+        "header": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 107,
+            "top": 0,
+            "right": 360,
+            "bottom": 107,
+            "left": 0
+          },
+          "style": {
+            "position": "fixed",
+            "zIndex": "50",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "107px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.5s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "InicioQuiénes SomosServiciosTestimoniosBlogAgendar CitaContacto🇨🇴🇺🇸🇨🇴🇺🇸"
+        },
+        "heroShell": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 1619.5,
+            "top": 0,
+            "right": 360,
+            "bottom": 1619.5,
+            "left": 0
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "1619.5px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        },
+        "heroCopy": {
+          "rect": {
+            "x": 16,
+            "y": 232,
+            "w": 328,
+            "h": 644.09,
+            "top": 232,
+            "right": 344,
+            "bottom": 876.09,
+            "left": 16
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "1",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "644.094px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "fade-in-up",
+            "animationDuration": "0.8s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        },
+        "logo": {
+          "rect": {
+            "x": 16,
+            "y": 232,
+            "w": 327.98,
+            "h": 228.53,
+            "top": 232,
+            "right": 343.98,
+            "bottom": 460.53,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto 400 / 200",
+            "width": "327.984px",
+            "height": "228.531px",
+            "overflow": "clip",
+            "overflowX": "clip",
+            "overflowY": "clip",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "h1": {
+          "rect": {
+            "x": 16,
+            "y": 492.53,
+            "w": 328,
+            "h": 40.8,
+            "top": 492.53,
+            "right": 344,
+            "bottom": 533.33,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "576px",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "40.7969px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(76, 29, 149)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Georgia, \"Times New Roman\", ui-serif, serif",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "40.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de Amor"
+        },
+        "badge": {
+          "rect": {
+            "x": 16,
+            "y": 565.33,
+            "w": 237.19,
+            "h": 36,
+            "top": 565.33,
+            "right": 253.19,
+            "bottom": 601.33,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "237.188px",
+            "height": "36px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "inline-flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Terapia Holística Certificada"
+        },
+        "subtitle": {
+          "rect": {
+            "x": 16,
+            "y": 649.33,
+            "w": 328,
+            "h": 74.39,
+            "top": 649.33,
+            "right": 344,
+            "bottom": 723.72,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "512px",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "74.3906px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(80, 75, 115)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "lineHeight": "24.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Restaura el equilibrio de tu ser a través de terapias holísticas que atienden cuerpo, mente, emociones y espíritu."
+        },
+        "ctaPrimary": {
+          "rect": {
+            "x": 16,
+            "y": 755.72,
+            "w": 179.36,
+            "h": 51.19,
+            "top": 755.72,
+            "right": 195.36,
+            "bottom": 806.91,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "179.359px",
+            "height": "51.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Agenda tu Cita"
+        },
+        "ctaSecondary": {
+          "rect": {
+            "x": 16,
+            "y": 822.91,
+            "w": 170.05,
+            "h": 53.19,
+            "top": 822.91,
+            "right": 186.05,
+            "bottom": 876.09,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "170.047px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(109, 40, 217)",
+            "backgroundColor": "rgba(255, 255, 255, 0.75)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Ver Servicios"
+        },
+        "photo": {
+          "rect": {
+            "x": 15.91,
+            "y": 905.18,
+            "w": 328.17,
+            "h": 328.17,
+            "top": 905.18,
+            "right": 344.09,
+            "bottom": 1233.35,
+            "left": 15.91
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(0.999665, -0.025875, 0.025875, 0.999665, 0, -14.8269)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "320px",
+            "height": "320px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "float-slow",
+            "animationDuration": "10s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "masterReiki": {
+          "rect": {
+            "x": 262.04,
+            "y": 1144.69,
+            "w": 98.45,
+            "h": 98.45,
+            "top": 1144.69,
+            "right": 360.5,
+            "bottom": 1243.14,
+            "left": 262.04
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "96px",
+            "height": "96px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "glow",
+            "animationDuration": "4s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "rail": {
+          "rect": {
+            "x": 85,
+            "y": 1260.09,
+            "w": 190,
+            "h": 279.41,
+            "top": 1260.09,
+            "right": 275,
+            "bottom": 1539.5,
+            "left": 85
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "0",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "32px",
+            "maxWidth": "190px",
+            "aspectRatio": "0.68 / 1",
+            "width": "190px",
+            "height": "279.406px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "svg": {
+          "rect": {
+            "x": 93,
+            "y": 1268.09,
+            "w": 174,
+            "h": 263.41,
+            "top": 1268.09,
+            "right": 267,
+            "bottom": 1531.5,
+            "left": 93
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto",
+            "width": "174px",
+            "height": "263.406px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 7139.73,
+            "top": 0,
+            "right": 360,
+            "bottom": 7139.73,
+            "left": 0
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "7139.73px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        }
+      },
+      "svgAttrs": {
+        "ariaHidden": "true",
+        "hasAriaHidden": true,
+        "viewBox": "0 0 300 440",
+        "role": null,
+        "focusable": null,
+        "childCount": 24,
+        "innerHtmlLen": 14706,
+        "pathCount": 18,
+        "circleCount": 39,
+        "rectCount": 1
+      },
+      "railClient": {
+        "cw": 190,
+        "ch": 279,
+        "sw": 190,
+        "sh": 279
+      },
+      "overflow": {
+        "innerWidth": 375,
+        "docScrollWidth": 360,
+        "docClientWidth": 360,
+        "bodyScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "overlaps": {
+        "railVsHeader": {
+          "w": 190,
+          "h": -1153.09,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsH1": {
+          "w": 190,
+          "h": -726.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsSubtitle": {
+          "w": 190,
+          "h": -536.37,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsBadge": {
+          "w": 168.19,
+          "h": -658.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaPrimary": {
+          "w": 110.36,
+          "h": -453.18,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaSecondary": {
+          "w": 101.05,
+          "h": -384,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsLogo": {
+          "w": 190,
+          "h": -799.56,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsPhoto": {
+          "w": 190,
+          "h": -26.74,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsMasterReiki": {
+          "w": 12.96,
+          "h": -16.95,
+          "area": 0,
+          "overlapping": false
+        },
+        "railInViewport": false,
+        "safeZoneClearance": 1153.09,
+        "svgWithinRail": true,
+        "svgInViewport": true,
+        "svgVsH1": {
+          "w": 174,
+          "h": -734.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "svgVsPhoto": {
+          "w": 174,
+          "h": -34.74,
+          "area": 0,
+          "overlapping": false
+        }
+      },
+      "reduced": false,
+      "perf": {
+        "lcpMs": 1048,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      },
+      "navTiming": {
+        "ttfb": 426,
+        "domContentLoaded": 811.5,
+        "load": 1296.5,
+        "transferSize": 13799
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 37,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=640&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=384&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/favicon.ico",
+        "status": 200,
+        "mime": "image/vnd.microsoft.icon"
+      }
+    ]
+  },
+  {
+    "label": "home-en-375",
+    "url": "https://alas-de-amor-portal.vercel.app/?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "en",
+      "viewport": {
+        "vw": 375,
+        "vh": 812,
+        "dpr": 1
+      },
+      "elements": {
+        "header": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 107,
+            "top": 0,
+            "right": 360,
+            "bottom": 107,
+            "left": 0
+          },
+          "style": {
+            "position": "fixed",
+            "zIndex": "50",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "107px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.5s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "HomeAbout UsServicesTestimonialsBlogBook AppointmentContact🇨🇴🇺🇸🇨🇴🇺🇸"
+        },
+        "heroShell": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 1619.5,
+            "top": 0,
+            "right": 360,
+            "bottom": 1619.5,
+            "left": 0
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "1619.5px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        },
+        "heroCopy": {
+          "rect": {
+            "x": 16,
+            "y": 232,
+            "w": 328,
+            "h": 644.09,
+            "top": 232,
+            "right": 344,
+            "bottom": 876.09,
+            "left": 16
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "1",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "644.094px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "fade-in-up",
+            "animationDuration": "0.8s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        },
+        "logo": {
+          "rect": {
+            "x": 16,
+            "y": 232,
+            "w": 327.98,
+            "h": 228.53,
+            "top": 232,
+            "right": 343.98,
+            "bottom": 460.53,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto 400 / 200",
+            "width": "327.984px",
+            "height": "228.531px",
+            "overflow": "clip",
+            "overflowX": "clip",
+            "overflowY": "clip",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "h1": {
+          "rect": {
+            "x": 16,
+            "y": 492.53,
+            "w": 328,
+            "h": 40.8,
+            "top": 492.53,
+            "right": 344,
+            "bottom": 533.33,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "576px",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "40.7969px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(76, 29, 149)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Georgia, \"Times New Roman\", ui-serif, serif",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "40.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of Love"
+        },
+        "badge": {
+          "rect": {
+            "x": 16,
+            "y": 565.33,
+            "w": 219.03,
+            "h": 36,
+            "top": 565.33,
+            "right": 235.03,
+            "bottom": 601.33,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "219.031px",
+            "height": "36px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "inline-flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Certified Holistic Therapy"
+        },
+        "subtitle": {
+          "rect": {
+            "x": 16,
+            "y": 649.33,
+            "w": 328,
+            "h": 74.39,
+            "top": 649.33,
+            "right": 344,
+            "bottom": 723.72,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "512px",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "74.3906px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(80, 75, 115)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "lineHeight": "24.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Restore the balance of your being through holistic therapies that address body, mind, emotions, and spirit."
+        },
+        "ctaPrimary": {
+          "rect": {
+            "x": 16,
+            "y": 755.72,
+            "w": 209.34,
+            "h": 51.19,
+            "top": 755.72,
+            "right": 225.34,
+            "bottom": 806.91,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "209.344px",
+            "height": "51.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Book Your Session"
+        },
+        "ctaSecondary": {
+          "rect": {
+            "x": 16,
+            "y": 822.91,
+            "w": 177.61,
+            "h": 53.19,
+            "top": 822.91,
+            "right": 193.61,
+            "bottom": 876.09,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "177.609px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(109, 40, 217)",
+            "backgroundColor": "rgba(255, 255, 255, 0.75)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "View Services"
+        },
+        "photo": {
+          "rect": {
+            "x": 15.31,
+            "y": 902.34,
+            "w": 329.38,
+            "h": 329.38,
+            "top": 902.34,
+            "right": 344.69,
+            "bottom": 1231.73,
+            "left": 15.31
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(0.999557, -0.0297699, 0.0297699, 0.999557, 0, -17.0594)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "320px",
+            "height": "320px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "float-slow",
+            "animationDuration": "10s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "masterReiki": {
+          "rect": {
+            "x": 262.35,
+            "y": 1141.76,
+            "w": 98.82,
+            "h": 98.82,
+            "top": 1141.76,
+            "right": 361.16,
+            "bottom": 1240.57,
+            "left": 262.35
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "96px",
+            "height": "96px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "glow",
+            "animationDuration": "4s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "rail": {
+          "rect": {
+            "x": 85,
+            "y": 1260.09,
+            "w": 190,
+            "h": 279.41,
+            "top": 1260.09,
+            "right": 275,
+            "bottom": 1539.5,
+            "left": 85
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "0",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "32px",
+            "maxWidth": "190px",
+            "aspectRatio": "0.68 / 1",
+            "width": "190px",
+            "height": "279.406px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "svg": {
+          "rect": {
+            "x": 93,
+            "y": 1268.09,
+            "w": 174,
+            "h": 263.41,
+            "top": 1268.09,
+            "right": 267,
+            "bottom": 1531.5,
+            "left": 93
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto",
+            "width": "174px",
+            "height": "263.406px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 6952.61,
+            "top": 0,
+            "right": 360,
+            "bottom": 6952.61,
+            "left": 0
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "6952.61px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        }
+      },
+      "svgAttrs": {
+        "ariaHidden": "true",
+        "hasAriaHidden": true,
+        "viewBox": "0 0 300 440",
+        "role": null,
+        "focusable": null,
+        "childCount": 24,
+        "innerHtmlLen": 14706,
+        "pathCount": 18,
+        "circleCount": 39,
+        "rectCount": 1
+      },
+      "railClient": {
+        "cw": 190,
+        "ch": 279,
+        "sw": 190,
+        "sh": 279
+      },
+      "overflow": {
+        "innerWidth": 375,
+        "docScrollWidth": 360,
+        "docClientWidth": 360,
+        "bodyScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "overlaps": {
+        "railVsHeader": {
+          "w": 190,
+          "h": -1153.09,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsH1": {
+          "w": 190,
+          "h": -726.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsSubtitle": {
+          "w": 190,
+          "h": -536.37,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsBadge": {
+          "w": 150.03,
+          "h": -658.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaPrimary": {
+          "w": 140.34,
+          "h": -453.18,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaSecondary": {
+          "w": 108.61,
+          "h": -384,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsLogo": {
+          "w": 190,
+          "h": -799.56,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsPhoto": {
+          "w": 190,
+          "h": -28.36,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsMasterReiki": {
+          "w": 12.65,
+          "h": -19.52,
+          "area": 0,
+          "overlapping": false
+        },
+        "railInViewport": false,
+        "safeZoneClearance": 1153.09,
+        "svgWithinRail": true,
+        "svgInViewport": true,
+        "svgVsH1": {
+          "w": 174,
+          "h": -734.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "svgVsPhoto": {
+          "w": 174,
+          "h": -36.36,
+          "area": 0,
+          "overlapping": false
+        }
+      },
+      "reduced": false,
+      "perf": {
+        "lcpMs": 428,
+        "cls": 0,
+        "lcpElem": "IMG.w-full max-w-xs sm:max-w-sm h-auto"
+      },
+      "navTiming": {
+        "ttfb": 119.8,
+        "domContentLoaded": 212.3,
+        "load": 546.2,
+        "transferSize": 300
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 35,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=384&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "home-es-768",
+    "url": "https://alas-de-amor-portal.vercel.app/?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "viewport": {
+        "vw": 768,
+        "vh": 1024,
+        "dpr": 1
+      },
+      "elements": {
+        "header": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 753,
+            "h": 107,
+            "top": 0,
+            "right": 753,
+            "bottom": 107,
+            "left": 0
+          },
+          "style": {
+            "position": "fixed",
+            "zIndex": "50",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "753px",
+            "height": "107px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.5s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "InicioQuiénes SomosServiciosTestimoniosBlogAgendar CitaContacto🇨🇴🇺🇸🇨🇴🇺🇸"
+        },
+        "heroShell": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 753,
+            "h": 1819.33,
+            "top": 0,
+            "right": 753,
+            "bottom": 1819.33,
+            "left": 0
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "753px",
+            "height": "1819.33px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        },
+        "heroCopy": {
+          "rect": {
+            "x": 120.5,
+            "y": 232,
+            "w": 512,
+            "h": 647.58,
+            "top": 232,
+            "right": 632.5,
+            "bottom": 879.58,
+            "left": 120.5
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "1",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "647.578px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "fade-in-up",
+            "animationDuration": "0.8s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        },
+        "logo": {
+          "rect": {
+            "x": 120.5,
+            "y": 232,
+            "w": 465,
+            "h": 324,
+            "top": 232,
+            "right": 585.5,
+            "bottom": 556,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto 400 / 200",
+            "width": "465px",
+            "height": "324px",
+            "overflow": "clip",
+            "overflowX": "clip",
+            "overflowY": "clip",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "h1": {
+          "rect": {
+            "x": 120.5,
+            "y": 588,
+            "w": 512,
+            "h": 40.8,
+            "top": 588,
+            "right": 632.5,
+            "bottom": 628.8,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "576px",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "40.7969px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(76, 29, 149)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Georgia, \"Times New Roman\", ui-serif, serif",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "40.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de Amor"
+        },
+        "badge": {
+          "rect": {
+            "x": 120.5,
+            "y": 660.8,
+            "w": 237.19,
+            "h": 36,
+            "top": 660.8,
+            "right": 357.69,
+            "bottom": 696.8,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "237.188px",
+            "height": "36px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "inline-flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Terapia Holística Certificada"
+        },
+        "subtitle": {
+          "rect": {
+            "x": 120.5,
+            "y": 744.8,
+            "w": 512,
+            "h": 49.59,
+            "top": 744.8,
+            "right": 632.5,
+            "bottom": 794.39,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "512px",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "49.5938px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(80, 75, 115)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "lineHeight": "24.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Restaura el equilibrio de tu ser a través de terapias holísticas que atienden cuerpo, mente, emociones y espíritu."
+        },
+        "ctaPrimary": {
+          "rect": {
+            "x": 120.5,
+            "y": 826.39,
+            "w": 179.36,
+            "h": 53.19,
+            "top": 826.39,
+            "right": 299.86,
+            "bottom": 879.58,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "179.359px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Agenda tu Cita"
+        },
+        "ctaSecondary": {
+          "rect": {
+            "x": 315.86,
+            "y": 826.39,
+            "w": 170.05,
+            "h": 53.19,
+            "top": 826.39,
+            "right": 485.91,
+            "bottom": 879.58,
+            "left": 315.86
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "170.047px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(109, 40, 217)",
+            "backgroundColor": "rgba(255, 255, 255, 0.75)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Ver Servicios"
+        },
+        "photo": {
+          "rect": {
+            "x": 179.82,
+            "y": 908.76,
+            "w": 393.36,
+            "h": 393.36,
+            "top": 908.76,
+            "right": 573.18,
+            "bottom": 1302.12,
+            "left": 179.82
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(0.999696, -0.0246717, 0.0246717, 0.999696, 0, -14.1373)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "384px",
+            "height": "384px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "float-slow",
+            "animationDuration": "10s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "masterReiki": {
+          "rect": {
+            "x": 491.23,
+            "y": 1212.28,
+            "w": 98.34,
+            "h": 98.34,
+            "top": 1212.28,
+            "right": 589.57,
+            "bottom": 1310.61,
+            "left": 491.23
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "96px",
+            "height": "96px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "glow",
+            "animationDuration": "4s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "rail": {
+          "rect": {
+            "x": 236.5,
+            "y": 1327.58,
+            "w": 280,
+            "h": 411.75,
+            "top": 1327.58,
+            "right": 516.5,
+            "bottom": 1739.33,
+            "left": 236.5
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "0",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "32px",
+            "maxWidth": "280px",
+            "aspectRatio": "0.68 / 1",
+            "width": "280px",
+            "height": "411.75px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "svg": {
+          "rect": {
+            "x": 244.5,
+            "y": 1335.58,
+            "w": 264,
+            "h": 395.75,
+            "top": 1335.58,
+            "right": 508.5,
+            "bottom": 1731.33,
+            "left": 244.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto",
+            "width": "264px",
+            "height": "395.75px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 753,
+            "h": 5875.34,
+            "top": 0,
+            "right": 753,
+            "bottom": 5875.34,
+            "left": 0
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "753px",
+            "height": "5875.34px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        }
+      },
+      "svgAttrs": {
+        "ariaHidden": "true",
+        "hasAriaHidden": true,
+        "viewBox": "0 0 300 440",
+        "role": null,
+        "focusable": null,
+        "childCount": 24,
+        "innerHtmlLen": 14706,
+        "pathCount": 18,
+        "circleCount": 39,
+        "rectCount": 1
+      },
+      "railClient": {
+        "cw": 280,
+        "ch": 412,
+        "sw": 280,
+        "sh": 412
+      },
+      "overflow": {
+        "innerWidth": 768,
+        "docScrollWidth": 753,
+        "docClientWidth": 753,
+        "bodyScrollWidth": 753,
+        "horizontalOverflow": false
+      },
+      "overlaps": {
+        "railVsHeader": {
+          "w": 280,
+          "h": -1220.58,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsH1": {
+          "w": 280,
+          "h": -698.78,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsSubtitle": {
+          "w": 280,
+          "h": -533.19,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsBadge": {
+          "w": 121.19,
+          "h": -630.78,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaPrimary": {
+          "w": 63.36,
+          "h": -448,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaSecondary": {
+          "w": 170.05,
+          "h": -448,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsLogo": {
+          "w": 280,
+          "h": -771.58,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsPhoto": {
+          "w": 280,
+          "h": -25.46,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsMasterReiki": {
+          "w": 25.27,
+          "h": -16.97,
+          "area": 0,
+          "overlapping": false
+        },
+        "railInViewport": false,
+        "safeZoneClearance": 1220.58,
+        "svgWithinRail": true,
+        "svgInViewport": true,
+        "svgVsH1": {
+          "w": 264,
+          "h": -706.78,
+          "area": 0,
+          "overlapping": false
+        },
+        "svgVsPhoto": {
+          "w": 264,
+          "h": -33.46,
+          "area": 0,
+          "overlapping": false
+        }
+      },
+      "reduced": false,
+      "perf": {
+        "lcpMs": 356,
+        "cls": 0,
+        "lcpElem": "IMG.w-full max-w-xs sm:max-w-sm h-auto"
+      },
+      "navTiming": {
+        "ttfb": 118.9,
+        "domContentLoaded": 161.9,
+        "load": 403.5,
+        "transferSize": 300
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 35,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=384&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "home-en-768",
+    "url": "https://alas-de-amor-portal.vercel.app/?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "en",
+      "viewport": {
+        "vw": 768,
+        "vh": 1024,
+        "dpr": 1
+      },
+      "elements": {
+        "header": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 753,
+            "h": 107,
+            "top": 0,
+            "right": 753,
+            "bottom": 107,
+            "left": 0
+          },
+          "style": {
+            "position": "fixed",
+            "zIndex": "50",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "753px",
+            "height": "107px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.5s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "HomeAbout UsServicesTestimonialsBlogBook AppointmentContact🇨🇴🇺🇸🇨🇴🇺🇸"
+        },
+        "heroShell": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 753,
+            "h": 1819.33,
+            "top": 0,
+            "right": 753,
+            "bottom": 1819.33,
+            "left": 0
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "753px",
+            "height": "1819.33px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        },
+        "heroCopy": {
+          "rect": {
+            "x": 120.5,
+            "y": 232,
+            "w": 512,
+            "h": 647.58,
+            "top": 232,
+            "right": 632.5,
+            "bottom": 879.58,
+            "left": 120.5
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "1",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "647.578px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "fade-in-up",
+            "animationDuration": "0.8s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        },
+        "logo": {
+          "rect": {
+            "x": 120.5,
+            "y": 232,
+            "w": 465,
+            "h": 324,
+            "top": 232,
+            "right": 585.5,
+            "bottom": 556,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto 400 / 200",
+            "width": "465px",
+            "height": "324px",
+            "overflow": "clip",
+            "overflowX": "clip",
+            "overflowY": "clip",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "h1": {
+          "rect": {
+            "x": 120.5,
+            "y": 588,
+            "w": 512,
+            "h": 40.8,
+            "top": 588,
+            "right": 632.5,
+            "bottom": 628.8,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "576px",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "40.7969px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(76, 29, 149)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Georgia, \"Times New Roman\", ui-serif, serif",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "40.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of Love"
+        },
+        "badge": {
+          "rect": {
+            "x": 120.5,
+            "y": 660.8,
+            "w": 219.03,
+            "h": 36,
+            "top": 660.8,
+            "right": 339.53,
+            "bottom": 696.8,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "219.031px",
+            "height": "36px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "inline-flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Certified Holistic Therapy"
+        },
+        "subtitle": {
+          "rect": {
+            "x": 120.5,
+            "y": 744.8,
+            "w": 512,
+            "h": 49.59,
+            "top": 744.8,
+            "right": 632.5,
+            "bottom": 794.39,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "512px",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "49.5938px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(80, 75, 115)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "lineHeight": "24.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Restore the balance of your being through holistic therapies that address body, mind, emotions, and spirit."
+        },
+        "ctaPrimary": {
+          "rect": {
+            "x": 120.5,
+            "y": 826.39,
+            "w": 209.34,
+            "h": 53.19,
+            "top": 826.39,
+            "right": 329.84,
+            "bottom": 879.58,
+            "left": 120.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "209.344px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Book Your Session"
+        },
+        "ctaSecondary": {
+          "rect": {
+            "x": 345.84,
+            "y": 826.39,
+            "w": 177.61,
+            "h": 53.19,
+            "top": 826.39,
+            "right": 523.45,
+            "bottom": 879.58,
+            "left": 345.84
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "177.609px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(109, 40, 217)",
+            "backgroundColor": "rgba(255, 255, 255, 0.75)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "View Services"
+        },
+        "photo": {
+          "rect": {
+            "x": 178.98,
+            "y": 905.34,
+            "w": 395.04,
+            "h": 395.04,
+            "top": 905.34,
+            "right": 574.02,
+            "bottom": 1300.38,
+            "left": 178.98
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(0.999574, -0.0291746, 0.0291746, 0.999574, 0, -16.7182)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "384px",
+            "height": "384px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "float-slow",
+            "animationDuration": "10s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "masterReiki": {
+          "rect": {
+            "x": 491.72,
+            "y": 1208.74,
+            "w": 98.76,
+            "h": 98.76,
+            "top": 1208.74,
+            "right": 590.48,
+            "bottom": 1307.5,
+            "left": 491.72
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "96px",
+            "height": "96px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "glow",
+            "animationDuration": "4s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "rail": {
+          "rect": {
+            "x": 236.5,
+            "y": 1327.58,
+            "w": 280,
+            "h": 411.75,
+            "top": 1327.58,
+            "right": 516.5,
+            "bottom": 1739.33,
+            "left": 236.5
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "0",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "32px",
+            "maxWidth": "280px",
+            "aspectRatio": "0.68 / 1",
+            "width": "280px",
+            "height": "411.75px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "svg": {
+          "rect": {
+            "x": 244.5,
+            "y": 1335.58,
+            "w": 264,
+            "h": 395.75,
+            "top": 1335.58,
+            "right": 508.5,
+            "bottom": 1731.33,
+            "left": 244.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto",
+            "width": "264px",
+            "height": "395.75px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 753,
+            "h": 5797.16,
+            "top": 0,
+            "right": 753,
+            "bottom": 5797.16,
+            "left": 0
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "753px",
+            "height": "5797.16px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        }
+      },
+      "svgAttrs": {
+        "ariaHidden": "true",
+        "hasAriaHidden": true,
+        "viewBox": "0 0 300 440",
+        "role": null,
+        "focusable": null,
+        "childCount": 24,
+        "innerHtmlLen": 14706,
+        "pathCount": 18,
+        "circleCount": 39,
+        "rectCount": 1
+      },
+      "railClient": {
+        "cw": 280,
+        "ch": 412,
+        "sw": 280,
+        "sh": 412
+      },
+      "overflow": {
+        "innerWidth": 768,
+        "docScrollWidth": 753,
+        "docClientWidth": 753,
+        "bodyScrollWidth": 753,
+        "horizontalOverflow": false
+      },
+      "overlaps": {
+        "railVsHeader": {
+          "w": 280,
+          "h": -1220.58,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsH1": {
+          "w": 280,
+          "h": -698.78,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsSubtitle": {
+          "w": 280,
+          "h": -533.19,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsBadge": {
+          "w": 103.03,
+          "h": -630.78,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaPrimary": {
+          "w": 93.34,
+          "h": -448,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaSecondary": {
+          "w": 170.66,
+          "h": -448,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsLogo": {
+          "w": 280,
+          "h": -771.58,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsPhoto": {
+          "w": 280,
+          "h": -27.2,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsMasterReiki": {
+          "w": 24.78,
+          "h": -20.08,
+          "area": 0,
+          "overlapping": false
+        },
+        "railInViewport": false,
+        "safeZoneClearance": 1220.58,
+        "svgWithinRail": true,
+        "svgInViewport": true,
+        "svgVsH1": {
+          "w": 264,
+          "h": -706.78,
+          "area": 0,
+          "overlapping": false
+        },
+        "svgVsPhoto": {
+          "w": 264,
+          "h": -35.2,
+          "area": 0,
+          "overlapping": false
+        }
+      },
+      "reduced": false,
+      "perf": {
+        "lcpMs": 488,
+        "cls": 0,
+        "lcpElem": "IMG.w-full max-w-xs sm:max-w-sm h-auto"
+      },
+      "navTiming": {
+        "ttfb": 120.4,
+        "domContentLoaded": 183.8,
+        "load": 567.2,
+        "transferSize": 300
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 35,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=384&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "home-es-1440",
+    "url": "https://alas-de-amor-portal.vercel.app/?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "viewport": {
+        "vw": 1440,
+        "vh": 900,
+        "dpr": 1
+      },
+      "elements": {
+        "header": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 1425,
+            "h": 107,
+            "top": 0,
+            "right": 1425,
+            "bottom": 107,
+            "left": 0
+          },
+          "style": {
+            "position": "fixed",
+            "zIndex": "50",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "1425px",
+            "height": "107px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.5s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "InicioQuiénes SomosServiciosTestimoniosBlogAgendar CitaContacto🇨🇴🇺🇸🇨🇴🇺🇸"
+        },
+        "heroShell": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 1425,
+            "h": 1131.75,
+            "top": 0,
+            "right": 1425,
+            "bottom": 1131.75,
+            "left": 0
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "1425px",
+            "height": "1131.75px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        },
+        "heroCopy": {
+          "rect": {
+            "x": 160.5,
+            "y": 288.72,
+            "w": 512,
+            "h": 714.3,
+            "top": 288.72,
+            "right": 672.5,
+            "bottom": 1003.02,
+            "left": 160.5
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "1",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "714.297px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "fade-in-up",
+            "animationDuration": "0.8s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        },
+        "logo": {
+          "rect": {
+            "x": 160.5,
+            "y": 288.72,
+            "w": 465,
+            "h": 324,
+            "top": 288.72,
+            "right": 625.5,
+            "bottom": 612.72,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto 400 / 200",
+            "width": "465px",
+            "height": "324px",
+            "overflow": "clip",
+            "overflowX": "clip",
+            "overflowY": "clip",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "h1": {
+          "rect": {
+            "x": 160.5,
+            "y": 644.72,
+            "w": 512,
+            "h": 73.44,
+            "top": 644.72,
+            "right": 672.5,
+            "bottom": 718.16,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "576px",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "73.4375px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(76, 29, 149)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Georgia, \"Times New Roman\", ui-serif, serif",
+            "fontSize": "72px",
+            "fontWeight": "700",
+            "lineHeight": "73.44px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de Amor"
+        },
+        "badge": {
+          "rect": {
+            "x": 160.5,
+            "y": 750.16,
+            "w": 237.19,
+            "h": 36,
+            "top": 750.16,
+            "right": 397.69,
+            "bottom": 786.16,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "237.188px",
+            "height": "36px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "inline-flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Terapia Holística Certificada"
+        },
+        "subtitle": {
+          "rect": {
+            "x": 160.5,
+            "y": 834.16,
+            "w": 512,
+            "h": 83.67,
+            "top": 834.16,
+            "right": 672.5,
+            "bottom": 917.83,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "512px",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "83.6719px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(80, 75, 115)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "18px",
+            "fontWeight": "500",
+            "lineHeight": "27.9px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Restaura el equilibrio de tu ser a través de terapias holísticas que atienden cuerpo, mente, emociones y espíritu."
+        },
+        "ctaPrimary": {
+          "rect": {
+            "x": 160.5,
+            "y": 949.83,
+            "w": 179.36,
+            "h": 53.19,
+            "top": 949.83,
+            "right": 339.86,
+            "bottom": 1003.02,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "179.359px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Agenda tu Cita"
+        },
+        "ctaSecondary": {
+          "rect": {
+            "x": 355.86,
+            "y": 949.83,
+            "w": 170.05,
+            "h": 53.19,
+            "top": 949.83,
+            "right": 525.91,
+            "bottom": 1003.02,
+            "left": 355.86
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "170.047px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(109, 40, 217)",
+            "backgroundColor": "rgba(255, 255, 255, 0.75)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Ver Servicios"
+        },
+        "photo": {
+          "rect": {
+            "x": 811.15,
+            "y": 218.44,
+            "w": 394.71,
+            "h": 394.7,
+            "top": 218.44,
+            "right": 1205.85,
+            "bottom": 613.15,
+            "left": 811.15
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(0.9996, -0.0282773, 0.0282773, 0.9996, 0, -16.2039)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "384px",
+            "height": "384px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "float-slow",
+            "animationDuration": "10s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "masterReiki": {
+          "rect": {
+            "x": 1123.62,
+            "y": 521.87,
+            "w": 98.68,
+            "h": 98.68,
+            "top": 521.87,
+            "right": 1222.3,
+            "bottom": 620.55,
+            "left": 1123.62
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "96px",
+            "height": "96px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "glow",
+            "animationDuration": "4s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "rail": {
+          "rect": {
+            "x": 868.5,
+            "y": 640,
+            "w": 280,
+            "h": 411.75,
+            "top": 640,
+            "right": 1148.5,
+            "bottom": 1051.75,
+            "left": 868.5
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "0",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "32px",
+            "maxWidth": "280px",
+            "aspectRatio": "0.68 / 1",
+            "width": "280px",
+            "height": "411.75px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "svg": {
+          "rect": {
+            "x": 876.5,
+            "y": 648,
+            "w": 264,
+            "h": 395.75,
+            "top": 648,
+            "right": 1140.5,
+            "bottom": 1043.75,
+            "left": 876.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto",
+            "width": "264px",
+            "height": "395.75px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 1425,
+            "h": 4620.34,
+            "top": 0,
+            "right": 1425,
+            "bottom": 4620.34,
+            "left": 0
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "1425px",
+            "height": "4620.34px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        }
+      },
+      "svgAttrs": {
+        "ariaHidden": "true",
+        "hasAriaHidden": true,
+        "viewBox": "0 0 300 440",
+        "role": null,
+        "focusable": null,
+        "childCount": 24,
+        "innerHtmlLen": 14706,
+        "pathCount": 18,
+        "circleCount": 39,
+        "rectCount": 1
+      },
+      "railClient": {
+        "cw": 280,
+        "ch": 412,
+        "sw": 280,
+        "sh": 412
+      },
+      "overflow": {
+        "innerWidth": 1440,
+        "docScrollWidth": 1425,
+        "docClientWidth": 1425,
+        "bodyScrollWidth": 1425,
+        "horizontalOverflow": false
+      },
+      "overlaps": {
+        "railVsHeader": {
+          "w": 280,
+          "h": -533,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsH1": {
+          "w": -196,
+          "h": 73.44,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsSubtitle": {
+          "w": -196,
+          "h": 83.67,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsBadge": {
+          "w": -470.81,
+          "h": 36,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaPrimary": {
+          "w": -528.64,
+          "h": 53.19,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaSecondary": {
+          "w": -342.59,
+          "h": 53.19,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsLogo": {
+          "w": -243,
+          "h": -27.28,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsPhoto": {
+          "w": 280,
+          "h": -26.85,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsMasterReiki": {
+          "w": 24.88,
+          "h": -19.45,
+          "area": 0,
+          "overlapping": false
+        },
+        "railInViewport": false,
+        "safeZoneClearance": 533,
+        "svgWithinRail": true,
+        "svgInViewport": true,
+        "svgVsH1": {
+          "w": -204,
+          "h": 70.16,
+          "area": 0,
+          "overlapping": false
+        },
+        "svgVsPhoto": {
+          "w": 264,
+          "h": -34.85,
+          "area": 0,
+          "overlapping": false
+        }
+      },
+      "reduced": false,
+      "perf": {
+        "lcpMs": 508,
+        "cls": 0,
+        "lcpElem": "IMG.w-full max-w-xs sm:max-w-sm h-auto"
+      },
+      "navTiming": {
+        "ttfb": 148.1,
+        "domContentLoaded": 225.1,
+        "load": 714.2,
+        "transferSize": 300
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 58,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=384&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "home-en-1440",
+    "url": "https://alas-de-amor-portal.vercel.app/?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "en",
+      "viewport": {
+        "vw": 1440,
+        "vh": 900,
+        "dpr": 1
+      },
+      "elements": {
+        "header": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 1425,
+            "h": 107,
+            "top": 0,
+            "right": 1425,
+            "bottom": 107,
+            "left": 0
+          },
+          "style": {
+            "position": "fixed",
+            "zIndex": "50",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "1425px",
+            "height": "107px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.5s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "HomeAbout UsServicesTestimonialsBlogBook AppointmentContact🇨🇴🇺🇸🇨🇴🇺🇸"
+        },
+        "heroShell": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 1425,
+            "h": 1131.75,
+            "top": 0,
+            "right": 1425,
+            "bottom": 1131.75,
+            "left": 0
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "1425px",
+            "height": "1131.75px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        },
+        "heroCopy": {
+          "rect": {
+            "x": 160.5,
+            "y": 302.67,
+            "w": 512,
+            "h": 686.41,
+            "top": 302.67,
+            "right": 672.5,
+            "bottom": 989.08,
+            "left": 160.5
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "1",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "686.406px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "fade-in-up",
+            "animationDuration": "0.8s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        },
+        "logo": {
+          "rect": {
+            "x": 160.5,
+            "y": 302.67,
+            "w": 465,
+            "h": 324,
+            "top": 302.67,
+            "right": 625.5,
+            "bottom": 626.67,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto 400 / 200",
+            "width": "465px",
+            "height": "324px",
+            "overflow": "clip",
+            "overflowX": "clip",
+            "overflowY": "clip",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "h1": {
+          "rect": {
+            "x": 160.5,
+            "y": 658.67,
+            "w": 512,
+            "h": 73.44,
+            "top": 658.67,
+            "right": 672.5,
+            "bottom": 732.11,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "576px",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "73.4375px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(76, 29, 149)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Georgia, \"Times New Roman\", ui-serif, serif",
+            "fontSize": "72px",
+            "fontWeight": "700",
+            "lineHeight": "73.44px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of Love"
+        },
+        "badge": {
+          "rect": {
+            "x": 160.5,
+            "y": 764.11,
+            "w": 219.03,
+            "h": 36,
+            "top": 764.11,
+            "right": 379.53,
+            "bottom": 800.11,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "219.031px",
+            "height": "36px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "inline-flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Certified Holistic Therapy"
+        },
+        "subtitle": {
+          "rect": {
+            "x": 160.5,
+            "y": 848.11,
+            "w": 512,
+            "h": 55.78,
+            "top": 848.11,
+            "right": 672.5,
+            "bottom": 903.89,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "512px",
+            "aspectRatio": "auto",
+            "width": "512px",
+            "height": "55.7812px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(80, 75, 115)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "18px",
+            "fontWeight": "500",
+            "lineHeight": "27.9px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Restore the balance of your being through holistic therapies that address body, mind, emotions, and spirit."
+        },
+        "ctaPrimary": {
+          "rect": {
+            "x": 160.5,
+            "y": 935.89,
+            "w": 209.34,
+            "h": 53.19,
+            "top": 935.89,
+            "right": 369.84,
+            "bottom": 989.08,
+            "left": 160.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "209.344px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Book Your Session"
+        },
+        "ctaSecondary": {
+          "rect": {
+            "x": 385.84,
+            "y": 935.89,
+            "w": 177.61,
+            "h": 53.19,
+            "top": 935.89,
+            "right": 563.45,
+            "bottom": 989.08,
+            "left": 385.84
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "177.609px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0.3s",
+            "color": "rgb(109, 40, 217)",
+            "backgroundColor": "rgba(255, 255, 255, 0.75)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "View Services"
+        },
+        "photo": {
+          "rect": {
+            "x": 811.04,
+            "y": 217.99,
+            "w": 394.93,
+            "h": 394.93,
+            "top": 217.99,
+            "right": 1205.96,
+            "bottom": 612.92,
+            "left": 811.04
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(0.999583, -0.0288765, 0.0288765, 0.999583, 0, -16.5473)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "384px",
+            "height": "384px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "float-slow",
+            "animationDuration": "10s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "masterReiki": {
+          "rect": {
+            "x": 1123.69,
+            "y": 521.4,
+            "w": 98.73,
+            "h": 98.73,
+            "top": 521.4,
+            "right": 1222.42,
+            "bottom": 620.13,
+            "left": 1123.69
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "96px",
+            "height": "96px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "glow",
+            "animationDuration": "4s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "rail": {
+          "rect": {
+            "x": 868.5,
+            "y": 640,
+            "w": 280,
+            "h": 411.75,
+            "top": 640,
+            "right": 1148.5,
+            "bottom": 1051.75,
+            "left": 868.5
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "0",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "32px",
+            "maxWidth": "280px",
+            "aspectRatio": "0.68 / 1",
+            "width": "280px",
+            "height": "411.75px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "svg": {
+          "rect": {
+            "x": 876.5,
+            "y": 648,
+            "w": 264,
+            "h": 395.75,
+            "top": 648,
+            "right": 1140.5,
+            "bottom": 1043.75,
+            "left": 876.5
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto",
+            "width": "264px",
+            "height": "395.75px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 1425,
+            "h": 4558.13,
+            "top": 0,
+            "right": 1425,
+            "bottom": 4558.13,
+            "left": 0
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "1425px",
+            "height": "4558.12px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "0s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Wings of LoveCertified Holistic TherapyRestore the balance of your being through holistic therapies that address body, m"
+        }
+      },
+      "svgAttrs": {
+        "ariaHidden": "true",
+        "hasAriaHidden": true,
+        "viewBox": "0 0 300 440",
+        "role": null,
+        "focusable": null,
+        "childCount": 24,
+        "innerHtmlLen": 14706,
+        "pathCount": 18,
+        "circleCount": 39,
+        "rectCount": 1
+      },
+      "railClient": {
+        "cw": 280,
+        "ch": 412,
+        "sw": 280,
+        "sh": 412
+      },
+      "overflow": {
+        "innerWidth": 1440,
+        "docScrollWidth": 1425,
+        "docClientWidth": 1425,
+        "bodyScrollWidth": 1425,
+        "horizontalOverflow": false
+      },
+      "overlaps": {
+        "railVsHeader": {
+          "w": 280,
+          "h": -533,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsH1": {
+          "w": -196,
+          "h": 73.44,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsSubtitle": {
+          "w": -196,
+          "h": 55.78,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsBadge": {
+          "w": -488.97,
+          "h": 36,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaPrimary": {
+          "w": -498.66,
+          "h": 53.19,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaSecondary": {
+          "w": -305.05,
+          "h": 53.19,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsLogo": {
+          "w": -243,
+          "h": -13.33,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsPhoto": {
+          "w": 280,
+          "h": -27.08,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsMasterReiki": {
+          "w": 24.81,
+          "h": -19.87,
+          "area": 0,
+          "overlapping": false
+        },
+        "railInViewport": false,
+        "safeZoneClearance": 533,
+        "svgWithinRail": true,
+        "svgInViewport": true,
+        "svgVsH1": {
+          "w": -204,
+          "h": 73.44,
+          "area": 0,
+          "overlapping": false
+        },
+        "svgVsPhoto": {
+          "w": 264,
+          "h": -35.08,
+          "area": 0,
+          "overlapping": false
+        }
+      },
+      "reduced": false,
+      "perf": {
+        "lcpMs": 704,
+        "cls": 0.0006410185185185185,
+        "lcpElem": "IMG.w-full max-w-xs sm:max-w-sm h-auto"
+      },
+      "navTiming": {
+        "ttfb": 128.1,
+        "domContentLoaded": 186.7,
+        "load": 638.4,
+        "transferSize": 300
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 55,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=384&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "home-es-375-reduced",
+    "url": "https://alas-de-amor-portal.vercel.app/?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "viewport": {
+        "vw": 375,
+        "vh": 812,
+        "dpr": 1
+      },
+      "elements": {
+        "header": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 107,
+            "top": 0,
+            "right": 360,
+            "bottom": 107,
+            "left": 0
+          },
+          "style": {
+            "position": "fixed",
+            "zIndex": "50",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "107px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "InicioQuiénes SomosServiciosTestimoniosBlogAgendar CitaContacto🇨🇴🇺🇸🇨🇴🇺🇸"
+        },
+        "heroShell": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 1619.5,
+            "top": 0,
+            "right": 360,
+            "bottom": 1619.5,
+            "left": 0
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "1619.5px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        },
+        "heroCopy": {
+          "rect": {
+            "x": 16,
+            "y": 232,
+            "w": 328,
+            "h": 644.09,
+            "top": 232,
+            "right": 344,
+            "bottom": 876.09,
+            "left": 16
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "1",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "644.094px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "fade-in-up",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        },
+        "logo": {
+          "rect": {
+            "x": 16,
+            "y": 232,
+            "w": 327.98,
+            "h": 228.53,
+            "top": 232,
+            "right": 343.98,
+            "bottom": 460.53,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto 400 / 200",
+            "width": "327.984px",
+            "height": "228.531px",
+            "overflow": "clip",
+            "overflowX": "clip",
+            "overflowY": "clip",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "h1": {
+          "rect": {
+            "x": 16,
+            "y": 492.53,
+            "w": 328,
+            "h": 40.8,
+            "top": 492.53,
+            "right": 344,
+            "bottom": 533.33,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "576px",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "40.7969px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(76, 29, 149)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Georgia, \"Times New Roman\", ui-serif, serif",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "40.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de Amor"
+        },
+        "badge": {
+          "rect": {
+            "x": 16,
+            "y": 565.33,
+            "w": 237.19,
+            "h": 36,
+            "top": 565.33,
+            "right": 253.19,
+            "bottom": 601.33,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "237.188px",
+            "height": "36px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "inline-flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.999994 0.0000455677 0.0000200868 / 0.6)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Terapia Holística Certificada"
+        },
+        "subtitle": {
+          "rect": {
+            "x": 16,
+            "y": 649.33,
+            "w": 328,
+            "h": 74.39,
+            "top": 649.33,
+            "right": 344,
+            "bottom": 723.72,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "512px",
+            "aspectRatio": "auto",
+            "width": "328px",
+            "height": "74.3906px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(80, 75, 115)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "lineHeight": "24.8px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Restaura el equilibrio de tu ser a través de terapias holísticas que atienden cuerpo, mente, emociones y espíritu."
+        },
+        "ctaPrimary": {
+          "rect": {
+            "x": 16,
+            "y": 755.72,
+            "w": 179.36,
+            "h": 51.19,
+            "top": 755.72,
+            "right": 195.36,
+            "bottom": 806.91,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "179.359px",
+            "height": "51.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Agenda tu Cita"
+        },
+        "ctaSecondary": {
+          "rect": {
+            "x": 16,
+            "y": 822.91,
+            "w": 170.05,
+            "h": 53.19,
+            "top": 822.91,
+            "right": 186.05,
+            "bottom": 876.09,
+            "left": 16
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "170.047px",
+            "height": "53.1875px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(109, 40, 217)",
+            "backgroundColor": "rgba(255, 255, 255, 0.75)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "19.2px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Ver Servicios"
+        },
+        "photo": {
+          "rect": {
+            "x": 20,
+            "y": 924.09,
+            "w": 320,
+            "h": 320,
+            "top": 924.09,
+            "right": 340,
+            "bottom": 1244.09,
+            "left": 20
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "320px",
+            "height": "320px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "float-slow",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "masterReiki": {
+          "rect": {
+            "x": 260,
+            "y": 1164.09,
+            "w": 96,
+            "h": 96,
+            "top": 1164.09,
+            "right": 356,
+            "bottom": 1260.09,
+            "left": 260
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "3.35544e+07px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "96px",
+            "height": "96px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "glow",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Master\nReiki"
+        },
+        "rail": {
+          "rect": {
+            "x": 85,
+            "y": 1260.09,
+            "w": 190,
+            "h": 279.41,
+            "top": 1260.09,
+            "right": 275,
+            "bottom": 1539.5,
+            "left": 85
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "0",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "32px",
+            "maxWidth": "190px",
+            "aspectRatio": "0.68 / 1",
+            "width": "190px",
+            "height": "279.406px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "flex",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "svg": {
+          "rect": {
+            "x": 93,
+            "y": 1268.09,
+            "w": 174,
+            "h": 263.41,
+            "top": 1268.09,
+            "right": 267,
+            "bottom": 1531.5,
+            "left": 93
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "none",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "100%",
+            "aspectRatio": "auto",
+            "width": "174px",
+            "height": "263.406px",
+            "overflow": "hidden",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "0s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": ""
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 7139.73,
+            "top": 0,
+            "right": 360,
+            "bottom": 7139.73,
+            "left": 0
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "pointerEvents": "auto",
+            "opacity": "1",
+            "filter": "none",
+            "transform": "none",
+            "borderRadius": "0px",
+            "maxWidth": "none",
+            "aspectRatio": "auto",
+            "width": "360px",
+            "height": "7139.73px",
+            "overflow": "visible",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "display": "block",
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "animationName": "none",
+            "animationDuration": "1e-05s",
+            "transitionDuration": "1e-05s",
+            "color": "rgb(30, 27, 75)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontFamily": "Inter, \"Inter Fallback\"",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "opacityVal": 1,
+            "filterVal": "none"
+          },
+          "text": "Alas de AmorTerapia Holística CertificadaRestaura el equilibrio de tu ser a través de terapias holísticas que atienden c"
+        }
+      },
+      "svgAttrs": {
+        "ariaHidden": "true",
+        "hasAriaHidden": true,
+        "viewBox": "0 0 300 440",
+        "role": null,
+        "focusable": null,
+        "childCount": 24,
+        "innerHtmlLen": 14706,
+        "pathCount": 18,
+        "circleCount": 39,
+        "rectCount": 1
+      },
+      "railClient": {
+        "cw": 190,
+        "ch": 279,
+        "sw": 190,
+        "sh": 279
+      },
+      "overflow": {
+        "innerWidth": 375,
+        "docScrollWidth": 360,
+        "docClientWidth": 360,
+        "bodyScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "overlaps": {
+        "railVsHeader": {
+          "w": 190,
+          "h": -1153.09,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsH1": {
+          "w": 190,
+          "h": -726.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsSubtitle": {
+          "w": 190,
+          "h": -536.37,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsBadge": {
+          "w": 168.19,
+          "h": -658.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaPrimary": {
+          "w": 110.36,
+          "h": -453.18,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsCtaSecondary": {
+          "w": 101.05,
+          "h": -384,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsLogo": {
+          "w": 190,
+          "h": -799.56,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsPhoto": {
+          "w": 190,
+          "h": -16,
+          "area": 0,
+          "overlapping": false
+        },
+        "railVsMasterReiki": {
+          "w": 15,
+          "h": 0,
+          "area": 0,
+          "overlapping": false
+        },
+        "railInViewport": false,
+        "safeZoneClearance": 1153.09,
+        "svgWithinRail": true,
+        "svgInViewport": true,
+        "svgVsH1": {
+          "w": 174,
+          "h": -734.76,
+          "area": 0,
+          "overlapping": false
+        },
+        "svgVsPhoto": {
+          "w": 174,
+          "h": -24,
+          "area": 0,
+          "overlapping": false
+        }
+      },
+      "reduced": true,
+      "perf": {
+        "lcpMs": 376,
+        "cls": 0,
+        "lcpElem": "IMG.w-full max-w-xs sm:max-w-sm h-auto"
+      },
+      "navTiming": {
+        "ttfb": 124.5,
+        "domContentLoaded": 184.3,
+        "load": 488.9,
+        "transferSize": 300
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 35,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=384&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-nosotros-375",
+    "url": "https://alas-de-amor-portal.vercel.app/nosotros?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Quiénes Somos | Alas de Amor",
+      "viewport": {
+        "vw": 375,
+        "vh": 812
+      },
+      "mainChars": 1455,
+      "overflow": {
+        "docScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "h1": "Quiénes   Somos",
+      "imgBroken": [],
+      "imgCount": 14,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 412,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 25,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=640&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-nosotros-1440",
+    "url": "https://alas-de-amor-portal.vercel.app/nosotros?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Quiénes Somos | Alas de Amor",
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "mainChars": 1455,
+      "overflow": {
+        "docScrollWidth": 1425,
+        "horizontalOverflow": false
+      },
+      "h1": "Quiénes   Somos",
+      "imgBroken": [],
+      "imgCount": 14,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 404,
+        "cls": 0,
+        "lcpElem": "IMG.w-full h-[500px] object-cover"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 57,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fteam%2Fliliana-profile.jpg&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-servicios-375",
+    "url": "https://alas-de-amor-portal.vercel.app/servicios?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Servicios | Alas de Amor",
+      "viewport": {
+        "vw": 375,
+        "vh": 812
+      },
+      "mainChars": 4201,
+      "overflow": {
+        "docScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "h1": "Nuestros Servicios",
+      "imgBroken": [],
+      "imgCount": 24,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 628,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 27,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fterapias-reiki-v2.jpg&w=384&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fterapias-access.jpg&w=384&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-servicios-1440",
+    "url": "https://alas-de-amor-portal.vercel.app/servicios?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Servicios | Alas de Amor",
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "mainChars": 4201,
+      "overflow": {
+        "docScrollWidth": 1425,
+        "horizontalOverflow": false
+      },
+      "h1": "Nuestros Servicios",
+      "imgBroken": [],
+      "imgCount": 24,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 976,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 60,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fterapias-reiki-v2.jpg&w=750&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fterapias-access.jpg&w=750&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fgen-servicios-combo.jpg&w=750&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fterapias-chakras.jpg&w=750&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fterapias-reiki-v2.jpg&w=750&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fterapias-chakras.jpg&w=750&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fterapias-access.jpg&w=750&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fservices%2Fgen-servicios-combo.jpg&w=750&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-agendar-375",
+    "url": "https://alas-de-amor-portal.vercel.app/agendar?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Agendar Cita | Alas de Amor",
+      "viewport": {
+        "vw": 375,
+        "vh": 812
+      },
+      "mainChars": 1234,
+      "overflow": {
+        "docScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "h1": "Agendar   Cita",
+      "imgBroken": [],
+      "imgCount": 3,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 508,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 24,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-agendar-1440",
+    "url": "https://alas-de-amor-portal.vercel.app/agendar?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Agendar Cita | Alas de Amor",
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "mainChars": 1234,
+      "overflow": {
+        "docScrollWidth": 1425,
+        "horizontalOverflow": false
+      },
+      "h1": "Agendar   Cita",
+      "imgBroken": [],
+      "imgCount": 3,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 484,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 54,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fgen-agendar-lateral.jpg&w=640&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fgen-agendar-lateral.jpg&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-contacto-375",
+    "url": "https://alas-de-amor-portal.vercel.app/contacto?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Contacto | Alas de Amor",
+      "viewport": {
+        "vw": 375,
+        "vh": 812
+      },
+      "mainChars": 510,
+      "overflow": {
+        "docScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "h1": "Contacto",
+      "imgBroken": [],
+      "imgCount": 3,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 408,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 25,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fgen-agendar-lateral.jpg&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-contacto-1440",
+    "url": "https://alas-de-amor-portal.vercel.app/contacto?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Contacto | Alas de Amor",
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "mainChars": 510,
+      "overflow": {
+        "docScrollWidth": 1425,
+        "horizontalOverflow": false
+      },
+      "h1": "Contacto",
+      "imgBroken": [],
+      "imgCount": 3,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 448,
+        "cls": 0,
+        "lcpElem": "IMG.w-full h-[400px] lg:h-[550px] object-cover"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 57,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Fgen-agendar-lateral.jpg&w=640&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-testimonios-375",
+    "url": "https://alas-de-amor-portal.vercel.app/testimonios?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Testimonios | Alas de Amor",
+      "viewport": {
+        "vw": 375,
+        "vh": 812
+      },
+      "mainChars": 1276,
+      "overflow": {
+        "docScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "h1": "Lo   que   Dicen   Nuestros   Clientes",
+      "imgBroken": [],
+      "imgCount": 8,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 524,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 28,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-02.webp&w=64&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-01.webp&w=64&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-04.webp&w=64&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-03.webp&w=64&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-testimonios-1440",
+    "url": "https://alas-de-amor-portal.vercel.app/testimonios?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Testimonios | Alas de Amor",
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "mainChars": 1276,
+      "overflow": {
+        "docScrollWidth": 1425,
+        "horizontalOverflow": false
+      },
+      "h1": "Lo   que   Dicen   Nuestros   Clientes",
+      "imgBroken": [],
+      "imgCount": 8,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 412,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 59,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-03.webp&w=64&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-04.webp&w=64&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-01.webp&w=64&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-02.webp&w=64&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-05.webp&w=64&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Ftestimonials%2Fgen-testimonio-avatar-06.webp&w=64&q=75",
+        "status": 200,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-blog-375",
+    "url": "https://alas-de-amor-portal.vercel.app/blog?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Blog | Alas de Amor",
+      "viewport": {
+        "vw": 375,
+        "vh": 812
+      },
+      "mainChars": 1050,
+      "overflow": {
+        "docScrollWidth": 360,
+        "horizontalOverflow": false
+      },
+      "h1": "Mensajes   de   Luz",
+      "imgBroken": [],
+      "imgCount": 2,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 676,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 24,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  {
+    "label": "smoke-blog-1440",
+    "url": "https://alas-de-amor-portal.vercel.app/blog?qa=chakras",
+    "loaded": true,
+    "data": {
+      "lang": "es",
+      "title": "Blog | Alas de Amor",
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "mainChars": 1050,
+      "overflow": {
+        "docScrollWidth": 1425,
+        "horizontalOverflow": false
+      },
+      "h1": "Mensajes   de   Luz",
+      "imgBroken": [],
+      "imgCount": 2,
+      "reduced": false,
+      "perf": {
+        "lcpMs": 528,
+        "cls": 0,
+        "lcpElem": "IMG.h-10 w-auto"
+      }
+    },
+    "consoleMsgs": [],
+    "networkFailures": [],
+    "networkCount": 56,
+    "resources": [
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+        "status": 200,
+        "mime": "font/woff2"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=128&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=256&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      },
+      {
+        "url": "https://alas-de-amor-portal.vercel.app/_next/image?url=%2Fimgs%2Flogo.png&w=96&q=75",
+        "status": 304,
+        "mime": "image/webp"
+      }
+    ]
+  }
+]
