@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
 import { useLanguage } from "@/context/LanguageContext";
 import { EditorialMarker, FloatingOrbs } from "@/components/HeroDecoration";
+import SocialLinks from "@/components/SocialLinks";
+import SocialEmbeds from "@/components/SocialEmbeds";
 export default function BlogPage() {
   const t = useTranslations();
   const { lang } = useLanguage();
@@ -115,6 +117,31 @@ export default function BlogPage() {
           </div>{" "}
         </div>{" "}
         <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
+      </section>{" "}
+      <section className="relative py-24 bg-warm-white">
+        {" "}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {" "}
+          <div className="rounded-3xl border border-reiki-100 bg-white/70 p-8 sm:p-12 shadow-sm">
+            {" "}
+            <div className="flex flex-col gap-6 mb-10 lg:flex-row lg:items-center lg:justify-between">
+              {" "}
+              <div>
+                {" "}
+                <h2 className="role-h2">
+                  {" "}
+                  {t("social.blogTitle")}{" "}
+                </h2>{" "}
+                <p className="role-subtitle mt-3">
+                  {" "}
+                  {t("social.blogSubtitle")}{" "}
+                </p>{" "}
+              </div>{" "}
+              <SocialLinks variant="chip" />{" "}
+            </div>{" "}
+            <SocialEmbeds />{" "}
+          </div>{" "}
+        </div>{" "}
       </section>{" "}
       <section className="relative py-24 gradient-spiritual">
         {" "}

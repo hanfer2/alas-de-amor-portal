@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
 import { HeroChakras } from "@/components/HeroChakras";
+import SocialLinks from "@/components/SocialLinks";
 
 const serviceIcons = [
   {
@@ -137,6 +138,11 @@ export default function Home() {
                 >
                   {t("home.hero.ctaSecondary")}
                 </Link>
+              </div>
+
+              <div className="mt-2">
+                <span className="visually-hidden">{t("social.heroCaption")}</span>
+                <SocialLinks variant="quiet" className="mt-3" />
               </div>
             </div>
 
@@ -409,6 +415,20 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="relative py-24 bg-warm-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 reveal">
+            <h2 className="role-h2">
+              {t("social.followTitle")}
+            </h2>
+            <p className="role-subtitle mt-4 max-w-2xl mx-auto">
+              {t("social.followSubtitle")}
+            </p>
+          </div>
+          <SocialLinks variant="card" />
         </div>
       </section>
     </div>
