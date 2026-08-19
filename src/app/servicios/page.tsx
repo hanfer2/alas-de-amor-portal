@@ -33,13 +33,13 @@ export default function ServiciosPage() {
   };
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-28 pb-4 gradient-hero overflow-hidden">
+      <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         <FloatingOrbs />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 hero-icon-halo opacity-90">
-          <EnergyWaves className="w-[600px] h-[200px]" />
+        <div className="hero-decoration-rail hero-service-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(15,102,117,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
+          <EnergyWaves className="h-full w-full" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto reveal">
+          <div className="hero-copy text-center max-w-3xl mx-auto reveal">
             <h1 className="role-h1 mt-0">
               {t("servicios.hero.title")
                 .split(" ")
@@ -185,6 +185,7 @@ function ServiceBlock({
   liquidPilot: boolean;
 }) {
   const t = useTranslations();
+  const [imageFailed, setImageFailed] = useState(false);
   return (
     <div
       className={`grid lg:grid-cols-2 gap-12 items-center mb-24 last:mb-0 ${index % 2 === 1 ? "lg:direction-rtl" : ""}`}
@@ -223,56 +224,38 @@ function ServiceBlock({
       </div>
       <div className={`relative reveal ${index % 2 === 1 ? "lg:order-1" : ""}`}>
         <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.3)]">
-          {item.image ? (
+          {item.image && !imageFailed ? (
             <Image
               src={item.image}
               alt={t(item.titleKey)}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              onError={() => setImageFailed(true)}
             />
           ) : (
-            <>
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10`}
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div
-                  className={`w-32 h-32 rounded-full bg-gradient-to-br ${color} opacity-20 blur-2xl animate-float`}
-                />
-              </div>
-              <svg
-                viewBox="0 0 48 48"
-                fill="none"
-                className="w-24 h-24 mx-auto text-reiki-400 opacity-30"
-              >
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="20"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                />
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="12"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                />
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="6"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                />
-                <circle cx="24" cy="24" r="2" fill="currentColor" />
-              </svg>
-            </>
+            <ServiceFallback itemId={item.id} />
           )}
         </div>
       </div>
+    </div>
+  );
+}
+
+function ServiceFallback({ itemId }: { itemId: string }) {
+  return (
+    <div className="service-fallback text-reiki-900" aria-hidden="true">
+      <svg viewBox="0 0 120 120" className="h-28 w-28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        {itemId.includes("orac") || itemId === "basica" || itemId === "angelical" ? (
+          <><rect x="24" y="29" width="72" height="62" rx="6" fill="#fff8e8" stroke="#b7791f" /><path d="M24 48h72M42 20v18M78 20v18M38 64h12M58 64h24M38 78h25" stroke="#0f6675" /></>
+        ) : itemId.includes("medit") || itemId.includes("reiki") ? (
+          <><path d="M60 92C36 80 26 63 31 48c4-12 17-18 29-7 12-11 25-5 29 7 5 15-5 32-29 44Z" fill="#fff1f3" stroke="#b4233f" /><path d="M60 28v20M51 38l9-9 9 9" stroke="#0f6675" /></>
+        ) : itemId.includes("charla") || itemId.includes("coaching") ? (
+          <><path d="M24 29h72v50H55l-18 15V79H24Z" fill="#f5f3ff" stroke="#4c1d95" /><path d="M40 49h40M40 63h27" stroke="#b4233f" /></>
+        ) : (
+          <><path d="M60 15 71 45l31 2-24 19 8 30-26-17-26 17 8-30-24-19 31-2Z" fill="#fff8e8" stroke="#b7791f" /><path d="M60 45v21M50 55h20" stroke="#0f6675" /></>
+        )}
+      </svg>
     </div>
   );
 }

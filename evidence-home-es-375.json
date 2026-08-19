@@ -1,0 +1,118 @@
+{
+  "viewport": {
+    "w": 375,
+    "h": 900
+  },
+  "scrollWidth": 360,
+  "header": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 107
+    },
+    "style": {
+      "color": "rgb(30, 27, 75)",
+      "opacity": "1",
+      "filter": "none",
+      "transform": "none",
+      "zIndex": "50",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "pointerEvents": "auto"
+    }
+  },
+  "h1": {
+    "rect": {
+      "x": 16,
+      "y": 492.53125,
+      "width": 328,
+      "height": 40.796875
+    },
+    "style": {
+      "color": "rgb(76, 29, 149)",
+      "opacity": "1",
+      "filter": "none",
+      "transform": "none",
+      "zIndex": "auto",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "fontFamily": "Georgia, \"Times New Roman\", ui-serif, serif",
+      "fontSize": "40px",
+      "fontWeight": "700",
+      "lineHeight": "40.8px",
+      "pointerEvents": "auto"
+    }
+  },
+  "description": null,
+  "decoration": {
+    "rect": {
+      "x": 0,
+      "y": 994.09375,
+      "width": 360,
+      "height": 180
+    },
+    "style": {
+      "color": "rgb(30, 27, 75)",
+      "opacity": "1",
+      "filter": "none",
+      "transform": "none",
+      "zIndex": "0",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "pointerEvents": "none"
+    }
+  },
+  "image": {
+    "rect": {
+      "x": 16,
+      "y": 232,
+      "width": 327.984375,
+      "height": 228.53125
+    },
+    "style": {
+      "color": "rgba(0, 0, 0, 0)",
+      "opacity": "1",
+      "filter": "none",
+      "transform": "none",
+      "zIndex": "auto",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "pointerEvents": "auto"
+    }
+  },
+  "cta": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "style": {
+      "color": "rgb(124, 58, 237)",
+      "opacity": "1",
+      "filter": "none",
+      "transform": "none",
+      "zIndex": "auto",
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "fontFamily": "Inter, \"Inter Fallback\"",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "lineHeight": "20px",
+      "pointerEvents": "auto"
+    }
+  }
+}

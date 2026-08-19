@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
-import { LotusMandala, FloatingOrbs } from "@/components/HeroDecoration";
+import { CredentialIcon, LotusMandala, FloatingOrbs } from "@/components/HeroDecoration";
 export default function NosotrosPage() {
   const t = useTranslations();
   const credentialKeys = [
@@ -30,16 +30,16 @@ export default function NosotrosPage() {
   return (
     <div className="relative overflow-hidden">
       {" "}
-      <section className="relative pt-28 pb-4 gradient-hero overflow-hidden">
+       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-        <div className="absolute top-10 right-10 hero-icon-halo opacity-90">
+         <div className="hero-decoration-rail hero-lotus-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
           {" "}
           <LotusMandala className="w-48 h-48" />{" "}
         </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center max-w-3xl mx-auto reveal">
+           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
             {" "}
             <h1 className="role-h1 mt-0">
               {" "}
@@ -173,21 +173,22 @@ export default function NosotrosPage() {
           </div>{" "}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {" "}
-            {credentialKeys.map((cred) => (
+             {credentialKeys.map((cred, i) => (
               <div
                 key={cred.titleKey}
                 className="gradient-card rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-white/50 hover:-translate-y-1 reveal"
               >
                 {" "}
-                <div className="role-icon-halo w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                 <div className="role-icon-halo w-14 h-14 rounded-2xl flex items-center justify-center mb-6" data-accent={i % 3 === 1 ? "coral" : i % 3 === 2 ? "gold" : "aqua"}>
                   {" "}
-                  <svg
-                    className="role-icon w-7 h-7"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
+                   <CredentialIcon variant={i} className="role-icon h-7 w-7" />
+                   <svg
+                     className="hidden"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     strokeWidth="2"
+                   >
                     {" "}
                     <path
                       strokeLinecap="round"

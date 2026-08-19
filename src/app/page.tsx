@@ -11,7 +11,7 @@ const serviceIcons = [
     titleKey: "credentials.reiki.title",
     descKey: "credentials.reiki.desc",
     icon: (
-       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8" aria-hidden="true">
         <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="2" />
         <path d="M24 4v8M24 36v8M4 24h8M36 24h8M10 10l5.5 5.5M32.5 32.5l5.5 5.5M38 10l-5.5 5.5M15.5 32.5L10 38" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
@@ -21,7 +21,7 @@ const serviceIcons = [
     titleKey: "credentials.access.title",
     descKey: "credentials.access.desc",
     icon: (
-       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8" aria-hidden="true">
         <circle cx="24" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
         <circle cx="12" cy="28" r="4" stroke="currentColor" strokeWidth="2" />
         <circle cx="36" cy="28" r="4" stroke="currentColor" strokeWidth="2" />
@@ -33,7 +33,7 @@ const serviceIcons = [
     titleKey: "credentials.angelical.title",
     descKey: "credentials.angelical.desc",
     icon: (
-       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8" aria-hidden="true">
         <path d="M12 28c0-8 5-16 12-16s12 8 12 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         <path d="M16 28c0-6 4-12 8-12s8 6 8 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         <circle cx="24" cy="32" r="4" stroke="currentColor" strokeWidth="2" />
@@ -45,7 +45,7 @@ const serviceIcons = [
     titleKey: "credentials.facelight.title",
     descKey: "credentials.facelight.desc",
     icon: (
-       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8" aria-hidden="true">
         <ellipse cx="24" cy="24" rx="12" ry="14" stroke="currentColor" strokeWidth="2" />
         <circle cx="19" cy="20" r="1.5" fill="currentColor" />
         <circle cx="29" cy="20" r="1.5" fill="currentColor" />
@@ -58,7 +58,7 @@ const serviceIcons = [
     titleKey: "credentials.medium.title",
     descKey: "credentials.medium.desc",
     icon: (
-       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8" aria-hidden="true">
         <circle cx="24" cy="24" r="16" stroke="currentColor" strokeWidth="2" />
         <path d="M24 12c-4 0-8 4-8 10s4 10 8 10 8-4 8-10-4-10-8-10z" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="24" cy="8" r="2" fill="currentColor" />
@@ -69,7 +69,7 @@ const serviceIcons = [
     titleKey: "credentials.espiritual.title",
     descKey: "credentials.espiritual.desc",
     icon: (
-       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8">
+       <svg viewBox="0 0 48 48" fill="none" className="role-icon w-8 h-8" aria-hidden="true">
         <path d="M24 4l3 8h8l-6.5 5 2.5 8L24 20l-7 5 2.5-8L13 12h8l3-8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         <circle cx="24" cy="32" r="8" stroke="currentColor" strokeWidth="2" />
         <path d="M24 28v8M20 32h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -103,13 +103,10 @@ export default function Home() {
         delay={4}
       />
 
-      <section className="relative min-h-[70vh] flex items-center gradient-hero pt-28 overflow-hidden">
-         <div className="absolute top-0 right-0 hero-icon-halo opacity-70">
-           <AngelFeathers className="w-[500px] h-[250px]" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="space-y-8 animate-fade-in-up">
+       <section className="hero-shell relative min-h-[70vh] flex items-center gradient-hero overflow-hidden">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+             <div className="hero-copy space-y-8 animate-fade-in-up">
               <Logo className="w-full max-w-xs sm:max-w-sm h-auto" size={200} />
 
               <h1 className="role-h1 max-w-xl">
@@ -143,8 +140,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative flex justify-center">
-              <div className="relative w-80 h-80 sm:w-96 sm:h-96 animate-float-slow">
+             <div className="relative z-10 flex flex-col items-center">
+               <div className="hero-decoration-rail home-wings-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
+                 <AngelFeathers className="h-full w-full" />
+               </div>
+               <div className="home-photo relative w-80 h-80 sm:w-96 sm:h-96 animate-float-slow">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-reiki-200 via-reiki-300 to-reiki-100 opacity-60 blur-2xl" />
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-glow">
                   <Image

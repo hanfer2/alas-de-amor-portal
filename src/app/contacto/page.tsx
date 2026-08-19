@@ -9,16 +9,16 @@ export default function ContactoPage() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-warm-white to-violet-50/30">
       {" "}
-      <section className="relative pt-28 pb-4 gradient-hero overflow-hidden">
+       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-        <div className="absolute top-8 right-8 hero-icon-halo opacity-90">
+         <div className="hero-decoration-rail hero-dove-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
           {" "}
           <DovePeace className="w-64 h-28" />{" "}
         </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center max-w-3xl mx-auto reveal">
+           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
             {" "}
             <h1 className="role-h1 mt-0">
               {" "}
@@ -101,10 +101,11 @@ function ContactInfo() {
           {" "}
           <div className="flex items-start gap-4">
             {" "}
-                <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" data-accent="aqua">
               {" "}
               <svg
-                  className="role-icon w-6 h-6"
+                   className="role-icon w-6 h-6"
+                   aria-hidden="true"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -128,10 +129,11 @@ function ContactInfo() {
           </div>{" "}
           <div className="flex items-start gap-4">
             {" "}
-                <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" data-accent="aqua">
               {" "}
               <svg
-                  className="role-icon w-6 h-6"
+                   className="role-icon w-6 h-6"
+                   aria-hidden="true"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -155,10 +157,11 @@ function ContactInfo() {
           </div>{" "}
           <div className="flex items-start gap-4">
             {" "}
-                <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" data-accent="coral">
               {" "}
               <svg
-                  className="role-icon w-6 h-6"
+                   className="role-icon w-6 h-6"
+                   aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -184,10 +187,11 @@ function ContactInfo() {
           </div>{" "}
           <div className="flex items-start gap-4">
             {" "}
-                <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" data-accent="gold">
               {" "}
               <svg
-                  className="role-icon w-6 h-6"
+                   className="role-icon w-6 h-6"
+                   aria-hidden="true"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -220,7 +224,7 @@ function ContactInfo() {
         {" "}
         <div className="flex items-start gap-4">
           {" "}
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-reiki-100 to-reiki-200 flex items-center justify-center flex-shrink-0">
+          <div className="role-icon-halo w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" data-accent="gold">
             {" "}
             <svg
               className="w-6 h-6 text-reiki-600"

@@ -84,4 +84,4 @@ Cuatro agentes personalizados en `.agents/agents/` para el flujo Spec → Plan �
 
 **Flujo**: ver `.agents/agents/WORKFLOW.md` para el ciclo completo.
 
-**Skills**: 24 skills de `addyosmani/agent-skills` instaladas en `.agents/skills/` (spec-driven-development, planning-and-task-breakdown, browser-testing-with-devtools, etc.)
+**Skills**: 24 skills de `addyosmani/agent-skills` más la skill de proyecto `visual-harmony-audit` instaladas en `.agents/skills/` (spec-driven-development, planning-and-task-breakdown, browser-testing-with-devtools, etc.)

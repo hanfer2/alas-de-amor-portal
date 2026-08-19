@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auditoría de armonía visual · Alas de Amor</title>
+  <style>
+    :root {
+      --warm: #fefcfb;
+      --paper: #fff;
+      --lavender: #f5f3ff;
+      --violet: #4c1d95;
+      --plum: #1e1b4b;
+      --aqua: #0f6675;
+      --coral: #b4233f;
+      --gold: #b7791f;
+      --gold-dark: #8a5a00;
+      --line: rgba(76, 29, 149, .15);
+      --shadow: 0 18px 48px rgba(76, 29, 149, .12);
+      --display: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--warm); color: var(--plum); font-family: var(--sans); }
+    body { margin: 0; background: var(--warm); }
+    svg { display: block; max-width: 100%; }
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(76,29,149,.12); background: rgba(254,252,251,.94); backdrop-filter: blur(14px); }
+    .topbar-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--violet); }
+    .brand-mark { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--violet), var(--coral)); box-shadow: 0 0 0 5px rgba(183,121,31,.12); }
+    .prototype { border: 1px solid rgba(180,35,63,.35); border-radius: 999px; padding: 8px 12px; color: var(--coral); background: #fff1f3; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .intro { padding: 68px 0 36px; text-align: center; background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 32%, #fce7f3 62%, #f5f3ff 100%); }
+    .eyebrow { color: var(--gold-dark); font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3 { font-family: var(--display); color: var(--violet); }
+    h1 { max-width: 780px; margin: 12px auto 0; font-size: clamp(2.2rem, 6vw, 4.6rem); line-height: .98; letter-spacing: -.04em; }
+    .intro p { max-width: 650px; margin: 18px auto 0; color: #504b73; line-height: 1.6; }
+    .section { padding: 64px 0; }
+    .section.alt { background: linear-gradient(135deg, #ddd6fe 0%, #ede9fe 25%, #f5f3ff 55%, #fce7f3 100%); }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 24px; }
+    .section h2 { margin: 6px 0 0; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1; }
+    .section-head p { max-width: 480px; margin: 0; color: #504b73; line-height: 1.55; }
+    .compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .compare { position: relative; overflow: hidden; min-height: 260px; padding: 24px; border: 1px solid var(--line); border-radius: 26px; background: rgba(255,255,255,.8); box-shadow: var(--shadow); }
+    .compare.proposed { border-color: rgba(15,102,117,.3); background: linear-gradient(145deg, rgba(255,255,255,.92), rgba(245,243,255,.9)); }
+    .compare-label { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 22px; padding: 7px 10px; border-radius: 999px; color: var(--gold-dark); background: #fff8e8; font-size: .7rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+    .proposed .compare-label { color: var(--aqua); background: #e7f7f8; }
+    .stage { position: relative; min-height: 155px; display: grid; place-items: center; border-radius: 18px; overflow: hidden; background: linear-gradient(135deg, #f5f3ff, #fce7f3); }
+    .stage::before, .stage::after { content: ""; position: absolute; border-radius: 50%; background: rgba(167,139,250,.2); filter: blur(18px); }
+    .stage::before { width: 150px; height: 150px; left: -42px; top: 40px; }
+    .stage::after { width: 110px; height: 110px; right: -20px; top: -25px; background: rgba(253,164,175,.18); }
+    .placeholder-note { position: absolute; right: 10px; bottom: 10px; z-index: 2; max-width: 180px; padding: 5px 8px; border: 1px dashed rgba(180,35,63,.4); border-radius: 7px; background: rgba(255,255,255,.9); color: var(--coral); font-size: .61rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+    .book-old { width: 138px; opacity: .34; color: var(--violet); }
+    .editorial-mark { width: 152px; color: var(--violet); filter: drop-shadow(0 10px 12px rgba(76,29,149,.16)); }
+    .micro-copy { margin: 16px 0 0; color: #504b73; font-size: .9rem; line-height: 1.45; }
+    .micro-copy strong { color: var(--plum); }
+    .home-stage { min-height: 250px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 14px; padding: 24px; border-radius: 20px; background: linear-gradient(135deg, #f5f3ff, #fce7f3); }
+    .mock-nav { position: absolute; inset: 0 0 auto; height: 42px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; border-bottom: 1px solid rgba(76,29,149,.15); background: rgba(254,252,251,.82); color: var(--violet); font: 700 .72rem var(--display); }
+    .home-current .home-stage { padding-top: 66px; }
+    .overlap-wings { position: absolute; top: 0; right: -26px; width: 230px; height: 108px; opacity: .38; color: var(--coral); }
+    .profile { position: relative; z-index: 1; width: 116px; height: 116px; margin: auto; border: 8px solid rgba(221,214,254,.9); border-radius: 50%; background: radial-gradient(circle at 50% 36%, #f2c46d 0 14%, var(--violet) 15% 32%, #b8a7e8 33% 100%); box-shadow: 0 0 0 8px rgba(255,255,255,.65), 0 14px 28px rgba(76,29,149,.18); }
+    .copy-block { position: relative; z-index: 2; padding: 12px; border-radius: 15px; background: rgba(254,252,251,.76); }
+    .copy-block span { display: block; width: 78%; height: 9px; margin: 8px 0; border-radius: 99px; background: var(--violet); }
+    .copy-block span:nth-child(2) { width: 58%; background: var(--gold); }
+    .copy-block span:nth-child(3) { width: 92%; height: 6px; background: #504b73; opacity: .5; }
+    .safe-tag { display: inline-block; margin-top: 12px; padding: 5px 8px; border-radius: 6px; color: var(--aqua); background: #e7f7f8; font-size: .62rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .steps-stage { min-height: 210px; padding: 30px 16px; display: grid; align-items: center; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; position: relative; z-index: 1; }
+    .steps::before { content: ""; position: absolute; top: 35px; left: 15%; right: 15%; height: 2px; background: linear-gradient(90deg, var(--aqua), var(--coral), var(--gold)); opacity: .8; }
+    .step { position: relative; z-index: 1; text-align: center; }
+    .step-number { width: 70px; height: 70px; margin: 0 auto 12px; display: grid; place-items: center; border: 3px solid var(--violet); border-radius: 50%; outline: 1px solid rgba(183,121,31,.8); outline-offset: -8px; color: var(--plum); background: rgba(254,252,251,.96); font: 700 1.8rem var(--display); box-shadow: 0 0 0 7px rgba(255,255,255,.44), 0 8px 18px rgba(76,29,149,.14); }
+    .step:nth-child(2) .step-number { border-color: var(--coral); }
+    .step:nth-child(3) .step-number { border-color: var(--gold-dark); }
+    .step-title { margin: 0; color: var(--violet); font: 700 .95rem var(--display); }
+    .step-current .step-number { border: 0; outline: 0; color: #fff; background: linear-gradient(135deg, #c4b5fd, #a78bfa); filter: blur(.6px); opacity: .68; font-family: var(--sans); }
+    .step-current .steps::before { display: none; }
+    .type-stage { position: relative; min-height: 220px; padding: 28px; overflow: hidden; border-radius: 20px; background: linear-gradient(135deg, #ddd6fe, #fce7f3 62%, #ede9fe); }
+    .type-stage .orb { position: absolute; width: 170px; height: 170px; right: -35px; top: -30px; border-radius: 50%; background: rgba(167,139,250,.42); filter: blur(24px); }
+    .type-current h3, .type-proposed h3 { position: relative; margin: 0; font-size: 1.7rem; }
+    .type-current p, .type-proposed p { position: relative; margin: 12px 0 0; color: #504b73; line-height: 1.5; }
+    .safe-copy { position: relative; z-index: 1; width: min(100%, 480px); padding: 16px 18px; border: 1px solid rgba(76,29,149,.14); border-radius: 18px; background: rgba(254,252,251,.9); box-shadow: 0 10px 24px rgba(76,29,149,.08); }
+    .safe-copy h3 { margin: 0; }
+    .safe-copy p { margin-bottom: 0; color: var(--plum); }
+    .icon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .icon-card { padding: 20px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.84); box-shadow: 0 12px 30px rgba(76,29,149,.08); }
+    .icon-card h3 { margin: 16px 0 7px; font-size: 1.2rem; }
+    .icon-card p { margin: 0; color: #504b73; font-size: .84rem; line-height: 1.45; }
+    .icon-well { width: 74px; height: 74px; display: grid; place-items: center; border: 1px solid rgba(15,102,117,.2); border-radius: 22px; background: linear-gradient(135deg, #e7f7f8, #f5f3ff 65%, #fff1f3); box-shadow: 0 10px 20px rgba(15,102,117,.12); }
+    .icon-well svg { width: 43px; height: 43px; }
+    .icon-card.current { opacity: .56; filter: saturate(.25); }
+    .icon-card.current .icon-well { background: #f5f3ff; box-shadow: none; }
+    .icon-card.current h3 { color: #504b73; }
+    .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; color: #504b73; font-size: .78rem; }
+    .legend span { display: inline-flex; align-items: center; gap: 7px; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--aqua); }
+    .dot.current { background: #a78bfa; opacity: .6; }
+    .matrix { width: 100%; border-collapse: collapse; margin-top: 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.78); font-size: .82rem; }
+    .matrix th, .matrix td { padding: 13px 14px; border-bottom: 1px solid rgba(76,29,149,.1); text-align: left; vertical-align: top; }
+    .matrix th { color: var(--violet); background: rgba(245,243,255,.86); font-family: var(--display); }
+    .matrix tr:last-child td { border-bottom: 0; }
+    footer { padding: 36px 0 56px; color: #504b73; text-align: center; font-size: .8rem; }
+    @media (max-width: 900px) {
+      .icon-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      .shell { width: min(100% - 24px, 520px); }
+      .topbar-inner { min-height: 60px; }
+      .brand { font-size: .9rem; }
+      .prototype { max-width: 144px; padding: 7px 9px; font-size: .6rem; text-align: center; }
+      .intro { padding: 48px 0 24px; }
+      .section { padding: 42px 0; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .compare { min-height: 250px; padding: 17px; }
+      .home-stage { grid-template-columns: 1fr 1fr; padding: 15px; }
+      .home-current .home-stage { padding-top: 58px; }
+      .overlap-wings { width: 184px; right: -42px; }
+      .profile { width: 92px; height: 92px; border-width: 6px; }
+      .steps { gap: 5px; }
+      .steps::before { left: 17%; right: 17%; }
+      .step-number { width: 58px; height: 58px; font-size: 1.45rem; }
+      .step-title { font-size: .78rem; }
+      .icon-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .icon-card { padding: 14px; }
+      .icon-card h3 { font-size: 1rem; }
+      .icon-card p { font-size: .76rem; }
+      .matrix { display: block; overflow-x: auto; white-space: nowrap; }
+      .matrix th, .matrix td { min-width: 150px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span> Alas de Amor · auditoría visual</div>
+      <div class="prototype">Prototipo no productivo</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="shell">
+        <div class="eyebrow">Visual harmony audit · 375 / 768 / 1440</div>
+        <h1>Más intención. Menos ruido.</h1>
+        <p>Comparativas de composición para devolver presencia a los símbolos sin cambiar los fondos, el menú, el copy ni los flujos de Alas de Amor.</p>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">01 · Blog</div><h2>De libro genérico a señal editorial</h2></div><p>El recurso debe conectar con categoría, fecha, título y excerpt. El marcador vive en una zona segura, no en la banda del menú.</p></div>
+        <div class="compare-grid">
+          <article class="compare">
+            <div class="compare-label">Actual · OpenBook</div>
+            <div class="stage">
+              <svg class="book-old" viewBox="0 0 200 150" fill="none" aria-hidden="true"><path d="M40 30c20-10 40-10 60-8v86c-30-2-50 2-60 7V30Zm120 5c-20-10-40-11-60-5v86c30 2 50 7 60 9V35Z" fill="currentColor" stroke="currentColor" stroke-width="2"/><path d="M100 22v86M55 45h38M55 58h34" stroke="currentColor" stroke-width="2" opacity=".45"/></svg>
+              <span class="placeholder-note">SVG placeholder · actual audit</span>
+            </div>
+            <p class="micro-copy"><strong>Observable:</strong> libro amplio, monocromo y separado del contenido; entra en la franja superior.</p>
+          </article>
+          <article class="compare proposed">
+            <div class="compare-label">Propuesta · editorial conectado</div>
+            <div class="stage">
+              <svg class="editorial-mark" viewBox="0 0 180 160" fill="none" aria-hidden="true"><path d="M32 47c22-12 43-13 58-6v82c-22-8-42-7-58 2V47Zm116 0c-22-12-43-13-58-6v82c22-8 42-7 58 2V47Z" fill="#ede9fe" stroke="#4c1d95" stroke-width="3"/><path d="M90 41v82M47 65h30M47 78h25M103 65h30M103 78h25" stroke="#0f6675" stroke-width="3" stroke-linecap="round"/><path d="M128 36v32l10-7 10 7V36" fill="#f2c46d" stroke="#8a5a00" stroke-width="2"/><path d="m39 28 3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z" fill="#b4233f"/></svg>
+              <span class="placeholder-note">SVG placeholder · no asset final</span>
+            </div>
+            <p class="micro-copy"><strong>Propuesta:</strong> páginas + bookmark + líneas de lectura + chispa coral. Misma marca, significado editorial inmediato.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="home">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">02 · Inicio</div><h2>La marca respira debajo del menú</h2></div><p>La foto y el copy siguen siendo protagonistas. Las alas pasan a un rail seguro y acompañan el retrato en vez de invadir el Header.</p></div>
+        <div class="compare-grid">
+          <article class="compare home-current">
+            <div class="compare-label">Actual · overlap / crop</div>
+            <div class="home-stage">
+              <div class="mock-nav">logo <span>menu · flags</span></div>
+              <svg class="overlap-wings" viewBox="0 0 400 200" fill="none" aria-hidden="true"><path d="M180 10C140 12 100 45 90 90c-9-18-31-30-47-13-12 13-5 35 14 38 17 3 27-12 28-27 22-39 45-48 75-59v86c-11 28-29 46-57 56 36 3 67-30 76-76V10Z" fill="currentColor"/><path d="M220 10c40 2 80 35 90 80 9-18 31-30 47-13 12 13 5 35-14 38-17 3-27-12-28-27-22-39-45-48-75-59v86c11 28 29 46 57 56-36 3-67-30-76-76V10Z" fill="currentColor"/></svg>
+              <div class="profile"></div><div class="copy-block"><span></span><span></span><span></span></div>
+            </div>
+            <p class="micro-copy"><strong>Observable:</strong> el adorno ocupa `y=0`, cruza la banda del menú y pierde partes de la silueta al reducirse.</p>
+          </article>
+          <article class="compare proposed">
+            <div class="compare-label">Propuesta · safe rail</div>
+            <div class="home-stage">
+              <div class="mock-nav">logo <span>menu · flags</span></div>
+              <div class="copy-block"><span></span><span></span><span></span><b class="safe-tag">copy en plano seguro</b></div>
+              <div style="position:relative;z-index:1;text-align:center"><svg class="editorial-mark" viewBox="0 0 180 160" fill="none" aria-hidden="true" style="width:135px;margin:0 auto"><path d="M21 81c24-41 48-61 69-61s45 20 69 61c-28-14-51-14-69 0-18-14-41-14-69 0Z" fill="#ede9fe" stroke="#0f6675" stroke-width="3"/><path d="M90 20v94" stroke="#b7791f" stroke-width="3" stroke-linecap="round"/><path d="M43 101c20-7 36-6 47 4 11-10 27-11 47-4" stroke="#b4233f" stroke-width="3" stroke-linecap="round"/></svg><div class="safe-tag">rail bajo Header</div></div>
+            </div>
+            <p class="micro-copy"><strong>Propuesta:</strong> decoración completa, acotada y alineada con la foto; z-index local inferior al contenido.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="agendar">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">03 · Agendar</div><h2>Números que guían el flujo</h2></div><p>Los pasos no cambian. Solo ganan un marcador legible, un orden visual claro y un conector opcional en desktop.</p></div>
+        <div class="compare-grid">
+          <article class="compare step-current">
+            <div class="compare-label">Actual · círculos borrosos</div>
+            <div class="stage steps-stage"><div class="steps"><div class="step"><div class="step-number">1</div><div class="step-title">elige</div></div><div class="step"><div class="step-number">2</div><div class="step-title">coordina</div></div><div class="step"><div class="step-number">3</div><div class="step-title">comienza</div></div></div><span class="placeholder-note">SVG/CSS placeholder · no final</span></div>
+            <p class="micro-copy"><strong>Observable:</strong> mismo gradiente y baja separación; el número pierde prioridad frente al halo.</p>
+          </article>
+          <article class="compare proposed">
+            <div class="compare-label">Propuesta · 1 / 2 / 3 nítidos</div>
+            <div class="stage steps-stage"><div class="steps"><div class="step"><div class="step-number">1</div><div class="step-title">elige</div></div><div class="step"><div class="step-number">2</div><div class="step-title">coordina</div></div><div class="step"><div class="step-number">3</div><div class="step-title">comienza</div></div></div><span class="placeholder-note">CSS marker · no asset</span></div>
+            <p class="micro-copy"><strong>Propuesta:</strong> fondo crema, borde 3px, anillo interior y Georgia. Conector solo donde no atraviesa copy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="type">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">04 · Título + descripción</div><h2>El degradado se conserva; el copy gana refugio</h2></div><p>La placa es local y condicional: solo se usa cuando el peor píxel real del degradado u orbe no alcanza contraste.</p></div>
+        <div class="compare-grid">
+          <article class="compare type-current"><div class="compare-label">Actual · copy sobre blur</div><div class="type-stage"><div class="orb"></div><h3>Tu camino</h3><p>Descripción pegada a una zona difuminada, con poca separación y sin superficie estable.</p></div><p class="micro-copy"><strong>Problema:</strong> el fondo compite con el peso y el color del texto.</p></article>
+          <article class="compare proposed type-proposed"><div class="compare-label">Propuesta · placa local</div><div class="type-stage"><div class="orb"></div><div class="safe-copy"><h3>Tu camino</h3><p>Descripción separada 12px, con color de cuerpo y superficie cálida local. El degradado sigue visible alrededor.</p></div><span class="placeholder-note">CSS surface · no asset</span></div><p class="micro-copy"><strong>Criterio:</strong> H1 dominante, descripción secundaria, aire y contraste medible.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="icons">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">05 · Iconos de sección</div><h2>Presencia con color de marca</h2></div><p>Cada símbolo refuerza su contenido. Son placeholders SVG, no assets finales, y no reemplazan ningún texto.</p></div>
+        <div class="icon-grid">
+          <article class="icon-card current"><div class="compare-label">Nosotros · actual</div><div class="icon-well"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="16" stroke="#8b5cf6" stroke-width="2"/><circle cx="24" cy="24" r="8" stroke="#8b5cf6" stroke-width="2"/></svg></div><h3>Sello repetido</h3><p>Monocromo y sin diferencia entre credenciales.</p></article>
+          <article class="icon-card"><div class="compare-label">Nosotros · propuesta</div><div class="icon-well"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 7c3 8 10 13 17 17-7 4-14 9-17 17-3-8-10-13-17-17 7-4 14-9 17-17Z" fill="#ede9fe" stroke="#b4233f" stroke-width="2.5"/><circle cx="24" cy="24" r="5" fill="#f2c46d" stroke="#8a5a00" stroke-width="2"/></svg></div><h3>Loto con núcleo</h3><p>Flor, centro y contorno dan lectura de crecimiento.</p></article>
+          <article class="icon-card"><div class="compare-label">Servicios · propuesta</div><div class="icon-well"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M5 28c7-10 13-10 19 0s12 10 19 0M5 19c7-10 13-10 19 0s12 10 19 0" stroke="#0f6675" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="35" r="4" fill="#f2c46d" stroke="#8a5a00" stroke-width="2"/><path d="M24 7v7" stroke="#b4233f" stroke-width="2.5" stroke-linecap="round"/></svg></div><h3>Onda + semilla</h3><p>Movimiento energético sin caer en una diana genérica.</p></article>
+          <article class="icon-card"><div class="compare-label">Contacto · propuesta</div><div class="icon-well"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 30c7-8 14-12 21-13 7-1 10 2 11 5-7 3-14 4-22 2M18 23c4-8 11-12 20-12-4 5-10 9-18 12" fill="#ede9fe" stroke="#b4233f" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 34c8-3 16-3 24 0" stroke="#0f6675" stroke-width="2.5" stroke-linecap="round"/></svg></div><h3>Puente de paz</h3><p>Paloma contenida, coral y aqua, lejos del Header.</p></article>
+        </div>
+        <div class="legend"><span><i class="dot current"></i> Estado actual simplificado</span><span><i class="dot"></i> Tratamiento propuesto</span><span>Todos los gráficos: `aria-hidden` + texto independiente</span></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="matrix">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">QA visual</div><h2>Composición que debe sobrevivir al viewport</h2></div><p>La revisión final debe cubrir estado cargado, reduced motion, ES/EN, focus y fallbacks; no basta con que el asset tenga `naturalWidth`.</p></div>
+        <table class="matrix">
+          <thead><tr><th>Viewport</th><th>Composición</th><th>Gate</th></tr></thead>
+          <tbody>
+            <tr><td>375px</td><td>Safe inset, copy en placa cuando corresponda, una columna</td><td>Sin crop, overlap ni scroll horizontal; H1 máximo tres líneas</td></tr>
+            <tr><td>768px</td><td>Transición: iconos contenidos, pasos equilibrados</td><td>Sin cambio de significado ni pérdida de contraste</td></tr>
+            <tr><td>1440px</td><td>Decoración acompaña, no compite; grids respiran</td><td>Header, CTA, imagen y texto mantienen jerarquía</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>✅ APROBADA AUTOMÁTICAMENTE — implementación pendiente · Prototipo no productivo</footer>
+</body>
+</html>

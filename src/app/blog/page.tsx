@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
 import { useLanguage } from "@/context/LanguageContext";
-import { OpenBook, FloatingOrbs } from "@/components/HeroDecoration";
+import { EditorialMarker, FloatingOrbs } from "@/components/HeroDecoration";
 export default function BlogPage() {
   const t = useTranslations();
   const { lang } = useLanguage();
@@ -23,16 +23,15 @@ export default function BlogPage() {
   return (
     <div className="relative overflow-hidden">
       {" "}
-      <section className="relative pt-28 pb-4 gradient-hero overflow-hidden">
+       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-         <div className="absolute bottom-5 right-10 hero-icon-halo opacity-90">
-          {" "}
-          <OpenBook className="w-52 h-40" />{" "}
+          <div className="hero-decoration-rail blog-editorial-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
+           <EditorialMarker className="h-full w-full" />
         </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center max-w-3xl mx-auto reveal">
+           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
             {" "}
              <h1 className="role-h1 mt-0">
               {" "}
