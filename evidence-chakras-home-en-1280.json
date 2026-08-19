@@ -1,0 +1,147 @@
+{
+  "recordedAt": "2026-08-19T18:04:05.658Z",
+  "summary": {
+    "page": "http://localhost:3000/",
+    "lang": "en",
+    "h1Text": "Wings of Love",
+    "viewport": {
+      "w": 1280,
+      "h": 800
+    },
+    "hasHorizontalOverflow": false,
+    "docScrollWidth": 1265,
+    "docClientWidth": 1265,
+    "viewBox": "0 0 300 440",
+    "ariaHidden": "true"
+  },
+  "boxes": {
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1265,
+      "height": 107,
+      "right": 1265,
+      "bottom": 107
+    },
+    "logo": {
+      "x": 80.5,
+      "y": 306.8,
+      "width": 465,
+      "height": 324,
+      "right": 545.5,
+      "bottom": 630.8
+    },
+    "h1": {
+      "x": 80.5,
+      "y": 662.8,
+      "width": 512,
+      "height": 65.3,
+      "right": 592.5,
+      "bottom": 728
+    },
+    "ctaPrimary": {
+      "x": 80.5,
+      "y": 931.8,
+      "width": 209.3,
+      "height": 53.2,
+      "right": 289.8,
+      "bottom": 985
+    },
+    "ctaSecondary": {
+      "x": 305.8,
+      "y": 931.8,
+      "width": 177.6,
+      "height": 53.2,
+      "right": 483.5,
+      "bottom": 985
+    },
+    "photo": {
+      "x": 728.9,
+      "y": 209,
+      "width": 399.3,
+      "height": 399.3,
+      "right": 1128.1,
+      "bottom": 608.3
+    },
+    "heroShell": {
+      "x": 0,
+      "y": 0,
+      "width": 1265,
+      "height": 1131.8,
+      "right": 1265,
+      "bottom": 1131.8
+    },
+    "rail": {
+      "x": 788.5,
+      "y": 640,
+      "width": 280,
+      "height": 411.8,
+      "right": 1068.5,
+      "bottom": 1051.8
+    },
+    "svg": {
+      "x": 796.5,
+      "y": 648,
+      "width": 264,
+      "height": 395.8,
+      "right": 1060.5,
+      "bottom": 1043.8
+    },
+    "svgContentPx": {
+      "x": 852.4,
+      "y": 655.2,
+      "width": 152.2,
+      "height": 387.7
+    }
+  },
+  "computed": {
+    "rail": {
+      "aspectRatio": "0.68 / 1",
+      "maxWidth": "280px",
+      "width": "280px",
+      "height": "411.75px",
+      "borderRadius": "32px",
+      "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+      "padding": "8px",
+      "pointerEvents": "none",
+      "zIndex": "0",
+      "position": "relative",
+      "order": "2",
+      "marginTop": "16px"
+    },
+    "svg": {
+      "width": "264px",
+      "height": "395.75px",
+      "maxWidth": "100%",
+      "maxHeight": "100%",
+      "display": "block",
+      "overflow": "hidden"
+    }
+  },
+  "checks": {
+    "noCropFullIllustrationVisible": true,
+    "clipCheck": {
+      "contentTopInsideSvg": true,
+      "contentBottomInsideSvg": true,
+      "contentLeftInsideSvg": true,
+      "contentRightInsideSvg": true,
+      "svgInsideRail": true
+    },
+    "svgInsideRail": true,
+    "overlapArea2dPx": {
+      "rail_vs_header": 0,
+      "rail_vs_logo": 0,
+      "rail_vs_h1": 0,
+      "rail_vs_ctaPrimary": 0,
+      "rail_vs_ctaSecondary": 0,
+      "rail_vs_photo": 0
+    },
+    "noVisualOverlap2D": true,
+    "railInsideHeroShell": true,
+    "railInsideViewportWidth": true,
+    "insideHeaderSafeZone": true
+  },
+  "screenshots": [
+    "evidence-chakras-home-en-1280.png"
+  ]
+}

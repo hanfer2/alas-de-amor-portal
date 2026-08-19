@@ -1,0 +1,137 @@
+{
+  "recordedAt": "2026-08-19T18:02:14.327Z",
+  "summary": {
+    "page": "http://localhost:3000/",
+    "lang": "en",
+    "viewport": {
+      "w": 375,
+      "h": 812
+    },
+    "hasHorizontalOverflow": false,
+    "docScrollWidth": 360,
+    "docClientWidth": 360,
+    "viewBox": "0 0 300 440",
+    "ariaHidden": "true"
+  },
+  "boxes": {
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 93,
+      "right": 360,
+      "bottom": 93
+    },
+    "logo": {
+      "x": 16,
+      "y": -762,
+      "width": 328,
+      "height": 228.5,
+      "right": 344,
+      "bottom": -533.5
+    },
+    "h1": {
+      "x": 16,
+      "y": -501.5,
+      "width": 328,
+      "height": 40.8,
+      "right": 344,
+      "bottom": -460.7
+    },
+    "ctaPrimary": {
+      "x": 16,
+      "y": -238.3,
+      "width": 209.3,
+      "height": 51.2,
+      "right": 225.3,
+      "bottom": -187.1
+    },
+    "ctaSecondary": {
+      "x": 16,
+      "y": -171.1,
+      "width": 177.6,
+      "height": 53.2,
+      "right": 193.6,
+      "bottom": -117.9
+    },
+    "photo": {
+      "x": 12.6,
+      "y": -104.3,
+      "width": 334.7,
+      "height": 334.7,
+      "right": 347.4,
+      "bottom": 230.4
+    },
+    "rail": {
+      "x": 85,
+      "y": 266.1,
+      "width": 190,
+      "height": 279.4,
+      "right": 275,
+      "bottom": 545.5
+    },
+    "svg": {
+      "x": 93,
+      "y": 274.1,
+      "width": 174,
+      "height": 263.4,
+      "right": 267,
+      "bottom": 537.5
+    },
+    "svgContentPx": {
+      "x": 129.8,
+      "y": 278.9,
+      "width": 100.3,
+      "height": 258
+    }
+  },
+  "computed": {
+    "rail": {
+      "aspectRatio": "0.68 / 1",
+      "maxWidth": "190px",
+      "width": "190px",
+      "height": "279.406px",
+      "borderRadius": "32px",
+      "backgroundColor": "oklab(0.992309 0.00170523 0.00191104 / 0.7)",
+      "padding": "8px",
+      "pointerEvents": "none",
+      "zIndex": "0",
+      "position": "relative",
+      "order": "2",
+      "marginTop": "16px"
+    },
+    "svg": {
+      "width": "174px",
+      "height": "263.406px",
+      "maxWidth": "100%",
+      "maxHeight": "100%",
+      "display": "block",
+      "overflow": "hidden"
+    }
+  },
+  "checks": {
+    "noCropFullIllustrationVisible": true,
+    "clipCheck": {
+      "contentTopInsideSvg": true,
+      "contentBottomInsideSvg": true,
+      "contentLeftInsideSvg": true,
+      "contentRightInsideSvg": true,
+      "svgInsideRail": true
+    },
+    "svgInsideRail": true,
+    "noOverlapWithHeaderOrCopyOrCtAs": true,
+    "overlaps": {
+      "rail_vs_header": 0,
+      "rail_vs_logo": 0,
+      "rail_vs_h1": 0,
+      "rail_vs_cta_primary": 0,
+      "rail_vs_cta_secondary": 0,
+      "rail_vs_photo": 0
+    },
+    "insideHeaderSafeZone": true
+  },
+  "screenshots": [
+    "evidence-chakras-home-en-375.png",
+    "evidence-chakras-home-en-375-rail.png"
+  ]
+}

@@ -393,8 +393,8 @@ body {
   inset: auto;
   order: 2;
   width: calc(100% + 2rem);
-  max-width: 26.25rem;
-  aspect-ratio: 2;
+  max-width: 17.5rem;
+  aspect-ratio: 0.68;
   margin-top: 1rem;
 }
 
@@ -437,7 +437,7 @@ body {
 }
 
 @media (max-width: 639px) {
-  .home-wings-rail { max-width: 17.5rem; }
+  .home-wings-rail { max-width: 11.875rem; }
 }
 
 .hero-decoration-rail svg {
