@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import config from "@/lib/config";
 import { testimonials, type Testimonial } from "@/lib/testimonials";
-import { SparkleStars, FloatingOrbs } from "@/components/HeroDecoration";
+import { HeartBubble, FloatingOrbs } from "@/components/HeroDecoration";
 import SocialLinks from "@/components/SocialLinks";
 
 export default function TestimoniosPage() {
@@ -18,8 +18,8 @@ export default function TestimoniosPage() {
     <div className="relative overflow-hidden">
       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         <FloatingOrbs />
-        <div className="hero-decoration-rail hero-testimonial-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(219,9,12,0.16),0_12px_30px_rgba(63,178,188,0.18)]">
-          <SparkleStars className="w-80 h-32" />
+        <div className="hero-decoration-rail hero-testimonial-rail flex items-center justify-center">
+          <HeartBubble className="h-full w-full" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
@@ -33,11 +33,10 @@ export default function TestimoniosPage() {
             <p className="role-subtitle mt-4 leading-relaxed">{heroSubtitle}</p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
 
       {hasTestimonials && (
-        <section className="relative py-24 bg-warm-white">
+        <section className="relative py-24 band-aqua">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonials.map((item) => (
@@ -45,7 +44,6 @@ export default function TestimoniosPage() {
               ))}
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
         </section>
       )}
 
@@ -60,12 +58,11 @@ export default function TestimoniosPage() {
             <span>{t("testimonios.cta.button")}</span>
           </Link>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
 
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-rose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-          <h3 className="font-display text-2xl font-bold text-reiki-800 mb-4">
+          <h3 className="font-display text-3xl font-bold text-reiki-800 mb-4">
             {t("testimonios.share.title")}
           </h3>
           <p className="text-reiki-700 mb-6">{t("testimonios.share.subtitle")}</p>
@@ -107,7 +104,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
           {item.avatar ? (
             <Image src={item.avatar} alt="" width={64} height={64} className="h-full w-full object-cover" />
           ) : (
-            <span className="font-display text-lg font-bold text-reiki-900" aria-hidden="true">
+            <span className="font-display text-2xl font-bold text-reiki-900" aria-hidden="true">
               {monogram}
             </span>
           )}

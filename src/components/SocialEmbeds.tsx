@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import config from "@/lib/config";
-import SocialLinks, { getSocialMeta, type SocialNetwork } from "@/components/SocialLinks";
+import { Glyph, getSocialMeta, type SocialNetwork } from "@/components/SocialLinks";
 
 declare global {
   interface Window {
@@ -52,8 +52,10 @@ function ProfileCard({ network }: { network: SocialNetwork }) {
       aria-label={`${meta.name} ${meta.handle}`}
       className="flex w-full max-w-[280px] flex-col items-center gap-3 rounded-3xl border border-reiki-100 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
     >
-      <SocialLinks variant="chip" networks={[network]} className="justify-center" />
-      <span className="font-display text-lg font-bold text-reiki-800">{meta.name}</span>
+      <span className={`flex h-12 w-12 items-center justify-center rounded-full text-white shadow-md ${meta.chipClass}`} aria-hidden="true">
+        <Glyph network={network} variant="chip" />
+      </span>
+      <span className="font-display text-2xl font-bold text-reiki-800">{meta.name}</span>
       <span className="break-all text-sm text-reiki-600">{meta.handle}</span>
     </a>
   );

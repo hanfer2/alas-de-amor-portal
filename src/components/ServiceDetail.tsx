@@ -80,7 +80,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 band-aqua">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-start">
           <div>
             {benefits.length > 0 && (
@@ -129,6 +129,18 @@ export default function ServiceDetail({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
+
+      {(item.id === "oraculos" || item.id === "oraculo") && (
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl border border-reiki-100 bg-white p-8">
+            <h2 className="role-h2 mb-3">{t("servicioDetalle.oraculoCtaTitle")}</h2>
+            <p className="role-description mb-5 leading-relaxed">{t("servicioDetalle.oraculoCtaDesc")}</p>
+            <Link href="/oraculo" className="role-cta underline underline-offset-4 hover:text-reiki-700">
+              {t("servicioDetalle.oraculoCtaButton")}
+            </Link>
+          </div>
+        </section>
+      )}
 
       <section className="py-16 bg-reiki-50/60">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,131 +1,222 @@
-export function AngelFeathers({ className = "" }: { className?: string }) {
+// Ilustraciones decorativas de las cabeceras. Comparten el lenguaje del logo: plumas con degradado
+// aguamarina y rosa, trazo blanco, corazón rojo y un brillo suave detrás. Cada SVG usa ids propios.
+
+const FEATHER =
+  "M0,0 C22,-12 66,-20 104,-25 C116,-26 125,-22 123,-16 C119,-8 96,-1 66,3 C36,6 14,4 0,0Z";
+const HEART = "M0,14 C-26,-4 -20,-24 -8,-24 C-3,-24 0,-20 0,-16 C0,-20 3,-24 8,-24 C20,-24 26,-4 0,14Z";
+const SPARKLE = "M0,-10 C1,-3 3,-1 10,0 C3,1 1,3 0,10 C-1,3 -3,1 -10,0 C-3,-1 -1,-3 0,-10Z";
+
+type Tone = "aqua" | "rose";
+
+function Defs({ id }: { id: string }) {
   return (
-    <svg viewBox="0 0 400 200" fill="none" className={className} aria-hidden="true">
-      <path d="M190 18C158 20 126 42 101 73C88 57 69 53 54 67C39 81 42 104 60 113C72 119 83 114 91 105C88 91 91 76 101 65C111 54 125 49 140 51C142 77 134 103 120 124C107 143 92 156 72 166C99 168 125 155 143 133C158 114 169 89 173 59C179 47 184 37 190 30V18Z" fill="url(#angelGrad)" stroke="#2A99A4" strokeWidth="3" />
-      <path d="M210 18C242 20 274 42 299 73C312 57 331 53 346 67C361 81 358 104 340 113C328 119 317 114 309 105C312 91 309 76 299 65C289 54 275 49 260 51C258 77 266 103 280 124C293 143 308 156 328 166C301 168 275 155 257 133C242 114 231 89 227 59C221 47 216 37 210 30V18Z" fill="url(#angelGrad)" stroke="#DB090C" strokeWidth="3" />
-      <path d="M116 82C133 90 145 99 154 111M284 82C267 90 255 99 246 111" stroke="#f2c46d" strokeWidth="5" strokeLinecap="round" opacity="0.95" />
-      <defs>
-        <linearGradient id="angelGrad" x1="0" y1="0" x2="400" y2="200">
-          <stop stopColor="#C8080C" />
-          <stop offset="0.55" stopColor="#2A99A4" />
-          <stop offset="1" stopColor="#f2c46d" />
-        </linearGradient>
-      </defs>
-    </svg>
+    <defs>
+      <linearGradient id={`${id}-aqua`} x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stopColor="#3FB2BC" />
+        <stop offset="1" stopColor="#7FD3D9" />
+      </linearGradient>
+      <linearGradient id={`${id}-rose`} x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stopColor="#E8595B" />
+        <stop offset="1" stopColor="#F9D6D6" />
+      </linearGradient>
+      <radialGradient id={`${id}-heart`} cx=".38" cy=".3" r=".9">
+        <stop offset="0" stopColor="#FF6A6E" />
+        <stop offset=".55" stopColor="#DB090C" />
+        <stop offset="1" stopColor="#C8080C" />
+      </radialGradient>
+      <radialGradient id={`${id}-glow`} cx=".5" cy=".5" r=".5">
+        <stop offset="0" stopColor="#F9D6D6" stopOpacity=".9" />
+        <stop offset="1" stopColor="#F9D6D6" stopOpacity="0" />
+      </radialGradient>
+      <radialGradient id={`${id}-mist`} cx=".5" cy=".5" r=".5">
+        <stop offset="0" stopColor="#C8F0F2" stopOpacity=".9" />
+        <stop offset="1" stopColor="#C8F0F2" stopOpacity="0" />
+      </radialGradient>
+    </defs>
   );
 }
 
-export function EnergyWaves({ className = "" }: { className?: string }) {
+function Feather({ id, tone, x, y, rot, s }: { id: string; tone: Tone; x: number; y: number; rot: number; s: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
+      <path d={FEATHER} fill={`url(#${id}-${tone})`} stroke="#fff" strokeOpacity=".9" strokeWidth="1.3" />
+      <path d="M6,0 C34,-6 74,-12 112,-19" fill="none" stroke="#fff" strokeOpacity=".6" strokeWidth="1.2" strokeLinecap="round" />
+    </g>
+  );
+}
+
+// Ala completa que se abre hacia la derecha; con flip=true se refleja hacia la izquierda.
+function Wing({ id, x, y, s, flip = false, spread = 1 }: { id: string; x: number; y: number; s: number; flip?: boolean; spread?: number }) {
+  const upper = [
+    { rot: -18 * spread, k: 1 },
+    { rot: -30 * spread, k: 0.86 },
+    { rot: -42 * spread, k: 0.7 },
+  ];
+  const lower = [
+    { rot: 4 * spread, k: 1 },
+    { rot: 14 * spread, k: 0.86 },
+    { rot: 24 * spread, k: 0.7 },
+  ];
+  return (
+    <g transform={`translate(${x} ${y}) scale(${flip ? -s : s} ${s})`}>
+      {lower.map((f) => (
+        <Feather key={`l${f.rot}`} id={id} tone="aqua" x={0} y={6} rot={f.rot} s={f.k} />
+      ))}
+      {upper.map((f) => (
+        <Feather key={`u${f.rot}`} id={id} tone="rose" x={0} y={0} rot={f.rot} s={f.k} />
+      ))}
+    </g>
+  );
+}
+
+function Heart({ id, x, y, s = 1 }: { id: string; x: number; y: number; s?: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${s})`}>
+      <path d={HEART} fill={`url(#${id}-heart)`} stroke="#fff" strokeOpacity=".85" strokeWidth="1.4" />
+      <ellipse cx="-9" cy="-13" rx="4.5" ry="2.6" fill="#fff" opacity=".55" transform="rotate(-30 -9 -13)" />
+    </g>
+  );
+}
+
+function Sparkle({ x, y, s = 1, color = "#7FD3D9" }: { x: number; y: number; s?: number; color?: string }) {
+  return <path d={SPARKLE} fill={color} transform={`translate(${x} ${y}) scale(${s})`} />;
+}
+
+// Servicios: alas abiertas con un corazón al centro.
+export function WingedWaves({ className = "" }: { className?: string }) {
+  const id = "ww";
   return (
     <svg viewBox="0 0 600 200" fill="none" className={className} aria-hidden="true">
-      <path d="M34 54C118 23 184 35 244 86C271 109 291 117 318 111" stroke="#2A99A4" strokeWidth="3" strokeLinecap="round" />
-      <path d="M28 101C121 69 185 79 243 116C270 133 294 139 326 128" stroke="#DB090C" strokeWidth="3" strokeLinecap="round" />
-      <path d="M52 153C137 119 201 122 251 144C275 155 299 158 335 144" stroke="#b7791f" strokeWidth="3" strokeLinecap="round" />
-      <path d="M318 111l20-13m-20 13 4 20M326 128l20-11m-20 11 5 18M335 144l20-7m-20 7 8 15" stroke="#C8080C" strokeWidth="2" strokeLinecap="round" />
-      <path d="M335 107l8 10-4 14-10-8 4-14Z" fill="#f2c46d" stroke="#8a5a00" strokeWidth="2" />
-      <defs>
-        <radialGradient id="waveGrad">
-          <stop offset="0%" stopColor="#2A99A4" />
-          <stop offset="55%" stopColor="#C8080C" />
-          <stop offset="100%" stopColor="#DB090C" />
-        </radialGradient>
-      </defs>
+      <Defs id={id} />
+      <ellipse cx="300" cy="104" rx="210" ry="82" fill={`url(#${id}-mist)`} />
+      <circle cx="300" cy="104" r="62" fill={`url(#${id}-glow)`} />
+      <Wing id={id} x={314} y={96} s={1.5} />
+      <Wing id={id} x={286} y={96} s={1.5} flip />
+      <Heart id={id} x={300} y={100} s={1.25} />
+      <Sparkle x={58} y={46} s={1.1} />
+      <Sparkle x={548} y={152} s={1.2} color="#F2A0A0" />
+      <Sparkle x={96} y={160} s={0.7} color="#F2A0A0" />
+      <Sparkle x={520} y={40} s={0.8} />
     </svg>
   );
 }
 
-export function LotusMandala({ className = "" }: { className?: string }) {
+// Nosotros: loto formado por plumas.
+export function FeatherLotus({ className = "" }: { className?: string }) {
+  const id = "fl";
+  const back = [
+    { rot: -90, k: 0.8 },
+    { rot: -62, k: 0.7 },
+    { rot: -118, k: 0.7 },
+    { rot: -34, k: 0.56 },
+    { rot: -146, k: 0.56 },
+  ];
+  const front = [
+    { rot: -76, k: 0.62 },
+    { rot: -104, k: 0.62 },
+    { rot: -50, k: 0.5 },
+    { rot: -130, k: 0.5 },
+  ];
   return (
     <svg viewBox="0 0 200 200" fill="none" className={className} aria-hidden="true">
-      <path d="M100 168C73 150 48 125 42 95C38 73 51 57 70 61C83 64 93 76 100 91C107 76 117 64 130 61C149 57 162 73 158 95C152 125 127 150 100 168Z" fill="#fff1f3" stroke="#DB090C" strokeWidth="3" />
-      <path d="M100 150C79 129 66 108 68 85C70 68 84 60 96 70C101 74 103 82 100 91C97 82 99 74 104 70C116 60 130 68 132 85C134 108 121 129 100 150Z" fill="#E4F7F8" stroke="#2A99A4" strokeWidth="3" />
-      <path d="M100 47C109 61 112 75 100 94C88 75 91 61 100 47Z" fill="#fff1f3" stroke="#DB090C" strokeWidth="3" />
-      <circle cx="100" cy="101" r="16" fill="#f2c46d" stroke="#8a5a00" strokeWidth="3" />
-      <defs>
-        <linearGradient id="lotusGrad" x1="0" y1="0" x2="200" y2="200">
-          <stop stopColor="#DB090C" />
-          <stop offset="0.55" stopColor="#C8080C" />
-          <stop offset="1" stopColor="#f2c46d" />
-        </linearGradient>
-      </defs>
+      <Defs id={id} />
+      <circle cx="100" cy="100" r="92" fill={`url(#${id}-glow)`} />
+      {back.map((f) => (
+        <Feather key={f.rot} id={id} tone="aqua" x={100} y={150} rot={f.rot} s={f.k} />
+      ))}
+      {front.map((f) => (
+        <Feather key={f.rot} id={id} tone="rose" x={100} y={152} rot={f.rot} s={f.k} />
+      ))}
+      <Heart id={id} x={100} y={140} s={0.62} />
+      <path d="M52 166C74 176 126 176 148 166" stroke="#7FD3D9" strokeWidth="2.4" strokeLinecap="round" opacity=".75" />
+      <path d="M68 178C86 185 114 185 132 178" stroke="#C8F0F2" strokeWidth="2.4" strokeLinecap="round" />
+      <Sparkle x={30} y={52} s={0.9} />
+      <Sparkle x={172} y={70} s={0.7} color="#F2A0A0" />
+      <Sparkle x={160} y={26} s={0.5} />
     </svg>
   );
 }
 
-export function SparkleStars({ className = "" }: { className?: string }) {
+// Agendar: calendario con alas pequeñas y un día marcado con corazón.
+export function WingedCalendar({ className = "" }: { className?: string }) {
+  const id = "wc";
+  const days = [0, 1, 2].flatMap((r) => [0, 1, 2].map((c) => ({ r, c })));
+  return (
+    <svg viewBox="0 0 200 160" fill="none" className={className} aria-hidden="true">
+      <Defs id={id} />
+      <circle cx="100" cy="82" r="76" fill={`url(#${id}-glow)`} />
+      <Wing id={id} x={64} y={88} s={0.46} flip />
+      <Wing id={id} x={136} y={88} s={0.46} />
+      <rect x="62" y="28" width="76" height="98" rx="12" fill="#FFFBF8" stroke="#F2A0A0" strokeWidth="2" />
+      <path d="M62 56V40a12 12 0 0 1 12-12h52a12 12 0 0 1 12 12v16Z" fill={`url(#${id}-rose)`} />
+      <rect x="82" y="20" width="5" height="16" rx="2.5" fill="#7FD3D9" stroke="#fff" strokeWidth="1.2" />
+      <rect x="113" y="20" width="5" height="16" rx="2.5" fill="#7FD3D9" stroke="#fff" strokeWidth="1.2" />
+      {days.map(({ r, c }) =>
+        r === 1 && c === 1 ? (
+          <Heart key="h" id={id} x={100} y={89} s={0.34} />
+        ) : (
+          <rect key={`${r}${c}`} x={76 + c * 20} y={68 + r * 20} width="12" height="12" rx="4" fill="#C8F0F2" />
+        ),
+      )}
+      <Sparkle x={34} y={34} s={0.8} />
+      <Sparkle x={168} y={124} s={0.7} color="#F2A0A0" />
+    </svg>
+  );
+}
+
+// Contacto: sobre con sello de corazón y alas.
+export function WingedEnvelope({ className = "" }: { className?: string }) {
+  const id = "we";
+  return (
+    <svg viewBox="0 0 300 140" fill="none" className={className} aria-hidden="true">
+      <Defs id={id} />
+      <ellipse cx="150" cy="72" rx="130" ry="56" fill={`url(#${id}-mist)`} />
+      <Wing id={id} x={96} y={82} s={0.62} flip />
+      <Wing id={id} x={204} y={82} s={0.62} />
+      <rect x="96" y="40" width="108" height="72" rx="12" fill="#FFFBF8" stroke="#F2A0A0" strokeWidth="2" />
+      <path d="M100 48l50 38 50-38" stroke={`url(#${id}-aqua)`} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <Heart id={id} x={150} y={88} s={0.5} />
+      <Sparkle x={40} y={34} s={0.9} />
+      <Sparkle x={262} y={104} s={0.8} color="#F2A0A0" />
+      <Sparkle x={248} y={30} s={0.5} />
+    </svg>
+  );
+}
+
+// Testimonios: globo de conversación con corazón y alas.
+export function HeartBubble({ className = "" }: { className?: string }) {
+  const id = "hb";
   return (
     <svg viewBox="0 0 400 150" fill="none" className={className} aria-hidden="true">
-      <path d="M34 37C62 22 79 34 99 56C119 34 136 22 164 37C139 48 123 62 112 83C105 96 93 96 86 83C75 62 59 48 34 37Z" fill="#fff1f3" stroke="#DB090C" strokeWidth="3" />
-      <path d="M366 37C338 22 321 34 301 56C281 34 264 22 236 37C261 48 277 62 288 83C295 96 307 96 314 83C325 62 341 48 366 37Z" fill="#fff1f3" stroke="#DB090C" strokeWidth="3" />
-      <path d="M199 25v36M181 43h36" stroke="#2A99A4" strokeWidth="3" strokeLinecap="round" />
-      <path d="M200 70l7 13 14 2-10 10 3 14-14-7-14 7 3-14-10-10 14-2 7-13Z" fill="#f2c46d" stroke="#8a5a00" strokeWidth="2" />
-      <defs>
-        <linearGradient id="starGrad" x1="0" y1="0" x2="400" y2="150">
-          <stop stopColor="#b7791f" />
-          <stop offset="0.55" stopColor="#f2c46d" />
-          <stop offset="1" stopColor="#DB090C" />
-        </linearGradient>
-      </defs>
+      <Defs id={id} />
+      <ellipse cx="200" cy="74" rx="170" ry="62" fill={`url(#${id}-mist)`} />
+      <Wing id={id} x={150} y={70} s={0.8} flip spread={0.9} />
+      <Wing id={id} x={250} y={70} s={0.8} spread={0.9} />
+      <path d="M160 26h80a22 22 0 0 1 22 22v34a22 22 0 0 1-22 22h-34l-22 20v-20h-24a22 22 0 0 1-22-22V48a22 22 0 0 1 22-22Z" fill="#FFFBF8" stroke="#F2A0A0" strokeWidth="2" />
+      <Heart id={id} x={200} y={62} s={0.95} />
+      <Sparkle x={52} y={40} s={1} />
+      <Sparkle x={352} y={110} s={1} color="#F2A0A0" />
+      <Sparkle x={338} y={34} s={0.6} />
     </svg>
   );
 }
 
-export function DovePeace({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 300 120" fill="none" className={className} aria-hidden="true">
-      <path d="M36 78C57 59 81 48 109 49C128 50 147 56 164 61C183 67 202 64 221 54C216 78 195 91 167 89C144 87 123 77 103 73C84 69 65 77 48 91C38 97 31 89 36 78Z" fill="#fff1f3" stroke="#DB090C" strokeWidth="3" />
-      <path d="M102 51C119 28 151 17 184 20C164 32 148 46 128 63C117 71 104 66 102 51Z" fill="#E4F7F8" stroke="#2A99A4" strokeWidth="3" />
-      <circle cx="184" cy="34" r="7" fill="#f2c46d" stroke="#8a5a00" strokeWidth="2" />
-      <path d="M225 56l14 4-13 6M45 80l-13-4 7 12" stroke="#b7791f" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <defs>
-        <linearGradient id="doveGrad" x1="0" y1="0" x2="300" y2="120">
-          <stop stopColor="#DB090C" />
-          <stop offset="0.55" stopColor="#C8080C" />
-          <stop offset="1" stopColor="#2A99A4" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
-
-export function CalendarWings({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 150 150" fill="none" className={className} aria-hidden="true">
-      <path d="M35 45C17 30 10 28 5 31C18 45 24 59 37 67M115 45C133 30 140 28 145 31C132 45 126 59 113 67" stroke="#2A99A4" strokeWidth="3" strokeLinecap="round" />
-      <rect x="35" y="25" width="80" height="95" rx="6" fill="#fff8e8" stroke="#DB090C" strokeWidth="3" />
-      <line x1="35" y1="55" x2="115" y2="55" stroke="#b7791f" strokeWidth="3" />
-      <line x1="55" y1="15" x2="55" y2="35" stroke="#DB090C" strokeWidth="3" strokeLinecap="round" />
-      <line x1="95" y1="15" x2="95" y2="35" stroke="#DB090C" strokeWidth="3" strokeLinecap="round" />
-      <path d="M53 78h44M53 96h26" stroke="#2A99A4" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="49" cy="78" r="3" fill="#f2c46d" stroke="#8a5a00" strokeWidth="1.5" />
-      <circle cx="49" cy="96" r="3" fill="#f2c46d" stroke="#8a5a00" strokeWidth="1.5" />
-      <defs>
-        <linearGradient id="calGrad" x1="0" y1="0" x2="150" y2="150">
-          <stop stopColor="#8a5a00" />
-          <stop offset="0.5" stopColor="#b7791f" />
-          <stop offset="1" stopColor="#2A99A4" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
-
-export function EditorialMarker({ className = "" }: { className?: string }) {
+// Blog: libro abierto con marcador de corazón y una pluma.
+export function FeatherBook({ className = "" }: { className?: string }) {
+  const id = "fb";
   return (
     <svg viewBox="0 0 200 150" fill="none" className={className} aria-hidden="true">
-      <path d="M42 25C58 18 78 18 100 28V125C78 115 58 115 42 122V25Z" fill="#fff8e8" stroke="#2A99A4" strokeWidth="3" />
-      <path d="M100 28C122 18 142 18 158 25V122C142 115 122 115 100 125V28Z" fill="#E4F7F8" stroke="#DB090C" strokeWidth="3" />
-      <path d="M100 28V125" stroke="#b7791f" strokeWidth="3" />
-      <path d="M58 48h27M58 63h29M58 78h20M115 48h27M115 63h25M115 78h20" stroke="#C8080C" strokeWidth="3" strokeLinecap="round" />
-      <path d="M137 18v-12l12 8 12-8v38" fill="#DB090C" stroke="#8a1c35" strokeWidth="2" strokeLinejoin="round" />
-      <path d="M164 44l6 12 13 2-10 9 3 13-12-6-12 6 3-13-10-9 13-2 6-12Z" fill="#f2c46d" stroke="#8a5a00" strokeWidth="2" />
-      <defs>
-        <linearGradient id="bookGrad" x1="0" y1="0" x2="200" y2="150">
-          <stop stopColor="#2A99A4" />
-          <stop offset="0.5" stopColor="#C8080C" />
-          <stop offset="1" stopColor="#DB090C" />
-        </linearGradient>
-      </defs>
+      <Defs id={id} />
+      <circle cx="100" cy="82" r="72" fill={`url(#${id}-glow)`} />
+      <path d="M100 52C84 42 58 42 38 50V118C58 110 84 110 100 120Z" fill="#FFFBF8" stroke="#F2A0A0" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M100 52C116 42 142 42 162 50V118C142 110 116 110 100 120Z" fill="#FFFBF8" stroke="#7FD3D9" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M52 66c12-3 24-2 34 3M52 80c12-3 24-2 34 3M52 94c12-3 24-2 34 3" stroke="#F9D6D6" strokeWidth="3" strokeLinecap="round" />
+      <path d="M148 66c-12-3-24-2-34 3M148 80c-12-3-24-2-34 3" stroke="#C8F0F2" strokeWidth="3" strokeLinecap="round" />
+      <Heart id={id} x={100} y={44} s={0.5} />
+      <Feather id={id} tone="rose" x={128} y={104} rot={-58} s={0.62} />
+      <Feather id={id} tone="aqua" x={132} y={104} rot={-40} s={0.5} />
+      <Sparkle x={30} y={36} s={0.8} />
+      <Sparkle x={176} y={30} s={0.6} color="#F2A0A0" />
     </svg>
   );
 }
@@ -134,8 +225,8 @@ export function FloatingOrbs({ className = "" }: { className?: string }) {
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none z-0 ${className}`} aria-hidden="true">
       <div className="absolute w-72 h-72 rounded-full bg-reiki-300/20 blur-3xl top-10 -left-20 animate-float-slow" />
-      <div className="absolute w-56 h-56 rounded-full bg-reiki-200/15 blur-3xl top-40 right-10 animate-float" style={{ animationDelay: "2s" }} />
-      <div className="absolute w-40 h-40 rounded-full bg-reiki-100/15 blur-3xl bottom-20 left-1/3 animate-float-delay" style={{ animationDelay: "4s" }} />
+      <div className="absolute w-56 h-56 rounded-full bg-aqua-200/40 blur-3xl top-40 right-10 animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute w-40 h-40 rounded-full bg-aqua-300/20 blur-3xl bottom-20 left-1/3 animate-float-delay" style={{ animationDelay: "4s" }} />
     </div>
   );
 }

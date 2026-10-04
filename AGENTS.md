@@ -64,7 +64,7 @@ Next.js 16 App Router portal for "Alas de Amor" — a holistic therapy brand by 
 
 ## Design System
 - **Colors**: escala `reiki-*` (rojo claro, tokens en `src/app/globals.css`) y `aqua-*` (aguamarina), marfil de fondo, texto en gris cálido. Sin colores oscuros ni violeta (excepto el chakra corona). Detalle y contrastes en `docs/estrategia-marca/GUIA-MARCA.md`
-- **Fonts**: Inter (sans), Playfair Display (display/serif) via `next/font/google`
+- **Fonts**: Inter (texto) y Playball (cursiva del logo, todos los títulos) via `next/font/google`. Ilustraciones decorativas de cabecera en `src/components/HeroDecoration.tsx` (plumas aguamarina/rosa, mismo lenguaje del logo). Franjas de sección: `band-aqua`, `band-rose`, `band-ivory`
 - **Animations**: float, glow, shimmer, fade-in-up, gradient-shift
 - **Style**: Ethereal — soft gradients, glass morphism, floating orbs, ethereal color palette
 

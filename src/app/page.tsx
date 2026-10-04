@@ -165,7 +165,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-br from-reiki-300 to-reiki-500 flex items-center justify-center shadow-gold animate-glow">
-                  <span className="text-white font-display text-xs font-bold text-center leading-tight whitespace-pre-line">
+                  <span className="text-white font-sans text-xs font-bold text-center leading-tight whitespace-pre-line">
                     {t("home.masterReiki")}
                   </span>
                 </div>
@@ -177,7 +177,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-warm-white to-transparent" />
       </section>
 
-      <section className="relative py-8 bg-warm-white">
+      <section className="relative py-8 band-ivory">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl bg-aqua-100">
             <LazyVideo
@@ -190,7 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-aqua">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
@@ -325,7 +325,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-rose">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
             <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-reiki-200/20 border border-white/50">
             <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-aqua-200 flex items-center justify-center animate-glow">
@@ -410,7 +410,7 @@ export default function Home() {
         </section>
       )}
 
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-aqua">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
             <h2 className="role-h2">

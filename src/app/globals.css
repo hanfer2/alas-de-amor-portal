@@ -62,7 +62,7 @@
   --color-deep-plum: #4A3B3E;
 
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: Georgia, "Times New Roman", ui-serif, serif;
+  --font-display: var(--font-script), "Brush Script MT", cursive;
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-float-slow: float-slow 10s ease-in-out infinite;
@@ -130,8 +130,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Playball solo existe en peso normal: se evita el negrita sintético que la deforma. */
 .font-display {
-  font-family: Georgia, "Times New Roman", ui-serif, serif;
+  font-family: var(--font-script), "Brush Script MT", cursive;
+  font-synthesis: none;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .visually-hidden {
@@ -181,28 +185,31 @@ body {
 @layer utilities {
   .role-h1 {
     color: #C8080C;
-    font-family: Georgia, "Times New Roman", ui-serif, serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    line-height: 1.02;
+    font-family: var(--font-script), "Brush Script MT", cursive;
+    font-size: clamp(2.875rem, 5.6vw, 5rem);
+    font-synthesis: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.12;
   }
 
   .role-h2 {
     color: #C8080C;
-    font-family: Georgia, "Times New Roman", ui-serif, serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.08;
+    font-family: var(--font-script), "Brush Script MT", cursive;
+    font-size: clamp(2.25rem, 4.5vw, 3.375rem);
+    font-synthesis: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.15;
   }
 
   .role-card-title {
     color: #C8080C;
-    font-family: Georgia, "Times New Roman", ui-serif, serif;
-    font-size: clamp(1.625rem, 2.5vw, 2rem);
-    font-weight: 700;
-    line-height: 1.1;
+    font-family: var(--font-script), "Brush Script MT", cursive;
+    font-size: clamp(1.875rem, 2.8vw, 2.25rem);
+    font-synthesis: none;
+    font-weight: 400;
+    line-height: 1.15;
   }
 
   .role-subtitle,
@@ -343,6 +350,30 @@ body {
   .gradient-card {
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(228, 247, 248, 0.75) 100%);
     backdrop-filter: blur(10px);
+    border-top: 3px solid #7FD3D9;
+  }
+
+  /* Las tarjetas de una misma cuadrícula alternan aguamarina, rosa y aguamarina intenso. */
+  .gradient-card:nth-child(3n + 2) {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(249, 214, 214, 0.55) 100%);
+    border-top-color: #F2A0A0;
+  }
+
+  .gradient-card:nth-child(3n) {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(200, 240, 242, 0.85) 100%);
+    border-top-color: #3FB2BC;
+  }
+
+  .band-ivory {
+    background: #FFFBF8;
+  }
+
+  .band-aqua {
+    background: linear-gradient(180deg, #F3FBFC 0%, #E4F7F8 100%);
+  }
+
+  .band-rose {
+    background: linear-gradient(180deg, #FFF5F5 0%, #FDE8E8 100%);
   }
 
   .text-gradient {
@@ -426,15 +457,15 @@ body {
 .hero-calendar-rail {
   right: 3rem;
   bottom: 0.5rem;
-  width: 9rem;
-  height: 9rem;
+  width: 12rem;
+  height: 9.6rem;
 }
 
 .hero-dove-rail {
   right: 2.5rem;
   bottom: 0.5rem;
-  width: 12rem;
-  height: 8rem;
+  width: 15rem;
+  height: 7rem;
 }
 
 .hero-testimonial-rail {
@@ -487,9 +518,10 @@ body {
   border-radius: 9999px;
   background: #FFF5F5;
   color: #C8080C;
-  font-family: Georgia, "Times New Roman", ui-serif, serif;
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-family: var(--font-script), "Brush Script MT", cursive;
+  font-size: 2rem;
+  font-synthesis: none;
+  font-weight: 400;
   line-height: 1;
   box-shadow: 0 0 0 1px #F2A0A0, 0 8px 18px rgba(63, 178, 188, 0.2);
 }
@@ -538,10 +570,10 @@ body {
   .steps-grid::before { top: 2.25rem; }
   .blog-editorial-rail {
     position: absolute;
-    top: 10rem;
-    right: 8%;
-    width: 13rem;
-    height: 9rem;
+    top: 10.5rem;
+    right: 3%;
+    width: 11rem;
+    height: 8.25rem;
     margin: 0;
   }
 }

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import AppointmentForm from "@/components/AppointmentForm";
 import { useTranslations } from "@/hooks/useTranslations";
-import { CalendarWings, FloatingOrbs } from "@/components/HeroDecoration";
+import { WingedCalendar, FloatingOrbs } from "@/components/HeroDecoration";
 export default function AgendarPage() {
   const t = useTranslations();
   return (
@@ -11,9 +11,9 @@ export default function AgendarPage() {
        <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-         <div className="hero-decoration-rail hero-calendar-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(219,9,12,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
+         <div className="hero-decoration-rail hero-calendar-rail flex items-center justify-center">
           {" "}
-          <CalendarWings className="w-36 h-36" />{" "}
+          <WingedCalendar className="h-full w-full" />{" "}
         </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
@@ -40,9 +40,8 @@ export default function AgendarPage() {
             </p>{" "}
           </div>{" "}
         </div>{" "}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
       </section>{" "}
-      <section className="relative py-12 lg:py-20">
+      <section className="relative py-12 lg:py-20 band-aqua">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
@@ -52,7 +51,7 @@ export default function AgendarPage() {
               {" "}
               {t("agendar.steps.title")}{" "}
             </h2>{" "}
-            <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-reiki-300 to-reiki-500" />{" "}
+            <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-aqua-400 via-reiki-300 to-reiki-500" />{" "}
           </div>{" "}
            <div className="steps-grid grid sm:grid-cols-3 gap-8 mb-16 lg:mb-20 reveal">
             {" "}
@@ -88,7 +87,7 @@ export default function AgendarPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-reiki-900/60 via-transparent to-transparent" />{" "}
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 {" "}
-                <h3 className="font-display text-2xl lg:text-3xl font-bold text-white mb-3">
+                <h3 className="font-display text-3xl lg:text-4xl font-bold text-white mb-3">
                   {" "}
                   {t("agendar.sidebar.title")}{" "}
                 </h3>{" "}
@@ -104,7 +103,6 @@ export default function AgendarPage() {
             </div>{" "}
           </div>{" "}
         </div>{" "}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
       </section>{" "}
     </div>
   );

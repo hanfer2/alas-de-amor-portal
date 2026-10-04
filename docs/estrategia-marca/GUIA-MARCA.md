@@ -21,7 +21,7 @@ En el código, los rojos son la escala `reiki-*` y los aguamarinas la escala `aq
 
 ## Tipografía
 
-- **Playball** (SIL OFL 1.1): nombre en el logo. Solo en el logo; el texto del sitio sigue en Inter y Georgia.
+- **Playball** (SIL OFL 1.1): nombre en el logo y todos los títulos del sitio (h1, h2 y títulos de tarjeta, vía `--font-script`). Solo existe en peso normal, por eso se desactiva el negrita sintético. El texto corrido sigue en Inter.
 - **Josefin Sans** semibold (SIL OFL 1.1): etiqueta "TERAPIA HOLÍSTICA", en mayúsculas con 7 px de separación sobre 17 px.
 - En los archivos del logo el texto está convertido a curvas, así que no depende de tener las tipografías instaladas.
 
