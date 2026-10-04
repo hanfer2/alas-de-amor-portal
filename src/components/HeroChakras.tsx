@@ -8,8 +8,8 @@ export function HeroChakras({ className = "" }: { className?: string }) {
           <stop offset="1" stopColor="#fff8e8"/>
         </linearGradient>
         <linearGradient id="chakraBrandStroke" x1="0" y1="0" x2="300" y2="440" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#4c1d95"/>
-          <stop offset="0.5" stopColor="#0f6675"/>
+          <stop offset="0" stopColor="#C8080C"/>
+          <stop offset="0.5" stopColor="#2A99A4"/>
           <stop offset="1" stopColor="#b7791f"/>
         </linearGradient>
         <radialGradient id="chakraGoldCore" cx="0.5" cy="0.42" r="0.75">
@@ -85,9 +85,9 @@ export function HeroChakras({ className = "" }: { className?: string }) {
         <path id="chakraRay" d="M0 -23 L0 -30" stroke="#b7791f" strokeWidth="3" strokeLinecap="round"/>
       </defs>
 
-      <ellipse cx="150" cy="432" rx="64" ry="7" fill="#4c1d95" opacity="0.10"/>
-      <path d="M108 420 Q150 433 192 420" stroke="#b4233f" strokeWidth="3" fill="none" strokeLinecap="round"/>
-      <path d="M122 428 Q150 437 178 428" stroke="#0f6675" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.8"/>
+      <ellipse cx="150" cy="432" rx="64" ry="7" fill="#C8080C" opacity="0.10"/>
+      <path d="M108 420 Q150 433 192 420" stroke="#DB090C" strokeWidth="3" fill="none" strokeLinecap="round"/>
+      <path d="M122 428 Q150 437 178 428" stroke="#2A99A4" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.8"/>
 
       <path d="M150 120 L150 394" stroke="#b7791f" strokeWidth="2.5" strokeDasharray="1 7" strokeLinecap="round" opacity="0.85"/>
       <circle cx="150" cy="184" r="2.2" fill="#f2c46d"/>
@@ -97,14 +97,14 @@ export function HeroChakras({ className = "" }: { className?: string }) {
 
       <path d="M135 84 L165 84 L173 100 C196 110 214 128 224 150 C234 172 238 200 236 232 C233 280 220 330 200 358 L150 378 L100 358 C80 330 67 280 64 232 C62 200 66 172 76 150 C86 128 104 110 127 100 L135 84 Z" fill="url(#chakraBodyFill)" stroke="url(#chakraBrandStroke)" strokeWidth="3" strokeLinejoin="round"/>
       <path d="M127 100 C136 108 164 108 173 100" stroke="#f2c46d" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-      <path d="M78 148 l5 5 -5 5 -5 -5 Z" fill="#b4233f" opacity="0.85"/>
-      <path d="M222 148 l5 5 -5 5 -5 -5 Z" fill="#b4233f" opacity="0.85"/>
+      <path d="M78 148 l5 5 -5 5 -5 -5 Z" fill="#DB090C" opacity="0.85"/>
+      <path d="M222 148 l5 5 -5 5 -5 -5 Z" fill="#DB090C" opacity="0.85"/>
       <circle cx="150" cy="86" r="26" fill="url(#chakraBodyFill)" stroke="url(#chakraBrandStroke)" strokeWidth="3"/>
 
       <g transform="translate(150 384)">
         <circle r="36" fill="url(#chakraHaloRed)"/>
         <circle r="25" fill="none" stroke="#d63333" strokeWidth="2" strokeDasharray="2 5" opacity="0.7"/>
-        <g fill="#fff8e8" stroke="#b4233f" strokeWidth="2">
+        <g fill="#fff8e8" stroke="#DB090C" strokeWidth="2">
           <use href="#chakraPetal" transform="rotate(0) scale(0.85)"/>
           <use href="#chakraPetal" transform="rotate(90) scale(0.85)"/>
           <use href="#chakraPetal" transform="rotate(180) scale(0.85)"/>
@@ -155,7 +155,7 @@ export function HeroChakras({ className = "" }: { className?: string }) {
       <g transform="translate(150 208)">
         <circle r="42" fill="url(#chakraHaloGreen)"/>
         <circle r="32" fill="none" stroke="#1fa35c" strokeWidth="2" strokeDasharray="2 5" opacity="0.7"/>
-        <g fill="#fff8e8" stroke="#0f6675" strokeWidth="2">
+        <g fill="#fff8e8" stroke="#2A99A4" strokeWidth="2">
           <use href="#chakraPetal" transform="rotate(0) scale(1.2)"/>
           <use href="#chakraPetal" transform="rotate(30) scale(1.2)"/>
           <use href="#chakraPetal" transform="rotate(60) scale(1.2)"/>
@@ -170,8 +170,8 @@ export function HeroChakras({ className = "" }: { className?: string }) {
           <use href="#chakraPetal" transform="rotate(330) scale(1.2)"/>
         </g>
         <circle r="17" fill="#fefcfb" stroke="#117a43" strokeWidth="2"/>
-        <path d="M0 -12 L10 7 L-10 7 Z" fill="none" stroke="#0f6675" strokeWidth="2" strokeLinejoin="round"/>
-        <path d="M0 12 L-10 -7 L10 -7 Z" fill="none" stroke="#b4233f" strokeWidth="2" strokeLinejoin="round"/>
+        <path d="M0 -12 L10 7 L-10 7 Z" fill="none" stroke="#2A99A4" strokeWidth="2" strokeLinejoin="round"/>
+        <path d="M0 12 L-10 -7 L10 -7 Z" fill="none" stroke="#DB090C" strokeWidth="2" strokeLinejoin="round"/>
         <circle r="9" fill="url(#chakraCoreGreen)" stroke="#117a43" strokeWidth="2"/>
         <circle r="2.5" fill="#f2c46d"/>
       </g>
@@ -179,7 +179,7 @@ export function HeroChakras({ className = "" }: { className?: string }) {
       <g transform="translate(150 152)">
         <circle r="38" fill="url(#chakraHaloBlue)"/>
         <circle r="28" fill="none" stroke="#2f6fe0" strokeWidth="2" strokeDasharray="2 5" opacity="0.7"/>
-        <g fill="#fff8e8" stroke="#0f6675" strokeWidth="2">
+        <g fill="#fff8e8" stroke="#2A99A4" strokeWidth="2">
           <use href="#chakraPetalSlim" transform="rotate(0) scale(0.95)"/>
           <use href="#chakraPetalSlim" transform="rotate(22.5) scale(0.95)"/>
           <use href="#chakraPetalSlim" transform="rotate(45) scale(0.95)"/>
@@ -198,7 +198,7 @@ export function HeroChakras({ className = "" }: { className?: string }) {
           <use href="#chakraPetalSlim" transform="rotate(337.5) scale(0.95)"/>
         </g>
         <circle r="14" fill="#fefcfb" stroke="#1e47a8" strokeWidth="2"/>
-        <path d="M0 10 L-8 -5 L8 -5 Z" fill="none" stroke="#0f6675" strokeWidth="2" strokeLinejoin="round"/>
+        <path d="M0 10 L-8 -5 L8 -5 Z" fill="none" stroke="#2A99A4" strokeWidth="2" strokeLinejoin="round"/>
         <circle r="8" fill="url(#chakraCoreBlue)" stroke="#1e47a8" strokeWidth="2"/>
         <circle r="2" fill="#f2c46d"/>
       </g>
@@ -219,7 +219,7 @@ export function HeroChakras({ className = "" }: { className?: string }) {
       <g transform="translate(150 60)">
         <circle r="52" fill="url(#chakraHaloViolet)"/>
         <circle r="44" fill="none" stroke="#8b5cf6" strokeWidth="2" strokeDasharray="2 6" opacity="0.75"/>
-        <g fill="#fff8e8" stroke="#4c1d95" strokeWidth="2">
+        <g fill="#fff8e8" stroke="#C8080C" strokeWidth="2">
           <use href="#chakraPetalSlim" transform="rotate(0) scale(2)"/>
           <use href="#chakraPetalSlim" transform="rotate(22.5) scale(2)"/>
           <use href="#chakraPetalSlim" transform="rotate(45) scale(2)"/>
@@ -251,14 +251,14 @@ export function HeroChakras({ className = "" }: { className?: string }) {
           <use href="#chakraPetalSlim" transform="rotate(315) scale(1.3)"/>
           <use href="#chakraPetalSlim" transform="rotate(345) scale(1.3)"/>
         </g>
-        <path d="M0 -30 L11 -8 L0 18 L-11 -8 Z" fill="url(#chakraCoreViolet)" stroke="#4c1d95" strokeWidth="2" strokeLinejoin="round"/>
+        <path d="M0 -30 L11 -8 L0 18 L-11 -8 Z" fill="url(#chakraCoreViolet)" stroke="#C8080C" strokeWidth="2" strokeLinejoin="round"/>
         <circle cx="0" cy="-2" r="5" fill="url(#chakraGoldCore)" stroke="#8a5a00" strokeWidth="2"/>
         <circle r="1.5" fill="#ffffff" opacity="0.9"/>
       </g>
 
       <path d="M208 40 L212 46 L208 52 L204 46 Z" fill="#f2c46d" stroke="#8a5a00" strokeWidth="2"/>
-      <path d="M92 44 L96 50 L92 56 L88 50 Z" fill="#fff8e8" stroke="#b4233f" strokeWidth="2"/>
-      <circle cx="222" cy="62" r="2" fill="#0f6675"/>
+      <path d="M92 44 L96 50 L92 56 L88 50 Z" fill="#fff8e8" stroke="#DB090C" strokeWidth="2"/>
+      <circle cx="222" cy="62" r="2" fill="#2A99A4"/>
     </svg>
   );
 }

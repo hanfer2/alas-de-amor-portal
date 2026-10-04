@@ -259,13 +259,13 @@ function ServiceFallback({ itemId }: { itemId: string }) {
     <div className="service-fallback text-reiki-900" aria-hidden="true">
       <svg viewBox="0 0 120 120" className="h-28 w-28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
         {itemId.includes("orac") || itemId === "basica" || itemId === "angelical" ? (
-          <><rect x="24" y="29" width="72" height="62" rx="6" fill="#fff8e8" stroke="#b7791f" /><path d="M24 48h72M42 20v18M78 20v18M38 64h12M58 64h24M38 78h25" stroke="#0f6675" /></>
+          <><rect x="24" y="29" width="72" height="62" rx="6" fill="#fff8e8" stroke="#b7791f" /><path d="M24 48h72M42 20v18M78 20v18M38 64h12M58 64h24M38 78h25" stroke="#2A99A4" /></>
         ) : itemId.includes("medit") || itemId.includes("reiki") ? (
-          <><path d="M60 92C36 80 26 63 31 48c4-12 17-18 29-7 12-11 25-5 29 7 5 15-5 32-29 44Z" fill="#fff1f3" stroke="#b4233f" /><path d="M60 28v20M51 38l9-9 9 9" stroke="#0f6675" /></>
+          <><path d="M60 92C36 80 26 63 31 48c4-12 17-18 29-7 12-11 25-5 29 7 5 15-5 32-29 44Z" fill="#fff1f3" stroke="#DB090C" /><path d="M60 28v20M51 38l9-9 9 9" stroke="#2A99A4" /></>
         ) : itemId.includes("charla") || itemId.includes("coaching") ? (
-          <><path d="M24 29h72v50H55l-18 15V79H24Z" fill="#f5f3ff" stroke="#4c1d95" /><path d="M40 49h40M40 63h27" stroke="#b4233f" /></>
+          <><path d="M24 29h72v50H55l-18 15V79H24Z" fill="#E4F7F8" stroke="#C8080C" /><path d="M40 49h40M40 63h27" stroke="#DB090C" /></>
         ) : (
-          <><path d="M60 15 71 45l31 2-24 19 8 30-26-17-26 17 8-30-24-19 31-2Z" fill="#fff8e8" stroke="#b7791f" /><path d="M60 45v21M50 55h20" stroke="#0f6675" /></>
+          <><path d="M60 15 71 45l31 2-24 19 8 30-26-17-26 17 8-30-24-19 31-2Z" fill="#fff8e8" stroke="#b7791f" /><path d="M60 45v21M50 55h20" stroke="#2A99A4" /></>
         )}
       </svg>
     </div>
@@ -371,7 +371,7 @@ function SanacionFallback({ itemId }: { itemId: string }) {
     return (
       <svg className="role-icon h-20 w-20" viewBox="0 0 80 80" fill="none" aria-hidden="true">
         <path d="M18 50c5-16 14-25 22-25s17 9 22 25" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-        <path d="M24 53c6 8 12 12 16 12s10-4 16-12" stroke="#b4233f" strokeWidth="4" strokeLinecap="round" />
+        <path d="M24 53c6 8 12 12 16 12s10-4 16-12" stroke="#DB090C" strokeWidth="4" strokeLinecap="round" />
         <circle cx="40" cy="36" r="8" fill="#f2c46d" stroke="#8a5a00" strokeWidth="3" />
       </svg>
     );
@@ -382,15 +382,15 @@ function SanacionFallback({ itemId }: { itemId: string }) {
       <svg className="role-icon h-20 w-20" viewBox="0 0 80 80" fill="none" aria-hidden="true">
         <circle cx="40" cy="40" r="13" fill="#f2c46d" stroke="#8a5a00" strokeWidth="3" />
         <path d="M40 8v17M40 55v17M8 40h17M55 40h17" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-        <path d="M18 18l12 12M50 50l12 12M62 18L50 30M30 50L18 62" stroke="#0f6675" strokeWidth="3" strokeLinecap="round" />
+        <path d="M18 18l12 12M50 50l12 12M62 18L50 30M30 50L18 62" stroke="#2A99A4" strokeWidth="3" strokeLinecap="round" />
       </svg>
     );
   }
 
   return (
     <svg className="role-icon h-20 w-20" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-      <path d="M40 64C25 53 18 45 18 35c0-8 6-13 13-13 4 0 7 2 9 5 2-3 5-5 9-5 7 0 13 5 13 13 0 10-7 18-22 29Z" fill="#fff1f3" stroke="#b4233f" strokeWidth="3" />
-      <path d="M40 22V12M35 16l5-5 5 5" stroke="#0f6675" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M40 64C25 53 18 45 18 35c0-8 6-13 13-13 4 0 7 2 9 5 2-3 5-5 9-5 7 0 13 5 13 13 0 10-7 18-22 29Z" fill="#fff1f3" stroke="#DB090C" strokeWidth="3" />
+      <path d="M40 22V12M35 16l5-5 5 5" stroke="#2A99A4" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }

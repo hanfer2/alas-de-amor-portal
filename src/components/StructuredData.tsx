@@ -20,6 +20,7 @@ export default function StructuredData() {
     description:
       "Terapias holísticas con Liliana Rodas en Cali, Colombia: Reiki, Barras Access, lectura angelical, alineación de chakras y meditación guiada.",
     image: absoluteUrl(defaultOgImage),
+    logo: absoluteUrl("/imgs/brand/logo.png"),
     url: absoluteUrl("/"),
     telephone: config.contact.phone.replace(/\s/g, ""),
     email: config.contact.email,

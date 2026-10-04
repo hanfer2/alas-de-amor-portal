@@ -84,7 +84,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/imgs/brand/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/imgs/brand/apple-touch-icon.png", sizes: "180x180" }],
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,

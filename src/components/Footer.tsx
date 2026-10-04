@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <Logo className="h-14 w-auto mb-4" size={64} />
+              <Logo className="h-28 w-auto" />
             </div>
             <p className="text-reiki-600 max-w-md mb-6">
               {t("footer.description")}
@@ -85,7 +85,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Alas de Amor - Liliana Rodas.
             {` ${t("footer.rights")}`}
           </p>
-          <p className="text-reiki-400 text-xs mt-2">
+          <p className="text-reiki-600 text-xs mt-2">
             {t("footer.therapy")}
           </p>
         </div>

@@ -110,7 +110,7 @@ export default function AppointmentForm() {
     } focus:ring-2 focus:border-transparent outline-none transition-all`;
 
   return (
-    <div className="bg-white/90 backdrop-blur-sm shadow-xl shadow-indigo-900/5 rounded-3xl border border-white/50 p-8 sm:p-12">
+    <div className="bg-white/90 backdrop-blur-sm shadow-xl shadow-aqua-500/15 rounded-3xl border border-white/50 p-8 sm:p-12">
       <h2 className="font-display text-2xl font-bold text-reiki-900 mb-8 text-center">
         {t("agendar.form.title")}
       </h2>

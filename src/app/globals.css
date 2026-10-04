@@ -1,40 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  --color-reiki-50: #f5f3ff;
-  --color-reiki-100: #ede9fe;
-  --color-reiki-200: #ddd6fe;
-  --color-reiki-300: #c4b5fd;
-  --color-reiki-400: #a78bfa;
-  --color-reiki-500: #8b5cf6;
-  --color-reiki-600: #7c3aed;
-  --color-reiki-700: #6d28d9;
-  --color-reiki-800: #5b21b6;
-  --color-reiki-900: #4c1d95;
-  --color-reiki-950: #3b0764;
+  --color-reiki-50: #FFF5F5;
+  --color-reiki-100: #FDE8E8;
+  --color-reiki-200: #F9D6D6;
+  --color-reiki-300: #F2A0A0;
+  --color-reiki-400: #EE7C7E;
+  --color-reiki-500: #E02226;
+  --color-reiki-600: #DB090C;
+  --color-reiki-700: #C8080C;
+  --color-reiki-800: #B10709;
+  --color-reiki-900: #960608;
+  --color-reiki-950: #6E0406;
 
-  --color-spiritual-50: #f5f3ff;
-  --color-spiritual-100: #ede9fe;
-  --color-spiritual-200: #ddd6fe;
-  --color-spiritual-300: #c4b5fd;
-  --color-spiritual-400: #a78bfa;
-  --color-spiritual-500: #8b5cf6;
-  --color-spiritual-600: #7c3aed;
-  --color-spiritual-700: #6d28d9;
-  --color-spiritual-800: #5b21b6;
-  --color-spiritual-900: #4c1d95;
-  --color-spiritual-950: #3b0764;
+  --color-spiritual-50: #FFF5F5;
+  --color-spiritual-100: #FDE8E8;
+  --color-spiritual-200: #F9D6D6;
+  --color-spiritual-300: #F2A0A0;
+  --color-spiritual-400: #EE7C7E;
+  --color-spiritual-500: #E02226;
+  --color-spiritual-600: #DB090C;
+  --color-spiritual-700: #C8080C;
+  --color-spiritual-800: #B10709;
+  --color-spiritual-900: #960608;
+  --color-spiritual-950: #6E0406;
 
-  --color-heal-50: #f5f3ff;
-  --color-heal-100: #ede9fe;
-  --color-heal-200: #ddd6fe;
-  --color-heal-300: #c4b5fd;
-  --color-heal-400: #a78bfa;
-  --color-heal-500: #8b5cf6;
-  --color-heal-600: #7c3aed;
-  --color-heal-700: #6d28d9;
-  --color-heal-800: #5b21b6;
-  --color-heal-900: #4c1d95;
+  --color-heal-50: #FFF5F5;
+  --color-heal-100: #FDE8E8;
+  --color-heal-200: #F9D6D6;
+  --color-heal-300: #F2A0A0;
+  --color-heal-400: #EE7C7E;
+  --color-heal-500: #E02226;
+  --color-heal-600: #DB090C;
+  --color-heal-700: #C8080C;
+  --color-heal-800: #B10709;
+  --color-heal-900: #960608;
+
+  --color-aqua-50: #F3FBFC;
+  --color-aqua-100: #E4F7F8;
+  --color-aqua-200: #C8F0F2;
+  --color-aqua-300: #A5E3E8;
+  --color-aqua-400: #7FD3D9;
+  --color-aqua-500: #3FB2BC;
+  --color-aqua-600: #2A99A4;
 
   --color-gold-50: #fffaf0;
   --color-gold-100: #fff3d6;
@@ -49,9 +57,9 @@
 
   --color-cream: #fefcfb;
   --color-warm-white: #fefcfb;
-  --color-soft-lavender: #ede9fe;
+  --color-soft-lavender: #E4F7F8;
   --color-rose-gold: #fda4af;
-  --color-deep-plum: #1e1b4b;
+  --color-deep-plum: #4A3B3E;
 
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: Georgia, "Times New Roman", ui-serif, serif;
@@ -87,8 +95,8 @@
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.5), 0 0 60px rgba(139, 92, 246, 0.15); }
+  0%, 100% { box-shadow: 0 0 20px rgba(232, 89, 91, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(232, 89, 91, 0.5), 0 0 60px rgba(232, 89, 91, 0.15); }
 }
 
 @keyframes fade-in-up {
@@ -143,7 +151,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #7c3aed;
+  outline: 2px solid #DB090C;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -172,7 +180,7 @@ body {
 
 @layer utilities {
   .role-h1 {
-    color: #4c1d95;
+    color: #C8080C;
     font-family: Georgia, "Times New Roman", ui-serif, serif;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 700;
@@ -181,7 +189,7 @@ body {
   }
 
   .role-h2 {
-    color: #4c1d95;
+    color: #C8080C;
     font-family: Georgia, "Times New Roman", ui-serif, serif;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
@@ -190,7 +198,7 @@ body {
   }
 
   .role-card-title {
-    color: #4c1d95;
+    color: #C8080C;
     font-family: Georgia, "Times New Roman", ui-serif, serif;
     font-size: clamp(1.625rem, 2.5vw, 2rem);
     font-weight: 700;
@@ -204,13 +212,13 @@ body {
   }
 
   .role-subtitle {
-    color: #504b73;
+    color: #6B5558;
     font-size: clamp(1rem, 1.5vw, 1.125rem);
     font-weight: 500;
   }
 
   .role-description {
-    color: #1e1b4b;
+    color: #4A3B3E;
     font-size: 1rem;
     font-weight: 400;
   }
@@ -225,15 +233,15 @@ body {
   }
 
   .role-metadata-neutral {
-    color: #504b73;
+    color: #6B5558;
     background-color: rgba(254, 252, 251, 0.9);
-    border: 1px solid rgba(76, 29, 149, 0.14);
+    border: 1px solid rgba(63, 178, 188, 0.14);
   }
 
   .role-metadata-gold {
-    color: #8a5a00;
-    background-color: #fff8e8;
-    border: 1px solid rgba(183, 121, 31, 0.3);
+    color: #C8080C;
+    background-color: #FDE8E8;
+    border: 1px solid rgba(219, 9, 12, 0.25);
   }
 
   .role-metadata-inverse {
@@ -241,27 +249,27 @@ body {
   }
 
   .role-icon {
-    color: #0f6675;
+    color: #2A99A4;
   }
 
   .role-icon-halo {
-    background: linear-gradient(135deg, #e7f7f8 0%, #f5f3ff 68%, #fff1f3 100%);
-    border: 1px solid rgba(15, 102, 117, 0.18);
-    box-shadow: 0 8px 20px rgba(15, 102, 117, 0.12);
+    background: linear-gradient(135deg, #E4F7F8 0%, #E4F7F8 68%, #FFF5F5 100%);
+    border: 1px solid rgba(63, 178, 188, 0.18);
+    box-shadow: 0 8px 20px rgba(63, 178, 188, 0.12);
   }
 
   .role-icon-halo[data-accent="coral"] {
-    background: linear-gradient(135deg, #fff1f3 0%, #f5f3ff 72%);
-    border-color: rgba(180, 35, 63, 0.2);
-    box-shadow: 0 8px 20px rgba(180, 35, 63, 0.12);
+    background: linear-gradient(135deg, #FFF5F5 0%, #E4F7F8 72%);
+    border-color: rgba(219, 9, 12, 0.2);
+    box-shadow: 0 8px 20px rgba(219, 9, 12, 0.12);
   }
 
   .role-icon-halo[data-accent="coral"] .role-icon {
-    color: #b4233f;
+    color: #DB090C;
   }
 
   .role-icon-halo[data-accent="gold"] {
-    background: linear-gradient(135deg, #fff8e8 0%, #f5f3ff 72%);
+    background: linear-gradient(135deg, #fff8e8 0%, #E4F7F8 72%);
     border-color: rgba(138, 90, 0, 0.2);
     box-shadow: 0 8px 20px rgba(138, 90, 0, 0.12);
   }
@@ -275,7 +283,7 @@ body {
   }
 
   .role-quote-mark {
-    color: #b4233f;
+    color: #DB090C;
   }
 
   .role-cta {
@@ -288,26 +296,26 @@ body {
   .hero-icon-halo {
     border-radius: 9999px;
     background: rgba(254, 252, 251, 0.58);
-    box-shadow: 0 0 0 1px rgba(15, 102, 117, 0.14), 0 12px 30px rgba(76, 29, 149, 0.12);
+    box-shadow: 0 0 0 1px rgba(63, 178, 188, 0.14), 0 12px 30px rgba(63, 178, 188, 0.12);
     padding: 0.75rem;
   }
 
   .sanacion-card {
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(76, 29, 149, 0.12);
+    border: 1px solid rgba(63, 178, 188, 0.12);
     border-radius: 1.5rem;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(245, 243, 255, 0.82));
-    box-shadow: 0 12px 28px rgba(76, 29, 149, 0.09);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(228, 247, 248, 0.82));
+    box-shadow: 0 12px 28px rgba(63, 178, 188, 0.09);
   }
 
   .sanacion-card__accent {
     height: 0.5rem;
-    background: #0f6675;
+    background: #3FB2BC;
   }
 
   .sanacion-card--coral .sanacion-card__accent {
-    background: #b4233f;
+    background: #DB090C;
   }
 
   .sanacion-card--gold .sanacion-card__accent {
@@ -315,7 +323,7 @@ body {
   }
 
   .sanacion-card--coral .role-icon {
-    color: #b4233f;
+    color: #DB090C;
   }
 
   .sanacion-card--gold .role-icon {
@@ -323,29 +331,29 @@ body {
   }
 
   .gradient-spiritual {
-    background: linear-gradient(135deg, #ddd6fe 0%, #ede9fe 25%, #f5f3ff 50%, #ede9fe 75%, #ddd6fe 100%);
+    background: linear-gradient(135deg, #C8F0F2 0%, #F3FBFC 25%, #FFFBF8 45%, #FDE8E8 70%, #F9D6D6 100%);
     background-size: 200% 200%;
     animation: gradient-shift 8s ease infinite;
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 30%, #fce7f3 60%, #f5f3ff 100%);
+    background: linear-gradient(135deg, #E4F7F8 0%, #F3FBFC 32%, #FFFBF8 54%, #FDE8E8 100%);
   }
 
   .gradient-card {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 243, 255, 0.75) 100%);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(228, 247, 248, 0.75) 100%);
     backdrop-filter: blur(10px);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 40%, #a78bfa 100%);
+    background: linear-gradient(135deg, #C8080C 0%, #DB090C 40%, #E8595B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .shadow-glow {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.08);
+    box-shadow: 0 0 30px rgba(232, 89, 91, 0.2), 0 0 60px rgba(232, 89, 91, 0.08);
   }
 
   .shadow-gold {
@@ -461,7 +469,7 @@ body {
   padding: 1rem 1.25rem;
   border-radius: 1.25rem;
   background: rgba(254, 252, 251, 0.9);
-  box-shadow: 0 10px 28px rgba(76, 29, 149, 0.08);
+  box-shadow: 0 10px 28px rgba(63, 178, 188, 0.08);
 }
 
 .hero-icon-halo {
@@ -475,15 +483,15 @@ body {
   isolation: isolate;
   width: 4rem;
   height: 4rem;
-  border: 3px solid #4c1d95;
+  border: 3px solid #C8080C;
   border-radius: 9999px;
-  background: #fff8e8;
-  color: #4c1d95;
+  background: #FFF5F5;
+  color: #C8080C;
   font-family: Georgia, "Times New Roman", ui-serif, serif;
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1;
-  box-shadow: 0 0 0 1px #f2c46d, 0 8px 18px rgba(76, 29, 149, 0.16);
+  box-shadow: 0 0 0 1px #F2A0A0, 0 8px 18px rgba(63, 178, 188, 0.2);
 }
 
 .step-marker::after {
@@ -495,9 +503,9 @@ body {
   content: "";
 }
 
-.step-marker--coral { border-color: #b4233f; color: #4c1d95; }
-.step-marker--aqua { border-color: #0f6675; color: #4c1d95; }
-.step-marker--gold { border-color: #8a5a00; color: #4c1d95; }
+.step-marker--coral { border-color: #DB090C; color: #C8080C; }
+.step-marker--aqua { border-color: #2A99A4; color: #C8080C; }
+.step-marker--gold { border-color: #8a5a00; color: #C8080C; }
 
 .steps-grid { position: relative; }
 
@@ -508,7 +516,7 @@ body {
     right: 16.66%;
     left: 16.66%;
     height: 1px;
-    background: #b7791f;
+    background: #F2A0A0;
     content: "";
   }
 }
@@ -517,11 +525,11 @@ body {
   display: grid;
   place-items: center;
   height: 100%;
-  background: #f5f3ff;
+  background: #E4F7F8;
 }
 
-.channel-icon--aqua { color: #0f6675; }
-.channel-icon--coral { color: #b4233f; }
+.channel-icon--aqua { color: #2A99A4; }
+.channel-icon--coral { color: #DB090C; }
 .channel-icon--gold { color: #8a5a00; }
 
 @media (min-width: 1024px) {
