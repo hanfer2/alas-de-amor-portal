@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
 import SocialLinks from "@/components/SocialLinks";
+import { getServiceSlug } from "@/lib/services";
 
 export default function Footer() {
   const t = useTranslations();
@@ -16,13 +17,13 @@ export default function Footer() {
     { href: "/contacto", labelKey: "nav.contacto" },
   ];
 
-  const serviceKeys = [
-    "nosotros.services.reiki",
-    "nosotros.services.access",
-    "nosotros.services.angelical",
-    "nosotros.services.chakras",
-    "nosotros.services.meditacion",
-    "nosotros.services.facelight",
+  const serviceLinks = [
+    { id: "reiki", key: "nosotros.services.reiki" },
+    { id: "access", key: "nosotros.services.access" },
+    { id: "angelical", key: "nosotros.services.angelical" },
+    { id: "chakras", key: "nosotros.services.chakras" },
+    { id: "meditacion", key: "nosotros.services.meditacion" },
+    { id: "facelight", key: "nosotros.services.facelight" },
   ];
 
   return (
@@ -65,10 +66,10 @@ export default function Footer() {
               {t("footer.services")}
             </h4>
             <ul className="space-y-3">
-              {serviceKeys.map((key) => (
+              {serviceLinks.map(({ id, key }) => (
                 <li key={key}>
                   <Link
-                    href="/servicios"
+                    href={`/servicios/${getServiceSlug(id) ?? ""}`}
                     className="text-reiki-600 hover:text-reiki-800 transition-colors text-sm"
                   >
                     {t(key)}

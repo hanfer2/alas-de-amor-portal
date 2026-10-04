@@ -113,12 +113,12 @@
     "reiki": {
       "desc": "El Reiki es una técnica de canalización de energía universal que activa el proceso natural de sanación del cuerpo. A través de la imposición de manos, se equilibran los centros energéticos promoviendo la relajación profunda, reduciendo el estrés y restaurando el bienestar físico, emocional y espiritual.",
       "duration": "60 minutos",
-      "benefits": ["Reduce el estrés y la ansiedad", "Alivia dolores físicos y tensiones", "Mejora la calidad del sueño", "Fortalece el sistema inmunológico", "Promueve la paz interior"]
+      "benefits": ["Puede ayudarte a relajarte y a bajar el estrés", "Te ayuda a soltar tensiones del cuerpo", "Favorece un descanso más tranquilo", "Favorece tu bienestar general", "Promueve la paz interior"]
     },
     "barras": {
       "desc": "Las Barras de Access es una técnica que consiste en tocar suavemente 32 puntos en la cabeza para liberar bloqueos energéticos, pensamientos limitantes, creencias y emociones que ya no te sirven.",
       "duration": "45-60 minutos",
-      "benefits": ["Libera patrones limitantes", "Mejora el enfoque y la claridad mental", "Reduce la ansiedad y el estrés", "Favorece un sueño reparador", "Abre nuevas posibilidades de vida"]
+      "benefits": ["Libera patrones limitantes", "Mejora el enfoque y la claridad mental", "Puede ayudarte a bajar el estrés", "Favorece un descanso más tranquilo", "Abre nuevas posibilidades de vida"]
     },
     "angelical": {
       "desc": "Como Medium y Coach Angelical, Liliana canaliza mensajes de tus ángeles y guías espirituales para brindarte orientación, claridad y sanación en los momentos que más lo necesitas.",
@@ -128,17 +128,17 @@
     "chakras": {
       "desc": "Los 7 chakras son centros de energía en tu cuerpo que regulan diferentes aspectos de tu bienestar. Cuando están bloqueados o desequilibrados, pueden manifestarse problemas físicos, emocionales o espirituales.",
       "duration": "60 minutos",
-      "benefits": ["Restablece el equilibrio energético", "Mejora la vitalidad y energía física", "Equilibra las emociones", "Fortalece la intuición", "Conecta cuerpo, mente y espíritu"]
+      "benefits": ["Restablece el equilibrio energético", "Puede darte una sensación de más energía", "Equilibra las emociones", "Fortalece la intuición", "Conecta cuerpo, mente y espíritu"]
     },
     "meditacion": {
       "desc": "Sesiones personalizadas de meditación profunda guiadas por Liliana. Cada sesión está diseñada para tu necesidad específica: relajación, sanación, conexión espiritual o liberación emocional.",
       "duration": "30-45 minutos",
-      "benefits": ["Reduce el estrés y la tensión", "Mejora la concentración y el enfoque", "Profundiza la conexión espiritual", "Libera emociones reprimidas", "Promueve la autoconciencia"]
+      "benefits": ["Puede ayudarte a soltar el estrés y la tensión", "Mejora la concentración y el enfoque", "Profundiza la conexión espiritual", "Libera emociones reprimidas", "Promueve la autoconciencia"]
     },
     "facelight": {
       "desc": "Técnica de limpieza energética facial que libera tensiones acumuladas en el rostro. A través de movimientos suaves y canalización de energía, se liberan bloqueos.",
       "duration": "30 minutos",
-      "benefits": ["Libera tensiones faciales acumuladas", "Alivia dolores de cabeza y migrañas", "Mejora la circulación energética facial", "Promueve la relajación profunda", "Revitaliza la piel desde el interior"]
+      "benefits": ["Libera tensiones faciales acumuladas", "Te ayuda a soltar la tensión de la cabeza y el rostro", "Mejora la circulación energética facial", "Promueve la relajación profunda", "Deja una sensación de frescura y descanso en el rostro"]
     },
     "coaching": {
       "desc": "Acompañamiento personalizado para tu despertar y crecimiento espiritual. Liliana te guía en un proceso de autoconocimiento profundo.",
@@ -283,7 +283,22 @@
       "submit": "Solicitar Cita",
       "submitting": "Enviando...",
       "success": "¡Tu solicitud ha sido enviada! Te contactaremos pronto para confirmar tu cita.",
-      "whatsapp": "O agenda directamente por WhatsApp"
+      "whatsapp": "O agenda directamente por WhatsApp",
+      "modality": "Modalidad preferida",
+      "modalityPlaceholder": "Selecciona una opción",
+      "modalityPresencial": "Presencial (Cali)",
+      "modalityVirtual": "Virtual",
+      "modalityUnsure": "No estoy segura/o",
+      "country": "País desde el que escribes",
+      "countryPlaceholder": "Colombia, España, Estados Unidos…",
+      "source": "¿Cómo nos conociste?",
+      "sourcePlaceholder": "Selecciona una opción",
+      "sourceReferral": "Me recomendó alguien",
+      "sourceTiktok": "TikTok",
+      "sourceInstagram": "Instagram",
+      "sourceFacebook": "Facebook",
+      "sourceGoogle": "Google",
+      "sourceOther": "Otro"
     }
   },
   "contacto": {
@@ -343,6 +358,12 @@
       "medicalQ": "¿Reemplaza la atención médica?",
       "medicalA": "No. Es una terapia complementaria de bienestar y no reemplaza el diagnóstico, el tratamiento ni el seguimiento de un profesional de la salud."
     }
+  },
+  "alt": {
+    "lilianaHero": "Liliana Rodas, Master Reiki y terapeuta holística de Alas de Amor",
+    "space": "Espacio de terapia holística de Alas de Amor en Cali",
+    "certification": "Liliana Rodas con su certificación profesional",
+    "lilianaAbout": "Liliana Rodas, fundadora de Alas de Amor y Master Reiki"
   },
   "footer": {
     "description": "Restauramos el equilibrio integral de tu ser a través de terapias holísticas que atienden la causa profunda, promoviendo la autosanación y el bienestar general.",

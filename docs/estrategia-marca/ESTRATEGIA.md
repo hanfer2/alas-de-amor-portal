@@ -8,6 +8,25 @@ Fecha: 2026-10-04 · Fases 1 a 4 del plan de marca (diagnóstico, investigación
 
 ---
 
+## Estado de implementación (PR #19)
+
+| Ítem | Estado |
+|---|---|
+| sitemap, robots, metadatos en español, canonical, hreflang | Hecho |
+| Una página por servicio (18) con FAQ y datos estructurados | Hecho |
+| LocalBusiness con Cali + Person (Liliana) en `/nosotros` | Hecho |
+| Imagen para redes 1200×630 (`public/imgs/og-default.jpg`) | Hecho |
+| Frases médicas suavizadas en beneficios (ES y EN) | Hecho |
+| Formulario de reserva: modalidad, país, "¿cómo nos conociste?" | Hecho |
+| Alt de imágenes en español, enlaces del footer a cada servicio | Hecho |
+| `/testimonios` y `/blog` en `noindex` hasta tener contenido real | Hecho (revertir al tener testimonios reales) |
+| Elegir y aplicar logo (propuestas A/B/C) | Pendiente: decide Liliana |
+| Marcar qué servicios son virtuales | Pendiente: confirmar con Liliana |
+| Blog con artículos reales | Pendiente: Liliana debe aprobar el contenido |
+| Dominio propio en Vercel, Search Console, Google Business Profile | Pendiente: acciones fuera del código |
+| Página `/aliados` y paquetes para convenios | Pendiente: definir qué ofrece Liliana y a qué precio |
+| Precios en EUR/USD visibles para todos | Pendiente |
+
 ## 1. Punto de partida (datos reales)
 
 | Canal | Dato | Lectura honesta |

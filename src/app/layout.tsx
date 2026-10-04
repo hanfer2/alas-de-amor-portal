@@ -58,8 +58,10 @@ export const metadata: Metadata = {
     siteName: "Alas de Amor",
     images: [
       {
-        url: "/imgs/team/liliana-profile.jpg",
-        alt: "Liliana Rodas, terapeuta holística de Alas de Amor",
+        url: "/imgs/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Alas de Amor, terapias holísticas con Liliana Rodas en Cali",
       },
     ],
   },
@@ -68,7 +70,7 @@ export const metadata: Metadata = {
     title: "Alas de Amor · Terapias holísticas en Cali",
     description:
       "Reiki, Barras Access, lectura angelical, alineación de chakras y más con Liliana Rodas.",
-    images: ["/imgs/team/liliana-profile.jpg"],
+    images: ["/imgs/og-default.jpg"],
   },
   robots: {
     index: true,

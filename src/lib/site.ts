@@ -18,7 +18,7 @@ export const location = {
   countryCode: "CO",
 } as const;
 
-export const defaultOgImage = "/imgs/team/liliana-profile.jpg";
+export const defaultOgImage = "/imgs/og-default.jpg";
 
 export function absoluteUrl(path: string): string {
   return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
@@ -56,7 +56,7 @@ export function buildPageMetadata({
       siteName,
       title: fullTitle,
       description,
-      images: [{ url: image, alt: title }],
+      images: [{ url: image, alt: title, ...(image === defaultOgImage ? { width: 1200, height: 630 } : {}) }],
     },
     twitter: {
       card: "summary_large_image",

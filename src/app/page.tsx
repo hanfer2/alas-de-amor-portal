@@ -155,7 +155,7 @@ export default function Home() {
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-glow">
                   <Image
                     src="/imgs/team/liliana-profile.jpg"
-                    alt="Liliana Rodas - Master Reiki and Holistic Therapist at Alas de Amor"
+                    alt={t("alt.lilianaHero")}
                     fill
                     className="object-cover"
                     priority
@@ -260,7 +260,7 @@ export default function Home() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20">
                 <Image
                   src="/imgs/gallery/gallery-1.jpg"
-                  alt="Holistic therapy space at Alas de Amor"
+                  alt={t("alt.space")}
                   width={600}
                   height={400}
                   className="w-full h-80 sm:h-96 object-cover"
@@ -269,7 +269,7 @@ export default function Home() {
               <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
                   src="/imgs/team/liliana-about.jpg"
-                  alt="Professional certification of Alas de Amor"
+                  alt={t("alt.certification")}
                   width={192}
                   height={192}
                   className="w-full h-full object-cover"
