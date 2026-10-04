@@ -25,7 +25,12 @@ Fecha: 2026-10-04 · Fases 1 a 4 del plan de marca (diagnóstico, investigación
 | Blog con artículos reales | Pendiente: Liliana debe aprobar el contenido |
 | Dominio propio en Vercel, Search Console, Google Business Profile | Pendiente: acciones fuera del código |
 | Página `/aliados` y paquetes para convenios | Pendiente: definir qué ofrece Liliana y a qué precio |
-| Precios en EUR/USD visibles para todos | Pendiente |
+| Precios en COP, USD y EUR | Hecho: COP como base y equivalentes aproximados con la tasa del día |
+| Video de portada | Hecho: 720p (3 MB → 0,7 MB), póster de marca y carga solo al verse. Pendiente: el contenido del video usa la marca anterior (violeta y dorado) y la frase "Cada enfermedad tiene un mensaje"; conviene reeditarlo |
+| Limpieza de imágenes | Hecho: `public/` pasó de 23,6 MB a 11 MB sin romper ninguna imagen. Pendiente: 18 imágenes de servicios son copias temporales y deben reemplazarse por fotos reales |
+| Testimonios | Hecho: se retiraron los de ejemplo; las secciones se llenan solas con `src/lib/testimonials.ts`. Pendiente: pedir testimonios reales |
+| Correo de los formularios | Código listo (Resend gratis, con pruebas). Falta crear la cuenta y poner `RESEND_API_KEY` en Vercel: ver `docs/CORREO-GRATIS.md` |
+| CI | Hecho: GitHub Actions (gratis, repo público) con lint, tipos, pruebas, build y rastreo de humo |
 
 ## 1. Punto de partida (datos reales)
 
