@@ -5,6 +5,8 @@ Curador: `disenador`
 Propósito: fuente de verdad para el `dev` — cada imagen documentada con su ubicación exacta de uso.
 Regla: antes de implementar cualquier imagen, consulta este archivo. Si no encuentras lo que necesitas, pídele al `disenador` que la genere.
 
+
+> **Limpieza del 2026-10-04.** Se eliminaron de `public/` 54 archivos sin uso o duplicados (las imágenes `image1` a `image26` extraídas de la presentación original, la carpeta duplicada `certificates/`, imágenes de galería y de servicios sin referencia, los avatares de los testimonios de ejemplo y los íconos de ejemplo de Next.js). Esas filas se quitaron de este inventario. Los originales siguen en el historial de git y, los de la presentación, en `imgs/docs/ALAS DE AMOR.pptx`. `npm run smoke` comprueba que cada imagen que citan las páginas exista.
 ---
 
 ## En uso (por página / componente)
@@ -25,7 +27,6 @@ Regla: antes de implementar cualquier imagen, consulta este archivo. Si no encue
 | Archivo | Dim | Peso | Formato | Uso | Descripción |
 |---------|-----|------|---------|-----|-------------|
 | `/imgs/og-default.jpg` | 1200×630 | 80 KB | JPG | `og:image` — vista previa al compartir (Facebook, WhatsApp, LinkedIn) | Logo, texto y foto de Liliana |
-| `/imgs/image7.jpeg` | — | — | JPEG | `twitter:image` — Twitter Card preview | Imagen principal del portal (Liliana Rodas) |
 
 ### `src/components/StructuredData.tsx` — Schema.org JSON-LD
 
@@ -136,31 +137,9 @@ Curador: `disenador` | Fecha: 2026-08-07 | Total: 21 imágenes
 
 ## Disponibles sin asignar
 
-Imágenes que existen en `public/imgs/` pero no están referenciadas en el código.
-El `disenador` puede reasignarlas si el contexto lo permite. El `dev` puede usarlas libremente.
+Ninguna. Las imágenes sin uso se eliminaron el 2026-10-04 (ver la nota del inicio). Las fotos originales de Liliana (terapias, retiros, Oráculo) están en `imgs/` en la raíz del repositorio, fuera de `public/`, y todavía no se publican.
 
-| Archivo | Formato | Origen | Nota |
-|---------|---------|--------|------|
-| `image1.jpeg` — `image6.png` | JPEG/PNG | Extraídas de PPTX | Sin uso actual — banco de imágenes del material original |
-| `image8.png` — `image17.jpeg` | PNG/JPEG | Extraídas de PPTX | Sin uso actual |
-| `image18.jpeg` | JPEG | PPTX | ⚠️ USADA como fallback en gen-sanaciones-papa.jpg |
-| `image19.jpeg` | JPEG | PPTX | Sin uso actual |
-| `image20.jpeg` | JPEG | PPTX | ⚠️ USADA como fallback en gen-charlas-1.jpg |
-| `image21.jpeg` | JPEG | PPTX | ⚠️ USADA como fallback en gen-charlas-2.jpg |
-| `image22.jpeg` — `image26.jpeg` | JPEG | PPTX | Sin uso actual |
-| `couch.jpeg` | JPEG | Foto real | Espacio de trabajo — mencionado en AGENTS.md, sin uso en código |
-| `image7.jpeg` | JPEG | Foto real | Solo usada en Twitter Card metadata (`layout.tsx`), no en UI visible |
-| `gallery/gallery-1.jpg` | JPG | Galería | ⚠️ USADA como fallback en terapias-meditacion.jpg |
-| `gallery/gallery-2.jpg` | JPG | Galería | ⚠️ USADA como fallback en gen-talleres-medium.jpg |
-| `gallery/gallery-3.jpg` | JPG | Galería | ⚠️ USADA como fallback en gen-sanaciones-nina.jpg |
-| `gallery/gallery-4.jpg` | JPG | Galería | ⚠️ USADA como fallback en gen-sanaciones-mama.jpg |
-| `gallery/gallery-5.jpg` | JPG | Galería | ⚠️ USADA como fallback en talleres-reiki.jpg |
-| `gallery/gallery-6.jpg` | JPG | Galería | ⚠️ USADA como fallback en talleres-access.jpg |
-| `gallery/gallery-7.jpg` | JPG | Galería | ⚠️ USADA como fallback en retiros-1.jpg |
-| `gallery/gallery-8.jpg` | JPG | Galería | ⚠️ USADA como fallback en retiros-2.jpg |
-| `gallery/gallery-9.jpg` | JPG | Galería | ⚠️ USADA como fallback en gen-servicios-combo.jpg |
-| `gallery/gallery-10.jpg` | JPG | Galería | ⚠️ USADA como fallback en gen-servicios-facelight.jpg |
-| `gallery/gallery-11.jpg` | JPG | Galería | ⚠️ USADA como fallback en gen-servicios-coaching.jpg |
+**Pendiente de contenido:** 18 de las 21 imágenes de `/servicios` son copias temporales de fotos de galería o de otros servicios (por ejemplo, la de "Meditación guiada online" es la misma imagen del certificado 9 y las de Reiki y Alineación de chakras son idénticas). Conviene reemplazarlas por fotos reales de cada servicio.
 
 ---
 
@@ -187,12 +166,6 @@ rostros de referencia ni likeness de personas reales.
 | `public/imgs/services/gen-sanaciones-icon-nina.webp` | `/imgs/services/gen-sanaciones-icon-nina.webp` | `/servicios` → Sanaciones → Sanación niño interior | Icono de Variante A | 512×512 px | 8,386 bytes (8.2 KB) | WebP | Composición 1:1 abstracta de semilla protegida y alas, cuidado y transformación interior, halo crema/lavanda, contornos violetas, coral, dorado y aqua; legible a 64 px, sin rostro identificable. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Ilustración original creada para este lote; no contiene texto, logo ni persona real. |
 | `public/imgs/services/gen-sanaciones-icon-mama.webp` | `/imgs/services/gen-sanaciones-icon-mama.webp` | `/servicios` → Sanaciones → Sanación mamá | Icono de Variante A | 512×512 px | 9,374 bytes (9.2 KB) | WebP | Composición 1:1 abstracta de abrazo envolvente y flor central, vínculo cálido, halo crema/lavanda, contornos violetas, coral, dorado y aqua; diferenciada por forma y legible a 64 px. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Ilustración original creada para este lote; no contiene texto, logo ni persona real. |
 | `public/imgs/services/gen-sanaciones-icon-papa.webp` | `/imgs/services/gen-sanaciones-icon-papa.webp` | `/servicios` → Sanaciones → Sanación papá | Icono de Variante A | 512×512 px | 8,628 bytes (8.4 KB) | WebP | Composición 1:1 abstracta de eje vertical, sol central y alas equilibradas, sostén y acompañamiento, halo crema/lavanda, contornos violetas, aqua y dorado; legible a 64 px. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Ilustración original creada para este lote; no contiene texto, logo ni persona real. |
-| `public/imgs/testimonials/gen-testimonio-avatar-01.webp` | `/imgs/testimonials/gen-testimonio-avatar-01.webp` | `/testimonios` → card de María G. | Avatar ilustrativo anónimo circular | 400×400 px | 5,052 bytes (4.9 KB) | WebP | Busto ilustrado simplificado, cálido y sereno, cabello oscuro y detalle dorado sobre fondo lavanda; composición apta para marco de 56–64 px, no fotográfica. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Avatar ilustrativo original y anónimo; no representa ni imita a una clienta real, y no contiene nombre, texto o logo. |
-| `public/imgs/testimonials/gen-testimonio-avatar-02.webp` | `/imgs/testimonials/gen-testimonio-avatar-02.webp` | `/testimonios` → card de Carlos R. | Avatar ilustrativo anónimo circular | 400×400 px | 5,108 bytes (5.0 KB) | WebP | Busto ilustrado simplificado de expresión tranquila, cabello oscuro y vestuario aqua sobre fondo lavanda; diferenciable por silueta y contraste, no fotográfico. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Avatar ilustrativo original y anónimo; no representa ni imita a un cliente real, y no contiene nombre, texto o logo. |
-| `public/imgs/testimonials/gen-testimonio-avatar-03.webp` | `/imgs/testimonials/gen-testimonio-avatar-03.webp` | `/testimonios` → card de Ana P. | Avatar ilustrativo anónimo circular | 400×400 px | 5,492 bytes (5.4 KB) | WebP | Busto ilustrado cálido con gesto sereno y halo sutil de crecimiento, cabello lavanda y acento coral; sin alas literales, no fotográfico ni identificable. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Avatar ilustrativo original y anónimo; no representa ni imita a una clienta real, y no contiene nombre, texto o logo. |
-| `public/imgs/testimonials/gen-testimonio-avatar-04.webp` | `/imgs/testimonials/gen-testimonio-avatar-04.webp` | `/testimonios` → card de Laura M. | Avatar ilustrativo anónimo circular | 400×400 px | 6,230 bytes (6.1 KB) | WebP | Busto ilustrado de bienestar y equilibrio, gesto calmado, cabello dorado sobrio y detalle aqua; composición distinta del resto y no fotográfica. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Avatar ilustrativo original y anónimo; no representa ni imita a una clienta real, y no contiene nombre, texto o logo. |
-| `public/imgs/testimonials/gen-testimonio-avatar-05.webp` | `/imgs/testimonials/gen-testimonio-avatar-05.webp` | `/testimonios` → card de Daniel S. | Avatar ilustrativo anónimo circular | 400×400 px | 5,412 bytes (5.3 KB) | WebP | Busto ilustrado minimalista de calma y meditación, expresión serena, cabello ciruela y arco lavanda; sin símbolos religiosos literales, no fotográfico. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Avatar ilustrativo original y anónimo; no representa ni imita a un cliente real, y no contiene nombre, texto o logo. |
-| `public/imgs/testimonials/gen-testimonio-avatar-06.webp` | `/imgs/testimonials/gen-testimonio-avatar-06.webp` | `/testimonios` → card de Isabella R. | Avatar ilustrativo anónimo circular | 400×400 px | 5,796 bytes (5.7 KB) | WebP | Busto ilustrado cálido y diverso asociado a crecimiento espiritual, gesto sereno, cabello coral y rayos dorados; composición abstracta, no fotográfica. | Fallback vectorial original SVG → Chromium screenshot PNG → `ffmpeg` WebP (`q:v 82`) | 2026-08-18 | Avatar ilustrativo original y anónimo; no representa ni imita a una clienta real, y no contiene nombre, texto o logo. |
 
 Los nueve archivos son WebP independientes, menores de 200 KB y no sustituyen ni
 alteran los fallbacks históricos documentados arriba.

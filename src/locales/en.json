@@ -10,6 +10,7 @@
     "contacto": "Contact"
   },
   "home": {
+    "video": { "label": "Alas de Amor introduction video" },
     "badge": "Certified Holistic Therapy",
     "hero": {
       "title1": "Wings of",
@@ -38,21 +39,7 @@
     },
     "testimonials": {
       "badge": "Testimonials",
-      "title": "What Our Clients Say",
-      "items": [
-        {
-          "quote": "After my Reiki session I felt a peace I hadn't experienced in years. Liliana has a special gift.",
-          "author": "Maria G."
-        },
-        {
-          "quote": "Access Bars changed my life perspective. I now sleep better and feel more centered.",
-          "author": "Carlos R."
-        },
-        {
-          "quote": "The angelic reading gave me the clarity I needed to make important decisions. Highly recommended.",
-          "author": "Ana P."
-        }
-      ]
+      "title": "What Our Clients Say"
     },
     "masterReiki": "Master\nReiki"
   },
@@ -165,7 +152,8 @@
     },
     "price": {
       "consult": "Contact for pricing",
-      "fallbackNote": "Estimated price based on current exchange rate."
+      "approxNote": "The base price is in Colombian pesos (COP). USD and EUR values are approximate and use today's exchange rate.",
+      "fallbackNote": "We could not fetch today's rate: USD and EUR values use a reference rate."
     },
     "combo": {
       "title": "Bars + Reiki Combo",
@@ -339,6 +327,7 @@
     "home": "Home",
     "services": "Services",
     "location": "Cali, Valle del Cauca, Colombia",
+    "approxShort": "approximate values",
     "viewDetail": "View details",
     "benefits": "What to expect",
     "faqTitle": "Frequently asked questions",
@@ -411,52 +400,10 @@
     "hero": {
       "badge": "Testimonials",
       "title": "What Our Clients Say",
-      "subtitle": "These are experiences from people who have transformed their lives with Wings of Love."
+      "subtitle": "These are experiences from people who have transformed their lives with Wings of Love.",
+      "titleEmpty": "Healing Experiences",
+      "subtitleEmpty": "Soon we will share here the experiences of people who have had a session with Alas de Amor."
     },
-    "items": [
-      {
-        "name": "María G.",
-        "location": "Bogotá",
-        "therapy": "Reiki",
-        "quote": "After my Reiki session I felt a peace I hadn't experienced in years. Liliana has a special gift for transmitting healing energy.",
-        "rating": 5
-      },
-      {
-        "name": "Carlos R.",
-        "location": "Medellín",
-        "therapy": "Access Bars",
-        "quote": "Access Bars changed my life perspective. I now sleep better and feel more centered in my decisions.",
-        "rating": 5
-      },
-      {
-        "name": "Ana P.",
-        "location": "Cali",
-        "therapy": "Angelic Reading",
-        "quote": "The angelic reading gave me the clarity I needed to make important decisions in my life.",
-        "rating": 5
-      },
-      {
-        "name": "Laura M.",
-        "location": "Cartagena",
-        "therapy": "Chakra Alignment",
-        "quote": "After my chakra session, I felt energy flowing that I hadn't felt before. Incredible.",
-        "rating": 5
-      },
-      {
-        "name": "Daniel S.",
-        "location": "Bogotá",
-        "therapy": "Guided Meditation",
-        "quote": "Guided meditation completely changed how I handle daily stress. Now I have tools to stay at peace.",
-        "rating": 5
-      },
-      {
-        "name": "Isabella R.",
-        "location": "Barranquilla",
-        "therapy": "Spiritual Coaching",
-        "quote": "My spiritual coaching process helped me find my life purpose. I'm infinitely grateful.",
-        "rating": 5
-      }
-    ],
     "cta": {
       "title": "You Can Also Transform",
       "subtitle": "Book your session now and begin your healing journey.",
@@ -465,7 +412,8 @@
     "share": {
       "title": "Share Your Experience",
       "subtitle": "Have you already had a session with us? We'd love to hear your story.",
-      "button": "Leave Testimonial"
+      "button": "Leave Testimonial",
+      "whatsappText": "Hi Liliana, I would like to share my experience with Alas de Amor."
     }
   },
   "blog": {

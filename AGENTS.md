@@ -11,6 +11,9 @@ Next.js 16 App Router portal for "Alas de Amor" — a holistic therapy brand by 
 | `npm run build` | Production build (Turbopack disabled) |
 | `npm run start` | Start production server |
 | `npm run lint` | Run ESLint |
+| `npm run typecheck` | `tsc --noEmit` (el build ignora tipos, esto no) |
+| `npm test` | Pruebas de la acción de correo (`tests/`, Node 22+) |
+| `npm run smoke` | Rastreo del sitio ya en marcha: sitemap, SEO, JSON-LD e imágenes (`BASE_URL` opcional) |
 
 ## Tech Stack
 - **Framework**: Next.js 16.2.4 (App Router)
@@ -51,12 +54,16 @@ Next.js 16 App Router portal for "Alas de Amor" — a holistic therapy brand by 
 - Default language: Spanish (`es`)
 
 ### Assets
-- Images extracted from PPTX: `public/imgs/` (26 images: `image1.jpeg` through `image26.jpeg/png`)
-- Hero image: `/imgs/image7.jpeg` (Liliana Rodas)
-- Workspace photo: `/imgs/couch.jpeg`
+- Imágenes en `public/imgs/` (inventario en `IMAGES.md`). Logo e íconos de marca en `public/imgs/brand/` (ver `docs/estrategia-marca/GUIA-MARCA.md`)
+- Foto de Liliana: `/imgs/team/liliana-profile.jpg`
+
+## CI y correo
+- **CI** (`.github/workflows/ci.yml`, gratis porque el repo es público): `lint`, `typecheck`, `test`, `build` y `smoke` en cada PR y push a `staging`/`main`.
+- **Correo de los formularios**: `RESEND_API_KEY` (gratis) en Vercel; guía en `docs/CORREO-GRATIS.md`.
+- **Testimonios**: solo reales y autorizados, en `src/lib/testimonials.ts` (hoy vacío; las secciones se ocultan solas).
 
 ## Design System
-- **Colors**: spiritual (purple), gold, cream, warm-white, rose-gold, deep-plum
+- **Colors**: escala `reiki-*` (rojo claro, tokens en `src/app/globals.css`) y `aqua-*` (aguamarina), marfil de fondo, texto en gris cálido. Sin colores oscuros ni violeta (excepto el chakra corona). Detalle y contrastes en `docs/estrategia-marca/GUIA-MARCA.md`
 - **Fonts**: Inter (sans), Playfair Display (display/serif) via `next/font/google`
 - **Animations**: float, glow, shimmer, fade-in-up, gradient-shift
 - **Style**: Ethereal — soft gradients, glass morphism, floating orbs, ethereal color palette
@@ -68,8 +75,8 @@ Next.js 16 App Router portal for "Alas de Amor" — a holistic therapy brand by 
 
 ## SEO
 - Full metadata in root layout (title, description, OG, Twitter, robots)
-- OpenGraph image: `/imgs/image7.jpeg`
-- `metadataBase`: `https://alas-de-amor.vercel.app` (configurable via `NEXT_PUBLIC_SITE_URL`)
+- OpenGraph image: `/imgs/og-default.jpg` (1200×630)
+- `metadataBase`: tomado de `NEXT_PUBLIC_SITE_URL` o, en Vercel, del dominio de producción (`VERCEL_PROJECT_PRODUCTION_URL`); ver `src/lib/site.ts`
 
 ## Custom Agents (Orquestación)
 

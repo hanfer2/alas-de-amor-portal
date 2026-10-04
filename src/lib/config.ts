@@ -19,6 +19,7 @@ const config = {
   currency: {
     base: "COP",
     fallbackUsdRate: Number(process.env.NEXT_PUBLIC_DEFAULT_USD_RATE) || 0.00025,
+    fallbackEurRate: Number(process.env.NEXT_PUBLIC_DEFAULT_EUR_RATE) || 0.00023,
     rateApi: process.env.NEXT_PUBLIC_RATE_API_URL || "https://open.er-api.com/v6/latest/COP",
     rateTtlHours: 6,
   },

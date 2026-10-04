@@ -48,6 +48,7 @@ export default function AppointmentForm() {
     modality: "",
     country: "",
     source: "",
+    website: "",
   });
 
   const validate = (): boolean => {
@@ -89,6 +90,7 @@ export default function AppointmentForm() {
         modality: formData.modality,
         country: formData.country,
         source: formData.source,
+        website: formData.website,
       });
 
       if (!result.success) {
@@ -316,6 +318,18 @@ export default function AppointmentForm() {
               />
           </div>
 
+          <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+            <label htmlFor="apt-website">No llenar este campo</label>
+            <input
+              id="apt-website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={formData.website}
+              onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+            />
+          </div>
+
           {sendError && (
             <p className="text-red-500 text-sm text-center bg-red-50 rounded-xl px-4 py-2" role="alert">
               {sendError}
@@ -348,7 +362,7 @@ export default function AppointmentForm() {
           blur={5}
           contrast={18}
           fill="var(--color-reiki-500)"
-          shadow="0 4px 14px rgba(139,92,246,0.22)"
+          shadow="0 4px 14px rgba(232,89,91,0.22)"
           className="inline-flex"
         >
           <Liquid.Item>

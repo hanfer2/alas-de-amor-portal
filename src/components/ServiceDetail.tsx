@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import config from "@/lib/config";
-import { formatCOP, formatUSD, useRate } from "@/lib/prices";
+import { priceLines, useRates } from "@/lib/prices";
 import {
   buildFaq,
   getRelatedServices,
@@ -16,18 +16,17 @@ import { useTranslations } from "@/hooks/useTranslations";
 export default function ServiceDetail({ slug }: { slug: string }) {
   const t = useTranslations();
   const { lang } = useLanguage();
-  const { rate } = useRate();
+  const { rates } = useRates();
   const service = getServiceBySlug(slug);
   if (!service) return null;
 
   const { item } = service;
   const title = getServiceTitle(lang, service);
-  const priceText =
+  const price =
     item.price === null
-      ? t("servicios.price.consult")
-      : lang === "en" && rate
-        ? formatUSD(item.price * rate)
-        : formatCOP(item.price);
+      ? { primary: t("servicios.price.consult"), secondary: null }
+      : priceLines(item.price, lang, rates);
+  const priceText = price.secondary ? `${price.primary} (${price.secondary})` : price.primary;
   const benefitsRaw = service.benefitsKey ? t(service.benefitsKey) : null;
   const benefits = Array.isArray(benefitsRaw) ? (benefitsRaw as string[]) : [];
   const faq = buildFaq(lang, service, priceText);
@@ -67,12 +66,17 @@ export default function ServiceDetail({ slug }: { slug: string }) {
               </span>
             )}
             <span className="role-metadata role-metadata-gold inline-flex items-center rounded-full px-4 py-2 text-sm">
-              {priceText}
+              {price.primary}
             </span>
             <span className="role-metadata role-metadata-neutral inline-flex items-center rounded-full px-4 py-2 text-sm">
               {t("servicioDetalle.location")}
             </span>
           </div>
+          {price.secondary && (
+            <p className="mt-3 text-sm text-reiki-700">
+              {price.secondary} · {t("servicioDetalle.approxShort")}
+            </p>
+          )}
         </div>
       </section>
 
