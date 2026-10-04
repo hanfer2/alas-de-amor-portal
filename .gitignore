@@ -41,8 +41,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# qa artifacts
+# qa artifacts (capturas de pantalla). Los PNG del sitio y de las propuestas de diseño sí se versionan.
 *.png
+!public/**/*.png
+!design-proposals/**/*.png
 .playwright-mcp/
 
 .qa-history/
