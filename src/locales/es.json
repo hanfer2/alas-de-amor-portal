@@ -320,6 +320,30 @@
       "hoursDetail": "Lunes a Sábado: 8:00 AM - 6:00 PM"
     }
   },
+  "servicioDetalle": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "location": "Cali, Valle del Cauca, Colombia",
+    "viewDetail": "Ver detalle",
+    "benefits": "Qué puedes esperar",
+    "faqTitle": "Preguntas frecuentes",
+    "relatedTitle": "Otros servicios que pueden interesarte",
+    "whatsapp": "Escribir por WhatsApp",
+    "whatsappText": "Hola Liliana, me interesa {title}. ¿Me das más información?",
+    "breadcrumb": "Ruta de navegación",
+    "faq": {
+      "durationQ": "¿Cuánto dura la sesión?",
+      "durationA": "La sesión de {title} dura {duration}.",
+      "priceQ": "¿Cuánto cuesta?",
+      "priceA": "El valor de {title} es {price}. Puedes confirmarlo y reservar por WhatsApp.",
+      "whereQ": "¿Dónde se atiende?",
+      "whereA": "Alas de Amor está en Cali, Valle del Cauca, Colombia. Escríbenos por WhatsApp para coordinar la modalidad de tu sesión.",
+      "bookQ": "¿Cómo reservo?",
+      "bookA": "Escríbenos por WhatsApp o usa el formulario de Agendar Cita. Te confirmamos la fecha y la hora por WhatsApp.",
+      "medicalQ": "¿Reemplaza la atención médica?",
+      "medicalA": "No. Es una terapia complementaria de bienestar y no reemplaza el diagnóstico, el tratamiento ni el seguimiento de un profesional de la salud."
+    }
+  },
   "footer": {
     "description": "Restauramos el equilibrio integral de tu ser a través de terapias holísticas que atienden la causa profunda, promoviendo la autosanación y el bienestar general.",
     "navigation": "Navegación",

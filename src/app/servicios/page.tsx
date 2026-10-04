@@ -13,6 +13,7 @@ import {
   useRate,
   type CatalogItem,
 } from "@/lib/prices";
+import { getServiceSlug } from "@/lib/services";
 const categoryColors: Record<string, string> = {
   terapias: "from-reiki-400 to-reiki-600",
   talleres: "from-reiki-300 to-reiki-500",
@@ -186,6 +187,7 @@ function ServiceBlock({
 }) {
   const t = useTranslations();
   const [imageFailed, setImageFailed] = useState(false);
+  const detailSlug = getServiceSlug(item.id);
   return (
     <div
       className={`grid lg:grid-cols-2 gap-12 items-center mb-24 last:mb-0 ${index % 2 === 1 ? "lg:direction-rtl" : ""}`}
@@ -221,6 +223,16 @@ function ServiceBlock({
             />
           </svg>
         </Link>
+        {detailSlug && (
+          <div className="mt-5">
+            <Link
+              href={`/servicios/${detailSlug}`}
+              className="text-reiki-700 underline underline-offset-4 hover:text-reiki-900"
+            >
+              {t("servicioDetalle.viewDetail")}: {t(item.titleKey)}
+            </Link>
+          </div>
+        )}
       </div>
       <div className={`relative reveal ${index % 2 === 1 ? "lg:order-1" : ""}`}>
         <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.3)]">
@@ -289,6 +301,7 @@ function SanacionCard({
 }) {
   const t = useTranslations();
   const [imageFailed, setImageFailed] = useState(false);
+  const detailSlug = getServiceSlug(item.id);
   const cardVariant = item.id === "mama" ? "sanacion-card--coral" : item.id === "papa" ? "sanacion-card--gold" : "";
 
   return (
@@ -331,9 +344,17 @@ function SanacionCard({
             {priceText}
           </span>
         </div>
+        {detailSlug && (
+          <Link
+            href={`/servicios/${detailSlug}`}
+            className="mt-6 text-center text-reiki-700 underline underline-offset-4 hover:text-reiki-900"
+          >
+            {t("servicioDetalle.viewDetail")}
+          </Link>
+        )}
         <Link
           href="/agendar"
-          className="role-cta mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 px-6 py-4 text-white shadow-lg shadow-reiki-400/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+          className="role-cta mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-reiki-500 to-reiki-600 px-6 py-4 text-white shadow-lg shadow-reiki-400/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
         >
           <span>{t("servicios.scheduleButton")}</span>
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">

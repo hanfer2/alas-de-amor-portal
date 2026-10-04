@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Blog",
+export const metadata: Metadata = buildPageMetadata({
+  path: "/blog",
+  title: "Blog: Mensajes de Luz",
   description:
-    "Blog de Alas de Amor — artículos sobre terapias holísticas, Reiki, Barras Access, meditación, sanación energética y crecimiento espiritual por Liliana Rodas.",
-};
+    "Reflexiones sobre terapias holísticas, Reiki, Barras Access, meditación y crecimiento espiritual por Liliana Rodas.",
+  noindex: true,
+});
 
 export default function BlogLayout({
   children,

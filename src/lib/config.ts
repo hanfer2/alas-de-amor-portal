@@ -1,6 +1,6 @@
 const config = {
   site: {
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://alas-de-amor.vercel.app",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://alas-de-amor-portal.vercel.app",
   },
 
   contact: {
@@ -25,7 +25,7 @@ const config = {
 
   social: {
     facebook: process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK || "https://www.facebook.com/liliana.rodas.9615",
-    instagram: process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM || "https://instagram.com/alasdeamor",
+    instagram: process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM || "https://instagram.com/alasde_de_amor_",
     tiktok: process.env.NEXT_PUBLIC_SOCIAL_TIKTOK || "https://www.tiktok.com/@lilianarodas155?lang=es-419",
     blogInstagramPost: process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_POST || "",
     blogTikTokVideo: process.env.NEXT_PUBLIC_SOCIAL_TIKTOK_VIDEO || "",

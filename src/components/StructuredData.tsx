@@ -1,89 +1,48 @@
-export default function StructuredData() {
-  const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "+57 304 3732955";
-  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "Lilo_rodas87@hotmail.com";
-  const fb = process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK || "https://www.facebook.com/liliana.rodas.9615";
-  const ig = process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM || "https://instagram.com/alasdeamor";
+import config from "@/lib/config";
+import { absoluteUrl, defaultOgImage, location, siteName } from "@/lib/site";
 
+const offeredServices = [
+  { name: "Reiki", description: "Canalización de energía universal para sanación integral." },
+  { name: "Barras Access", description: "Liberación de bloqueos energéticos y creencias limitantes." },
+  { name: "Lectura Angelical", description: "Canalización de mensajes de ángeles y guías espirituales." },
+  { name: "Alineación de Chakras", description: "Equilibrio de los 7 centros energéticos." },
+  { name: "Meditación Guiada", description: "Sesiones personalizadas de meditación profunda." },
+  { name: "Facelight Energético", description: "Limpieza energética facial para liberar tensiones." },
+];
+
+export default function StructuredData() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Alas de Amor",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": absoluteUrl("/#business"),
+    name: siteName,
+    alternateName: "Alas de Amor by Liliana Rodas",
     description:
-      "Holistic therapy with Liliana Rodas. Master Reiki, Access Bars Facilitator, Medium and Angelic Coach.",
-    image: "https://alas-de-amor.vercel.app/imgs/team/liliana-profile.jpg",
-    url: "https://alas-de-amor.vercel.app",
-    telephone: phone.replace(/\s/g, ""),
-    email,
+      "Terapias holísticas con Liliana Rodas en Cali, Colombia: Reiki, Barras Access, lectura angelical, alineación de chakras y meditación guiada.",
+    image: absoluteUrl(defaultOgImage),
+    url: absoluteUrl("/"),
+    telephone: config.contact.phone.replace(/\s/g, ""),
+    email: config.contact.email,
     address: {
       "@type": "PostalAddress",
-      addressCountry: "CO",
+      addressLocality: location.city,
+      addressRegion: location.region,
+      addressCountry: location.countryCode,
     },
+    areaServed: { "@type": "City", name: location.city },
     founder: {
       "@type": "Person",
       name: "Liliana Rodas",
-      jobTitle: "Master Reiki & Holistic Therapist",
+      jobTitle: "Master Reiki y terapeuta holística",
     },
-    makesOffer: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Reiki",
-          description: "Canalización de energía universal para sanación integral.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Barras Access",
-          description: "Liberación de bloqueos energéticos y creencias limitantes.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Lectura Angelical",
-          description: "Canalización de mensajes de ángeles y guías espirituales.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Alineación de Chakras",
-          description: "Equilibrio de los 7 centros energéticos.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Meditación Guiada",
-          description: "Sesiones personalizadas de meditación profunda.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Facelight Energético",
-          description: "Limpieza energética facial para liberar tensiones.",
-        },
-      },
-    ],
-    sameAs: [fb, ig],
+    makesOffer: offeredServices.map((service) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", ...service },
+    })),
+    sameAs: [config.social.facebook, config.social.instagram, config.social.tiktok],
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       opens: "08:00",
       closes: "18:00",
     },
@@ -92,7 +51,7 @@ export default function StructuredData() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
     />
   );
 }

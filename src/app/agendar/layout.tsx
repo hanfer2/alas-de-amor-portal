@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Agendar Cita",
+export const metadata: Metadata = buildPageMetadata({
+  path: "/agendar",
+  title: "Agendar cita",
   description:
-    "Agenda tu sesión de terapia holística con Liliana Rodas. Reiki, Barras Access, Lectura Angelical, Meditación Guiada y más. Reserva fácil y rápida.",
-};
+    "Agenda tu sesión de terapia holística con Liliana Rodas en Cali: Reiki, Barras Access, lectura angelical, meditación guiada y más. Confirmación por WhatsApp.",
+});
 
 export default function AgendarLayout({
   children,

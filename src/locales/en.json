@@ -320,6 +320,30 @@
       "hoursDetail": "Monday to Saturday: 8:00 AM - 6:00 PM"
     }
   },
+  "servicioDetalle": {
+    "home": "Home",
+    "services": "Services",
+    "location": "Cali, Valle del Cauca, Colombia",
+    "viewDetail": "View details",
+    "benefits": "What to expect",
+    "faqTitle": "Frequently asked questions",
+    "relatedTitle": "Other services you may like",
+    "whatsapp": "Message on WhatsApp",
+    "whatsappText": "Hi Liliana, I'm interested in {title}. Could you give me more information?",
+    "breadcrumb": "Breadcrumb",
+    "faq": {
+      "durationQ": "How long is the session?",
+      "durationA": "The {title} session lasts {duration}.",
+      "priceQ": "How much does it cost?",
+      "priceA": "The price of {title} is {price}. You can confirm it and book through WhatsApp.",
+      "whereQ": "Where are sessions held?",
+      "whereA": "Alas de Amor is based in Cali, Valle del Cauca, Colombia. Message us on WhatsApp to arrange the format of your session.",
+      "bookQ": "How do I book?",
+      "bookA": "Message us on WhatsApp or use the Book Appointment form. We confirm the date and time by WhatsApp.",
+      "medicalQ": "Does it replace medical care?",
+      "medicalA": "No. It is a complementary wellness therapy and does not replace the diagnosis, treatment or follow-up of a healthcare professional."
+    }
+  },
   "footer": {
     "description": "We restore the integral balance of your being through holistic therapies that address the root cause, promoting self-healing and general well-being.",
     "navigation": "Navigation",
