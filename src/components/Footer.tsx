@@ -11,6 +11,7 @@ export default function Footer() {
     { href: "/", labelKey: "nav.inicio" },
     { href: "/nosotros", labelKey: "nav.nosotros" },
     { href: "/servicios", labelKey: "nav.servicios" },
+    { href: "/oraculo", labelKey: "nav.oraculo" },
     { href: "/testimonios", labelKey: "nav.testimonios" },
     { href: "/blog", labelKey: "nav.blog" },
     { href: "/agendar", labelKey: "nav.agendar" },

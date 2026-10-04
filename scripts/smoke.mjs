@@ -68,7 +68,7 @@ for (const path of urls) {
   collectResources(path, text);
 }
 
-for (const path of ["/testimonios", "/blog"]) {
+for (const path of ["/testimonios"]) {
   const { status, text } = await get(path);
   if (status !== 200) fail(path, `HTTP ${status}`);
   else if (!/<meta name="robots" content="[^"]*noindex/.test(text)) fail(path, "debería tener noindex");

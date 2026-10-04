@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { buildPageMetadata } from "@/lib/site";
+import { buildPageMetadata, siteName } from "@/lib/site";
 
-export const metadata: Metadata = buildPageMetadata({
+// El layout define su propio título y corta la herencia del template raíz: se añade la marca a mano.
+const metadata = buildPageMetadata({
   path: "/blog",
   title: "Blog: Mensajes de Luz",
   description:
-    "Reflexiones sobre terapias holísticas, Reiki, Barras Access, meditación y crecimiento espiritual por Liliana Rodas.",
-  noindex: true,
+    "Guías sencillas sobre Reiki, Barras Access, sesiones en línea y oráculo angelical, escritas desde Alas de Amor en Cali, Colombia.",
+});
+
+export const generateMetadata = (): Metadata => ({
+  ...metadata,
+  title: { absolute: `Blog: Mensajes de Luz | ${siteName}` },
 });
 
 export default function BlogLayout({

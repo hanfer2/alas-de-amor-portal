@@ -7,7 +7,8 @@
     "blog": "Blog",
     "acerca": "Acerca de",
     "agendar": "Agendar Cita",
-    "contacto": "Contacto"
+    "contacto": "Contacto",
+    "oraculo": "Oráculo"
   },
   "home": {
     "video": { "label": "Video de presentación de Alas de Amor" },
@@ -324,6 +325,9 @@
     }
   },
   "servicioDetalle": {
+    "oraculoCtaTitle": "Oráculo Zaquiel",
+    "oraculoCtaDesc": "Si prefieres hacer tu propia lectura en casa, conoce la baraja de cartas de ángeles creada por Liliana.",
+    "oraculoCtaButton": "Ver el Oráculo Zaquiel",
     "home": "Inicio",
     "services": "Servicios",
     "location": "Cali, Valle del Cauca, Colombia",
@@ -421,38 +425,6 @@
       "badge": "Blog",
       "title": "Mensajes de Luz",
       "subtitle": "Reflexiones y sabiduría espiritual para iluminar tu camino."
-    },
-    "posts": [
-      {
-        "title": "El Poder del Reiki en Tiempos de Cambio",
-        "excerpt": "El Reiki es una fuerza de sanación universal que nos conecta con la energía restauradora del universo. En tiempos de incertidumbre, esta práctica se vuelve aún más importante...",
-        "date": "2024-01-15",
-        "category": "Reiki"
-      },
-      {
-        "title": "Sanar Tu Niño Interior",
-        "excerpt": "El niño interior es esa parte de nosotros que guarda las heridas más profundas. Sanarlo nos permite vivir con mayor libertad emocional...",
-        "date": "2024-02-01",
-        "category": "Crecimiento"
-      },
-      {
-        "title": "Mensajes de Tus Ángeles",
-        "excerpt": "Tus ángeles siempre están hablando contigo. Aprende a reconocer las señales que te envían diariamente...",
-        "date": "2024-02-15",
-        "category": "Angelical"
-      },
-      {
-        "title": "La Transformación Que Viene",
-        "excerpt": "Cada fin ciclo trae consigo un nuevo comienzo. Abrazar la transformación es abrazar tu crecimiento espiritual...",
-        "date": "2024-03-01",
-        "category": "Espiritual"
-      }
-    ],
-    "newsletter": {
-      "title": "Recibe Mensajes de Luz",
-      "subtitle": "Suscríbete para recibir reflexiones diarias en tu correo.",
-      "placeholder": "Tu correo electrónico",
-      "button": "Suscribirse"
     }
   },
   "acerca": {

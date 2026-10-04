@@ -7,7 +7,8 @@
     "blog": "Blog",
     "acerca": "About",
     "agendar": "Book Appointment",
-    "contacto": "Contact"
+    "contacto": "Contact",
+    "oraculo": "Oracle"
   },
   "home": {
     "video": { "label": "Alas de Amor introduction video" },
@@ -324,6 +325,9 @@
     }
   },
   "servicioDetalle": {
+    "oraculoCtaTitle": "Zaquiel Oracle",
+    "oraculoCtaDesc": "If you would rather do your own reading at home, discover the angel card deck created by Liliana (page available in Spanish).",
+    "oraculoCtaButton": "See the Zaquiel Oracle",
     "home": "Home",
     "services": "Services",
     "location": "Cali, Valle del Cauca, Colombia",
@@ -421,38 +425,6 @@
       "badge": "Blog",
       "title": "Messages of Light",
       "subtitle": "Reflections and spiritual wisdom to illuminate your path."
-    },
-    "posts": [
-      {
-        "title": "The Power of Reiki in Times of Change",
-        "excerpt": "Reiki is a universal healing force that connects us with the restorative energy of the universe. In times of uncertainty, this practice becomes even more important...",
-        "date": "2024-01-15",
-        "category": "Reiki"
-      },
-      {
-        "title": "Heal Your Inner Child",
-        "excerpt": "The inner child is that part of us that holds the deepest wounds. Healing it allows us to live with greater emotional freedom...",
-        "date": "2024-02-01",
-        "category": "Growth"
-      },
-      {
-        "title": "Messages from Your Angels",
-        "excerpt": "Your angels are always talking with you. Learn to recognize the signs they send you daily...",
-        "date": "2024-02-15",
-        "category": "Angelic"
-      },
-      {
-        "title": "The Transformation Coming",
-        "excerpt": "Every end of cycle brings a new beginning. Embracing transformation is embracing your spiritual growth...",
-        "date": "2024-03-01",
-        "category": "Spiritual"
-      }
-    ],
-    "newsletter": {
-      "title": "Receive Messages of Light",
-      "subtitle": "Subscribe to receive daily reflections in your email.",
-      "placeholder": "Your email",
-      "button": "Subscribe"
     }
   },
   "acerca": {
