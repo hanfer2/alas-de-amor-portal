@@ -229,3 +229,38 @@ export function formatUSD(amount: number): string {
     maximumFractionDigits: 2,
   }).format(amount);
 }
+
+export type Rates = { usd: number; eur: number };
+
+function formatInteger(amount: number, lang: string): string {
+  return new Intl.NumberFormat(lang === "en" ? "en-US" : "es-CO", { maximumFractionDigits: 0 }).format(
+    Math.round(amount)
+  );
+}
+
+export function formatApprox(amount: number, code: "COP" | "USD" | "EUR", lang: string): string {
+  return `${formatInteger(amount, lang)} ${code}`;
+}
+
+// El precio base siempre es en COP. En español se muestra COP y el equivalente aproximado en USD y EUR;
+// en inglés se muestra USD y el equivalente en EUR y COP. Sin tasas, solo se muestra COP.
+export function priceLines(
+  price: number,
+  lang: string,
+  rates: Rates | null
+): { primary: string; secondary: string | null } {
+  if (lang === "en") {
+    return rates
+      ? {
+          primary: formatUSD(price * rates.usd),
+          secondary: `≈ ${formatApprox(price * rates.eur, "EUR", lang)} · ${formatApprox(price, "COP", lang)}`,
+        }
+      : { primary: formatCOP(price), secondary: null };
+  }
+  return {
+    primary: formatCOP(price),
+    secondary: rates
+      ? `≈ ${formatApprox(price * rates.usd, "USD", lang)} · ${formatApprox(price * rates.eur, "EUR", lang)}`
+      : null,
+  };
+}

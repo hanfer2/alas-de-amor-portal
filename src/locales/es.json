@@ -10,6 +10,7 @@
     "contacto": "Contacto"
   },
   "home": {
+    "video": { "label": "Video de presentación de Alas de Amor" },
     "badge": "Terapia Holística Certificada",
     "hero": {
       "title1": "Alas de",
@@ -38,21 +39,7 @@
     },
     "testimonials": {
       "badge": "Testimonios",
-      "title": "Lo que Dicen Nuestros Clientes",
-      "items": [
-        {
-          "quote": "Después de mi sesión de Reiki sentí una paz que no había experimentado en años. Liliana tiene un don especial.",
-          "author": "María G."
-        },
-        {
-          "quote": "Las Barras Access cambiaron mi perspectiva de vida. Ahora duermo mejor y me siento más centrada.",
-          "author": "Carlos R."
-        },
-        {
-          "quote": "La lectura angelical me dio la claridad que necesitaba para tomar decisiones importantes. Totalmente recomendado.",
-          "author": "Ana P."
-        }
-      ]
+      "title": "Lo que Dicen Nuestros Clientes"
     },
     "masterReiki": "Master\nReiki"
   },
@@ -165,7 +152,8 @@
     },
     "price": {
       "consult": "Consultar",
-      "fallbackNote": "Precio estimado según tasa de cambio actual."
+      "approxNote": "El precio base es en pesos colombianos (COP). Los valores en USD y EUR son aproximados y se calculan con la tasa del día.",
+      "fallbackNote": "No pudimos consultar la tasa del día: los valores en USD y EUR usan una tasa de referencia."
     },
     "combo": {
       "title": "Combo Barras + Reiki",
@@ -339,6 +327,7 @@
     "home": "Inicio",
     "services": "Servicios",
     "location": "Cali, Valle del Cauca, Colombia",
+    "approxShort": "valores aproximados",
     "viewDetail": "Ver detalle",
     "benefits": "Qué puedes esperar",
     "faqTitle": "Preguntas frecuentes",
@@ -411,61 +400,20 @@
     "hero": {
       "badge": "Testimonios",
       "title": "Lo que Dicen Nuestros Clientes",
-      "subtitle": "Estas son algunas experiencias de personas que han transformado su vida con Alas de Amor."
+      "subtitle": "Estas son algunas experiencias de personas que han transformado su vida con Alas de Amor.",
+      "titleEmpty": "Experiencias de Sanación",
+      "subtitleEmpty": "Muy pronto compartiremos aquí las experiencias de quienes han vivido una sesión con Alas de Amor."
     },
-    "items": [
-      {
-        "name": "María G.",
-        "location": "Bogotá",
-        "therapy": "Reiki",
-        "quote": "Después de mi sesión de Reiki sentí una paz que no había experimentado en años. Liliana tiene un don especial para transmitir energía sanadora.",
-        "rating": 5
-      },
-      {
-        "name": "Carlos R.",
-        "location": "Medellín",
-        "therapy": "Barras Access",
-        "quote": "Las Barras Access cambiaron mi perspectiva de vida. Ahora duermo mejor y me siento más centrado en mis decisiones.",
-        "rating": 5
-      },
-      {
-        "name": "Ana P.",
-        "location": "Cali",
-        "therapy": "Lectura Angelical",
-        "quote": "La lectura angelical me dio la claridad que necesitaba para tomar decisiones importantes en mi vida.",
-        "rating": 5
-      },
-      {
-        "name": "Laura M.",
-        "location": "Cartagena",
-        "therapy": "Alineación de Chakras",
-        "quote": "Tras mi sesión de chakras, sentí una energía fluyendo que no había sentido antes. Increíble.",
-        "rating": 5
-      },
-      {
-        "name": "Daniel S.",
-        "location": "Bogotá",
-        "therapy": "Meditación Guiada",
-        "quote": "La meditación guiada cambió completamente cómo manejo el estrés diario. Ahora tengo herramientas para mantenerme en paz.",
-        "rating": 5
-      },
-      {
-        "name": "Isabella R.",
-        "location": "Barranquilla",
-        "therapy": "Coaching Espiritual",
-        "quote": "Mi proceso de coaching espiritual me helped encontrar mi propósito de vida. Estoy infinitamente agradecida.",
-        "rating": 5
-      }
-    ],
     "cta": {
       "title": "Tu También Puedes Transformarte",
-      "subtitle": "Reserve ahora su sesión y comience su camino de sanación.",
+      "subtitle": "Reserva ahora tu sesión y comienza tu camino de sanación.",
       "button": "Agendar Ahora"
     },
     "share": {
       "title": "Comparte Tu Experiencia",
       "subtitle": "¿Ya has tenido una sesión con nosotros? Nos encantaría escuchar tu historia.",
-      "button": "Dejar Testimonio"
+      "button": "Dejar Testimonio",
+      "whatsappText": "Hola Liliana, quiero compartir mi experiencia con Alas de Amor."
     }
   },
   "blog": {

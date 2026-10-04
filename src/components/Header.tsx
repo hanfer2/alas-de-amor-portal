@@ -97,7 +97,7 @@ export default function Header() {
             blur={6}
             contrast={18}
             fill="rgba(255,255,255,0.85)"
-            shadow="0 4px 14px rgba(139,92,246,0.16)"
+            shadow="0 4px 14px rgba(232,89,91,0.16)"
             className="flex items-center gap-2 lg:hidden"
           >
             <Liquid.Item>

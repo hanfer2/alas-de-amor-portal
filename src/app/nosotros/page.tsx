@@ -33,7 +33,7 @@ export default function NosotrosPage() {
        <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-         <div className="hero-decoration-rail hero-lotus-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
+         <div className="hero-decoration-rail hero-lotus-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(219,9,12,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
           {" "}
           <LotusMandala className="w-48 h-48" />{" "}
         </div>{" "}

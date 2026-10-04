@@ -8,12 +8,12 @@ import { EnergyWaves, FloatingOrbs } from "@/components/HeroDecoration";
 import { Liquid } from "liquid-gooey";
 import {
   catalog,
-  formatCOP,
-  formatUSD,
-  useRate,
+  priceLines,
+  useRates,
   type CatalogItem,
 } from "@/lib/prices";
 import { getServiceSlug } from "@/lib/services";
+type PriceLine = { primary: string; secondary: string | null };
 const categoryColors: Record<string, string> = {
   terapias: "from-reiki-400 to-reiki-600",
   talleres: "from-reiki-300 to-reiki-500",
@@ -25,18 +25,16 @@ const categoryColors: Record<string, string> = {
 export default function ServiciosPage() {
   const t = useTranslations();
   const { lang } = useLanguage();
-  const { rate, isFallback } = useRate();
-  const showUsd = lang === "en";
+  const { rates, isFallback } = useRates();
   const formatPrice = (price: number | null) => {
-    if (price === null) return t("servicios.price.consult");
-    if (showUsd && rate) return formatUSD(price * rate);
-    return formatCOP(price);
+    if (price === null) return { primary: t("servicios.price.consult"), secondary: null };
+    return priceLines(price, lang, rates);
   };
   return (
     <div className="relative overflow-hidden">
       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         <FloatingOrbs />
-        <div className="hero-decoration-rail hero-service-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(15,102,117,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
+        <div className="hero-decoration-rail hero-service-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(63,178,188,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
           <EnergyWaves className="h-full w-full" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,11 +61,10 @@ export default function ServiciosPage() {
       </section>
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {isFallback && showUsd && (
-            <p className="text-sm text-reiki-500 text-center mb-12">
-              {t("servicios.price.fallbackNote")}
-            </p>
-          )}
+          <p className="text-sm text-reiki-700 text-center mb-12">
+            {t("servicios.price.approxNote")}
+            {isFallback && ` ${t("servicios.price.fallbackNote")}`}
+          </p>
           {catalog.map((category) => {
             const color =
               categoryColors[category.id] || "from-reiki-400 to-reiki-600";
@@ -91,7 +88,7 @@ export default function ServiciosPage() {
                       item={item}
                       index={i}
                       color={color}
-                      priceText={formatPrice(item.price)}
+                      price={formatPrice(item.price)}
                       liquidPilot={category.id === "terapias"}
                     />
                   ))
@@ -163,7 +160,7 @@ function ServiceMeta({
       blur={6}
       contrast={18}
       fill="var(--color-warm-white)"
-      shadow="0 4px 14px rgba(139,92,246,0.16)"
+      shadow="0 4px 14px rgba(232,89,91,0.16)"
       className="flex flex-wrap items-center gap-3 mb-4"
     >
       <Liquid.Item>{durationBadge}</Liquid.Item>
@@ -176,13 +173,13 @@ function ServiceBlock({
   item,
   index,
   color,
-  priceText,
+  price,
   liquidPilot,
 }: {
   item: CatalogItem;
   index: number;
   color: string;
-  priceText: string;
+  price: PriceLine;
   liquidPilot: boolean;
 }) {
   const t = useTranslations();
@@ -195,9 +192,12 @@ function ServiceBlock({
       <div className={`reveal ${index % 2 === 1 ? "lg:order-2" : ""}`}>
         <ServiceMeta
           duration={item.durationKey ? t(item.durationKey) : t("servicios.scheduleButton")}
-          priceText={priceText}
+          priceText={price.primary}
           liquidPilot={liquidPilot}
         />
+        {price.secondary && (
+          <p className="-mt-1 mb-4 text-sm text-reiki-700">{price.secondary}</p>
+        )}
         <h2 className="role-card-title mb-4">
           {t(item.titleKey)}
         </h2>
@@ -235,7 +235,7 @@ function ServiceBlock({
         )}
       </div>
       <div className={`relative reveal ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-        <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.3)]">
+        <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(232,89,91,0.3)]">
           {item.image && !imageFailed ? (
             <Image
               src={item.image}
@@ -277,7 +277,7 @@ function SanacionesGrid({
   formatPrice,
 }: {
   items: CatalogItem[];
-  formatPrice: (price: number | null) => string;
+  formatPrice: (price: number | null) => PriceLine;
 }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
@@ -285,7 +285,7 @@ function SanacionesGrid({
         <SanacionCard
           key={item.id}
           item={item}
-          priceText={formatPrice(item.price)}
+          price={formatPrice(item.price)}
         />
       ))}
     </div>
@@ -294,10 +294,10 @@ function SanacionesGrid({
 
 function SanacionCard({
   item,
-  priceText,
+  price,
 }: {
   item: CatalogItem;
-  priceText: string;
+  price: PriceLine;
 }) {
   const t = useTranslations();
   const [imageFailed, setImageFailed] = useState(false);
@@ -341,9 +341,12 @@ function SanacionCard({
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0l3 3m-3-3l-3 3M6 3h12a3 3 0 013 3v6a3 3 0 01-3 3H9l-3 3v-3a3 3 0 01-3-3V6a3 3 0 013-3z" />
             </svg>
-            {priceText}
+            {price.primary}
           </span>
         </div>
+        {price.secondary && (
+          <p className="mt-3 text-center text-sm text-reiki-700">{price.secondary}</p>
+        )}
         {detailSlug && (
           <Link
             href={`/servicios/${detailSlug}`}

@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
+import LazyVideo from "@/components/LazyVideo";
+import { testimonials } from "@/lib/testimonials";
 import { HeroChakras } from "@/components/HeroChakras";
 import SocialLinks from "@/components/SocialLinks";
 
@@ -147,7 +149,7 @@ export default function Home() {
             </div>
 
              <div className="relative z-10 flex flex-col items-center">
-               <div className="hero-decoration-rail home-wings-rail flex items-center justify-center rounded-[2rem] bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(180,35,63,0.16),0_12px_30px_rgba(76,29,149,0.12)]">
+               <div className="hero-decoration-rail home-wings-rail flex items-center justify-center rounded-[2rem] bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(219,9,12,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
                  <HeroChakras className="h-full w-full" />
                </div>
                <div className="home-photo relative w-80 h-80 sm:w-96 sm:h-96 animate-float-slow">
@@ -177,18 +179,13 @@ export default function Home() {
 
       <section className="relative py-8 bg-warm-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-          <div className="rounded-3xl overflow-hidden shadow-2xl bg-black">
-            <video
-              className="w-full"
-              controls
-              autoPlay
-              muted
-              playsInline
-              loop
-              preload="none"
-            >
-              <source src="/videos/alas-de-amor.mp4" type="video/mp4" />
-            </video>
+          <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl bg-aqua-100">
+            <LazyVideo
+              className="h-full w-full object-cover"
+              src="/videos/alas-de-amor.mp4"
+              poster="/videos/alas-de-amor-poster.jpg"
+              label={t("home.video.label")}
+            />
           </div>
         </div>
       </section>
@@ -364,59 +361,54 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-16 gradient-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
-              {t("home.testimonials.badge")}
-            </span>
-            <h2 className="role-h2 mt-3">
-              {t("home.testimonials.title").split(" ").map((word, i) => (
-                <span key={i}>
-                  {i >= 2 ? <span className="text-gradient">{word} </span> : `${word} `}
-                </span>
-              ))}
-            </h2>
-          </div>
+      {testimonials.length > 0 && (
+        <section className="relative py-16 gradient-hero">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16 reveal">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
+                {t("home.testimonials.badge")}
+              </span>
+              <h2 className="role-h2 mt-3">
+                {t("home.testimonials.title").split(" ").map((word, i) => (
+                  <span key={i}>
+                    {i >= 2 ? <span className="text-gradient">{word} </span> : `${word} `}
+                  </span>
+                ))}
+              </h2>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {Array.from({ length: 3 }).map((_, i) => {
-              const quote = t(`home.testimonials.items.${i}.quote`);
-              const author = t(`home.testimonials.items.${i}.author`);
-              return (
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.slice(0, 3).map((item) => (
                 <div
-                  key={i}
+                  key={item.id}
                   className="gradient-card rounded-3xl p-8 shadow-sm border border-white/50 hover:shadow-lg transition-shadow reveal"
                 >
-                    <div className="flex gap-1 mb-4" role="img" aria-label="Rating: 5 out of 5">
-                    {Array.from({ length: 5 }).map((_, j) => (
-                      <svg
-                        key={j}
-                        className="role-star w-5 h-5"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    ))}
-                  </div>
+                  {item.rating && (
+                    <div className="flex gap-1 mb-4" role="img" aria-label={`${item.rating} / 5`}>
+                      {Array.from({ length: item.rating }).map((_, j) => (
+                        <svg key={j} className="role-star w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                      ))}
+                    </div>
+                  )}
                   <p className="role-description italic mb-6">
-                    &ldquo;{quote}&rdquo;
+                    &ldquo;{item.quote}&rdquo;
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-reiki-300 to-reiki-500 flex items-center justify-center text-white font-bold text-sm">
-                      {author[0]}
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-reiki-300 to-reiki-500 flex items-center justify-center text-white font-bold text-sm" aria-hidden="true">
+                      {item.name[0]}
                     </div>
                     <span className="font-semibold text-reiki-800">
-                      {author}
+                      {item.name}
                     </span>
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
