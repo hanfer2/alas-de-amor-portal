@@ -20,7 +20,7 @@ Fecha: 2026-10-04 · Fases 1 a 4 del plan de marca (diagnóstico, investigación
 | Formulario de reserva: modalidad, país, "¿cómo nos conociste?" | Hecho |
 | Alt de imágenes en español, enlaces del footer a cada servicio | Hecho |
 | `/testimonios` y `/blog` en `noindex` hasta tener contenido real | Hecho (revertir al tener testimonios reales) |
-| Elegir y aplicar logo | Pendiente: ronda 5 en `design-proposals/logo/`. La propuesta 1 (plumas suaves sobre pincel, letra Allura) se mantiene; hay cuatro nuevas con alas de ángel de pocas plumas y letra Playball (ambas OFL), paleta clara de rojo y aguamarina |
+| Elegir y aplicar logo | Pendiente: ronda 6 en `design-proposals/logo/`. Se conservan las propuestas 1, 2 y 4; la 6 combina las alas de la 4 (rojo a aguamarina) con el pincel y el resplandor de la 2. Letras Allura y Playball (OFL), paleta clara |
 | Marcar qué servicios son virtuales | Pendiente: confirmar con Liliana |
 | Blog con artículos reales | Pendiente: Liliana debe aprobar el contenido |
 | Dominio propio en Vercel, Search Console, Google Business Profile | Pendiente: acciones fuera del código |
