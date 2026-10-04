@@ -16,6 +16,22 @@ type FormErrors = {
   message?: string;
 };
 
+// Los valores se guardan en español (los lee Liliana); solo el texto visible se traduce.
+const modalityOptions = [
+  { value: "Presencial (Cali)", labelKey: "agendar.form.modalityPresencial" },
+  { value: "Virtual", labelKey: "agendar.form.modalityVirtual" },
+  { value: "No estoy segura/o", labelKey: "agendar.form.modalityUnsure" },
+];
+
+const sourceOptions = [
+  { value: "Me recomendó alguien", labelKey: "agendar.form.sourceReferral" },
+  { value: "TikTok", labelKey: "agendar.form.sourceTiktok" },
+  { value: "Instagram", labelKey: "agendar.form.sourceInstagram" },
+  { value: "Facebook", labelKey: "agendar.form.sourceFacebook" },
+  { value: "Google", labelKey: "agendar.form.sourceGoogle" },
+  { value: "Otro", labelKey: "agendar.form.sourceOther" },
+];
+
 export default function AppointmentForm() {
   const t = useTranslations();
   const [submitted, setSubmitted] = useState(false);
@@ -29,6 +45,9 @@ export default function AppointmentForm() {
     service: "",
     date: "",
     message: "",
+    modality: "",
+    country: "",
+    source: "",
   });
 
   const validate = (): boolean => {
@@ -46,7 +65,7 @@ export default function AppointmentForm() {
   };
 
   const buildWhatsApp = () => {
-    const text = `Hola! Me gustaría agendar una cita.%0A%0A👤 Nombre: ${formData.name}%0A📧 Email: ${formData.email}%0A📱 Teléfono: ${formData.phone}%0A💆 Servicio: ${formData.service}%0A📅 Fecha: ${formData.date}%0A💬 Mensaje: ${formData.message || "N/A"}`;
+    const text = `Hola! Me gustaría agendar una cita.%0A%0A👤 Nombre: ${formData.name}%0A📧 Email: ${formData.email}%0A📱 Teléfono: ${formData.phone}%0A💆 Servicio: ${formData.service}%0A📅 Fecha: ${formData.date}%0A🌎 Modalidad: ${formData.modality || "N/A"}%0A📍 País: ${formData.country || "N/A"}%0A🔎 Cómo nos conoció: ${formData.source || "N/A"}%0A💬 Mensaje: ${formData.message || "N/A"}`;
     return `https://wa.me/${config.contact.whatsapp}?text=${text}`;
   };
 
@@ -67,6 +86,9 @@ export default function AppointmentForm() {
         service: formData.service,
         date: formData.date,
         message: formData.message,
+        modality: formData.modality,
+        country: formData.country,
+        source: formData.source,
       });
 
       if (!result.success) {
@@ -88,7 +110,7 @@ export default function AppointmentForm() {
     } focus:ring-2 focus:border-transparent outline-none transition-all`;
 
   return (
-    <div className="bg-white/90 backdrop-blur-sm shadow-xl shadow-indigo-900/5 rounded-3xl border border-white/50 p-8 sm:p-12">
+    <div className="bg-white/90 backdrop-blur-sm shadow-xl shadow-aqua-500/15 rounded-3xl border border-white/50 p-8 sm:p-12">
       <h2 className="font-display text-2xl font-bold text-reiki-900 mb-8 text-center">
         {t("agendar.form.title")}
       </h2>
@@ -228,6 +250,54 @@ export default function AppointmentForm() {
                 value={formData.date}
                 onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                 className={inputClass("date")}
+              />
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-medium text-reiki-700 mb-2" htmlFor="apt-modality">
+                {t("agendar.form.modality")}
+              </label>
+              <select
+                id="apt-modality"
+                value={formData.modality}
+                onChange={(e) => setFormData({ ...formData, modality: e.target.value })}
+                className={inputClass("service")}
+              >
+                <option value="">{t("agendar.form.modalityPlaceholder")}</option>
+                {modalityOptions.map((o) => (
+                  <option key={o.value} value={o.value}>{t(o.labelKey)}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-reiki-700 mb-2" htmlFor="apt-source">
+                {t("agendar.form.source")}
+              </label>
+              <select
+                id="apt-source"
+                value={formData.source}
+                onChange={(e) => setFormData({ ...formData, source: e.target.value })}
+                className={inputClass("service")}
+              >
+                <option value="">{t("agendar.form.sourcePlaceholder")}</option>
+                {sourceOptions.map((o) => (
+                  <option key={o.value} value={o.value}>{t(o.labelKey)}</option>
+                ))}
+              </select>
+            </div>
+            <div className="sm:col-span-2">
+              <label className="block text-sm font-medium text-reiki-700 mb-2" htmlFor="apt-country">
+                {t("agendar.form.country")}
+              </label>
+              <input
+                id="apt-country"
+                type="text"
+                value={formData.country}
+                onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                placeholder={t("agendar.form.countryPlaceholder")}
+                className={inputClass("service")}
               />
             </div>
           </div>

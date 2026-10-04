@@ -16,21 +16,16 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
 
     if (isTouchDevice || prefersReduced) return;
 
+    // smoothTouch no existe en Lenis 1.x; el scroll táctil ya es nativo por defecto (syncTouch: false).
+    // autoRaf deja que Lenis maneje y cancele su propio bucle de animación al hacer destroy().
     const lenis = new Lenis({
       lerp: 0.08,
       duration: 1.2,
       smoothWheel: true,
-      smoothTouch: false,
+      autoRaf: true,
     });
 
     lenisRef.current = lenis;
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
 
     return () => {
       lenis.destroy();

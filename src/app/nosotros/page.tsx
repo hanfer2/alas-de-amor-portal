@@ -76,7 +76,7 @@ export default function NosotrosPage() {
                 {" "}
                 <Image
                   src="/imgs/team/liliana-profile.jpg"
-                  alt="Liliana Rodas - Founder of Alas de Amor, Master Reiki"
+                  alt={t("alt.lilianaAbout")}
                   width={600}
                   height={700}
                   className="w-full h-[500px] object-cover"

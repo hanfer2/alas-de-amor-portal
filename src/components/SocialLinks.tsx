@@ -56,8 +56,8 @@ const SOCIALS: Record<SocialNetwork, SocialMeta> = {
     handle: "Lilo_rodas87@hotmail.com",
     href: `mailto:${config.contact.email}`,
     external: false,
-    chipClass: "bg-[#4c1d95]",
-    quietColorClass: "text-[#4c1d95]",
+    chipClass: "bg-[#C8080C]",
+    quietColorClass: "text-[#C8080C]",
   },
 };
 

@@ -8,7 +8,7 @@ import SocialLinks from "@/components/SocialLinks";
 export default function ContactoPage() {
   const t = useTranslations();
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-warm-white to-violet-50/30">
+    <div className="relative overflow-hidden bg-gradient-to-br from-warm-white to-aqua-50">
       {" "}
        <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}

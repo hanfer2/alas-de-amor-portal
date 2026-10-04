@@ -7,6 +7,9 @@ type AppointmentData = {
   service: string;
   date: string;
   message?: string;
+  modality?: string;
+  country?: string;
+  source?: string;
 };
 
 type ContactData = {
@@ -53,6 +56,9 @@ export async function sendAppointmentEmail(data: AppointmentData): Promise<Resul
     service: data.service,
     date: data.date,
     message: data.message || "",
+    modality: data.modality || "",
+    country: data.country || "",
+    source: data.source || "",
     timestamp: new Date().toISOString(),
   };
 

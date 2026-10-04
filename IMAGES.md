@@ -13,13 +13,18 @@ Regla: antes de implementar cualquier imagen, consulta este archivo. Si no encue
 
 | Archivo | Dim | Peso | Formato | Uso | Descripción |
 |---------|-----|------|---------|-----|-------------|
-| `/imgs/logo.png` | — | — | PNG | Logo principal en Header (todas las páginas) | Logo de Alas de Amor, carga prioritaria con `next/image` |
+| `/imgs/brand/logo-compact.svg` | 432×244 | 21 KB | SVG | Logo del Header (variante compacta, sin etiqueta) | Propuesta 6, texto en curvas |
+| `/imgs/brand/logo.svg` | 480×340 | 27 KB | SVG | Logo completo: Footer y portada | Propuesta 6, texto en curvas |
+| `/imgs/brand/symbol.svg` | 300×144 | 6 KB | SVG | Solo alas y corazón (sello de la sección CTA) | Propuesta 6 |
+| `/imgs/brand/logo.png` | 960×680 | 157 KB | PNG transparente | `logo` en datos estructurados y usos externos | Propuesta 6 |
+| `/imgs/brand/icon-512.png`, `apple-touch-icon.png` | 512 / 180 | — | PNG | Íconos del sitio | Símbolo sobre aguamarina original |
+| `/imgs/brand/avatar-social.png` | 1080×1080 | 134 KB | PNG | Foto de perfil de Instagram, TikTok, Facebook y WhatsApp | Para subir manualmente a cada red |
 
 ### `src/app/layout.tsx` — Metadata SEO
 
 | Archivo | Dim | Peso | Formato | Uso | Descripción |
 |---------|-----|------|---------|-----|-------------|
-| `/imgs/team/liliana-profile.jpg` | — | — | JPG | `og:image` — OpenGraph preview (Facebook, WhatsApp, LinkedIn) | Foto de perfil de Liliana Rodas |
+| `/imgs/og-default.jpg` | 1200×630 | 80 KB | JPG | `og:image` — vista previa al compartir (Facebook, WhatsApp, LinkedIn) | Logo, texto y foto de Liliana |
 | `/imgs/image7.jpeg` | — | — | JPEG | `twitter:image` — Twitter Card preview | Imagen principal del portal (Liliana Rodas) |
 
 ### `src/components/StructuredData.tsx` — Schema.org JSON-LD

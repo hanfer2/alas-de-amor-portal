@@ -108,7 +108,7 @@ export default function Home() {
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
              <div className="hero-copy space-y-8 animate-fade-in-up">
-              <Logo className="w-full max-w-xs sm:max-w-sm h-auto" size={200} />
+              <Logo priority className="w-full max-w-xs sm:max-w-sm h-auto" />
 
               <h1 className="role-h1 max-w-xl">
                 {t("home.hero.title1")} {t("home.hero.title2")}
@@ -155,7 +155,7 @@ export default function Home() {
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-glow">
                   <Image
                     src="/imgs/team/liliana-profile.jpg"
-                    alt="Liliana Rodas - Master Reiki and Holistic Therapist at Alas de Amor"
+                    alt={t("alt.lilianaHero")}
                     fill
                     className="object-cover"
                     priority
@@ -260,7 +260,7 @@ export default function Home() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20">
                 <Image
                   src="/imgs/gallery/gallery-1.jpg"
-                  alt="Holistic therapy space at Alas de Amor"
+                  alt={t("alt.space")}
                   width={600}
                   height={400}
                   className="w-full h-80 sm:h-96 object-cover"
@@ -269,7 +269,7 @@ export default function Home() {
               <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
                   src="/imgs/team/liliana-about.jpg"
-                  alt="Professional certification of Alas de Amor"
+                  alt={t("alt.certification")}
                   width={192}
                   height={192}
                   className="w-full h-full object-cover"
@@ -331,8 +331,8 @@ export default function Home() {
       <section className="relative py-24 bg-warm-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
             <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-reiki-200/20 border border-white/50">
-            <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-reiki-400 to-reiki-600 flex items-center justify-center animate-glow">
-              <Logo className="w-12 h-12" />
+            <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-aqua-200 flex items-center justify-center animate-glow">
+              <Logo variant="symbol" className="w-16 h-auto" />
             </div>
             <h2 className="role-h2 mb-4">
               <span>{t("home.cta.title1")}</span>{" "}
