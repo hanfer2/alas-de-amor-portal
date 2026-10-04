@@ -3,7 +3,7 @@ import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { useTranslations } from "@/hooks/useTranslations";
 import config from "@/lib/config";
-import { DovePeace, FloatingOrbs } from "@/components/HeroDecoration";
+import { WingedEnvelope, FloatingOrbs } from "@/components/HeroDecoration";
 import SocialLinks from "@/components/SocialLinks";
 export default function ContactoPage() {
   const t = useTranslations();
@@ -13,9 +13,9 @@ export default function ContactoPage() {
        <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-         <div className="hero-decoration-rail hero-dove-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(219,9,12,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
+         <div className="hero-decoration-rail hero-dove-rail flex items-center justify-center">
           {" "}
-          <DovePeace className="w-64 h-28" />{" "}
+          <WingedEnvelope className="h-full w-full" />{" "}
         </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
@@ -42,9 +42,8 @@ export default function ContactoPage() {
             </p>{" "}
           </div>{" "}
         </div>{" "}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
       </section>{" "}
-      <section className="relative py-12 lg:py-20">
+      <section className="relative py-12 lg:py-20 band-rose">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
@@ -62,7 +61,7 @@ export default function ContactoPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-reiki-900/60 via-transparent to-transparent" />{" "}
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 {" "}
-                <h3 className="font-display text-2xl lg:text-3xl font-bold text-white mb-3">
+                <h3 className="font-display text-3xl lg:text-4xl font-bold text-white mb-3">
                   {" "}
                   {t("contacto.sidebar.title")}{" "}
                 </h3>{" "}
@@ -82,7 +81,6 @@ export default function ContactoPage() {
             </div>{" "}
           </div>{" "}
         </div>{" "}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
       </section>{" "}
     </div>
   );

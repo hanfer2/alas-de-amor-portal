@@ -1,5 +1,6 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import { FeatherBook, FloatingOrbs } from "@/components/HeroDecoration";
 import SocialEmbeds from "@/components/SocialEmbeds";
 import SocialLinks from "@/components/SocialLinks";
 import { formatPostDate, posts, readingMinutes } from "@/lib/posts";
@@ -35,6 +36,10 @@ export default function BlogPage() {
     <div className="relative overflow-hidden">
       <JsonLd data={jsonLd} />
       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
+        <FloatingOrbs />
+        <div className="hero-decoration-rail blog-editorial-rail flex items-center justify-center">
+          <FeatherBook className="h-full w-full" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
             <h1 className="role-h1 mt-0">
@@ -45,10 +50,9 @@ export default function BlogPage() {
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
 
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-aqua">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {posts.map((post) => (
@@ -81,7 +85,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-rose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-reiki-100 bg-white/70 p-8 sm:p-12 shadow-sm">
             <div className="flex flex-col gap-6 mb-10 lg:flex-row lg:items-center lg:justify-between">

@@ -79,7 +79,7 @@ export default function ContactForm() {
 
   return (
     <div className="gradient-card rounded-3xl p-8 sm:p-10 shadow-xl shadow-reiki-200/20 border border-white/50">
-      <h2 className="font-display text-2xl font-bold text-reiki-900 mb-8">
+      <h2 className="font-display text-3xl font-bold text-reiki-900 mb-8">
         {t("contacto.form.title")}
       </h2>
 
@@ -90,7 +90,7 @@ export default function ContactForm() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <p className="font-display text-xl font-bold text-reiki-800">
+          <p className="font-display text-2xl font-bold text-reiki-800">
             {t("contacto.form.success")}
           </p>
           {sendError && (

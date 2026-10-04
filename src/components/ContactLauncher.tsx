@@ -56,7 +56,7 @@ export default function ContactLauncher() {
           >
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h2 className="font-display text-lg font-bold text-reiki-900">
+              <h2 className="font-display text-2xl font-bold text-reiki-900">
                 {t("contactLauncher.chat.title")}
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-reiki-700">

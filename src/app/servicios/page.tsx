@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import { useLanguage } from "@/context/LanguageContext";
-import { EnergyWaves, FloatingOrbs } from "@/components/HeroDecoration";
+import { WingedWaves, FloatingOrbs } from "@/components/HeroDecoration";
 import { Liquid } from "liquid-gooey";
 import {
   catalog,
@@ -34,8 +34,8 @@ export default function ServiciosPage() {
     <div className="relative overflow-hidden">
       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         <FloatingOrbs />
-        <div className="hero-decoration-rail hero-service-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(63,178,188,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
-          <EnergyWaves className="h-full w-full" />
+        <div className="hero-decoration-rail hero-service-rail flex items-center justify-center">
+          <WingedWaves className="h-full w-full" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
@@ -57,9 +57,8 @@ export default function ServiciosPage() {
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-aqua">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm text-reiki-700 text-center mb-12">
             {t("servicios.price.approxNote")}
@@ -74,7 +73,7 @@ export default function ServiciosPage() {
                   <h2 className="role-h2">
                     {t(category.titleKey)}
                   </h2>
-                  <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-reiki-300 to-reiki-500" />
+                  <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-aqua-400 via-reiki-300 to-reiki-500" />
                 </div>
                 {category.id === "sanaciones" ? (
                   <SanacionesGrid
@@ -97,7 +96,6 @@ export default function ServiciosPage() {
             );
           })}
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
       <section className="relative py-24 gradient-spiritual">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
@@ -114,7 +112,6 @@ export default function ServiciosPage() {
             <span>{t("servicios.cta.button")}</span>
           </Link>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />
       </section>
     </div>
   );

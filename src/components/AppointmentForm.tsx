@@ -113,7 +113,7 @@ export default function AppointmentForm() {
 
   return (
     <div className="bg-white/90 backdrop-blur-sm shadow-xl shadow-aqua-500/15 rounded-3xl border border-white/50 p-8 sm:p-12">
-      <h2 className="font-display text-2xl font-bold text-reiki-900 mb-8 text-center">
+      <h2 className="font-display text-3xl font-bold text-reiki-900 mb-8 text-center">
         {t("agendar.form.title")}
       </h2>
 
@@ -124,7 +124,7 @@ export default function AppointmentForm() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <p className="font-display text-xl font-bold text-reiki-800 mb-4">
+          <p className="font-display text-2xl font-bold text-reiki-800 mb-4">
             {t("agendar.form.success")}
           </p>
           <p className="text-reiki-600 text-sm">

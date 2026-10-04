@@ -28,7 +28,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-warm-white to-reiki-50 border-t border-reiki-100">
+    <footer className="bg-gradient-to-b from-aqua-50 via-warm-white to-reiki-100 border-t-4 border-aqua-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
@@ -38,14 +38,14 @@ export default function Footer() {
             <p className="text-reiki-600 max-w-md mb-6">
               {t("footer.description")}
             </p>
-            <h4 className="font-display text-lg font-semibold text-reiki-800 mb-4">
+            <h4 className="font-display text-2xl font-semibold text-reiki-800 mb-4">
               {t("social.followTitle")}
             </h4>
             <SocialLinks variant="chip" showLabel />
           </div>
 
           <div>
-            <h4 className="font-display text-lg font-semibold text-reiki-800 mb-4">
+            <h4 className="font-display text-2xl font-semibold text-reiki-800 mb-4">
               {t("footer.navigation")}
             </h4>
             <ul className="space-y-3">
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-lg font-semibold text-reiki-800 mb-4">
+            <h4 className="font-display text-2xl font-semibold text-reiki-800 mb-4">
               {t("footer.services")}
             </h4>
             <ul className="space-y-3">

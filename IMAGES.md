@@ -47,7 +47,6 @@ Regla: antes de implementar cualquier imagen, consulta este archivo. Si no encue
 | Archivo | Dim | Peso | Formato | Uso | Descripción |
 |---------|-----|------|---------|-----|-------------|
 | `/imgs/team/liliana-profile.jpg` | — | — | JPG | Bio → retrato principal de Liliana (sombra, bordes redondeados) | Perfil de Liliana Rodas |
-| `/imgs/certificado-2.jpg` | — | — | JPG | Certificados → galería grid | Certificado profesional |
 | `/imgs/certificado-8.jpg` | — | — | JPG | Certificados → galería grid | Certificado profesional |
 | `/imgs/certificado-9.jpg` | — | — | JPG | Certificados → galería grid | Certificado profesional |
 | `/imgs/certificado-10.jpg` | — | — | JPG | Certificados → galería grid | Certificado profesional |

@@ -107,7 +107,7 @@ export default function OraculoPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 band-aqua">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-center">
           <div className="relative mx-auto w-full max-w-xs aspect-[640/993] rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 lg:order-2">
             <Image

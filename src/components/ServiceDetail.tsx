@@ -80,7 +80,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 band-aqua">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-start">
           <div>
             {benefits.length > 0 && (

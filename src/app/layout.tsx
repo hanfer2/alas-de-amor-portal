@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playball } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import StructuredData from "@/components/StructuredData";
@@ -11,8 +11,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-display",
+// Misma letra cursiva del logo: se usa en todos los títulos.
+const playball = Playball({
+  variable: "--font-script",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
@@ -104,7 +106,7 @@ export default function RootLayout({
     <html
       lang="es"
       suppressHydrationWarning
-      className={`${inter.variable} ${playfair.variable} antialiased`}
+      className={`${inter.variable} ${playball.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col">
         <StructuredData />

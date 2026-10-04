@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
-import { CredentialIcon, LotusMandala, FloatingOrbs } from "@/components/HeroDecoration";
+import { CredentialIcon, FeatherLotus, FloatingOrbs } from "@/components/HeroDecoration";
 export default function NosotrosPage() {
   const t = useTranslations();
   const credentialKeys = [
@@ -33,9 +33,9 @@ export default function NosotrosPage() {
        <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-         <div className="hero-decoration-rail hero-lotus-rail flex items-center justify-center rounded-full bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(219,9,12,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
+         <div className="hero-decoration-rail hero-lotus-rail flex items-center justify-center">
           {" "}
-          <LotusMandala className="w-48 h-48" />{" "}
+          <FeatherLotus className="h-full w-full" />{" "}
         </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
@@ -62,9 +62,8 @@ export default function NosotrosPage() {
             </p>{" "}
           </div>{" "}
         </div>{" "}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
       </section>{" "}
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-ivory">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
@@ -77,9 +76,9 @@ export default function NosotrosPage() {
                 <Image
                   src="/imgs/team/liliana-profile.jpg"
                   alt={t("alt.lilianaAbout")}
-                  width={600}
-                  height={700}
-                  className="w-full h-[500px] object-cover"
+                  width={1284}
+                  height={1479}
+                  className="w-full h-auto aspect-[6/7] object-cover object-top"
                 />{" "}
               </div>{" "}
               <div className="absolute -bottom-6 -right-6 gradient-card rounded-2xl p-6 shadow-xl border border-white/50">
@@ -147,7 +146,6 @@ export default function NosotrosPage() {
             </div>{" "}
           </div>{" "}
         </div>{" "}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
       </section>{" "}
       <section className="relative py-24 gradient-spiritual">
         {" "}
@@ -206,9 +204,8 @@ export default function NosotrosPage() {
             ))}{" "}
           </div>{" "}
         </div>{" "}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
       </section>{" "}
-      <section className="relative py-24 bg-warm-white">
+      <section className="relative py-24 band-rose">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
@@ -233,7 +230,6 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {" "}
             {[
-              "certificado-2.jpg",
               "certificado-8.jpg",
               "certificado-9.jpg",
               "certificado-10.jpg",
@@ -258,7 +254,6 @@ export default function NosotrosPage() {
             ))}{" "}
           </div>{" "}
         </div>{" "}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-warm-white" />{" "}
       </section>{" "}
       <section className="relative py-24 gradient-hero">
         {" "}
@@ -285,10 +280,10 @@ export default function NosotrosPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {" "}
             {[
-              "gallery/gallery-2.jpg",
-              "gallery/gallery-3.jpg",
-              "gallery/gallery-4.jpg",
-            ].map((img, i) => (
+              { img: "gallery/gallery-2.jpg", position: "50% 15%" },
+              { img: "gallery/gallery-3.jpg", position: "50% 25%" },
+              { img: "gallery/gallery-4.jpg", position: "50% 50%" },
+            ].map(({ img, position }, i) => (
               <div
                 key={i}
                 className={`relative rounded-3xl overflow-hidden shadow-xl reveal ${i === 0 ? "md:col-span-2 h-80" : "h-64"}`}
@@ -299,6 +294,7 @@ export default function NosotrosPage() {
                   alt={`Experience ${i + 1} of Alas de Amor`}
                   fill
                   className="object-cover"
+                  style={{ objectPosition: position }}
                 />{" "}
                 <div className="absolute inset-0 bg-gradient-to-t from-reiki-900/50 to-transparent" />{" "}
               </div>

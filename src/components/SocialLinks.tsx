@@ -86,7 +86,7 @@ function InstagramQuietGlyph({ sizeClass }: { sizeClass: string }) {
   );
 }
 
-function Glyph({ network, variant }: { network: SocialNetwork; variant: GlyphVariant }) {
+export function Glyph({ network, variant }: { network: SocialNetwork; variant: GlyphVariant }) {
   const sizeClass =
     variant === "card" ? "h-8 w-8" : variant === "quiet" ? "h-5 w-5" : variant === "mini" ? "h-4 w-4" : "h-6 w-6";
 
@@ -183,7 +183,7 @@ function SocialLinkItem({
         >
           <Glyph network={network} variant="card" />
         </span>
-        <span className="font-display text-lg font-bold text-reiki-800">{meta.name}</span>
+        <span className="font-display text-2xl font-bold text-reiki-800">{meta.name}</span>
         <span className="break-all text-sm text-reiki-600">{meta.handle}</span>
         <span className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-reiki-600 px-5 py-2 text-xs font-bold text-white">
           {t(isWrite ? "social.write" : "social.visit")}
