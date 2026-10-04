@@ -20,7 +20,7 @@ Fecha: 2026-10-04 · Fases 1 a 4 del plan de marca (diagnóstico, investigación
 | Formulario de reserva: modalidad, país, "¿cómo nos conociste?" | Hecho |
 | Alt de imágenes en español, enlaces del footer a cada servicio | Hecho |
 | `/testimonios` y `/blog` en `noindex` hasta tener contenido real | Hecho (revertir al tener testimonios reales) |
-| Elegir y aplicar logo (propuestas A/B/C) | Pendiente: decide Liliana |
+| Elegir y aplicar logo | Pendiente: ronda 2 (rojo y aguamarina, propuestas 1 a 3) en `design-proposals/logo/`. Liliana pidió conservar esos colores; la primera ronda violeta queda descartada |
 | Marcar qué servicios son virtuales | Pendiente: confirmar con Liliana |
 | Blog con artículos reales | Pendiente: Liliana debe aprobar el contenido |
 | Dominio propio en Vercel, Search Console, Google Business Profile | Pendiente: acciones fuera del código |
