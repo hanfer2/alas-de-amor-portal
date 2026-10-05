@@ -408,8 +408,8 @@ body {
    changing the shared header or the approved page backgrounds. */
 .hero-shell {
   isolation: isolate;
-  min-height: 36rem;
-  padding-top: 9.5rem;
+  min-height: 0;
+  padding-top: 6.5rem;
 }
 
 .hero-copy {
@@ -420,25 +420,25 @@ body {
 /* Cabeceras de página: sin altura mínima, con el dibujo a la altura del título. */
 .hero-shell.hero-compact {
   min-height: 0;
-  padding-top: 8.5rem;
-  padding-bottom: 3.5rem;
+  padding-top: 6.5rem;
+  padding-bottom: 2rem;
 }
 
 .hero-title-icon {
-  width: 8rem;
-  height: 6.75rem;
+  width: 7rem;
+  height: 5.75rem;
 }
 
 @media (min-width: 640px) {
   .hero-title-icon {
-    width: 11rem;
-    height: 9.25rem;
+    width: 9.5rem;
+    height: 8rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-shell.hero-compact {
-    padding-top: 9.5rem;
+    padding-top: 7rem;
   }
 }
 
@@ -471,6 +471,10 @@ body {
 
 @media (max-width: 639px) {
   .home-wings-rail { max-width: 11.875rem; }
+}
+
+@media (min-width: 1024px) {
+  .home-wings-rail { max-width: 10.5rem; margin-top: 0; }
 }
 
 .hero-decoration-rail svg {
@@ -552,7 +556,7 @@ body {
 .channel-icon--gold { color: #8a5a00; }
 
 @media (min-width: 1024px) {
-  .hero-shell { padding-top: 10rem; }
+  .hero-shell { padding-top: 7rem; }
   .step-marker { width: 4.5rem; height: 4.5rem; }
   .steps-grid::before { top: 2.25rem; }
 }

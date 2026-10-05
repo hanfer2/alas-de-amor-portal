@@ -38,11 +38,11 @@ export default function AgendarPage() {
           />{" "}
         </div>{" "}
       </section>{" "}
-      <section className="relative py-12 lg:py-20 band-aqua">
+      <section className="relative py-8 lg:py-12 band-aqua">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center mb-12 lg:mb-16 reveal">
+          <div className="text-center mb-8 lg:mb-10 reveal">
             {" "}
             <h2 className="role-h2 mb-4">
               {" "}
@@ -50,7 +50,7 @@ export default function AgendarPage() {
             </h2>{" "}
             <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-aqua-400 via-reiki-300 to-reiki-500" />{" "}
           </div>{" "}
-           <div className="steps-grid grid sm:grid-cols-3 gap-8 mb-16 lg:mb-20 reveal">
+           <div className="steps-grid grid sm:grid-cols-3 gap-8 mb-10 lg:mb-8 reveal">
             {" "}
             {[1, 2, 3].map((n) => (
               <div key={n} className="text-center group">
@@ -70,7 +70,7 @@ export default function AgendarPage() {
               </div>
             ))}{" "}
           </div>{" "}
-          <div className="grid lg:grid-cols-2 gap-12 items-start reveal">
+          <div className="grid lg:grid-cols-2 gap-8 items-start reveal">
             {" "}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20 lg:sticky lg:top-24 order-last lg:order-first">
               {" "}
