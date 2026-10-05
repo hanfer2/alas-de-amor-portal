@@ -11,8 +11,8 @@ export default function ArcangelesPromo() {
   const whatsapp = (text: string) => `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent(text)}`;
 
   return (
-    <section className="relative py-24 band-ivory">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-center">
+    <section className="relative py-10 lg:py-14 band-ivory">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 lg:grid-cols-2 items-center">
         <div className="order-2 lg:order-1 reveal">
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-aqua-100 text-reiki-700 font-medium tracking-wider uppercase text-xs border border-aqua-200">
             {t("home.arcangeles.badge")}

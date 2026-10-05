@@ -57,9 +57,9 @@ export default function ServiciosPage() {
           />
         </div>
       </section>
-      <section className="relative py-24 band-aqua">
+      <section className="relative py-10 lg:py-14 band-aqua">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm text-reiki-700 text-center mb-12">
+          <p className="text-sm text-reiki-700 text-center mb-8">
             {t("servicios.price.approxNote")}
             {isFallback && ` ${t("servicios.price.fallbackNote")}`}
           </p>
@@ -67,8 +67,8 @@ export default function ServiciosPage() {
             const color =
               categoryColors[category.id] || "from-reiki-400 to-reiki-600";
             return (
-              <div key={category.id} className="mb-24 last:mb-0">
-                <div className="text-center mb-12 reveal">
+              <div key={category.id} className="mb-10 last:mb-0">
+                <div className="text-center mb-8 reveal">
                   <h2 className="role-h2">
                     {t(category.titleKey)}
                   </h2>
@@ -96,7 +96,7 @@ export default function ServiciosPage() {
           })}
         </div>
       </section>
-      <section className="relative py-24 gradient-spiritual">
+      <section className="relative py-10 lg:py-14 gradient-spiritual">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
           <h2 className="role-h2 mb-4">
             {t("servicios.cta.title")}
@@ -183,7 +183,7 @@ function ServiceBlock({
   const detailSlug = getServiceSlug(item.id);
   return (
     <div
-      className={`grid lg:grid-cols-2 gap-12 items-center mb-24 last:mb-0 ${index % 2 === 1 ? "lg:direction-rtl" : ""}`}
+      className={`grid lg:grid-cols-2 gap-8 items-center mb-10 last:mb-0 ${index % 2 === 1 ? "lg:direction-rtl" : ""}`}
     >
       <div className={`reveal ${index % 2 === 1 ? "lg:order-2" : ""}`}>
         <ServiceMeta
@@ -231,7 +231,7 @@ function ServiceBlock({
         )}
       </div>
       <div className={`relative reveal ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-        <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(232,89,91,0.3)]">
+        <div className="relative h-60 sm:h-72 lg:h-80 rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(232,89,91,0.3)]">
           {item.image && !imageFailed ? (
             <Image
               src={item.image}

@@ -81,7 +81,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   return (
     <div className="bg-warm-white">
       <JsonLd data={jsonLd} />
-      <section className="gradient-hero pt-32 pb-12 sm:pt-36">
+      <section className="gradient-hero pt-28 pb-8 sm:pt-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Ruta de navegación" className="mb-6 text-sm text-reiki-700">
             <ol className="flex flex-wrap items-center gap-2">
@@ -177,7 +177,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       </section>
 
       {others.length > 0 && (
-        <section className="py-16">
+        <section className="py-10 lg:py-12">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="role-h2 mb-6">Sigue leyendo</h2>
             <ul className="grid gap-4 sm:grid-cols-2">

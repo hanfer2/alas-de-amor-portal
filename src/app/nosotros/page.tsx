@@ -60,11 +60,11 @@ export default function NosotrosPage() {
           />{" "}
         </div>{" "}
       </section>{" "}
-      <section className="relative py-24 band-ivory">
+      <section className="relative py-10 lg:py-14 band-ivory">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             {" "}
             <div className="relative order-2 lg:order-1 reveal">
               {" "}
@@ -144,11 +144,11 @@ export default function NosotrosPage() {
           </div>{" "}
         </div>{" "}
       </section>{" "}
-      <section className="relative py-24 gradient-spiritual">
+      <section className="relative py-10 lg:py-14 gradient-spiritual">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center mb-16 reveal">
+          <div className="text-center mb-10 reveal">
             {" "}
             <h2 className="role-h2 mt-0">
               {" "}
@@ -202,11 +202,11 @@ export default function NosotrosPage() {
           </div>{" "}
         </div>{" "}
       </section>{" "}
-      <section className="relative py-24 band-rose">
+      <section className="relative py-10 lg:py-14 band-rose">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center mb-16 reveal">
+          <div className="text-center mb-10 reveal">
             {" "}
             <h2 className="role-h2 mt-0">
               {" "}
@@ -252,11 +252,11 @@ export default function NosotrosPage() {
           </div>{" "}
         </div>{" "}
       </section>{" "}
-      <section className="relative py-24 gradient-hero">
+      <section className="relative py-10 lg:py-14 gradient-hero">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="text-center mb-16 reveal">
+          <div className="text-center mb-10 reveal">
             {" "}
             <h2 className="role-h2 mt-0">
               {" "}

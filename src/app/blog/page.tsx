@@ -51,7 +51,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="relative py-24 band-aqua">
+      <section className="relative py-10 lg:py-14 band-aqua">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {posts.map((post) => (
@@ -84,7 +84,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="relative py-24 band-rose">
+      <section className="relative py-10 lg:py-14 band-rose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-reiki-100 bg-white/70 p-8 sm:p-12 shadow-sm">
             <div className="flex flex-col gap-6 mb-10 lg:flex-row lg:items-center lg:justify-between">

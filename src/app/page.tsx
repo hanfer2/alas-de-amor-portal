@@ -107,11 +107,11 @@ export default function Home() {
         delay={4}
       />
 
-       <section className="hero-shell relative min-h-[70vh] flex items-center gradient-hero overflow-hidden">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-             <div className="hero-copy space-y-8 animate-fade-in-up">
-              <Logo priority className="w-full max-w-xs sm:max-w-sm h-auto" />
+       <section className="hero-shell hero-compact relative flex items-center gradient-hero overflow-hidden">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
+           <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+             <div className="hero-copy space-y-5 animate-fade-in-up">
+              <Logo priority className="w-full max-w-[13rem] sm:max-w-[15rem] h-auto" />
 
               <h1 className="role-h1 max-w-xl">
                 {t("home.hero.title1")} {t("home.hero.title2")}
@@ -149,11 +149,11 @@ export default function Home() {
               </div>
             </div>
 
-             <div className="relative z-10 flex flex-col items-center">
+             <div className="relative z-10 flex flex-col items-center lg:flex-row lg:justify-center lg:gap-6">
                <div className="hero-decoration-rail home-wings-rail flex items-center justify-center rounded-[2rem] bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(219,9,12,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
                  <HeroChakras className="h-full w-full" />
                </div>
-               <div className="home-photo relative w-80 h-80 sm:w-96 sm:h-96 animate-float-slow">
+               <div className="home-photo relative w-72 h-72 sm:w-80 sm:h-80 lg:w-72 lg:h-72 animate-float-slow">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-reiki-200 via-reiki-300 to-reiki-100 opacity-60 blur-2xl" />
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-glow">
                   <Image
@@ -175,7 +175,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-warm-white to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-warm-white to-transparent" />
       </section>
 
       <section className="relative py-8 band-ivory">
@@ -191,9 +191,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-24 band-aqua">
+      <section className="relative py-10 lg:py-14 band-aqua">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal">
+          <div className="text-center mb-10 reveal">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
               {t("home.services.badge")}
             </span>
@@ -253,9 +253,9 @@ export default function Home() {
 
       <ArcangelesPromo />
 
-      <section className="relative py-24 gradient-spiritual">
+      <section className="relative py-10 lg:py-14 gradient-spiritual">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="relative reveal">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20">
                 <Image
@@ -328,7 +328,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-24 band-rose">
+      <section className="relative py-10 lg:py-14 band-rose">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
             <div className="gradient-card rounded-3xl p-12 sm:p-16 shadow-xl shadow-reiki-200/20 border border-white/50">
             <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-aqua-200 flex items-center justify-center animate-glow">
@@ -365,9 +365,9 @@ export default function Home() {
       </section>
 
       {testimonials.length > 0 && (
-        <section className="relative py-16 gradient-hero">
+        <section className="relative py-10 lg:py-12 gradient-hero">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16 reveal">
+            <div className="text-center mb-10 reveal">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-reiki-700 font-medium tracking-wider uppercase text-xs border border-white/30">
                 {t("home.testimonials.badge")}
               </span>
@@ -413,9 +413,9 @@ export default function Home() {
         </section>
       )}
 
-      <section className="relative py-24 band-aqua">
+      <section className="relative py-10 lg:py-14 band-aqua">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal">
+          <div className="text-center mb-10 reveal">
             <h2 className="role-h2">
               {t("social.followTitle")}
             </h2>

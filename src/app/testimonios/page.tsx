@@ -35,7 +35,7 @@ export default function TestimoniosPage() {
       </section>
 
       {hasTestimonials && (
-        <section className="relative py-24 band-aqua">
+        <section className="relative py-10 lg:py-14 band-aqua">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonials.map((item) => (
@@ -46,7 +46,7 @@ export default function TestimoniosPage() {
         </section>
       )}
 
-      <section className="relative py-24 gradient-spiritual">
+      <section className="relative py-10 lg:py-14 gradient-spiritual">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
           <h2 className="role-h2 mb-4">{t("testimonios.cta.title")}</h2>
           <p className="role-description text-lg mb-8">{t("testimonios.cta.subtitle")}</p>
@@ -59,7 +59,7 @@ export default function TestimoniosPage() {
         </div>
       </section>
 
-      <section className="relative py-24 band-rose">
+      <section className="relative py-10 lg:py-14 band-rose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
           <h3 className="font-display text-3xl font-bold text-reiki-800 mb-4">
             {t("testimonios.share.title")}

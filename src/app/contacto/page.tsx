@@ -40,11 +40,11 @@ export default function ContactoPage() {
           />{" "}
         </div>{" "}
       </section>{" "}
-      <section className="relative py-12 lg:py-20 band-rose">
+      <section className="relative py-8 lg:py-12 band-rose">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-          <div className="grid lg:grid-cols-2 gap-12 items-start reveal">
+          <div className="grid lg:grid-cols-2 gap-8 items-start reveal">
             {" "}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-reiki-300/20 lg:sticky lg:top-24 order-last lg:order-first">
               {" "}

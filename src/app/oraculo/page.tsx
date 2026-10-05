@@ -52,8 +52,8 @@ export default function OraculoPage() {
   return (
     <div className="bg-warm-white">
       <JsonLd data={jsonLd} />
-      <section className="gradient-hero pt-32 pb-16 sm:pt-36">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-center">
+      <section className="gradient-hero pt-28 pb-10 sm:pt-28">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 lg:grid-cols-2 items-center">
           <div>
             <nav aria-label="Ruta de navegación" className="mb-6 text-sm text-reiki-700">
               <ol className="flex flex-wrap items-center gap-2">
@@ -107,8 +107,8 @@ export default function OraculoPage() {
         </div>
       </section>
 
-      <section className="py-16 band-aqua">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-center">
+      <section className="py-10 lg:py-12 band-aqua">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 lg:grid-cols-2 items-center">
           <div className="relative mx-auto w-full max-w-xs aspect-[640/993] rounded-3xl overflow-hidden shadow-xl shadow-reiki-300/20 lg:order-2">
             <Image
               src="/imgs/oraculo/carta-ejemplo.jpg"
@@ -145,7 +145,7 @@ export default function OraculoPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-reiki-50/60">
+      <section className="py-10 lg:py-12 bg-reiki-50/60">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="role-h2 mb-4">¿Vives fuera de Colombia?</h2>
           <p className="role-description leading-relaxed">

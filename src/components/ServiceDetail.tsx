@@ -36,7 +36,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
 
   return (
     <div className="bg-warm-white">
-      <section className="gradient-hero pt-32 pb-12 sm:pt-36">
+      <section className="gradient-hero pt-28 pb-8 sm:pt-28">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label={t("servicioDetalle.breadcrumb")} className="mb-6 text-sm text-reiki-700">
             <ol className="flex flex-wrap items-center gap-2">
@@ -80,8 +80,8 @@ export default function ServiceDetail({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <section className="py-16 band-aqua">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-start">
+      <section className="py-10 lg:py-12 band-aqua">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 lg:grid-cols-2 items-start">
           <div>
             {benefits.length > 0 && (
               <>
@@ -142,7 +142,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
         </section>
       )}
 
-      <section className="py-16 bg-reiki-50/60">
+      <section className="py-10 lg:py-12 bg-reiki-50/60">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="role-h2 mb-8">{t("servicioDetalle.faqTitle")}</h2>
           <div className="space-y-3">
@@ -165,7 +165,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
       </section>
 
       {related.length > 0 && (
-        <section className="py-16">
+        <section className="py-10 lg:py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="role-h2 mb-8">{t("servicioDetalle.relatedTitle")}</h2>
             <ul className="grid gap-4 sm:grid-cols-3">
