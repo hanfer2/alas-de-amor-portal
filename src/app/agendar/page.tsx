@@ -3,23 +3,20 @@ import Image from "next/image";
 import AppointmentForm from "@/components/AppointmentForm";
 import { useTranslations } from "@/hooks/useTranslations";
 import { WingedCalendar, FloatingOrbs } from "@/components/HeroDecoration";
+import HeroTitle from "@/components/HeroTitle";
 export default function AgendarPage() {
   const t = useTranslations();
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-warm-white to-aqua-50">
       {" "}
-       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
+       <section className="hero-shell hero-compact relative gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-         <div className="hero-decoration-rail hero-calendar-rail flex items-center justify-center">
-          {" "}
-          <WingedCalendar className="h-full w-full" />{" "}
-        </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
-            {" "}
-            <h1 className="role-h1 mt-0">
+           <HeroTitle
+            icon={<WingedCalendar className="h-full w-full" />}
+            title={<>
               {" "}
               {t("agendar.hero.title")
                 .split(" ")
@@ -33,12 +30,12 @@ export default function AgendarPage() {
                     )}{" "}
                   </span>
                 ))}{" "}
-            </h1>{" "}
-            <p className="role-subtitle mt-4 leading-relaxed">
+            </>}
+            subtitle={<>
               {" "}
               {t("agendar.hero.subtitle")}{" "}
-            </p>{" "}
-          </div>{" "}
+            </>}
+          />{" "}
         </div>{" "}
       </section>{" "}
       <section className="relative py-12 lg:py-20 band-aqua">

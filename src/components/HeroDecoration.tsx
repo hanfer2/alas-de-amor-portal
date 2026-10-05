@@ -86,17 +86,17 @@ function Sparkle({ x, y, s = 1, color = "#7FD3D9" }: { x: number; y: number; s?:
 export function WingedWaves({ className = "" }: { className?: string }) {
   const id = "ww";
   return (
-    <svg viewBox="0 0 600 200" fill="none" className={className} aria-hidden="true">
+    <svg viewBox="0 0 280 170" fill="none" className={className} aria-hidden="true">
       <Defs id={id} />
-      <ellipse cx="300" cy="104" rx="210" ry="82" fill={`url(#${id}-mist)`} />
-      <circle cx="300" cy="104" r="62" fill={`url(#${id}-glow)`} />
-      <Wing id={id} x={314} y={96} s={1.5} />
-      <Wing id={id} x={286} y={96} s={1.5} flip />
-      <Heart id={id} x={300} y={100} s={1.25} />
-      <Sparkle x={58} y={46} s={1.1} />
-      <Sparkle x={548} y={152} s={1.2} color="#F2A0A0" />
-      <Sparkle x={96} y={160} s={0.7} color="#F2A0A0" />
-      <Sparkle x={520} y={40} s={0.8} />
+      <ellipse cx="140" cy="90" rx="124" ry="68" fill={`url(#${id}-mist)`} />
+      <circle cx="140" cy="88" r="46" fill={`url(#${id}-glow)`} />
+      <Wing id={id} x={149} y={84} s={0.78} />
+      <Wing id={id} x={131} y={84} s={0.78} flip />
+      <Heart id={id} x={140} y={88} s={1} />
+      <Sparkle x={22} y={34} s={1} />
+      <Sparkle x={258} y={132} s={1.1} color="#F2A0A0" />
+      <Sparkle x={40} y={140} s={0.6} color="#F2A0A0" />
+      <Sparkle x={250} y={34} s={0.7} />
     </svg>
   );
 }
@@ -168,17 +168,17 @@ export function WingedCalendar({ className = "" }: { className?: string }) {
 export function WingedEnvelope({ className = "" }: { className?: string }) {
   const id = "we";
   return (
-    <svg viewBox="0 0 300 140" fill="none" className={className} aria-hidden="true">
+    <svg viewBox="0 0 240 150" fill="none" className={className} aria-hidden="true">
       <Defs id={id} />
-      <ellipse cx="150" cy="72" rx="130" ry="56" fill={`url(#${id}-mist)`} />
-      <Wing id={id} x={96} y={82} s={0.62} flip />
-      <Wing id={id} x={204} y={82} s={0.62} />
-      <rect x="96" y="40" width="108" height="72" rx="12" fill="#FFFBF8" stroke="#F2A0A0" strokeWidth="2" />
-      <path d="M100 48l50 38 50-38" stroke={`url(#${id}-aqua)`} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-      <Heart id={id} x={150} y={88} s={0.5} />
-      <Sparkle x={40} y={34} s={0.9} />
-      <Sparkle x={262} y={104} s={0.8} color="#F2A0A0" />
-      <Sparkle x={248} y={30} s={0.5} />
+      <ellipse cx="120" cy="78" rx="108" ry="56" fill={`url(#${id}-mist)`} />
+      <Wing id={id} x={80} y={88} s={0.52} flip />
+      <Wing id={id} x={160} y={88} s={0.52} />
+      <rect x="78" y="48" width="84" height="58" rx="10" fill="#FFFBF8" stroke="#F2A0A0" strokeWidth="2" />
+      <path d="M82 56l38 30 38-30" stroke={`url(#${id}-aqua)`} strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+      <Heart id={id} x={120} y={90} s={0.42} />
+      <Sparkle x={26} y={34} s={0.9} />
+      <Sparkle x={214} y={118} s={0.8} color="#F2A0A0" />
+      <Sparkle x={206} y={30} s={0.5} />
     </svg>
   );
 }
@@ -187,16 +187,16 @@ export function WingedEnvelope({ className = "" }: { className?: string }) {
 export function HeartBubble({ className = "" }: { className?: string }) {
   const id = "hb";
   return (
-    <svg viewBox="0 0 400 150" fill="none" className={className} aria-hidden="true">
+    <svg viewBox="0 0 240 160" fill="none" className={className} aria-hidden="true">
       <Defs id={id} />
-      <ellipse cx="200" cy="74" rx="170" ry="62" fill={`url(#${id}-mist)`} />
-      <Wing id={id} x={150} y={70} s={0.8} flip spread={0.9} />
-      <Wing id={id} x={250} y={70} s={0.8} spread={0.9} />
-      <path d="M160 26h80a22 22 0 0 1 22 22v34a22 22 0 0 1-22 22h-34l-22 20v-20h-24a22 22 0 0 1-22-22V48a22 22 0 0 1 22-22Z" fill="#FFFBF8" stroke="#F2A0A0" strokeWidth="2" />
-      <Heart id={id} x={200} y={62} s={0.95} />
-      <Sparkle x={52} y={40} s={1} />
-      <Sparkle x={352} y={110} s={1} color="#F2A0A0" />
-      <Sparkle x={338} y={34} s={0.6} />
+      <ellipse cx="120" cy="82" rx="108" ry="62" fill={`url(#${id}-mist)`} />
+      <Wing id={id} x={88} y={66} s={0.55} flip spread={0.9} />
+      <Wing id={id} x={152} y={66} s={0.55} spread={0.9} />
+      <path d="M100 34h40a16 16 0 0 1 16 16v22a16 16 0 0 1-16 16h-18l-14 14v-14h-8a16 16 0 0 1-16-16V50a16 16 0 0 1 16-16Z" fill="#FFFBF8" stroke="#F2A0A0" strokeWidth="2" />
+      <Heart id={id} x={120} y={60} s={0.8} />
+      <Sparkle x={24} y={40} s={0.9} />
+      <Sparkle x={216} y={126} s={0.9} color="#F2A0A0" />
+      <Sparkle x={208} y={34} s={0.5} />
     </svg>
   );
 }

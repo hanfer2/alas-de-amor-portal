@@ -5,6 +5,7 @@ import { useTranslations } from "@/hooks/useTranslations";
 import config from "@/lib/config";
 import { testimonials, type Testimonial } from "@/lib/testimonials";
 import { HeartBubble, FloatingOrbs } from "@/components/HeroDecoration";
+import HeroTitle from "@/components/HeroTitle";
 import SocialLinks from "@/components/SocialLinks";
 
 export default function TestimoniosPage() {
@@ -16,22 +17,20 @@ export default function TestimoniosPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
+      <section className="hero-shell hero-compact relative gradient-hero overflow-hidden">
         <FloatingOrbs />
-        <div className="hero-decoration-rail hero-testimonial-rail flex items-center justify-center">
-          <HeartBubble className="h-full w-full" />
-        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="hero-copy text-center max-w-3xl mx-auto reveal">
-            <h1 className="role-h1 mt-0">
+          <HeroTitle
+            icon={<HeartBubble className="h-full w-full" />}
+            title={<>
               {heroTitle.split(" ").map((word: string, i: number) => (
                 <span key={i}>
                   {i >= 2 ? <span className="text-gradient">{word} </span> : `${word} `}
                 </span>
               ))}
-            </h1>
-            <p className="role-subtitle mt-4 leading-relaxed">{heroSubtitle}</p>
-          </div>
+            </>}
+            subtitle={<>{heroSubtitle}</>}
+          />
         </div>
       </section>
 

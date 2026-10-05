@@ -12,6 +12,19 @@
   },
   "home": {
     "video": { "label": "Alas de Amor introduction video" },
+    "arcangeles": {
+      "badge": "Messages from the Archangels",
+      "title1": "Write your",
+      "title2": "Name",
+      "subtitle": "and receive a message from the Archangels",
+      "description": "Book your session, write your name and receive a message from your guides. Choose between a medium message or a general message.",
+      "medium": "Medium message",
+      "general": "General message",
+      "whatsappMedium": "Hello, I would like to book a medium message from the Archangels. My name is ",
+      "whatsappGeneral": "Hello, I would like to book a general message from the Archangels. My name is ",
+      "note": "A spiritual and wellness practice: it does not replace care from a health professional.",
+      "imageAlt": "Alas de Amor poster: write your name and receive a message from the Archangels. Medium message or general message. WhatsApp 304 373 2955"
+    },
     "badge": "Certified Holistic Therapy",
     "hero": {
       "title1": "Wings of",

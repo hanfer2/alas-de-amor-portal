@@ -1,6 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { FeatherBook, FloatingOrbs } from "@/components/HeroDecoration";
+import HeroTitle from "@/components/HeroTitle";
 import SocialEmbeds from "@/components/SocialEmbeds";
 import SocialLinks from "@/components/SocialLinks";
 import { formatPostDate, posts, readingMinutes } from "@/lib/posts";
@@ -35,20 +36,18 @@ export default function BlogPage() {
   return (
     <div className="relative overflow-hidden">
       <JsonLd data={jsonLd} />
-      <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
+      <section className="hero-shell hero-compact relative gradient-hero overflow-hidden">
         <FloatingOrbs />
-        <div className="hero-decoration-rail blog-editorial-rail flex items-center justify-center">
-          <FeatherBook className="h-full w-full" />
-        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="hero-copy text-center max-w-3xl mx-auto reveal">
-            <h1 className="role-h1 mt-0">
+          <HeroTitle
+            icon={<FeatherBook className="h-full w-full" />}
+            title={<>
               Mensajes de <span className="text-gradient">Luz</span>
-            </h1>
-            <p className="role-subtitle mt-4 leading-relaxed">
+            </>}
+            subtitle={<>
               Guías sencillas sobre Reiki, Barras Access, sesiones en línea y oráculo angelical.
-            </p>
-          </div>
+            </>}
+          />
         </div>
       </section>
 
