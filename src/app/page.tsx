@@ -8,6 +8,7 @@ import LazyVideo from "@/components/LazyVideo";
 import { testimonials } from "@/lib/testimonials";
 import { HeroChakras } from "@/components/HeroChakras";
 import SocialLinks from "@/components/SocialLinks";
+import ArcangelesPromo from "@/components/ArcangelesPromo";
 
 const serviceIcons = [
   {
@@ -249,6 +250,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ArcangelesPromo />
 
       <section className="relative py-24 gradient-spiritual">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

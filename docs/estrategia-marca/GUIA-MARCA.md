@@ -48,3 +48,8 @@ En el código, los rojos son la escala `reiki-*` y los aguamarinas la escala `aq
 
 - Un diseñador debe revisar el logo (los trazos están dibujados con formas simples) y probarlo en blanco y negro y a 32 px antes de usarlo en impresos.
 - Subir `avatar-social.png` manualmente a cada red social.
+
+## Afiche de los lives
+- Fuente editable: `design-proposals/promo/mensaje-arcangeles.html` (usa el logo compacto y las fuentes de la marca). Se renderiza a 4:5 (1080×1350, publicaciones y portal) y a 9:16 (`?h=1920`, lives e historias); las instrucciones están en el comentario del archivo.
+- Imágenes finales en `public/imgs/promo/`. La versión 4:5 se muestra en el inicio del portal (`src/components/ArcangelesPromo.tsx`).
+- Para cambiar el teléfono o los textos, se edita el HTML y se vuelve a renderizar.

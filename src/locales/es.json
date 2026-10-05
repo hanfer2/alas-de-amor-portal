@@ -12,6 +12,19 @@
   },
   "home": {
     "video": { "label": "Video de presentación de Alas de Amor" },
+    "arcangeles": {
+      "badge": "Mensajes de los Arcángeles",
+      "title1": "Escribe tu",
+      "title2": "Nombre",
+      "subtitle": "y recibe un mensaje de los Arcángeles",
+      "description": "Agenda tu cita, escribe tu nombre y recibe un mensaje de tus guías. Puedes elegir entre un mensaje médium o un mensaje general.",
+      "medium": "Mensaje médium",
+      "general": "Mensaje general",
+      "whatsappMedium": "Hola, quiero agendar un mensaje médium de los Arcángeles. Mi nombre es ",
+      "whatsappGeneral": "Hola, quiero agendar un mensaje general de los Arcángeles. Mi nombre es ",
+      "note": "Práctica espiritual y de bienestar: no reemplaza la atención de un profesional de la salud.",
+      "imageAlt": "Afiche de Alas de Amor: escribe tu nombre y recibe un mensaje de los Arcángeles. Mensaje médium o mensaje general. WhatsApp 304 373 2955"
+    },
     "badge": "Terapia Holística Certificada",
     "hero": {
       "title1": "Alas de",

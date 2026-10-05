@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import { CredentialIcon, FeatherLotus, FloatingOrbs } from "@/components/HeroDecoration";
+import HeroTitle from "@/components/HeroTitle";
 export default function NosotrosPage() {
   const t = useTranslations();
   const credentialKeys = [
@@ -30,18 +31,14 @@ export default function NosotrosPage() {
   return (
     <div className="relative overflow-hidden">
       {" "}
-       <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
+       <section className="hero-shell hero-compact relative gradient-hero overflow-hidden">
         {" "}
         <FloatingOrbs />{" "}
-         <div className="hero-decoration-rail hero-lotus-rail flex items-center justify-center">
-          {" "}
-          <FeatherLotus className="h-full w-full" />{" "}
-        </div>{" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {" "}
-           <div className="hero-copy text-center max-w-3xl mx-auto reveal">
-            {" "}
-            <h1 className="role-h1 mt-0">
+           <HeroTitle
+            icon={<FeatherLotus className="h-full w-full" />}
+            title={<>
               {" "}
               {t("nosotros.hero.title")
                 .split(" ")
@@ -55,12 +52,12 @@ export default function NosotrosPage() {
                     )}{" "}
                   </span>
                 ))}{" "}
-            </h1>{" "}
-            <p className="role-subtitle mt-4 leading-relaxed">
+            </>}
+            subtitle={<>
               {" "}
               {t("nosotros.hero.subtitle")}{" "}
-            </p>{" "}
-          </div>{" "}
+            </>}
+          />{" "}
         </div>{" "}
       </section>{" "}
       <section className="relative py-24 band-ivory">

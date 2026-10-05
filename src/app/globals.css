@@ -417,6 +417,31 @@ body {
   z-index: 1;
 }
 
+/* Cabeceras de página: sin altura mínima, con el dibujo a la altura del título. */
+.hero-shell.hero-compact {
+  min-height: 0;
+  padding-top: 8.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero-title-icon {
+  width: 8rem;
+  height: 6.75rem;
+}
+
+@media (min-width: 640px) {
+  .hero-title-icon {
+    width: 11rem;
+    height: 9.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-shell.hero-compact {
+    padding-top: 9.5rem;
+  }
+}
+
 .hero-copy h1 + p {
   margin-top: 1rem;
 }
@@ -439,41 +464,10 @@ body {
 
 .home-photo { order: 1; }
 
-.hero-lotus-rail {
-  right: 2.5rem;
-  bottom: 0.75rem;
-  width: 12rem;
-  height: 12rem;
-}
 
-.hero-service-rail {
-  bottom: 0.5rem;
-  left: 50%;
-  width: min(37.5rem, calc(100vw - 2rem));
-  height: 10rem;
-  transform: translateX(-50%);
-}
 
-.hero-calendar-rail {
-  right: 3rem;
-  bottom: 0.5rem;
-  width: 12rem;
-  height: 9.6rem;
-}
 
-.hero-dove-rail {
-  right: 2.5rem;
-  bottom: 0.5rem;
-  width: 15rem;
-  height: 7rem;
-}
 
-.hero-testimonial-rail {
-  right: 2.5rem;
-  bottom: 0.5rem;
-  width: 20rem;
-  height: 8rem;
-}
 
 @media (max-width: 639px) {
   .home-wings-rail { max-width: 11.875rem; }
@@ -485,13 +479,6 @@ body {
   max-height: 100%;
 }
 
-.blog-editorial-rail {
-  position: relative;
-  inset: auto;
-  width: 10rem;
-  height: 7.5rem;
-  margin: 0 auto 1rem;
-}
 
 .hero-copy-plate {
   width: fit-content;
@@ -568,14 +555,6 @@ body {
   .hero-shell { padding-top: 10rem; }
   .step-marker { width: 4.5rem; height: 4.5rem; }
   .steps-grid::before { top: 2.25rem; }
-  .blog-editorial-rail {
-    position: absolute;
-    top: 10.5rem;
-    right: 3%;
-    width: 11rem;
-    height: 8.25rem;
-    margin: 0;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

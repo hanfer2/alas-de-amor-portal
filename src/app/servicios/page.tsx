@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "@/hooks/useTranslations";
 import { useLanguage } from "@/context/LanguageContext";
 import { WingedWaves, FloatingOrbs } from "@/components/HeroDecoration";
+import HeroTitle from "@/components/HeroTitle";
 import { Liquid } from "liquid-gooey";
 import {
   catalog,
@@ -32,14 +33,12 @@ export default function ServiciosPage() {
   };
   return (
     <div className="relative overflow-hidden">
-      <section className="hero-shell relative pb-4 gradient-hero overflow-hidden">
+      <section className="hero-shell hero-compact relative gradient-hero overflow-hidden">
         <FloatingOrbs />
-        <div className="hero-decoration-rail hero-service-rail flex items-center justify-center">
-          <WingedWaves className="h-full w-full" />
-        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="hero-copy text-center max-w-3xl mx-auto reveal">
-            <h1 className="role-h1 mt-0">
+          <HeroTitle
+            icon={<WingedWaves className="h-full w-full" />}
+            title={<>
               {t("servicios.hero.title")
                 .split(" ")
                 .map((word, i) => (
@@ -51,11 +50,11 @@ export default function ServiciosPage() {
                     )}
                   </span>
                 ))}
-            </h1>
-            <p className="role-subtitle mt-4 leading-relaxed">
+            </>}
+            subtitle={<>
               {t("servicios.hero.subtitle")}
-            </p>
-          </div>
+            </>}
+          />
         </div>
       </section>
       <section className="relative py-24 band-aqua">
