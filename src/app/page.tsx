@@ -165,9 +165,9 @@ export default function Home() {
                     sizes="(max-width: 640px) 320px, 384px"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-br from-reiki-300 to-reiki-500 flex items-center justify-center shadow-gold animate-glow">
-                  <span className="text-white font-sans text-xs font-bold text-center leading-tight whitespace-pre-line">
-                    {t("home.masterReiki")}
+                <div className="absolute -bottom-5 -right-6 sm:-right-10 px-6 py-2 rounded-full bg-gradient-to-br from-white/95 to-reiki-50/90 border border-reiki-300/50 ring-4 ring-white/70 shadow-[0_14px_36px_rgba(224,34,38,0.22)] flex items-center justify-center">
+                  <span className="font-display text-reiki-700 text-3xl leading-none whitespace-nowrap">
+                    {t("home.masterReiki").replace("\n", " ")}
                   </span>
                 </div>
               </div>
