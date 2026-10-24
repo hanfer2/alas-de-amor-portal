@@ -153,22 +153,17 @@ export default function Home() {
                <div className="hero-decoration-rail home-wings-rail flex items-center justify-center rounded-[2rem] bg-cream/70 p-2 shadow-[0_0_0_1px_rgba(219,9,12,0.16),0_12px_30px_rgba(63,178,188,0.12)]">
                  <HeroChakras className="h-full w-full" />
                </div>
-               <div className="home-photo relative w-72 h-72 sm:w-80 sm:h-80 lg:w-72 lg:h-72 animate-float-slow">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-reiki-200 via-reiki-300 to-reiki-100 opacity-60 blur-2xl" />
-                <div className="relative w-full h-full rounded-full overflow-hidden shadow-glow">
+               <div className="home-photo relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 animate-float-slow">
+                <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-aqua-200 via-reiki-200 to-reiki-100 opacity-60 blur-2xl" />
+                <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-glow">
                   <Image
-                    src="/imgs/team/liliana-profile.jpg"
+                    src="/imgs/promo/liliana-master-reiki-1x1.png"
                     alt={t("alt.lilianaHero")}
                     fill
                     className="object-cover"
                     priority
-                    sizes="(max-width: 640px) 320px, 384px"
+                    sizes="(max-width: 640px) 288px, 384px"
                   />
-                </div>
-                <div className="absolute -bottom-5 -right-6 sm:-right-10 px-6 py-2 rounded-full bg-gradient-to-br from-white/95 to-reiki-50/90 border border-reiki-300/50 ring-4 ring-white/70 shadow-[0_14px_36px_rgba(224,34,38,0.22)] flex items-center justify-center">
-                  <span className="font-display text-reiki-700 text-3xl leading-none whitespace-nowrap">
-                    {t("home.masterReiki").replace("\n", " ")}
-                  </span>
                 </div>
               </div>
             </div>
